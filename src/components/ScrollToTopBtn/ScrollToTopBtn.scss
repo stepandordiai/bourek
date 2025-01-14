@@ -1,0 +1,20 @@
+.to-top-btn {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 1;
+    background: var(--blue-clr-8);
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms;
+}
+
+.to-top-btn--visible {
+    opacity: 1;
+    pointer-events: all;
+}

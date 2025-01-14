@@ -1,0 +1,54 @@
+.cellulite {
+    padding: 0 20px;
+}
+
+.cellulite__title {
+    text-align: center;
+    font-size: 3rem;
+    padding: 100px 0;
+}
+
+.cellulite__info {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 20px;
+    text-align: justify;
+}
+
+.cellulite__chapters-list {
+    a {
+        color: var(--blue-clr);
+    }
+}
+
+.chapter {
+    padding-top: 90px;
+    font-weight: 600;
+}
+
+.cellulite__ol-list {
+    list-style-position: inside;
+    ::marker {
+        font-weight: 600;
+    }
+}
+
+.semi-tp-text {
+    opacity: 0.5;
+}
+
+@media (max-width: 1000px) {
+    .cellulite__info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cellulite__info {
+        width: 100%;
+    }
+}

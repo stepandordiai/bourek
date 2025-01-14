@@ -1,0 +1,119 @@
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.contact__title {
+    font-size: 3rem;
+    padding: 100px 0;
+}
+
+.contact__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    //
+    column-gap: 5px;
+    row-gap: 20px;
+    //
+    width: 100%;
+    li {
+        justify-self: center;
+    }
+    img {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    a:hover {
+        color: var(--blue-clr);
+    }
+}
+
+.contact__form-title {
+    font-size: 24px;
+    color: var(--blue-clr);
+    padding-bottom: 10px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 50%;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .first-name,
+    .last-name {
+        background: var(--blue-clr-1);
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .email,
+    .phone {
+        background: var(--blue-clr-2);
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .department {
+        background: var(--blue-clr-3);
+        border-radius: 5px;
+        padding: 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .date,
+    .time {
+        background: var(--blue-clr-4);
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    button {
+        background: var(--blue-clr);
+        align-self: center;
+        border-radius: 10px;
+        padding: 10px 10px;
+        color: #fff;
+        transition: background-color 200ms;
+        &:hover {
+            background: var(--blue-clr-8);
+        }
+    }
+}
+
+.contact__map {
+    width: 100%;
+    height: 500px;
+    margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+    .contact__form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact__form {
+        div {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+}

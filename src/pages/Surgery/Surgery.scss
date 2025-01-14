@@ -1,0 +1,42 @@
+.surgery {
+    padding: 0 20px;
+}
+
+.surgery__title {
+    text-align: center;
+    font-size: 3rem;
+    padding: 100px 0;
+}
+
+.surgery__info {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 20px;
+    text-align: justify;
+}
+
+.surgery__ul-list {
+    li {
+        list-style: disc;
+        list-style-position: inside;
+    }
+    ::marker {
+        color: var(--blue-clr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .surgery__info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .surgery__info {
+        width: 100%;
+    }
+}

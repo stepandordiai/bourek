@@ -1,0 +1,22 @@
+import "./BurgerBtn.scss";
+
+const BurgerBtn = () => {
+    function toggleBurger13() {
+        document
+            .querySelector(".burger-13")
+            .classList.toggle("burger-13--active");
+        document
+            .querySelector(".burger-13__center-line")
+            .classList.toggle("burger-13__center-line--active");
+        document
+            .querySelector(".header__list")
+            .classList.toggle("header__list--mobile");
+    }
+    return (
+        <div onClick={toggleBurger13} className="burger-13">
+            <span className="burger-13__center-line"></span>
+        </div>
+    );
+};
+
+export default BurgerBtn;

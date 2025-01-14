@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import logoImg from "./../../assets/medical-symbol.png";
-import "./Footer.scss";
 import CustomLine from "../CustomLine/CustomLine";
+import "./Footer.scss";
 
 const Footer = () => {
     return (
@@ -75,8 +75,16 @@ const Footer = () => {
             </div>
             <CustomLine />
             <div className="footer__footer">
-                <p className="copyright">&copy; 2025 Bourek</p>
-                <p>All rights reserved</p>
+                <p className="creator">
+                    Made by{" "}
+                    <a href="https://stepandordiai.netlify.app/">
+                        Stepan Dordiai
+                    </a>
+                </p>
+                <div>
+                    <p className="copyright">&copy; 2025 Bourek</p>
+                    <p>All rights reserved</p>
+                </div>
             </div>
         </footer>
     );

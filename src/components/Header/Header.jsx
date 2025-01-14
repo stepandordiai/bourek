@@ -91,31 +91,31 @@ const Header = () => {
                                 Ordinace
                             </NavLink>
                             <NavLink
-                                className={({ isActive }) => {
-                                    return isActive
+                                className={({ isActive }) =>
+                                    isActive
                                         ? activeLinkOption
-                                        : inactiveLinkOption;
-                                }}
+                                        : inactiveLinkOption
+                                }
                                 to="/starvac"
                             >
                                 Starvac
                             </NavLink>
                             <NavLink
-                                className={({ isActive }) => {
-                                    return isActive
+                                className={({ isActive }) =>
+                                    isActive
                                         ? activeLinkOption
-                                        : inactiveLinkOption;
-                                }}
+                                        : inactiveLinkOption
+                                }
                                 to="/cellulite"
                             >
                                 Celulitida
                             </NavLink>
                             <NavLink
-                                className={({ isActive }) => {
-                                    return isActive
+                                className={({ isActive }) =>
+                                    isActive
                                         ? activeLinkOption
-                                        : inactiveLinkOption;
-                                }}
+                                        : inactiveLinkOption
+                                }
                                 to="/lymfodrenaz"
                             >
                                 Lymfodrenaz
@@ -123,7 +123,14 @@ const Header = () => {
                         </div>
                     </li>
                     <li>
-                        <NavLink to="/prices">Prices</NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLink : inactiveLink
+                            }
+                            to="/prices"
+                        >
+                            Prices
+                        </NavLink>
                     </li>
                     <li>
                         <NavLink

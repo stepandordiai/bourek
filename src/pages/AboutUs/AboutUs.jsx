@@ -25,7 +25,7 @@ import "./AboutUs.scss";
 const AboutUs = () => {
     return (
         <section className="about-us">
-            <h3 className="about-us__offer-title">What we offer</h3>
+            <h3 className="about-us__offer-title">Co nabízíme</h3>
             <ul className="about-us__offer-list">
                 <li>služby odborného rehabilitačního lékaře</li>
                 <li>služby odborného neurologického lékaře</li>
@@ -44,7 +44,7 @@ const AboutUs = () => {
                 <li>speciální zdravotnický maloobchod</li>
             </ul>
             <CustomLine />
-            <h3 className="about-us__gallery-title">Gallery</h3>
+            <h3 className="about-us__gallery-title">Galerie</h3>
             <div className="about-us__gallery">
                 <img src={img1} alt="" />
                 <img src={img2} alt="" />

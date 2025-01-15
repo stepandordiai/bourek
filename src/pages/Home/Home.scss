@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
 }
 
 .home > div {
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    row-gap: 50px;
+    row-gap: 20px;
 }
 
 .home__title {
@@ -43,7 +43,6 @@
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column-reverse;
-        height: calc(100dvh - 70px);
     }
 
     .home__title {

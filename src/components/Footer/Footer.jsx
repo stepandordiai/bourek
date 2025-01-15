@@ -24,39 +24,59 @@ const Footer = () => {
             <CustomLine />
             <div className="footer__nav">
                 <div>
-                    <p>Work Hours</p>
+                    <p>Pracovní doba</p>
+                    <table className="footer__nav-table">
+                        <tbody>
+                            <tr>
+                                <td>Pondělí:</td>
+                                <td>7:30 - 15:00</td>
+                            </tr>
+                            <tr>
+                                <td>Uterý:</td>
+                                <td>7:30 - 15:00</td>
+                            </tr>
+                            <tr>
+                                <td>Středa:</td>
+                                <td>7:30 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>Ctvrtek:</td>
+                                <td>7:30 - 15:00</td>
+                            </tr>
+                            <tr>
+                                <td>Pátek:</td>
+                                <td>7:30 - 13:00</td>
+                            </tr>
+                            <tr>
+                                <td>Sobota:</td>
+                                <td>7:30 - 12:00</td>
+                            </tr>
+                            <tr>
+                                <td>Neděle:</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <p>Navigace</p>
                     <ul>
-                        <li>Monday: 7:30 - 15:00</li>
-                        <li>Tuesday: 7:30 - 15:00</li>
-                        <li>Wednesday: 7:30 - 18:00</li>
-                        <li>Thursday: 7:30 - 15:00</li>
-                        <li>Friday: 7:30 - 13:00</li>
-                        <li>Saturday: 7:30 - 12:00</li>
-                        <li>Sunday: Closed</li>
+                        <li>
+                            <NavLink to="/">Dům</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about-us">O nás</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/prices">Ceny</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact">Kontakt</NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <p>Navigation</p>
-                    <ul>
-                        <li>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/about-us">About us</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/services">Services</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/prices">Prices</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contact">Contact</NavLink>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <p>Services</p>
+                    <p>Služby</p>
                     <ul>
                         <li>
                             <NavLink to="/surgery">Ordinace</NavLink>
@@ -68,7 +88,7 @@ const Footer = () => {
                             <NavLink to="/cellulite">Celulitida</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/lymfodrenaz">Lymfodrenaz</NavLink>
+                            <NavLink to="/lymphatic">Lymfodrenáž</NavLink>
                         </li>
                     </ul>
                 </div>
@@ -83,7 +103,7 @@ const Footer = () => {
                 </p>
                 <div>
                     <p className="copyright">&copy; 2025 Bourek</p>
-                    <p>All rights reserved</p>
+                    <p>Všechna práva vyhrazena</p>
                 </div>
             </div>
         </footer>

@@ -1,0 +1,40 @@
+.prices {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prices__title {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    padding: 100px 0;
+}
+
+.prices__table-title {
+    font-size: 24px;
+    color: var(--blue-clr);
+    padding-bottom: 10px;
+}
+
+.prices__table {
+    width: 75%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    td {
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .prices__table {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .prices__table {
+        width: 100%;
+    }
+}

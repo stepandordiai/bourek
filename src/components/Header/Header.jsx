@@ -57,7 +57,7 @@ const Header = () => {
                             }}
                             to="/"
                         >
-                            Home
+                            Dům
                         </NavLink>
                     </li>
                     <li>
@@ -67,12 +67,12 @@ const Header = () => {
                             }}
                             to="/about-us"
                         >
-                            About us
+                            O nás
                         </NavLink>
                     </li>
                     <li className="nav__custom-select">
                         <div className="nav__custom-select-item">
-                            <span>Services</span>
+                            <span>Služby</span>
                             <img
                                 src={downArrowImg}
                                 className="custom-select__down-arrow"
@@ -116,9 +116,9 @@ const Header = () => {
                                         ? activeLinkOption
                                         : inactiveLinkOption
                                 }
-                                to="/lymfodrenaz"
+                                to="/lymphatic"
                             >
-                                Lymfodrenaz
+                                Lymfodrenáž
                             </NavLink>
                         </div>
                     </li>
@@ -129,7 +129,7 @@ const Header = () => {
                             }
                             to="/prices"
                         >
-                            Prices
+                            Ceny
                         </NavLink>
                     </li>
                     <li>
@@ -139,12 +139,12 @@ const Header = () => {
                             }
                             to="/contact"
                         >
-                            Contact
+                            Kontakt
                         </NavLink>
                     </li>
                     <li className="nav__btn">
                         <NavLink className="nav__btn-link" to="/contact">
-                            Make an appointment
+                            Domluvit si schůzku
                         </NavLink>
                     </li>
                 </ul>

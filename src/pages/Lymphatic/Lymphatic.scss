@@ -1,14 +1,14 @@
-.cellulite {
+.lymphatic {
     padding: 0 20px;
 }
 
-.cellulite__title {
+.lymphatic__title {
     text-align: center;
     font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 100px 0;
 }
 
-.cellulite__info {
+.lymphatic__info {
     width: 75%;
     margin: 0 auto;
     display: flex;
@@ -19,36 +19,31 @@
     text-align: justify;
 }
 
-.cellulite__chapters-list {
-    a {
-        color: var(--blue-clr);
+.lymphatic__img-info {
+    img {
+        float: left;
+        padding-right: 20px;
     }
 }
 
-.chapter {
-    padding-top: 90px;
-    font-weight: 600;
-}
+.lymphatic__ol-list {
+    li {
+        list-style-position: inside;
+    }
 
-.cellulite__ol-list {
-    list-style-position: inside;
     ::marker {
         font-weight: 600;
     }
 }
 
-.semi-tp-text {
-    opacity: 0.5;
-}
-
 @media (max-width: 1000px) {
-    .cellulite__info {
+    .lymphatic__info {
         width: 90%;
     }
 }
 
 @media (max-width: 600px) {
-    .cellulite__info {
+    .lymphatic__info {
         width: 100%;
     }
 }

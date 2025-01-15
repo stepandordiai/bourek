@@ -3,7 +3,7 @@ import "./Surgery.scss";
 const Surgery = () => {
     return (
         <section className="surgery">
-            <h3 className="surgery__title">Surgery</h3>
+            <h3 className="surgery__title">Ordinace</h3>
             <div className="surgery__info">
                 <p>
                     Naše ordinace poskytuje služby rehabilitačního lékaře s

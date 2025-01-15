@@ -6,12 +6,13 @@ const Home = () => {
         <section className="home">
             <div>
                 <p className="home__title">
-                    For better health
-                    <br />
-                    and flexibility
+                    Pro lepší zdraví
+                    <br />a flexibilitu
                 </p>
+                <p>ordinace rehabilitačního lékaře</p>
+                <p>MUDr. Josef Bourek</p>
                 <NavLink className="home__btn-link" to="/contact">
-                    Make an appointment
+                    Domluvit si schůzku
                 </NavLink>
             </div>
             <div>

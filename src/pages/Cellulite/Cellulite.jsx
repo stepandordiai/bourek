@@ -3,7 +3,7 @@ import "./Cellulite.scss";
 const Cellulite = () => {
     return (
         <section className="cellulite">
-            <h3 className="cellulite__title">Cellulite</h3>
+            <h3 className="cellulite__title">Celulitida</h3>
             <div className="cellulite__info">
                 <h4 style={{ fontWeight: 600 }}>Kapitoly:</h4>
                 <ul className="cellulite__chapters-list">

@@ -13,8 +13,11 @@ const BurgerBtn = () => {
             .classList.toggle("header__list--mobile");
     }
     return (
-        <div onClick={toggleBurger13} className="burger-13">
-            <span className="burger-13__center-line"></span>
+        <div onClick={toggleBurger13} className="burger__container">
+            <p>menu</p>
+            <div className="burger-13">
+                <span className="burger-13__center-line"></span>
+            </div>
         </div>
     );
 };

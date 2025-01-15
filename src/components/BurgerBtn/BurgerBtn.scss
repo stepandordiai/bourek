@@ -1,11 +1,18 @@
+.burger__container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    cursor: pointer;
+}
+
 .burger-13 {
     position: relative;
     width: 40px;
     padding: 20px 0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .none {
@@ -55,7 +62,7 @@
 }
 
 @media (max-width: 600px) {
-    .burger-13 {
+    .burger__container {
         display: flex;
     }
 }

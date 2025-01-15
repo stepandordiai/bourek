@@ -4,7 +4,7 @@
 
 .surgery__title {
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 100px 0;
 }
 

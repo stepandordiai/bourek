@@ -10,6 +10,8 @@ import Surgery from "./pages/Surgery/Surgery";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Prices from "./pages/Prices/Prices";
 import "./App.scss";
+import Lymphatic from "./pages/Lymphatic/Lymphatic";
+import Starvac from "./pages/Starvac/Starvac";
 
 function App() {
     return (
@@ -22,7 +24,9 @@ function App() {
                 <Route path="/about-us" element={<AboutUs />} />
                 {/* Services */}
                 <Route path="/surgery" element={<Surgery />} />
+                <Route path="/starvac" element={<Starvac />} />
                 <Route path="/cellulite" element={<Cellulite />} />
+                <Route path="/lymphatic" element={<Lymphatic />} />
                 {/*  */}
                 <Route path="/prices" element={<Prices />} />
                 <Route path="/contact" element={<Contact />} />

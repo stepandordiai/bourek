@@ -7,7 +7,7 @@ import CustomLine from "../../components/CustomLine/CustomLine";
 const Contact = () => {
     return (
         <section className="contact">
-            <h3 className="contact__title">Contact</h3>
+            <h3 className="contact__title">Kontakt</h3>
             <ul className="contact__list">
                 <li>
                     <img src={locationIcon} width={30} alt="" />
@@ -25,33 +25,33 @@ const Contact = () => {
                 </li>
             </ul>
             <CustomLine />
-            <h4 className="contact__form-title">Make an appointment</h4>
+            <h4 className="contact__form-title">Domluvit si schůzku</h4>
             <form className="contact__form" action="">
                 <div>
                     <input
                         className="first-name"
                         type="text"
-                        placeholder="First name *"
+                        placeholder="Jméno *"
                         required
                     />
                     <input
                         className="last-name"
                         type="text"
-                        placeholder="Last name *"
+                        placeholder="Příjmení *"
                         required
                     />
                 </div>
                 <div>
-                    <input className="email" type="text" placeholder="Email" />
+                    <input className="email" type="text" placeholder="E-mail" />
                     <input
                         className="phone"
                         type="text"
-                        placeholder="Phone *"
+                        placeholder="Telefonní číslo *"
                         required
                     />
                 </div>
                 <select className="department" name="" id="">
-                    <option value="John Doe">Select Department</option>
+                    <option value="John Doe">Vybrat oddělení</option>
                     <option value="John Doe">John Doe</option>
                     <option value="John Doe">John Doe</option>
                 </select>
@@ -71,7 +71,7 @@ const Contact = () => {
                         id=""
                     />
                 </div>
-                <button type="submit">Book an appointment</button>
+                <button type="submit">Rezervovat termín</button>
             </form>
             <CustomLine />
             <iframe

@@ -1,14 +1,14 @@
-.cellulite {
+.starvac {
     padding: 0 20px;
 }
 
-.cellulite__title {
+.starvac__title {
     text-align: center;
     font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 100px 0;
 }
 
-.cellulite__info {
+.starvac__info {
     width: 75%;
     margin: 0 auto;
     display: flex;
@@ -19,36 +19,31 @@
     text-align: justify;
 }
 
-.cellulite__chapters-list {
-    a {
+.img-text__container {
+    img {
+        float: left;
+        padding-right: 20px;
+    }
+}
+
+.starvac__ul-list {
+    li {
+        list-style: disc;
+        list-style-position: inside;
+    }
+    ::marker {
         color: var(--blue-clr);
     }
 }
 
-.chapter {
-    padding-top: 90px;
-    font-weight: 600;
-}
-
-.cellulite__ol-list {
-    list-style-position: inside;
-    ::marker {
-        font-weight: 600;
-    }
-}
-
-.semi-tp-text {
-    opacity: 0.5;
-}
-
 @media (max-width: 1000px) {
-    .cellulite__info {
+    .starvac__info {
         width: 90%;
     }
 }
 
 @media (max-width: 600px) {
-    .cellulite__info {
+    .starvac__info {
         width: 100%;
     }
 }

@@ -76,7 +76,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <p>Služby</p>
+                    <p>Oddělení</p>
                     <ul>
                         <li>
                             <NavLink to="/surgery">Ordinace</NavLink>

@@ -72,7 +72,7 @@ const Header = () => {
                     </li>
                     <li className="nav__custom-select">
                         <div className="nav__custom-select-item">
-                            <span>Služby</span>
+                            <span>Oddělení</span>
                             <img
                                 src={downArrowImg}
                                 className="custom-select__down-arrow"

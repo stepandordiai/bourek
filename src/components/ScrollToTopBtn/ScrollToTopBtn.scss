@@ -1,7 +1,6 @@
 .to-top-btn {
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 20px;
     bottom: 20px;
     z-index: 1;
     background: var(--blue-clr-8);
@@ -11,7 +10,7 @@
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 300ms, bottom 300ms;
+    transition: opacity 300ms, transform 300ms;
 }
 
 .to-top-btn--visible {
@@ -20,5 +19,5 @@
 }
 
 .to-top-btn--translate {
-    bottom: 70px;
+    transform: translateY(-50px);
 }

@@ -95,16 +95,17 @@ const Footer = () => {
             </div>
             <CustomLine />
             <div className="footer__footer">
+                <div>
+                    <p className="copyright">
+                        &copy; 2025 Bourek | Všechna práva vyhrazena.
+                    </p>
+                </div>
                 <p className="creator">
-                    Made by{" "}
+                    made with ❤ by{" "}
                     <a href="https://stepandordiai.netlify.app/">
-                        Stepan Dordiai
+                        heeeyooo.studio
                     </a>
                 </p>
-                <div>
-                    <p className="copyright">&copy; 2025 Bourek</p>
-                    <p>Všechna práva vyhrazena</p>
-                </div>
             </div>
         </footer>
     );

@@ -3,7 +3,6 @@
     flex-direction: column;
     padding: 40px;
     background: #fff;
-    width: 100%;
     //
     min-height: 100px;
     //
@@ -87,11 +86,8 @@
 .footer__footer {
     display: flex;
     flex-direction: column;
-    div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    justify-content: center;
+    align-items: center;
 }
 
 .creator {

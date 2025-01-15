@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import "./Home.scss";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
+    useEffect(() => {
+        document.title = "Bourek | Dům";
+    }, []);
+
     return (
         <section className="home">
             <div>
@@ -9,7 +14,7 @@ const Home = () => {
                     Pro lepší zdraví
                     <br />a flexibilitu
                 </p>
-                <p>ordinace rehabilitačního lékaře</p>
+                <p>Ordinace rehabilitačního lékaře</p>
                 <p>MUDr. Josef Bourek</p>
                 <NavLink className="home__btn-link" to="/contact">
                     Domluvit si schůzku

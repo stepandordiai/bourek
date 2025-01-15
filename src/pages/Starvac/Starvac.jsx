@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import "./Starvac.scss";
 import img1 from "./img/starvac.jpg";
 
 const Starvac = () => {
+    useEffect(() => {
+        document.title = "Bourek | Starvac";
+    }, []);
+
     return (
         <section className="starvac">
             <h3 className="starvac__title">Starvac</h3>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import CustomLine from "../../components/CustomLine/CustomLine";
 import img1 from "./img/1.jpg";
 import img2 from "./img/2.jpg";
@@ -23,6 +24,10 @@ import img22 from "./img/22.jpg";
 import "./AboutUs.scss";
 
 const AboutUs = () => {
+    useEffect(() => {
+        document.title = "Bourek | O nás";
+    }, []);
+
     return (
         <section className="about-us">
             <h3 className="about-us__offer-title">Co nabízíme</h3>

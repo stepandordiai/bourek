@@ -109,5 +109,12 @@
         align-items: center;
         justify-content: center;
         row-gap: 50px;
+        div:nth-of-type(1) {
+            width: 100%;
+        }
+    }
+
+    .footer__nav-table {
+        width: 100%;
     }
 }

@@ -1,8 +1,13 @@
 import "./Lymphatic.scss";
 import img1 from "./img/BTL-6000.jpg";
 import img2 from "./img/BTL-6000-1.jpg";
+import { useEffect } from "react";
 
 const Lymphatic = () => {
+    useEffect(() => {
+        document.title = "Bourek | Lymfodrenáž";
+    }, []);
+
     return (
         <section className="lymphatic">
             <h3 className="lymphatic__title">Lymfodrenáž</h3>

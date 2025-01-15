@@ -1,10 +1,15 @@
-import "./Contact.scss";
+import { useEffect } from "react";
 import locationIcon from "./img/location.png";
 import phoneIcon from "./img/telephone.png";
 import mailIcon from "./img/mail.png";
 import CustomLine from "../../components/CustomLine/CustomLine";
+import "./Contact.scss";
 
 const Contact = () => {
+    useEffect(() => {
+        document.title = "Bourek | Kontakt";
+    });
+
     return (
         <section className="contact">
             <h3 className="contact__title">Kontakt</h3>

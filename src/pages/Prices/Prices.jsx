@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import "./Prices.scss";
 
 const Prices = () => {
+    useEffect(() => {
+        document.title = "Bourek | Ceny";
+    }, []);
+
     return (
         <section className="prices">
             <h3 className="prices__title">Ceny</h3>

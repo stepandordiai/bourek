@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import "./Cellulite.scss";
 
 const Cellulite = () => {
+    useEffect(() => {
+        document.title = "Bourek | Celulitida";
+    }, []);
+
     return (
         <section className="cellulite">
             <h3 className="cellulite__title">Celulitida</h3>

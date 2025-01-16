@@ -1,17 +1,21 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Contact from "./pages/Contact/Contact";
-import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./utils/ScrollToTop";
-import Cellulite from "./pages/Cellulite/Cellulite";
 import ScrollToTopBtn from "./components/ScrollToTopBtn/ScrollToTopBtn";
-import Surgery from "./pages/Surgery/Surgery";
+import Header from "./components/Header/Header";
+import Home from "./pages/Home/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import Prices from "./pages/Prices/Prices";
-import "./App.scss";
-import Lymphatic from "./pages/Lymphatic/Lymphatic";
+// Services
+import Surgery from "./pages/Surgery/Surgery";
 import Starvac from "./pages/Starvac/Starvac";
+import Cellulite from "./pages/Cellulite/Cellulite";
+import Lymphatic from "./pages/Lymphatic/Lymphatic";
+//
+import Prices from "./pages/Prices/Prices";
+import Contact from "./pages/Contact/Contact";
+// Other
+import PersonalData from "./pages/PersonalData/PersonalData";
+import Footer from "./components/Footer/Footer";
+import "./App.scss";
 
 function App() {
     return (
@@ -30,6 +34,8 @@ function App() {
                 {/*  */}
                 <Route path="/prices" element={<Prices />} />
                 <Route path="/contact" element={<Contact />} />
+                {/* Other */}
+                <Route path="/personal-data" element={<PersonalData />} />
             </Routes>
             <Footer />
         </Router>

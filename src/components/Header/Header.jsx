@@ -46,7 +46,7 @@ const Header = () => {
         <>
             <header className="header">
                 <NavLink className="header__logo" to="/">
-                    <img src={logoImg} alt="" />
+                    <img src={logoImg} />
                     <span>Bourek</span>
                 </NavLink>
                 <ul className="header__list js-header__list">

@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__header">
                 <NavLink className="footer__header-logo" to="/">
-                    <img src={logoImg} alt="" />
+                    <img src={logoImg} loading="lazy" />
                     <span>Bourek</span>
                 </NavLink>
                 <ul className="footer__header-socials-list">
@@ -98,18 +98,24 @@ const Footer = () => {
                     <p>Kontakt</p>
                     <ul className="footer__contact-list">
                         <li>
-                            <img src={phoneIcon} width={20} alt="" />
+                            <img src={phoneIcon} width={20} loading="lazy" />
                             <a href="tel:+420321727404">+420 321 727 404</a>
                         </li>
                         <li>
-                            <img src={mailIcon} width={20} alt="" />
+                            <img src={mailIcon} width={20} loading="lazy" />
                             <a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
                         </li>
                         <li>
-                            <img src={locationIcon} width={20} alt="" />
+                            <img src={locationIcon} width={20} loading="lazy" />
                             <a href="https://maps.app.goo.gl/zyvc7wwr1atb3N3m8">
                                 Kolín 4 Pod Hroby 271
                             </a>
+                        </li>
+                    </ul>
+                    <p style={{ marginTop: 10 }}>O Bourek</p>
+                    <ul>
+                        <li>
+                            <NavLink to="/personal-data">Personal data</NavLink>
                         </li>
                     </ul>
                 </div>

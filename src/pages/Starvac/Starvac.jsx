@@ -15,7 +15,7 @@ const Starvac = () => {
                     Nový pomocník při baňkování – masážní přístroj STARVAC SP2
                 </strong>
                 <p className="img-text__container">
-                    <img src={img1} alt="" />
+                    <img src={img1} loading="lazy" />
                     Původní starověká metoda sloužící k čištění krve –
                     přikládání baněk se v dnešní doběstává novým hitem v léčebné
                     fyzioterapii, dále při léčbě celulitidy, podpory

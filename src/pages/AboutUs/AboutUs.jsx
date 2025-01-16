@@ -51,27 +51,27 @@ const AboutUs = () => {
             <CustomLine />
             <h3 className="about-us__gallery-title">Galerie</h3>
             <div className="about-us__gallery">
-                <img src={img1} alt="" />
-                <img src={img2} alt="" />
-                <img src={img3} alt="" />
-                <img src={img4} alt="" />
-                <img src={img5} alt="" />
-                <img src={img6} alt="" />
-                <img src={img7} alt="" />
-                <img src={img8} alt="" />
-                <img src={img9} alt="" />
-                <img src={img10} alt="" />
-                <img src={img11} alt="" />
-                <img src={img12} alt="" />
-                <img src={img13} alt="" />
-                <img src={img14} alt="" />
-                <img src={img15} alt="" />
-                <img src={img16} alt="" />
-                <img src={img18} alt="" />
-                <img src={img19} alt="" />
-                <img src={img20} alt="" />
-                <img src={img21} alt="" />
-                <img src={img22} alt="" />
+                <img src={img1} loading="lazy" />
+                <img src={img2} loading="lazy" />
+                <img src={img3} loading="lazy" />
+                <img src={img4} loading="lazy" />
+                <img src={img5} loading="lazy" />
+                <img src={img6} loading="lazy" />
+                <img src={img7} loading="lazy" />
+                <img src={img8} loading="lazy" />
+                <img src={img9} loading="lazy" />
+                <img src={img10} loading="lazy" />
+                <img src={img11} loading="lazy" />
+                <img src={img12} loading="lazy" />
+                <img src={img13} loading="lazy" />
+                <img src={img14} loading="lazy" />
+                <img src={img15} loading="lazy" />
+                <img src={img16} loading="lazy" />
+                <img src={img18} loading="lazy" />
+                <img src={img19} loading="lazy" />
+                <img src={img20} loading="lazy" />
+                <img src={img21} loading="lazy" />
+                <img src={img22} loading="lazy" />
             </div>
         </section>
     );

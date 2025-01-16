@@ -1,0 +1,33 @@
+.personal-data {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.personal-data__title {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.personal-data__info {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 1000px) {
+    .personal-data__info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .personal-data__info {
+        width: 100%;
+    }
+}

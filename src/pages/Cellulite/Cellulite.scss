@@ -1,5 +1,6 @@
 .cellulite {
     padding: 0 20px;
+    margin-bottom: 40px;
 }
 
 .cellulite__title {
@@ -20,8 +21,11 @@
 }
 
 .cellulite__chapters-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
     a {
-        color: var(--blue-clr);
+        color: var(--blue-clr) !important;
     }
 }
 

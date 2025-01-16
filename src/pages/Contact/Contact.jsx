@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import locationIcon from "./img/location.png";
-import phoneIcon from "./img/telephone.png";
-import mailIcon from "./img/mail.png";
+import dayjs from "dayjs";
+import locationIcon from "./../../assets/icons/location.png";
+import phoneIcon from "./../../assets/icons/telephone.png";
+import mailIcon from "./../../assets/icons/mail.png";
 import CustomLine from "../../components/CustomLine/CustomLine";
 import "./Contact.scss";
 
@@ -10,71 +11,104 @@ const Contact = () => {
         document.title = "Bourek | Kontakt";
     });
 
+    const currentDate = dayjs();
+
+    const hours = currentDate.hour();
+
+    const minutes = currentDate.minute();
+
+    const formatedDate = currentDate.format("YYYY-MM-DD");
+
     return (
         <section className="contact">
             <h3 className="contact__title">Kontakt</h3>
             <ul className="contact__list">
                 <li>
-                    <img src={locationIcon} width={30} alt="" />
-                    <span>Kolín 4 Pod Hroby 271</span>
-                </li>
-                <li>
                     <img src={phoneIcon} width={30} alt="" />
-
                     <a href="tel:+420321727404">+420 321 727 404</a>
+                    {/* <a href="sms:+380689852978?&body=Hi%2520there%252C%2520I%2527d%2520like%2520to%2520place%2520an%2520order%2520for...">
+                        Click here to text us!
+                    </a> */}
                 </li>
                 <li>
                     <img src={mailIcon} width={30} alt="" />
-
                     <a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
+                </li>
+                <li>
+                    <img src={locationIcon} width={30} alt="" />
+                    <a href="https://maps.app.goo.gl/zyvc7wwr1atb3N3m8">
+                        Kolín 4 Pod Hroby 271
+                    </a>
                 </li>
             </ul>
             <CustomLine />
             <h4 className="contact__form-title">Domluvit si schůzku</h4>
-            <form className="contact__form" action="">
+            <form
+                className="contact__form"
+                action="mailto:josef@bourek.cz"
+                method="post"
+                encType="text/plain"
+            >
                 <div>
                     <input
                         className="first-name"
                         type="text"
+                        name="First name"
                         placeholder="Jméno *"
                         required
                     />
                     <input
                         className="last-name"
                         type="text"
+                        name="Last name"
                         placeholder="Příjmení *"
                         required
                     />
                 </div>
                 <div>
-                    <input className="email" type="text" placeholder="E-mail" />
+                    <input
+                        className="email"
+                        type="text"
+                        name="E-mail"
+                        placeholder="E-mail"
+                    />
                     <input
                         className="phone"
                         type="text"
+                        name="Phone number"
                         placeholder="Telefonní číslo *"
                         required
                     />
                 </div>
-                <select className="department" name="" id="">
-                    <option value="John Doe">Vybrat oddělení</option>
-                    <option value="John Doe">John Doe</option>
-                    <option value="John Doe">John Doe</option>
+                <select className="department" name="Department">
+                    <option className="default-option" value="Vybrat oddělení">
+                        Vybrat oddělení
+                    </option>
+                    <option value="Ordinace">Ordinace</option>
+                    <option value="Starvac">Starvac</option>
+                    <option value="Celulitida">Celulitida</option>
+                    <option value="Lymfodrenáž">Lymfodrenáž</option>
                 </select>
                 <div>
-                    <input
-                        className="date"
-                        defaultValue="mm/dd/yyyy"
-                        type="date"
-                        name=""
-                        id=""
-                    />
-                    <input
-                        className="time"
-                        defaultValue="--:--"
-                        type="time"
-                        name=""
-                        id=""
-                    />
+                    <div className="date-container">
+                        <label htmlFor="date">Vyberte datum návštěvy</label>
+                        <input
+                            id="date"
+                            className="date"
+                            defaultValue={formatedDate}
+                            type="date"
+                            name="Date"
+                        />
+                    </div>
+                    <div className="time-container">
+                        <label htmlFor="date">Zvolit čas návštěvy</label>
+                        <input
+                            className="time"
+                            defaultValue={`${hours}:${minutes}`}
+                            type="time"
+                            name="Time"
+                        />
+                    </div>
                 </div>
                 <button type="submit">Rezervovat termín</button>
             </form>

@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     padding: 0 20px;
+    margin-bottom: 40px;
 }
 
 .contact__title {
@@ -27,8 +28,11 @@
         vertical-align: middle;
         margin-right: 5px;
     }
-    a:hover {
-        color: var(--blue-clr);
+    a {
+        transition: color 200ms;
+        &:hover {
+            color: var(--blue-clr);
+        }
     }
 }
 
@@ -71,9 +75,30 @@
         background: var(--blue-clr-3);
         border-radius: 5px;
         padding: 10px;
+        cursor: pointer;
+
         &:focus {
             outline: none;
         }
+
+        background-image: url("./../../assets/icons/down-arrow.png");
+        background-size: 25px;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .date-container,
+    .time-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    label {
+        color: rgba(0, 0, 0, 0.5);
     }
 
     .date,
@@ -90,6 +115,7 @@
         border-radius: 10px;
         padding: 10px 10px;
         color: #fff;
+        font-weight: inherit;
         transition: background-color 200ms;
         &:hover {
             background: var(--blue-clr-8);

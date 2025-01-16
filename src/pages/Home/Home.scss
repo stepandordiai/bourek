@@ -1,5 +1,6 @@
 .home {
     padding: 0 20px;
+    margin-bottom: 40px;
 }
 
 .home__container {
@@ -97,7 +98,6 @@
         width: 100%;
         height: 200px;
         border-radius: 10px;
-        // background: linear-gradient(90deg, var(--blue-clr), rgb(74, 253, 227));
         background: var(--blue-clr);
         color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -128,6 +128,76 @@
     }
 }
 
+.home__testimonials-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    padding: 100px 0 40px;
+    background: linear-gradient(90deg, var(--blue-clr), rgb(74, 253, 227));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.swiper {
+    width: 500px;
+    height: 350px;
+}
+
+.swiper-slide {
+    border-radius: 10px;
+    color: #000;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    span {
+        font-size: 2rem;
+    }
+}
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+
+    img {
+        width: 75px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    P {
+        font-size: clamp(0.9rem, 1vw, 1rem);
+    }
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+
+    img {
+        width: 30px;
+    }
+
+    p {
+        text-align: center;
+        font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+}
+
 @media (max-width: 1250px) {
     .home__grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -151,5 +221,10 @@
 @media (max-width: 800px) {
     .home__grid-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .swiper {
+        width: 250px;
+        height: 350px;
     }
 }

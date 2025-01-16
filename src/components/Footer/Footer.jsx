@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
 import logoImg from "./../../assets/medical-symbol.png";
 import CustomLine from "../CustomLine/CustomLine";
+import locationIcon from "./../../assets/icons/location.png";
+import phoneIcon from "./../../assets/icons/telephone.png";
+import mailIcon from "./../../assets/icons/mail.png";
 import "./Footer.scss";
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <CustomLine />
             <div className="footer__header">
                 <NavLink className="footer__header-logo" to="/">
                     <img src={logoImg} alt="" />
@@ -89,6 +91,25 @@ const Footer = () => {
                         </li>
                         <li>
                             <NavLink to="/lymphatic">Lymfodrenáž</NavLink>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Kontakt</p>
+                    <ul className="footer__contact-list">
+                        <li>
+                            <img src={phoneIcon} width={20} alt="" />
+                            <a href="tel:+420321727404">+420 321 727 404</a>
+                        </li>
+                        <li>
+                            <img src={mailIcon} width={20} alt="" />
+                            <a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
+                        </li>
+                        <li>
+                            <img src={locationIcon} width={20} alt="" />
+                            <a href="https://maps.app.goo.gl/zyvc7wwr1atb3N3m8">
+                                Kolín 4 Pod Hroby 271
+                            </a>
                         </li>
                     </ul>
                 </div>

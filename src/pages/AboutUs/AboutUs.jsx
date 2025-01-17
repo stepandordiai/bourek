@@ -51,27 +51,27 @@ const AboutUs = () => {
             <CustomHr />
             <h3 className="about-us__gallery-title">Galerie</h3>
             <div className="about-us__gallery">
-                <img src={img1} loading="lazy" />
-                <img src={img2} loading="lazy" />
-                <img src={img3} loading="lazy" />
-                <img src={img4} loading="lazy" />
-                <img src={img5} loading="lazy" />
-                <img src={img6} loading="lazy" />
-                <img src={img7} loading="lazy" />
-                <img src={img8} loading="lazy" />
-                <img src={img9} loading="lazy" />
-                <img src={img10} loading="lazy" />
-                <img src={img11} loading="lazy" />
-                <img src={img12} loading="lazy" />
-                <img src={img13} loading="lazy" />
-                <img src={img14} loading="lazy" />
-                <img src={img15} loading="lazy" />
-                <img src={img16} loading="lazy" />
-                <img src={img18} loading="lazy" />
-                <img src={img19} loading="lazy" />
-                <img src={img20} loading="lazy" />
-                <img src={img21} loading="lazy" />
-                <img src={img22} loading="lazy" />
+                <img src={img1} loading="lazy" alt="Image" />
+                <img src={img2} loading="lazy" alt="Image" />
+                <img src={img3} loading="lazy" alt="Image" />
+                <img src={img4} loading="lazy" alt="Image" />
+                <img src={img5} loading="lazy" alt="Image" />
+                <img src={img6} loading="lazy" alt="Image" />
+                <img src={img7} loading="lazy" alt="Image" />
+                <img src={img8} loading="lazy" alt="Image" />
+                <img src={img9} loading="lazy" alt="Image" />
+                <img src={img10} loading="lazy" alt="Image" />
+                <img src={img11} loading="lazy" alt="Image" />
+                <img src={img12} loading="lazy" alt="Image" />
+                <img src={img13} loading="lazy" alt="Image" />
+                <img src={img14} loading="lazy" alt="Image" />
+                <img src={img15} loading="lazy" alt="Image" />
+                <img src={img16} loading="lazy" alt="Image" />
+                <img src={img18} loading="lazy" alt="Image" />
+                <img src={img19} loading="lazy" alt="Image" />
+                <img src={img20} loading="lazy" alt="Image" />
+                <img src={img21} loading="lazy" alt="Image" />
+                <img src={img22} loading="lazy" alt="Image" />
             </div>
         </section>
     );

@@ -43,12 +43,12 @@ const Home = () => {
                         <img
                             className="home__img"
                             src="https://ld-wp73.template-help.com/wordpress/prod_29195/v1/wp-content/uploads/2020/05/Rectangle-64.png"
-                            loading="lazy"
+                            alt="Home Image"
                         />
                     </div>
                 </div>
                 <a className="home__scroll-down-btn" href="#departments">
-                    <img src={scrollBarIcon} loading="lazy" />
+                    <img src={scrollBarIcon} alt="Scroll Bar" />
                     <span>Click to scroll down</span>
                 </a>
             </div>
@@ -60,28 +60,40 @@ const Home = () => {
                     <span>Ordinace</span>
                     <NavLink className="grid-container__link" to="/surgery">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} />
+                        <img
+                            src={arrowUpperRightIcon}
+                            alt="Arrow Upper Right"
+                        />
                     </NavLink>
                 </div>
                 <div>
                     <span>Starvac</span>
                     <NavLink className="grid-container__link" to="/starvac">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} />
+                        <img
+                            src={arrowUpperRightIcon}
+                            alt="Arrow Upper Right"
+                        />
                     </NavLink>
                 </div>
                 <div>
                     <span>Celulitida</span>
                     <NavLink className="grid-container__link" to="/cellulite">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} />
+                        <img
+                            src={arrowUpperRightIcon}
+                            alt="Arrow Upper Right"
+                        />
                     </NavLink>
                 </div>
                 <div>
                     <span>Lymfodrenáž</span>
                     <NavLink className="grid-container__link" to="/lymphatic">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} />
+                        <img
+                            src={arrowUpperRightIcon}
+                            alt="Arrow Upper Right"
+                        />
                     </NavLink>
                 </div>
             </div>
@@ -90,10 +102,9 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={peopleImg} />
+                            <img src={peopleImg} alt="People" />
                             <p>Petr Klimša</p>
                         </div>
-
                         <div className="card__body">
                             <img src={quoteIcon} alt="Quote" />
                             <p>
@@ -107,7 +118,7 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={people1Img} />
+                            <img src={people1Img} alt="People" />
                             <p>Tereza Belingerová</p>
                         </div>
                         <div className="card__body">
@@ -123,7 +134,7 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={people2Img} />
+                            <img src={people2Img} alt="People" />
                             <p>Jan Ursíny</p>
                         </div>
                         <div className="card__body">

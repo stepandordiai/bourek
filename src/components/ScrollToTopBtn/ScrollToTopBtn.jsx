@@ -43,7 +43,7 @@ const ScrollToTopBtn = () => {
             onClick={scrollOnClick}
             title="Scroll to top button"
         >
-            <img src={upArrowIcon} />
+            <img src={upArrowIcon} alt="Up Arrow" />
         </button>
     );
 };

@@ -44,7 +44,7 @@ const Header = () => {
     return (
         <header className="header">
             <NavLink className="header__logo" to="/">
-                <img src={logoImg} />
+                <img src={logoImg} alt="Logo" />
                 <span>Bourek</span>
             </NavLink>
             <ul className="header__list js-header__list">
@@ -74,6 +74,7 @@ const Header = () => {
                         <img
                             src={downArrowImg}
                             className="custom-select__down-arrow"
+                            alt="Down Arrow"
                         />
                     </div>
                     <div className="nav__custom-options">

@@ -25,7 +25,7 @@ const Lymphatic = () => {
                     naplňujících se vzduchem.
                 </p>
                 <p className="lymphatic__img-info">
-                    <img src={img1} loading="lazy" />
+                    <img src={img1} loading="lazy" alt="Image" />
                     Lymfodrenáž ovlivňuje lymfatický systém, což je soustava
                     uzlin spojených mízními cévami, v nichž koluje
                     míza/lymfa/.Transport mízy je zajištěn pasivně pomocí
@@ -37,7 +37,7 @@ const Lymphatic = () => {
                     zlepšení průtoku mízy v cévách, zlepšení prokrvení.
                 </p>
                 <p className="lymphatic__img-info">
-                    <img src={img2} loading="lazy" />
+                    <img src={img2} loading="lazy" alt="Image" />
                     Lymfodrenáž je vhodná při detoxikaci organismu, při potížích
                     s křečovými žílami a při žilních nedostatcích, při prevenci
                     a odstraňování celulitidy, při otocích končetin,při

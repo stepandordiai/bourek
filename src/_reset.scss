@@ -126,3 +126,8 @@ select {
     -moz-appearance: none;
     appearance: none;
 }
+
+ol li,
+ul li {
+    list-style-position: inside !important;
+}

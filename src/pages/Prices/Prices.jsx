@@ -9,7 +9,7 @@ const Prices = () => {
     return (
         <section className="prices">
             <h3 className="prices__title">Ceny</h3>
-            <h4 className="contact__form-title">Lymfodrenáž</h4>
+            <h4 className="prices__table-title">Lymfodrenáž</h4>
             <table className="prices__table">
                 <tbody>
                     <tr>

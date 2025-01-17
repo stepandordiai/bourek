@@ -1,11 +1,12 @@
+@use "./../../mixins" as *;
+
 .about-us {
     padding: 0 40px;
     margin-bottom: 40px;
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
+
 .about-us__offer-title,
 .about-us__gallery-title {
     text-align: center;
@@ -18,10 +19,12 @@
         list-style: disc;
         list-style-position: inside;
         font-size: clamp(14px, 4vw, 16px);
+
         ul {
             padding-left: 20px;
         }
     }
+
     ::marker {
         color: var(--blue-clr);
     }
@@ -30,6 +33,7 @@
 .about-us__gallery {
     columns: 3;
     gap: 40px;
+
     img {
         margin-bottom: 40px;
         width: 100%;
@@ -43,8 +47,8 @@
 
     .about-us__gallery {
         columns: 2;
-
         gap: 20px;
+
         img {
             margin-bottom: 20px;
         }
@@ -53,9 +57,8 @@
 
 @media (max-width: 600px) {
     .about-us__gallery {
-        columns: 2;
-
         gap: 10px;
+
         img {
             margin-bottom: 10px;
         }

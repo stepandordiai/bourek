@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
-import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +11,8 @@ import "swiper/css/effect-cards";
 // import required modules
 import { EffectCards } from "swiper/modules";
 
+import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
+import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
 import peopleImg from "./../../assets/people.jpg";
 import people1Img from "./../../assets/people1.jpg";
 import people2Img from "./../../assets/people2.jpg";
@@ -60,28 +60,28 @@ const Home = () => {
                     <span>Ordinace</span>
                     <NavLink className="grid-container__link" to="/surgery">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} alt="" />
+                        <img src={arrowUpperRightIcon} />
                     </NavLink>
                 </div>
                 <div>
                     <span>Starvac</span>
                     <NavLink className="grid-container__link" to="/starvac">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} alt="" />
+                        <img src={arrowUpperRightIcon} />
                     </NavLink>
                 </div>
                 <div>
                     <span>Celulitida</span>
                     <NavLink className="grid-container__link" to="/cellulite">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} alt="" />
+                        <img src={arrowUpperRightIcon} />
                     </NavLink>
                 </div>
                 <div>
                     <span>Lymfodrenáž</span>
                     <NavLink className="grid-container__link" to="/lymphatic">
                         Zjistit víc
-                        <img src={arrowUpperRightIcon} alt="" />
+                        <img src={arrowUpperRightIcon} />
                     </NavLink>
                 </div>
             </div>
@@ -90,12 +90,12 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={peopleImg} alt="" />
+                            <img src={peopleImg} />
                             <p>Petr Klimša</p>
                         </div>
 
                         <div className="card__body">
-                            <img src={quoteIcon} alt="" />
+                            <img src={quoteIcon} alt="Quote" />
                             <p>
                                 Než jsem začal navštěvovat tyto fyzikální
                                 terapie a léčebná sezení, moje migrény mě každý
@@ -107,11 +107,11 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={people1Img} alt="" />
+                            <img src={people1Img} />
                             <p>Tereza Belingerová</p>
                         </div>
                         <div className="card__body">
-                            <img src={quoteIcon} alt="" />
+                            <img src={quoteIcon} alt="Quote" />
                             <p>
                                 Celý svůj dospělý život jsem se potýkal s
                                 různými typy a intenzitou bolestí zad. Díky bohu
@@ -123,11 +123,11 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={people2Img} alt="" />
+                            <img src={people2Img} />
                             <p>Jan Ursíny</p>
                         </div>
                         <div className="card__body">
-                            <img src={quoteIcon} alt="" />
+                            <img src={quoteIcon} alt="Quote" />
                             <p>
                                 prostě si nemůžete užívat život naplno, když
                                 neustále bojujete s bolestí svalů. To byl důvod,

@@ -1,3 +1,5 @@
+@use "./../../mixins" as *;
+
 .header {
     position: fixed;
     top: 0;
@@ -14,9 +16,7 @@
 }
 
 .header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     img {
         width: 40px;
     }
@@ -36,7 +36,6 @@
 .nav__link {
     position: relative;
     color: #000;
-    transition: all 0.3s ease-out;
 }
 
 .nav__link::before {
@@ -47,7 +46,7 @@
     width: 100%;
     transform: scaleX(0);
     background: var(--blue-clr);
-    transition: all 0.3s ease-out;
+    transition: transform 300ms ease-out;
 }
 
 .nav__link:hover:before {
@@ -61,11 +60,6 @@
 .nav__custom-select {
     position: relative;
     cursor: pointer;
-}
-
-.nav__custom-select:hover .nav__custom-options {
-    pointer-events: all;
-    opacity: 1;
 }
 
 .nav__custom-select-item {
@@ -94,6 +88,11 @@
     transition: opacity 300ms;
 }
 
+.nav__custom-select:hover .nav__custom-options {
+    pointer-events: all;
+    opacity: 1;
+}
+
 .nav__link-option {
     background: transparent;
     color: #000;
@@ -118,6 +117,7 @@
     border-radius: 10px;
     padding: 10px 10px;
     transition: background-color 200ms;
+
     &:hover {
         background: var(--blue-clr-8);
     }
@@ -158,12 +158,23 @@
         position: fixed;
         top: 70px;
         left: 0;
-        z-index: 5 !important;
+        z-index: 5;
         font-size: 2.5rem;
         flex-direction: column;
         width: 100%;
         height: calc(100% - 70px);
         background: #fff;
         padding: 20px;
+    }
+
+    .nav__btn {
+        display: initial;
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+
+    .nav__btn-link {
+        font-size: 1.5rem;
     }
 }

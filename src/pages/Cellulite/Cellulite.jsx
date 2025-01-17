@@ -10,7 +10,7 @@ const Cellulite = () => {
         <section className="cellulite">
             <h3 className="cellulite__title">Celulitida</h3>
             <div className="cellulite__info">
-                <h4 style={{ fontWeight: 600 }}>Kapitoly:</h4>
+                <strong>Kapitoly:</strong>
                 <ul className="cellulite__chapters-list">
                     <li>
                         <a href="#chapter1">Celulitida – jak na ni?</a>

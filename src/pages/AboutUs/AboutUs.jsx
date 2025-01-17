@@ -1,5 +1,5 @@
+import CustomHr from "../../components/CustomHr/CustomHr";
 import { useEffect } from "react";
-import CustomLine from "../../components/CustomLine/CustomLine";
 import img1 from "./img/1.jpg";
 import img2 from "./img/2.jpg";
 import img3 from "./img/3.jpg";
@@ -48,7 +48,7 @@ const AboutUs = () => {
                 </li>
                 <li>speciální zdravotnický maloobchod</li>
             </ul>
-            <CustomLine />
+            <CustomHr />
             <h3 className="about-us__gallery-title">Galerie</h3>
             <div className="about-us__gallery">
                 <img src={img1} loading="lazy" />

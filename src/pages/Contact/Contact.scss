@@ -1,3 +1,5 @@
+@use "./../../mixins" as *;
+
 .contact {
     display: flex;
     align-items: center;
@@ -16,20 +18,22 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    //
     column-gap: 5px;
     row-gap: 20px;
-    //
     width: 100%;
+
     li {
         justify-self: center;
     }
+
     img {
         vertical-align: middle;
         margin-right: 5px;
     }
+
     a {
         transition: color 200ms;
+
         &:hover {
             color: var(--blue-clr);
         }
@@ -49,9 +53,7 @@
     width: 50%;
 
     div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         column-gap: 10px;
     }
 
@@ -91,9 +93,9 @@
     .time-container {
         width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        flex-direction: column;
         gap: 0;
     }
 

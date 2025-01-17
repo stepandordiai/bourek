@@ -5,6 +5,7 @@ const Surgery = () => {
     useEffect(() => {
         document.title = "Bourek | Ordinace";
     }, []);
+
     return (
         <section className="surgery">
             <h3 className="surgery__title">Ordinace</h3>

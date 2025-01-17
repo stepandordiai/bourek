@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "./Starvac.scss";
 import img1 from "./img/starvac.jpg";
+import "./Starvac.scss";
 
 const Starvac = () => {
     useEffect(() => {

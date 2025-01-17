@@ -12,6 +12,7 @@ const BurgerBtn = () => {
             .querySelector(".header__list")
             .classList.toggle("header__list--mobile");
     }
+
     return (
         <div onClick={toggleBurger13} className="burger__container">
             <p>menu</p>

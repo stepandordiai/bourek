@@ -1,7 +1,7 @@
-import "./Lymphatic.scss";
+import { useEffect } from "react";
 import img1 from "./img/BTL-6000.jpg";
 import img2 from "./img/BTL-6000-1.jpg";
-import { useEffect } from "react";
+import "./Lymphatic.scss";
 
 const Lymphatic = () => {
     useEffect(() => {

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
+import CustomHr from "../CustomHr/CustomHr";
 import logoImg from "./../../assets/medical-symbol.png";
-import CustomLine from "../CustomLine/CustomLine";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
 import mailIcon from "./../../assets/icons/mail.png";
@@ -23,7 +23,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <CustomLine />
+            <CustomHr />
             <div className="footer__nav">
                 <div>
                     <p>Pracovní doba</p>
@@ -120,7 +120,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <CustomLine />
+            <CustomHr />
             <div className="footer__footer">
                 <div>
                     <p className="copyright">

@@ -1,11 +1,11 @@
+@import "./../../mixins";
+
 .footer {
     display: flex;
     flex-direction: column;
     padding: 40px;
     background: #fff;
-    //
     min-height: 100px;
-    //
     margin-top: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -18,9 +18,7 @@
 }
 
 .footer__header-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     img {
         width: 40px;
     }
@@ -31,9 +29,7 @@
 }
 
 .footer__header-socials-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     column-gap: 10px;
     a {
         transition: color 200ms;
@@ -47,9 +43,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    // div:not(:nth-of-type(1)) {
-    //     text-align: center;
-    // }
+
     p {
         font-size: 1.2rem;
         font-weight: 600;
@@ -64,6 +58,7 @@
 
     a {
         transition: color 200ms;
+
         &:hover {
             color: var(--blue-clr);
         }
@@ -93,6 +88,7 @@
 
     a {
         transition: color 200ms;
+
         &:hover {
             color: var(--blue-clr);
         }
@@ -100,10 +96,8 @@
 }
 
 .footer__footer {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .creator {

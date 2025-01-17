@@ -1,10 +1,9 @@
+import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 import logoImg from "./../../assets/medical-symbol.png";
 import downArrowImg from "./../../assets/icons/down-arrow.png";
 import "./Header.scss";
-import BurgerBtn from "../BurgerBtn/BurgerBtn";
-import "./../BurgerBtn/BurgerBtn.scss";
-import { useEffect } from "react";
 
 const Header = () => {
     const inactiveLink = "nav__link js-nav__link";
@@ -43,114 +42,106 @@ const Header = () => {
     });
 
     return (
-        <>
-            <header className="header">
-                <NavLink className="header__logo" to="/">
-                    <img src={logoImg} />
-                    <span>Bourek</span>
-                </NavLink>
-                <ul className="header__list js-header__list">
-                    <li>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive ? activeLink : inactiveLink;
-                            }}
-                            to="/"
-                        >
-                            Dům
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive ? activeLink : inactiveLink;
-                            }}
-                            to="/about-us"
-                        >
-                            O nás
-                        </NavLink>
-                    </li>
-                    <li className="nav__custom-select">
-                        <div className="nav__custom-select-item">
-                            <span>Oddělení</span>
-                            <img
-                                src={downArrowImg}
-                                className="custom-select__down-arrow"
-                                alt=""
-                            />
-                        </div>
-                        <div className="nav__custom-options">
-                            <NavLink
-                                className={({ isActive }) => {
-                                    return isActive
-                                        ? activeLinkOption
-                                        : inactiveLinkOption;
-                                }}
-                                to="/surgery"
-                            >
-                                Ordinace
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeLinkOption
-                                        : inactiveLinkOption
-                                }
-                                to="/starvac"
-                            >
-                                Starvac
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeLinkOption
-                                        : inactiveLinkOption
-                                }
-                                to="/cellulite"
-                            >
-                                Celulitida
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeLinkOption
-                                        : inactiveLinkOption
-                                }
-                                to="/lymphatic"
-                            >
-                                Lymfodrenáž
-                            </NavLink>
-                        </div>
-                    </li>
-                    <li>
+        <header className="header">
+            <NavLink className="header__logo" to="/">
+                <img src={logoImg} />
+                <span>Bourek</span>
+            </NavLink>
+            <ul className="header__list js-header__list">
+                <li>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/"
+                    >
+                        Dům
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/about-us"
+                    >
+                        O nás
+                    </NavLink>
+                </li>
+                <li className="nav__custom-select">
+                    <div className="nav__custom-select-item">
+                        <span>Oddělení</span>
+                        <img
+                            src={downArrowImg}
+                            className="custom-select__down-arrow"
+                        />
+                    </div>
+                    <div className="nav__custom-options">
                         <NavLink
                             className={({ isActive }) =>
-                                isActive ? activeLink : inactiveLink
+                                isActive ? activeLinkOption : inactiveLinkOption
                             }
-                            to="/prices"
+                            to="/surgery"
                         >
-                            Ceny
+                            Ordinace
                         </NavLink>
-                    </li>
-                    <li>
                         <NavLink
                             className={({ isActive }) =>
-                                isActive ? activeLink : inactiveLink
+                                isActive ? activeLinkOption : inactiveLinkOption
                             }
-                            to="/contact"
+                            to="/starvac"
                         >
-                            Kontakt
+                            Starvac
                         </NavLink>
-                    </li>
-                    <li className="nav__btn">
-                        <NavLink className="nav__btn-link" to="/contact">
-                            Domluvit si schůzku
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/cellulite"
+                        >
+                            Celulitida
                         </NavLink>
-                    </li>
-                </ul>
-                <BurgerBtn />
-            </header>
-        </>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/lymphatic"
+                        >
+                            Lymfodrenáž
+                        </NavLink>
+                    </div>
+                </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/prices"
+                    >
+                        Ceny
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/contact"
+                    >
+                        Kontakt
+                    </NavLink>
+                </li>
+                <li className="nav__btn">
+                    <NavLink
+                        className="nav__btn-link js-nav__link"
+                        to="/contact"
+                    >
+                        Domluvit si schůzku
+                    </NavLink>
+                </li>
+            </ul>
+            <BurgerBtn />
+        </header>
     );
 };
 

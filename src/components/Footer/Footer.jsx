@@ -128,9 +128,12 @@ const Footer = () => {
                     </p>
                 </div>
                 <p className="creator">
-                    made with ❤ by{" "}
-                    <a href="https://stepandordiai.netlify.app/">
-                        heeeyooo.studio
+                    Made with 💙 by{" "}
+                    <a
+                        href="https://stepandordiai.netlify.app/"
+                        target="_blank"
+                    >
+                        heeeyooo
                     </a>
                 </p>
             </div>

@@ -1,14 +1,14 @@
-.surgery {
+.ltv {
     padding: 0 20px 40px;
 }
 
-.surgery__title {
+.ltv__title {
     text-align: center;
     font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 100px 0;
 }
 
-.surgery__info {
+.ltv__info {
     width: 75%;
     margin: 0 auto;
     display: flex;
@@ -19,23 +19,14 @@
     text-align: justify;
 }
 
-.surgery__ul-list {
-    li {
-        list-style: disc;
-    }
-    ::marker {
-        color: var(--blue-clr);
-    }
-}
-
 @media (max-width: 1000px) {
-    .surgery__info {
+    .ltv__info {
         width: 90%;
     }
 }
 
 @media (max-width: 600px) {
-    .surgery__info {
+    .ltv__info {
         width: 100%;
     }
 }

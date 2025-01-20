@@ -1,8 +1,7 @@
 @use "./../../mixins" as *;
 
 .about-us {
-    padding: 0 40px;
-    margin-bottom: 40px;
+    padding: 0 40px 40px;
     @include flex-center;
     flex-direction: column;
 }
@@ -42,7 +41,7 @@
 
 @media (max-width: 1000px) {
     .about-us {
-        padding: 0 20px;
+        padding: 0 20px 40px;
     }
 
     .about-us__gallery {

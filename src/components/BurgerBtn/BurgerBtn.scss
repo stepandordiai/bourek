@@ -10,9 +10,6 @@
     position: relative;
     width: 40px;
     padding: 20px 0;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 }
 
 .burger-13::before {
@@ -57,7 +54,7 @@
     rotate: 45deg;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .burger__container {
         display: flex;
     }

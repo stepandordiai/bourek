@@ -1,4 +1,4 @@
-@import "./../../mixins";
+@use "./../../mixins" as *;
 
 .footer {
     display: flex;
@@ -100,6 +100,13 @@
     flex-direction: column;
 }
 
+.copyright {
+    text-align: center;
+    br {
+        display: none;
+    }
+}
+
 .creator {
     font-size: 0.9rem;
     a {
@@ -129,5 +136,16 @@
 @media (max-width: 600px) {
     .footer {
         padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .copyright {
+        span {
+            display: none;
+        }
+        br {
+            display: initial;
+        }
     }
 }

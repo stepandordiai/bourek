@@ -1,7 +1,7 @@
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
-import logoImg from "./../../assets/medical-symbol.png";
+import logoImg from "./../../assets/logo/medical-symbol.png";
 import downArrowImg from "./../../assets/icons/down-arrow.png";
 import "./Header.scss";
 
@@ -45,7 +45,7 @@ const Header = () => {
         <header className="header">
             <NavLink className="header__logo" to="/">
                 <img src={logoImg} alt="Logo" />
-                <span>Bourek</span>
+                <span>Pepa Bourek</span>
             </NavLink>
             <ul className="header__list js-header__list">
                 <li>
@@ -70,7 +70,7 @@ const Header = () => {
                 </li>
                 <li className="nav__custom-select">
                     <div className="nav__custom-select-item">
-                        <span>Oddělení</span>
+                        <span>Služby</span>
                         <img
                             src={downArrowImg}
                             className="custom-select__down-arrow"
@@ -110,6 +110,30 @@ const Header = () => {
                         >
                             Lymfodrenáž
                         </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/laser"
+                        >
+                            Laser
+                        </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/electrotherapy"
+                        >
+                            Elektroléčba
+                        </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/ltv"
+                        >
+                            Léčebná tělesná výchova
+                        </NavLink>
                     </div>
                 </li>
                 <li>
@@ -119,7 +143,7 @@ const Header = () => {
                         }
                         to="/prices"
                     >
-                        Ceny
+                        Ceník
                     </NavLink>
                 </li>
                 <li>
@@ -129,13 +153,13 @@ const Header = () => {
                         }
                         to="/contact"
                     >
-                        Kontakt
+                        Kontakty
                     </NavLink>
                 </li>
                 <li className="nav__btn">
                     <NavLink
                         className="nav__btn-link js-nav__link"
-                        to="/contact"
+                        to="/appointment"
                     >
                         Domluvit si schůzku
                     </NavLink>

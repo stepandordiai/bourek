@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import "./PersonalData.scss";
 
 const PersonalData = () => {
+    useEffect(() => {
+        document.title = "Pepa Bourek | Personal data";
+    });
     return (
         <section className="personal-data">
             <h3 className="personal-data__title">Osobní údaje</h3>

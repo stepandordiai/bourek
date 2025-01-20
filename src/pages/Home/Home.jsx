@@ -21,7 +21,7 @@ import "./Home.scss";
 
 const Home = () => {
     useEffect(() => {
-        document.title = "Bourek | Dům";
+        document.title = "Pepa Bourek | Dům";
     }, []);
 
     return (
@@ -35,7 +35,7 @@ const Home = () => {
                         </p>
                         <p>Ordinace rehabilitačního lékaře</p>
                         <p>MUDr. Josef Bourek</p>
-                        <NavLink className="home__btn-link" to="/contact">
+                        <NavLink className="home__btn-link" to="/appointment">
                             Domluvit si schůzku
                         </NavLink>
                     </div>
@@ -53,7 +53,7 @@ const Home = () => {
                 </a>
             </div>
             <h3 id="departments" className="home__grid-container-title">
-                Oddělení
+                Služby
             </h3>
             <div className="home__grid-container">
                 <div>
@@ -89,6 +89,39 @@ const Home = () => {
                 <div>
                     <span>Lymfodrenáž</span>
                     <NavLink className="grid-container__link" to="/lymphatic">
+                        Zjistit víc
+                        <img
+                            src={arrowUpperRightIcon}
+                            alt="Arrow Upper Right"
+                        />
+                    </NavLink>
+                </div>
+                <div>
+                    <span>Laser</span>
+                    <NavLink className="grid-container__link" to="/laser">
+                        Zjistit víc
+                        <img
+                            src={arrowUpperRightIcon}
+                            alt="Arrow Upper Right"
+                        />
+                    </NavLink>
+                </div>
+                <div>
+                    <span>Elektroléčba</span>
+                    <NavLink
+                        className="grid-container__link"
+                        to="/electrotherapy"
+                    >
+                        Zjistit víc
+                        <img
+                            src={arrowUpperRightIcon}
+                            alt="Arrow Upper Right"
+                        />
+                    </NavLink>
+                </div>
+                <div>
+                    <span>Léčebná tělesná výchova</span>
+                    <NavLink className="grid-container__link" to="/ltv">
                         Zjistit víc
                         <img
                             src={arrowUpperRightIcon}

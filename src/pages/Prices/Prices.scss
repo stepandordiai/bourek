@@ -11,27 +11,38 @@
     padding: 100px 0;
 }
 
-.prices__table-title {
-    font-size: 24px;
-    color: var(--blue-clr);
-    padding-bottom: 10px;
-}
-
 .prices__table {
-    width: 75%;
+    min-width: 700px;
     margin: 0 auto;
     border-collapse: collapse;
+    font-size: clamp(14px, 3vw, 16px);
+
+    tr:nth-child(odd) {
+        background: var(--blue-clr-2);
+    }
 
     td {
-        border-top: 1px solid rgba(0, 0, 0, 0.5);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-        padding: 10px 0;
+        // border-top: 1px solid rgba(0, 0, 0, 0.5);
+        // border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        &:nth-of-type(1) {
+            word-break: break-all;
+        }
+        &:nth-of-type(2) {
+            white-space: nowrap;
+        }
+
+        padding: 10px;
+        &:nth-last-of-type(1) {
+            text-align: end;
+            white-space: nowrap;
+        }
     }
 }
 
 @media (max-width: 1000px) {
     .prices__table {
-        width: 90%;
+        width: 80%;
+        min-width: auto;
     }
 }
 

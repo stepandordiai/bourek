@@ -18,3 +18,35 @@ html {
     padding-top: 70px;
     overflow-x: hidden;
 }
+
+.none {
+    display: none;
+}
+
+.wrapper {
+    opacity: 0;
+    pointer-events: none;
+    animation: reveal 500ms forwards;
+}
+
+.phone-call__btn-link {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    background: var(--blue-clr-8);
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    animation: reveal 300ms 1s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        pointer-events: all;
+    }
+}

@@ -25,7 +25,7 @@ import "./AboutUs.scss";
 
 const AboutUs = () => {
     useEffect(() => {
-        document.title = "Bourek | O nás";
+        document.title = "Pepa Bourek | O nás";
     }, []);
 
     return (

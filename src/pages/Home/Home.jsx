@@ -1,15 +1,15 @@
-import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
 // import required modules
 import { EffectCards } from "swiper/modules";
+
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
 import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
@@ -18,15 +18,33 @@ import people1Img from "./../../assets/people1.jpg";
 import people2Img from "./../../assets/people2.jpg";
 import quoteIcon from "./../../assets/icons/quote.png";
 import "./Home.scss";
+import "./../../components/Loading/Loading.scss";
 
 const Home = () => {
     useEffect(() => {
         document.title = "Pepa Bourek | Dům";
     }, []);
 
+    useEffect(() => {
+        //     document
+        //         .querySelector(".loading")
+        //         .addEventListener("animationend", () => {
+        if (document.querySelector(".loading").style.display === "flex") {
+            setTimeout(() => {
+                document.querySelector(".home__container").style.display =
+                    "initial";
+            }, 2200);
+        } else {
+            document.querySelector(".home__container").style.display =
+                "initial";
+        }
+
+        //         });
+    }, []);
+
     return (
         <section className="home">
-            <div className="home__container">
+            <div className="home__container" style={{ display: "none" }}>
                 <div className="home__wrapper">
                     <div>
                         <p className="home__title">
@@ -131,7 +149,12 @@ const Home = () => {
                 </div>
             </div>
             <h3 className="home__testimonials-title">Co říkají klienti</h3>
-            <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]}>
+            <Swiper
+                className="testimonials-swiper"
+                effect={"cards"}
+                grabCursor={true}
+                modules={[EffectCards]}
+            >
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">

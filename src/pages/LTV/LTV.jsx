@@ -3,14 +3,12 @@ import "./LTV.scss";
 const LTV = () => {
     return (
         <section className="ltv">
-            <h3 className="ltv__title">Léčebná tělesná výchova</h3>
+            <h3 className="ltv__title">Individuální fyzioterapie</h3>
             <div className="ltv__info">
                 <p>
-                    Léčebná tělesná výchova tvoří podstatnou část náplně práce
-                    fyzioterapeuta. Na základě vyšetření a zhodnocení stavu
-                    pacienta stanoví fyzioterapeut rehabilitační plán. Ten pak
-                    realizuje s využitím prostředků pohybové, manuální a
-                    fyzikální terapie.
+                    Individuální cvičení je vedené zkušeným fyzioterapeutem,
+                    jenž má bohaté zkušenosti v oblasti rehabilitace a péče o
+                    tělo.
                 </p>
             </div>
         </section>

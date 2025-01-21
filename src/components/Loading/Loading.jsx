@@ -5,12 +5,15 @@ import "./Loading.scss";
 const Loading = () => {
     useEffect(() => {
         setTimeout(() => {
-            document.querySelector(".wrapper").classList.remove("none");
-        }, 2700);
+            // document
+            // .querySelector(".loading")
+            // .addEventListener("animationend", () => {
+            document.querySelector(".loading").style.display = "none";
+            // });
+        }, 2200);
     }, []);
-
     return (
-        <div className="loading">
+        <div className="loading" style={{ display: "flex" }}>
             <img src={logoIcon} alt="Logo icon" />
             <div>
                 <p>Pepa Bourek</p>

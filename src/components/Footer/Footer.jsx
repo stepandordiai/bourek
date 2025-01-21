@@ -100,7 +100,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <NavLink to="/lymphatic">
-                                Léčebná tělesná výchova
+                                Individuální fyzioterapie
                             </NavLink>
                         </li>
                     </ul>
@@ -110,7 +110,7 @@ const Footer = () => {
                     <ul className="footer__contact-list">
                         <li>
                             <img src={phoneIcon} width={20} alt="Phone" />
-                            <a href="tel:+420321727404">+420 321 727 404</a>
+                            <a href="tel:+420602273579">+420 602 273 579</a>
                         </li>
                         <li>
                             <img src={mailIcon} width={20} alt="E-mail" />
@@ -139,7 +139,7 @@ const Footer = () => {
                     <p className="copyright">
                         &copy; 2025 Pepa Bourek<span> | </span>
                         <br />
-                        Všechna práva vyhrazena.
+                        Všechna práva vyhrazena
                     </p>
                 </div>
                 <p className="creator">

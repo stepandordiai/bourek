@@ -6,11 +6,16 @@
     flex-direction: column;
 }
 
-.about-us__offer-title,
-.about-us__gallery-title {
+.about-us__title {
     text-align: center;
     font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 100px 0;
+}
+
+.about-us__mini-title {
+    font-size: 24px;
+    color: var(--blue-clr);
+    padding-bottom: 40px;
 }
 
 .about-us__offer-list {
@@ -29,6 +34,34 @@
     }
 }
 
+.about-us__grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 40px;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 250px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        p:not(:nth-of-type(2)) {
+            opacity: 0.5;
+        }
+        a {
+            opacity: 0.5;
+            transition: color 200ms;
+            &:hover {
+                color: var(--blue-clr);
+            }
+        }
+    }
+}
+
 .about-us__gallery {
     columns: 3;
     gap: 40px;
@@ -39,9 +72,20 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .about-us__grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
 @media (max-width: 1000px) {
     .about-us {
         padding: 0 20px 40px;
+    }
+
+    .about-us__grid-container {
+        gap: 20px;
     }
 
     .about-us__gallery {
@@ -55,6 +99,10 @@
 }
 
 @media (max-width: 600px) {
+    .about-us__grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .about-us__gallery {
         gap: 10px;
 

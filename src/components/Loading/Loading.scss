@@ -4,12 +4,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
     pointer-events: all;
-    animation: hideLoading 500ms 2.2s forwards;
+    animation: hideLoading 2.2s forwards;
+
     img {
         width: clamp(60px, 12vw, 100px);
     }
@@ -17,7 +17,7 @@
         display: grid;
         grid-template-columns: 0fr;
         overflow: hidden;
-        animation: revealLoadingText 700ms 1s forwards ease;
+        animation: revealLoadingText 700ms 800ms forwards ease;
         p {
             font-size: clamp(1.5rem, 5vw, 2.5rem);
             overflow: hidden;
@@ -33,7 +33,11 @@
 }
 
 @keyframes hideLoading {
-    to {
+    75% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
         opacity: 0;
         pointer-events: none;
     }

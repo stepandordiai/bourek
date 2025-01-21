@@ -29,17 +29,34 @@ const Header = () => {
         });
     }, []);
 
-    addEventListener("resize", () => {
+    // addEventListener("resize", () => {
+    //     document
+    //         .querySelector(".burger-13")
+    //         .classList.remove("burger-13--active");
+    //     document
+    //         .querySelector(".burger-13__center-line")
+    //         .classList.remove("burger-13__center-line--active");
+    //     document
+    //         .querySelector(".header__list")
+    //         .classList.remove("header__list--mobile");
+    // });
+    useEffect(() => {
         document
-            .querySelector(".burger-13")
-            .classList.remove("burger-13--active");
-        document
-            .querySelector(".burger-13__center-line")
-            .classList.remove("burger-13__center-line--active");
-        document
-            .querySelector(".header__list")
-            .classList.remove("header__list--mobile");
-    });
+            .querySelector(".nav__custom-options")
+            .addEventListener("scroll", () => {
+                if (
+                    document.querySelector(".nav__custom-options").scrollTop > 0
+                ) {
+                    document
+                        .querySelector(".custom-options__down-arrow")
+                        .classList.add("custom-options__down-arrow--active");
+                } else {
+                    document
+                        .querySelector(".custom-options__down-arrow")
+                        .classList.remove("custom-options__down-arrow--active");
+                }
+            });
+    }, []);
 
     return (
         <header className="header">
@@ -132,8 +149,13 @@ const Header = () => {
                             }
                             to="/ltv"
                         >
-                            Léčebná tělesná výchova
+                            Individuální fyzioterapie
                         </NavLink>
+                        <img
+                            className="custom-options__down-arrow"
+                            src={downArrowImg}
+                            alt=""
+                        />
                     </div>
                 </li>
                 <li>

@@ -30,7 +30,8 @@ const AboutUs = () => {
 
     return (
         <section className="about-us">
-            <h3 className="about-us__offer-title">Co nabízíme</h3>
+            <h3 className="about-us__title">O nás</h3>
+            <h4 className="about-us__mini-title">Co nabízíme</h4>
             <ul className="about-us__offer-list">
                 <li>služby odborného rehabilitačního lékaře</li>
                 <li>služby odborného neurologického lékaře</li>
@@ -49,7 +50,45 @@ const AboutUs = () => {
                 <li>speciální zdravotnický maloobchod</li>
             </ul>
             <CustomHr />
-            <h3 className="about-us__gallery-title">Galerie</h3>
+            {/* <h3 className="about-us__gallery-title">Náš tým</h3> */}
+            <h4 className="about-us__mini-title">Náš tým</h4>
+            <div className="about-us__grid-container">
+                <div>
+                    <p>Rehabilitačního lékaře</p>
+                    <p>MUDr. Josef Bourek</p>
+                    <a href="tel:+420602273579">+420 602 273 579</a>
+                    <a href="mailto:pepabourek@gmail.com">
+                        pepabourek@gmail.com
+                    </a>
+                </div>
+                <div>
+                    <p>Rehabilitačního lékaře</p>
+                    <p>Dr. Sarah Johnson</p>
+                    <a href="tel:+420602273579">+420 602 273 579</a>
+                    <a href="mailto:pepabourek@gmail.com">
+                        pepabourek@gmail.com
+                    </a>
+                </div>
+                <div>
+                    <p>Rehabilitačního lékaře</p>
+                    <p>Dr. Sarah Johnson</p>
+                    <a href="tel:+420602273579">+420 602 273 579</a>
+                    <a href="mailto:pepabourek@gmail.com">
+                        pepabourek@gmail.com
+                    </a>
+                </div>
+                <div>
+                    <p>Rehabilitačního lékaře</p>
+                    <p>Dr. Sarah Johnson</p>
+                    <a href="tel:+420602273579">+420 602 273 579</a>
+                    <a href="mailto:pepabourek@gmail.com">
+                        pepabourek@gmail.com
+                    </a>
+                </div>
+            </div>
+            <CustomHr />
+            {/* <h3 className="about-us__gallery-title">Galerie</h3> */}
+            <h4 className="about-us__mini-title">Galerie</h4>
             <div className="about-us__gallery">
                 <img src={img1} loading="lazy" alt="Image" />
                 <img src={img2} loading="lazy" alt="Image" />

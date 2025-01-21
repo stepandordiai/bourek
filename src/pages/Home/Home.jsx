@@ -18,7 +18,6 @@ import people1Img from "./../../assets/people1.jpg";
 import people2Img from "./../../assets/people2.jpg";
 import quoteIcon from "./../../assets/icons/quote.png";
 import "./Home.scss";
-import "./../../components/Loading/Loading.scss";
 
 const Home = () => {
     useEffect(() => {
@@ -26,20 +25,16 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        //     document
-        //         .querySelector(".loading")
-        //         .addEventListener("animationend", () => {
         if (document.querySelector(".loading").style.display === "flex") {
             setTimeout(() => {
                 document.querySelector(".home__container").style.display =
                     "initial";
-            }, 2200);
+                // 100ms less time
+            }, 2100);
         } else {
             document.querySelector(".home__container").style.display =
                 "initial";
         }
-
-        //         });
     }, []);
 
     return (

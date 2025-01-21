@@ -149,3 +149,11 @@
         }
     }
 }
+
+@media (max-width: 450px) {
+    .footer__header-logo {
+        span {
+            display: none;
+        }
+    }
+}

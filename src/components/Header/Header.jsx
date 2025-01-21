@@ -27,9 +27,7 @@ const Header = () => {
                     .classList.remove("header__list--mobile");
             });
         });
-    }, []);
 
-    useEffect(() => {
         document
             .querySelector(".nav__custom-options")
             .addEventListener("scroll", () => {

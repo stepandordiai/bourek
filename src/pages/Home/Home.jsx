@@ -22,9 +22,7 @@ import "./Home.scss";
 const Home = () => {
     useEffect(() => {
         document.title = "Pepa Bourek | Dům";
-    }, []);
 
-    useEffect(() => {
         if (document.querySelector(".loading").style.display === "flex") {
             setTimeout(() => {
                 document.querySelector(".home__container").style.display =

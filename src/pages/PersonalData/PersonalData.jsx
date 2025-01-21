@@ -3,11 +3,11 @@ import "./PersonalData.scss";
 
 const PersonalData = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Personal data";
-    });
+        document.title = "Pepa Bourek | Osobní údaje";
+    }, []);
     return (
         <section className="personal-data">
-            <h3 className="personal-data__title">Osobní údaje</h3>
+            <h2 className="personal-data__title">Osobní údaje</h2>
             <div className="personal-data__info">
                 <strong>Vážení pacienti,</strong>
                 <strong>

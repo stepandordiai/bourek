@@ -21,29 +21,13 @@ const ScrollToTopBtn = () => {
         }
     });
 
-    // // Method that detects if we scrolled to bottom to translate to-top-btn
-    // window.onscroll = function () {
-    //     const difference =
-    //         document.documentElement.scrollHeight - window.innerHeight;
-    //     const scrollposition = document.documentElement.scrollTop;
-    //     if (difference - scrollposition <= 2) {
-    //         document
-    //             .querySelector(".to-top-btn")
-    //             .classList.add("to-top-btn--translate");
-    //     } else {
-    //         document
-    //             .querySelector(".to-top-btn")
-    //             .classList.remove("to-top-btn--translate");
-    //     }
-    // };
-
     return (
         <button
             className="to-top-btn"
             onClick={scrollOnClick}
             title="Scroll to top button"
         >
-            <img src={upArrowIcon} alt="Up Arrow" />
+            <img src={upArrowIcon} alt="Up Arrow" loading="lazy" />
         </button>
     );
 };

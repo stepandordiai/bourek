@@ -29,17 +29,6 @@ const Header = () => {
         });
     }, []);
 
-    // addEventListener("resize", () => {
-    //     document
-    //         .querySelector(".burger-13")
-    //         .classList.remove("burger-13--active");
-    //     document
-    //         .querySelector(".burger-13__center-line")
-    //         .classList.remove("burger-13__center-line--active");
-    //     document
-    //         .querySelector(".header__list")
-    //         .classList.remove("header__list--mobile");
-    // });
     useEffect(() => {
         document
             .querySelector(".nav__custom-options")

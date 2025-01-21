@@ -4,12 +4,12 @@ import "./Starvac.scss";
 
 const Starvac = () => {
     useEffect(() => {
-        document.title = "Bourek | Starvac";
+        document.title = "Pepa Bourek | Starvac";
     }, []);
 
     return (
         <section className="starvac">
-            <h3 className="starvac__title">Starvac</h3>
+            <h2 className="starvac__title">Starvac</h2>
             <div className="starvac__info">
                 <strong>
                     Nový pomocník při baňkování – masážní přístroj STARVAC SP2

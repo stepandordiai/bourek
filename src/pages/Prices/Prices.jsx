@@ -3,12 +3,12 @@ import "./Prices.scss";
 
 const Prices = () => {
     useEffect(() => {
-        document.title = "Bourek | Ceník";
+        document.title = "Pepa Bourek | Ceník";
     }, []);
 
     return (
         <section className="prices">
-            <h3 className="prices__title">Ceník</h3>
+            <h2 className="prices__title">Ceník</h2>
             <table className="prices__table">
                 <tbody>
                     <tr>

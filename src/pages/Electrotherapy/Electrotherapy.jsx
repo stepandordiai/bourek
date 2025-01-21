@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import "./Electrotherapy.scss";
 
 const Electrotherapy = () => {
+    useEffect(() => {
+        document.title = "Pepa Bourek | Elektroléčba";
+    }, []);
     return (
         <section className="electrotherapy">
-            <h3 className="electrotherapy__title">Elektroléčba</h3>
+            <h2 className="electrotherapy__title">Elektroléčba</h2>
             <div className="electrotherapy__info">
                 <p>
                     Elektroléčba je část fyzikální léčby, při které je využíván

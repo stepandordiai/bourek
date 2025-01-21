@@ -5,11 +5,7 @@ import "./Loading.scss";
 const Loading = () => {
     useEffect(() => {
         setTimeout(() => {
-            // document
-            // .querySelector(".loading")
-            // .addEventListener("animationend", () => {
             document.querySelector(".loading").style.display = "none";
-            // });
         }, 2200);
     }, []);
     return (

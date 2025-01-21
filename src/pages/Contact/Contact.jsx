@@ -8,7 +8,7 @@ import "./Contact.scss";
 
 const Contact = () => {
     useEffect(() => {
-        document.title = "Bourek | Kontakty";
+        document.title = "Pepa Bourek | Kontakty";
     });
 
     const dateNow = dayjs();
@@ -20,7 +20,7 @@ const Contact = () => {
 
     return (
         <section className="contact">
-            <h3 className="contact__title">Kontakty</h3>
+            <h2 className="contact__title">Kontakty</h2>
             <ul className="contact__list">
                 <li>
                     <img src={phoneIcon} width={30} alt="Phone" />
@@ -38,7 +38,7 @@ const Contact = () => {
                 </li>
             </ul>
             <CustomHr />
-            <h4 className="contact__form-title">Domluvit si schůzku</h4>
+            <h3 className="contact__form-title">Domluvit si schůzku</h3>
             <form
                 className="contact__form"
                 action="mailto:josef@bourek.cz"
@@ -109,7 +109,7 @@ const Contact = () => {
                 <button type="submit">Rezervovat termín</button>
             </form>
             <CustomHr />
-            <h4 className="contact__map-title">Kde jsme</h4>
+            <h3 className="contact__map-title">Kde jsme</h3>
             <iframe
                 className="contact__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.3689079134874!2d15.212577416454117!3d50.02330318902428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c153bee9daf87%3A0xc91ccf8d204d4cb!2sPod%20Hroby%20271%2F271%2C%20280%2002%20Kol%C3%ADn%20IV!5e0!3m2!1scs!2scz!4v1736770298235!5m2!1scs!2scz"

@@ -3,12 +3,12 @@ import "./Surgery.scss";
 
 const Surgery = () => {
     useEffect(() => {
-        document.title = "Bourek | Ordinace";
+        document.title = "Pepa Bourek | Ordinace";
     }, []);
 
     return (
         <section className="surgery">
-            <h3 className="surgery__title">Ordinace</h3>
+            <h2 className="surgery__title">Ordinace</h2>
             <div className="surgery__info">
                 <p>
                     Naše ordinace poskytuje služby rehabilitačního lékaře s

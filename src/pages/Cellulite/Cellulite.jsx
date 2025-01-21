@@ -3,12 +3,12 @@ import "./Cellulite.scss";
 
 const Cellulite = () => {
     useEffect(() => {
-        document.title = "Bourek | Celulitida";
+        document.title = "Pepa Bourek | Celulitida";
     }, []);
 
     return (
         <section className="cellulite">
-            <h3 className="cellulite__title">Celulitida</h3>
+            <h2 className="cellulite__title">Celulitida</h2>
             <div className="cellulite__info">
                 <strong>Kapitoly:</strong>
                 <ul className="cellulite__chapters-list">

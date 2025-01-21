@@ -5,12 +5,12 @@ import "./Lymphatic.scss";
 
 const Lymphatic = () => {
     useEffect(() => {
-        document.title = "Bourek | Lymfodrenáž";
+        document.title = "Pepa Bourek | Lymfodrenáž";
     }, []);
 
     return (
         <section className="lymphatic">
-            <h3 className="lymphatic__title">Lymfodrenáž</h3>
+            <h2 className="lymphatic__title">Lymfodrenáž</h2>
             <div className="lymphatic__info">
                 <strong>Přístrojová lymfodrenáž</strong>
                 <strong>

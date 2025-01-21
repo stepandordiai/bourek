@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -7,9 +10,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
 import { EffectCards } from "swiper/modules";
-
-import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
 import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
 import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
@@ -42,12 +42,12 @@ const Home = () => {
             <div className="home__container" style={{ display: "none" }}>
                 <div className="home__wrapper">
                     <div>
-                        <p className="home__title">
+                        <h1 className="home__title">
                             Pro lepší zdraví
                             <br />a flexibilitu
-                        </p>
-                        <p>Ordinace rehabilitačního lékaře</p>
-                        <p>MUDr. Josef Bourek</p>
+                        </h1>
+                        <h2>Ordinace rehabilitačního lékaře</h2>
+                        <h2>MUDr. Josef Bourek</h2>
                         <NavLink className="home__btn-link" to="/appointment">
                             Domluvit si schůzku
                         </NavLink>
@@ -65,9 +65,9 @@ const Home = () => {
                     <span>Click to scroll down</span>
                 </a>
             </div>
-            <h3 id="departments" className="home__grid-container-title">
+            <h2 id="departments" className="home__grid-container-title">
                 Služby
-            </h3>
+            </h2>
             <div className="home__grid-container">
                 <div>
                     <span>Ordinace</span>
@@ -143,7 +143,7 @@ const Home = () => {
                     </NavLink>
                 </div>
             </div>
-            <h3 className="home__testimonials-title">Co říkají klienti</h3>
+            <h2 className="home__testimonials-title">Co říkají klienti</h2>
             <Swiper
                 className="testimonials-swiper"
                 effect={"cards"}
@@ -153,11 +153,11 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={peopleImg} alt="People" />
+                            <img src={peopleImg} alt="People" loading="lazy" />
                             <p>Petr Klimša</p>
                         </div>
                         <div className="card__body">
-                            <img src={quoteIcon} alt="Quote" />
+                            <img src={quoteIcon} alt="Quote" loading="lazy" />
                             <p>
                                 Než jsem začal navštěvovat tyto fyzikální
                                 terapie a léčebná sezení, moje migrény mě každý
@@ -169,11 +169,11 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={people1Img} alt="People" />
+                            <img src={people1Img} alt="People" loading="lazy" />
                             <p>Tereza Belingerová</p>
                         </div>
                         <div className="card__body">
-                            <img src={quoteIcon} alt="Quote" />
+                            <img src={quoteIcon} alt="Quote" loading="lazy" />
                             <p>
                                 Celý svůj dospělý život jsem se potýkal s
                                 různými typy a intenzitou bolestí zad. Díky bohu
@@ -185,11 +185,11 @@ const Home = () => {
                 <SwiperSlide>
                     <div className="card">
                         <div className="card__header">
-                            <img src={people2Img} alt="People" />
+                            <img src={people2Img} alt="People" loading="lazy" />
                             <p>Jan Ursíny</p>
                         </div>
                         <div className="card__body">
-                            <img src={quoteIcon} alt="Quote" />
+                            <img src={quoteIcon} alt="Quote" loading="lazy" />
                             <p>
                                 prostě si nemůžete užívat život naplno, když
                                 neustále bojujete s bolestí svalů. To byl důvod,

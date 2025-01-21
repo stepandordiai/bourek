@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import "./Laser.scss";
 
 const Laser = () => {
+    useEffect(() => {
+        document.title = "Pepa Bourek | Laser";
+    }, []);
     return (
         <section className="laser">
-            <h3 className="laser__title">Laser</h3>
+            <h2 className="laser__title">Laser</h2>
             <div className="laser__info">
                 <p>
                     Laser je světlo zesilované pomocí stimulované emise záření.

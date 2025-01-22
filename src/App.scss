@@ -24,9 +24,15 @@ html {
 }
 
 .wrapper {
+    display: none;
     opacity: 0;
-    pointer-events: none;
-    animation: reveal 500ms 2.2s forwards;
+    animation: revealWrapper 500ms forwards;
+}
+
+@keyframes revealWrapper {
+    to {
+        opacity: 1;
+    }
 }
 
 .phone-call__btn-link {

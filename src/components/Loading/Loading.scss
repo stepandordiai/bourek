@@ -1,4 +1,4 @@
-.loading {
+.loading-logo {
     position: fixed;
     top: 0;
     right: 0;
@@ -8,37 +8,37 @@
     align-items: center;
     opacity: 1;
     pointer-events: all;
-    animation: hideLoading 2.2s forwards;
+    animation: animateLoading 2s forwards;
 
     img {
         width: clamp(60px, 12vw, 100px);
     }
-    div {
-        display: grid;
-        grid-template-columns: 0fr;
+}
+
+@keyframes animateLoading {
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text-line {
+    display: grid;
+    grid-template-columns: 0fr;
+    overflow: hidden;
+    animation: revealLoadingText 700ms 500ms forwards ease;
+    p {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
         overflow: hidden;
-        animation: revealLoadingText 700ms 800ms forwards ease;
-        p {
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
-            overflow: hidden;
-            white-space: nowrap;
-        }
+        white-space: nowrap;
     }
 }
 
 @keyframes revealLoadingText {
     to {
         grid-template-columns: 1fr;
-    }
-}
-
-@keyframes hideLoading {
-    75% {
-        opacity: 1;
-        pointer-events: all;
-    }
-    100% {
-        opacity: 0;
-        pointer-events: none;
     }
 }

@@ -1,43 +1,33 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// import required modules
-import { EffectCards } from "swiper/modules";
-
+import { Helmet } from "react-helmet";
 import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
 import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
-import peopleImg from "./../../assets/people.jpg";
-import people1Img from "./../../assets/people1.jpg";
-import people2Img from "./../../assets/people2.jpg";
-import quoteIcon from "./../../assets/icons/quote.png";
+
 import "./Home.scss";
 
 const Home = () => {
     useEffect(() => {
         document.title = "Pepa Bourek | Dům";
-
-        if (document.querySelector(".loading").style.display === "flex") {
-            setTimeout(() => {
-                document.querySelector(".home__container").style.display =
-                    "initial";
-                // 100ms less time
-            }, 2100);
-        } else {
-            document.querySelector(".home__container").style.display =
-                "initial";
-        }
     }, []);
+
+    useEffect(() => {
+        document
+            .querySelectorAll(".js-faq__item-header")
+            .forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    const classBtn = document.querySelectorAll(".faq__btn");
+                    classBtn[index].classList.toggle("faq__btn--active");
+                    const classGridLine =
+                        document.querySelectorAll(".grid-line");
+                    classGridLine[index].classList.toggle("grid-line--active");
+                });
+            });
+    });
 
     return (
         <section className="home">
-            <div className="home__container" style={{ display: "none" }}>
+            <div className="home__container">
                 <div className="home__wrapper">
                     <div>
                         <h1 className="home__title">
@@ -60,7 +50,7 @@ const Home = () => {
                 </div>
                 <a className="home__scroll-down-btn" href="#departments">
                     <img src={scrollBarIcon} alt="Scroll Bar" />
-                    <span>Click to scroll down</span>
+                    <span>Kliknutím přejděte dolů</span>
                 </a>
             </div>
             <h2 id="departments" className="home__grid-container-title">
@@ -141,62 +131,97 @@ const Home = () => {
                     </NavLink>
                 </div>
             </div>
-            <h2 className="home__testimonials-title">Co říkají klienti</h2>
-            <Swiper
-                className="testimonials-swiper"
-                effect={"cards"}
-                grabCursor={true}
-                modules={[EffectCards]}
-            >
-                <SwiperSlide>
-                    <div className="card">
-                        <div className="card__header">
-                            <img src={peopleImg} alt="People" loading="lazy" />
-                            <p>Petr Klimša</p>
-                        </div>
-                        <div className="card__body">
-                            <img src={quoteIcon} alt="Quote" loading="lazy" />
-                            <p>
-                                Než jsem začal navštěvovat tyto fyzikální
-                                terapie a léčebná sezení, moje migrény mě každý
-                                den přiváděly k šílenství
-                            </p>
-                        </div>
+            <h3 className="home__testimonials-title">
+                Co říkají naši zákazníci
+            </h3>
+            <Helmet>
+                <script
+                    src="https://static.elfsight.com/platform/platform.js"
+                    async
+                ></script>
+            </Helmet>
+            <div
+                className="elfsight-app-c6b13bc0-f18e-428b-8991-c245a3b9aafb"
+                data-elfsight-app-lazy
+            ></div>
+            <h3 className="home__testimonials-title">Často kladené dotazy</h3>
+            <div className="home__faq">
+                <div className="faq__item">
+                    <div className="faq__item-header js-faq__item-header">
+                        <p>Vaše otázka zde může být brzy</p>
+                        <div className="faq__btn"></div>
                     </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card">
-                        <div className="card__header">
-                            <img src={people1Img} alt="People" loading="lazy" />
-                            <p>Tereza Belingerová</p>
-                        </div>
-                        <div className="card__body">
-                            <img src={quoteIcon} alt="Quote" loading="lazy" />
-                            <p>
-                                Celý svůj dospělý život jsem se potýkal s
-                                různými typy a intenzitou bolestí zad. Díky bohu
-                                mě sem odkázal jeden z mých přátel
-                            </p>
-                        </div>
+                    <div className="grid-line">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odio, quos totam. Nihil harum inventore enim
+                            reiciendis, quam voluptas explicabo laborum dolorem
+                            vitae veritatis asperiores repudiandae ipsam eveniet
+                            dolor ipsum. Voluptates.
+                        </p>
                     </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card">
-                        <div className="card__header">
-                            <img src={people2Img} alt="People" loading="lazy" />
-                            <p>Jan Ursíny</p>
-                        </div>
-                        <div className="card__body">
-                            <img src={quoteIcon} alt="Quote" loading="lazy" />
-                            <p>
-                                prostě si nemůžete užívat život naplno, když
-                                neustále bojujete s bolestí svalů. To byl důvod,
-                                proč jsem nakonec začal
-                            </p>
-                        </div>
+                </div>
+                <div className="faq__item">
+                    <div className="faq__item-header js-faq__item-header">
+                        <p>Vaše otázka zde může být brzy</p>
+                        <div className="faq__btn"></div>
                     </div>
-                </SwiperSlide>
-            </Swiper>
+                    <div className="grid-line">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odio, quos totam. Nihil harum inventore enim
+                            reiciendis, quam voluptas explicabo laborum dolorem
+                            vitae veritatis asperiores repudiandae ipsam eveniet
+                            dolor ipsum. Voluptates.
+                        </p>
+                    </div>
+                </div>
+                <div className="faq__item">
+                    <div className="faq__item-header js-faq__item-header">
+                        <p>Vaše otázka zde může být brzy</p>
+                        <div className="faq__btn"></div>
+                    </div>
+                    <div className="grid-line">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odio, quos totam. Nihil harum inventore enim
+                            reiciendis, quam voluptas explicabo laborum dolorem
+                            vitae veritatis asperiores repudiandae ipsam eveniet
+                            dolor ipsum. Voluptates.
+                        </p>
+                    </div>
+                </div>
+                <div className="faq__item">
+                    <div className="faq__item-header js-faq__item-header">
+                        <p>Vaše otázka zde může být brzy</p>
+                        <div className="faq__btn"></div>
+                    </div>
+                    <div className="grid-line">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odio, quos totam. Nihil harum inventore enim
+                            reiciendis, quam voluptas explicabo laborum dolorem
+                            vitae veritatis asperiores repudiandae ipsam eveniet
+                            dolor ipsum. Voluptates.
+                        </p>
+                    </div>
+                </div>
+                <div className="faq__item">
+                    <div className="faq__item-header js-faq__item-header">
+                        <p>Vaše otázka zde může být brzy</p>
+                        <div className="faq__btn"></div>
+                    </div>
+                    <div className="grid-line">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odio, quos totam. Nihil harum inventore enim
+                            reiciendis, quam voluptas explicabo laborum dolorem
+                            vitae veritatis asperiores repudiandae ipsam eveniet
+                            dolor ipsum. Voluptates.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };

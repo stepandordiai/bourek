@@ -1,10 +1,12 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "./Appointment.scss";
 
 const Appointment = () => {
     useEffect(() => {
         document.title = "Pepa Bourek | Jmenování";
     }, []);
+
     return (
         <section className="appointment">
             <iframe

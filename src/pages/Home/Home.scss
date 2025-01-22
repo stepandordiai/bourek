@@ -160,68 +160,84 @@
 
 .home__testimonials-title {
     text-align: center;
-    font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 100px 0 40px;
-    background: linear-gradient(90deg, var(--blue-clr), rgb(74, 253, 227));
-    @include bg-clr-text;
+    font-size: 24px;
+    color: var(--blue-clr);
 }
 
-// Testimonials swiper
-.swiper {
-    width: 500px;
-    height: 350px;
-}
-
-.swiper-slide {
-    border-radius: 10px;
-    color: #000;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.card {
+.home__faq {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-
-    span {
-        font-size: 2rem;
-    }
-}
-
-.card__header {
-    @include flex-center;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     row-gap: 5px;
-
-    img {
-        width: 75px;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: top;
-    }
-
-    P {
-        font-size: clamp(0.9rem, 1vw, 1rem);
-    }
 }
 
-.card__body {
-    @include flex-center;
-    flex-direction: column;
-    row-gap: 5px;
+.faq__item {
+    background: var(--blue-clr-1);
+    padding: 10px;
+    border-radius: 10px;
+}
 
-    img {
-        width: 30px;
-    }
+.faq__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 
     p {
-        text-align: center;
-        font-size: clamp(0.8rem, 1vw, 1rem);
+        font-size: 1rem;
     }
+}
+
+.faq__btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 1px;
+        background: #000;
+        transform-origin: center center;
+        transition: transform 300ms;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 1px;
+        width: 100%;
+        background: #000;
+        transform-origin: center;
+    }
+}
+
+.faq__btn--active::before {
+    transform: rotate(90deg);
+}
+
+.grid-line {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    p {
+        overflow: hidden;
+        font-weight: 200;
+    }
+}
+
+.grid-line--active {
+    grid-template-rows: 1fr;
 }
 
 @media (max-width: 1250px) {
@@ -247,10 +263,5 @@
 @media (max-width: 800px) {
     .home__grid-container {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .swiper {
-        width: 250px;
-        height: 350px;
     }
 }

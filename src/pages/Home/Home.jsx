@@ -37,7 +37,7 @@ const Home = () => {
                         <h2>Ordinace rehabilitačního lékaře</h2>
                         <h2>MUDr. Josef Bourek</h2>
                         <NavLink className="home__btn-link" to="/appointment">
-                            Domluvit si schůzku
+                            Rezervovat termín
                         </NavLink>
                     </div>
                     <div>
@@ -121,7 +121,7 @@ const Home = () => {
                     </NavLink>
                 </div>
                 <div>
-                    <span>Léčebná tělesná výchova</span>
+                    <span>Individuální fyzioterapie</span>
                     <NavLink className="grid-container__link" to="/ltv">
                         Zjistit víc
                         <img

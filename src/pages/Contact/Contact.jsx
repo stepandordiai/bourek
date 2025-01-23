@@ -24,7 +24,7 @@ const Contact = () => {
             <ul className="contact__list">
                 <li>
                     <img src={phoneIcon} width={30} alt="Phone" />
-                    <a href="tel:+420321727404">+420 321 727 404</a>
+                    <a href="tel:+420602273579">+420 602 273 579</a>
                 </li>
                 <li>
                     <img src={mailIcon} width={30} alt="E-mail" />
@@ -106,7 +106,7 @@ const Contact = () => {
                         />
                     </div>
                 </div>
-                <button type="submit">Rezervovat termín</button>
+                <button type="submit">Domluvit si schůzku</button>
             </form>
             <CustomHr />
             <h3 className="contact__map-title">Kde jsme</h3>

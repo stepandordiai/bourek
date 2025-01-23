@@ -141,7 +141,7 @@ const Header = () => {
                         <img
                             className="custom-options__down-arrow"
                             src={downArrowImg}
-                            alt=""
+                            alt="Down arrow"
                         />
                     </div>
                 </li>
@@ -170,7 +170,7 @@ const Header = () => {
                         className="nav__btn-link js-nav__link"
                         to="/appointment"
                     >
-                        Domluvit si schůzku
+                        Rezervovat termín
                     </NavLink>
                 </li>
             </ul>

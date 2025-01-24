@@ -143,7 +143,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <p className="creator">
-                    Made with 💙 by{" "}
+                    Designed and developed by{" "}
                     <a
                         href="https://stepandordiai.netlify.app/"
                         target="_blank"

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
 import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
 
@@ -134,12 +133,6 @@ const Home = () => {
             <h3 className="home__testimonials-title">
                 Co říkají naši zákazníci
             </h3>
-            <Helmet>
-                <script
-                    src="https://static.elfsight.com/platform/platform.js"
-                    async
-                ></script>
-            </Helmet>
             <div
                 className="elfsight-app-c6b13bc0-f18e-428b-8991-c245a3b9aafb"
                 data-elfsight-app-lazy

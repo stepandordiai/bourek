@@ -97,8 +97,9 @@ const Contact = () => {
                         />
                     </div>
                     <div className="time-container">
-                        <label htmlFor="date">Zvolit čas návštěvy</label>
+                        <label htmlFor="time">Zvolit čas návštěvy</label>
                         <input
+                            id="time"
                             className="time"
                             defaultValue={`${formatedHours}:${formatedMinutes}`}
                             type="time"

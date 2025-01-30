@@ -148,7 +148,7 @@ const Footer = () => {
                         href="https://stepandordiai.netlify.app/"
                         target="_blank"
                     >
-                        heeeyooo
+                        heeeyooo.studio
                     </a>
                 </p>
             </div>

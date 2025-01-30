@@ -7,7 +7,7 @@ import "./Home.scss";
 
 const Home = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Dům";
+        document.title = "Pepa Bourek | Ordinace rehabilitačního lékaře";
     }, []);
 
     useEffect(() => {
@@ -134,7 +134,7 @@ const Home = () => {
                 Co říkají naši zákazníci
             </h3>
             <div
-                class="elfsight-app-920cb37f-0313-49ff-89e7-0fff3ce90a52"
+                className="elfsight-app-920cb37f-0313-49ff-89e7-0fff3ce90a52"
                 data-elfsight-app-lazy
             ></div>
             <h3 className="home__testimonials-title">Často kladené dotazy</h3>

@@ -2,27 +2,23 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
 import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
-
 import "./Home.scss";
 
 const Home = () => {
     useEffect(() => {
         document.title = "Pepa Bourek | Ordinace rehabilitačního lékaře";
-    }, []);
 
-    useEffect(() => {
         document
             .querySelectorAll(".js-faq__item-header")
-            .forEach((btn, index) => {
-                btn.addEventListener("click", () => {
-                    const classBtn = document.querySelectorAll(".faq__btn");
+            .forEach((el, index) => {
+                const classBtn = document.querySelectorAll(".faq__btn");
+                const classGridLine = document.querySelectorAll(".grid-line");
+                el.addEventListener("click", () => {
                     classBtn[index].classList.toggle("faq__btn--active");
-                    const classGridLine =
-                        document.querySelectorAll(".grid-line");
                     classGridLine[index].classList.toggle("grid-line--active");
                 });
             });
-    });
+    }, []);
 
     return (
         <section className="home">

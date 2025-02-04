@@ -9,7 +9,42 @@ import "./Contact.scss";
 const Contact = () => {
     useEffect(() => {
         document.title = "Pepa Bourek | Kontakty";
-    });
+
+        // Listener for multiple custom selectors
+        document.querySelectorAll(".custom-select").forEach((select) => {
+            const selectBtn = select.querySelector(".custom-select__btn");
+            const selectList = select.querySelector(".custom-select__list");
+            const selectOptions = selectList.querySelectorAll(
+                ".custom-select__option"
+            );
+            const selectInput = document.querySelector(".custom-select__input");
+
+            selectBtn.addEventListener("click", (e) => {
+                // Prevent from submitting a form
+                e.preventDefault();
+                selectList.classList.toggle("custom-select__list--visible");
+                selectBtn.classList.add("custom-select__btn--active");
+            });
+
+            selectOptions.forEach((option) => {
+                option.addEventListener("click", (e) => {
+                    // TODO:
+                    e.stopPropagation();
+                    selectBtn.textContent = option.textContent;
+                    selectBtn.focus();
+                    selectInput.value = option.dataset.value;
+                    selectList.classList.remove("custom-select__list--visible");
+                });
+            });
+
+            document.addEventListener("click", (e) => {
+                if (e.target !== selectBtn) {
+                    selectBtn.classList.remove("custom-select__btn--active");
+                    selectList.classList.remove("custom-select__list--visible");
+                }
+            });
+        });
+    }, []);
 
     const addressLink =
         "https://www.google.com/maps/place/Pepa+Bourek/@50.0241827,15.2118482,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x470c153bee9daf87:0xc91ccf8d204d4cb!2sPod+Hroby+271%2F271,+280+02+Kol%C3%ADn+IV!3b1!8m2!3d50.0240306!4d15.2143025!16s%2Fg%2F11cpkpjyq9!3m5!1s0x470c1567f730be5f:0xba05366bb1086eb!8m2!3d50.0241793!4d15.2144231!16s%2Fg%2F11ybt54v3c?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D";
@@ -48,7 +83,7 @@ const Contact = () => {
                 method="post"
                 encType="text/plain"
             >
-                <div>
+                <div className="contact-form__inputs">
                     <input
                         className="first-name"
                         type="text"
@@ -64,7 +99,7 @@ const Contact = () => {
                         required
                     />
                 </div>
-                <div>
+                <div className="contact-form__inputs">
                     <input
                         className="email"
                         type="text"
@@ -79,15 +114,50 @@ const Contact = () => {
                         required
                     />
                 </div>
-                <select className="department" name="Department">
-                    <option className="default-option" value="Vybrat oddělení">
-                        Vybrat oddělení
-                    </option>
-                    <option value="Ordinace">Ordinace</option>
-                    <option value="Starvac">Starvac</option>
-                    <option value="Celulitida">Celulitida</option>
-                    <option value="Lymfodrenáž">Lymfodrenáž</option>
-                </select>
+                {/* Custom select */}
+                <div className="custom-select">
+                    <button className="custom-select__btn">
+                        Choose department
+                    </button>
+                    <ul className="custom-select__list">
+                        <li
+                            className="custom-select__option"
+                            data-value="Not selected"
+                        >
+                            Select department
+                        </li>
+                        <li
+                            className="custom-select__option"
+                            data-value="Ordinace"
+                        >
+                            Ordinace
+                        </li>
+                        <li
+                            className="custom-select__option"
+                            data-value="Starvac"
+                        >
+                            Starvac
+                        </li>
+                        <li
+                            className="custom-select__option"
+                            data-value="Celulitida"
+                        >
+                            Celulitida
+                        </li>
+                        <li
+                            className="custom-select__option"
+                            data-value="Lymfodrenáž"
+                        >
+                            Lymfodrenáž
+                        </li>
+                    </ul>
+                    <input
+                        className="custom-select__input"
+                        type="text"
+                        name="Department"
+                        defaultValue=""
+                    />
+                </div>
                 <div>
                     <div className="date-container">
                         <label htmlFor="date">Vyberte datum návštěvy</label>
@@ -110,7 +180,9 @@ const Contact = () => {
                         />
                     </div>
                 </div>
-                <button type="submit">Domluvit si schůzku</button>
+                <button className="submit-btn" type="submit">
+                    Domluvit si schůzku
+                </button>
             </form>
             <CustomHr />
             <h3 className="contact__map-title">Kde jsme</h3>

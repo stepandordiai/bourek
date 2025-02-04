@@ -14,9 +14,7 @@
 }
 
 .contact__list {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex-center-evenly;
     flex-wrap: wrap;
     column-gap: 5px;
     row-gap: 20px;
@@ -52,77 +50,129 @@
     flex-direction: column;
     row-gap: 10px;
     width: 50%;
+}
 
-    div {
-        @include flex-center;
-        column-gap: 10px;
+.contact-form__inputs {
+    @include flex-center;
+    column-gap: 10px;
+}
+
+.first-name,
+.last-name {
+    background: var(--blue-clr-1);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.email,
+.phone {
+    background: var(--blue-clr-2);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+// Custom select
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select__btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: left;
+    background: var(--blue-clr-3);
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:focus {
+        border: 1px solid var(--blue-clr);
     }
+}
 
-    .first-name,
-    .last-name {
-        background: var(--blue-clr-1);
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
-    }
+.custom-select__btn--active {
+    border: 1px solid var(--blue-clr);
+}
 
-    .email,
-    .phone {
-        background: var(--blue-clr-2);
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
-    }
+.custom-select__btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 10px;
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: #000;
+}
 
-    .department {
+.custom-select__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fff;
+    border: 3px solid var(--blue-clr-3);
+}
+
+.custom-select__list--visible {
+    display: block;
+}
+
+.custom-select__option {
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
         background: var(--blue-clr-3);
-        border-radius: 5px;
-        padding: 10px;
-        cursor: pointer;
-
-        &:focus {
-            outline: none;
-        }
-
-        background-image: url("./../../assets/icons/down-arrow.png");
-        background-size: 25px;
-        background-position: right center;
-        background-repeat: no-repeat;
     }
+}
 
-    .date-container,
-    .time-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0;
-    }
+.custom-select__input {
+    display: none;
+}
 
-    label {
-        color: rgba(0, 0, 0, 0.5);
-    }
+.date-container,
+.time-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+}
 
-    .date,
-    .time {
-        background: var(--blue-clr-4);
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
-    }
+label {
+    color: rgba(0, 0, 0, 0.5);
+}
 
-    button {
-        background: var(--blue-clr);
-        align-self: center;
-        border-radius: 10px;
-        padding: 10px 10px;
-        color: #fff;
-        font-weight: inherit;
-        transition: background-color 200ms;
-        &:hover {
-            background: var(--blue-clr-8);
-        }
+.date,
+.time {
+    background: var(--blue-clr-4);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.submit-btn {
+    background: var(--blue-clr);
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: #fff;
+    font-weight: inherit;
+    transition: background-color 200ms;
+    &:hover {
+        background: var(--blue-clr-8);
     }
 }
 
@@ -138,10 +188,8 @@
 }
 
 @media (max-width: 600px) {
-    .contact__form {
-        div {
-            flex-direction: column;
-            row-gap: 10px;
-        }
+    .contact-form__inputs {
+        flex-direction: column;
+        row-gap: 10px;
     }
 }

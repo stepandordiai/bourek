@@ -59,7 +59,7 @@ const Header = () => {
                         }
                         to="/"
                     >
-                        Dům
+                        Úvod
                     </NavLink>
                 </li>
                 <li>

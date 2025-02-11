@@ -39,16 +39,17 @@
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
     gap: 40px;
-    div {
+    .team-member {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 100%;
-        height: 250px;
+        height: max-content;
         background: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
+        padding: 10px;
         p:not(:nth-of-type(2)) {
             opacity: 0.5;
         }
@@ -58,6 +59,22 @@
             &:hover {
                 color: var(--blue-clr);
             }
+        }
+    }
+}
+
+.footer__nav-table {
+    // width: 250px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    td {
+        // border-top: 1px solid rgba(0, 0, 0, 0.25);
+        // border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+        &:nth-of-type(2) {
+            text-align: right;
         }
     }
 }

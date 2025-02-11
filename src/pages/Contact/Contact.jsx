@@ -71,7 +71,7 @@ const Contact = () => {
                 <li>
                     <img src={locationIcon} width={30} alt="Location" />
                     <a href={addressLink} target="_blank">
-                        Pod Hroby 271/271 Kolín IV
+                        Pod Hroby 271 Kolín IV
                     </a>
                 </li>
             </ul>

@@ -34,16 +34,16 @@ const AboutUs = () => {
             <h3 className="about-us__mini-title">Co nabízíme</h3>
             <ul className="about-us__offer-list">
                 <li>služby odborného rehabilitačního lékaře</li>
-                <li>služby odborného neurologického lékaře</li>
+                {/* <li>služby odborného neurologického lékaře</li> */}
                 <li>služby rehabilitačních pracovnic</li>
                 <li>
                     veškeré kompletní rehabilitační služby:
                     <ul>
                         <li>masážní přístroj starvac sp 2</li>
                         <li>kompletní elektroléčba, laser terapie, solux</li>
-                        <li>léčebná tělesná výchova</li>
-                        <li>speciální LTV na míčích</li>
-                        <li>reflexní masáže</li>
+                        {/* <li>léčebná tělesná výchova</li> */}
+                        {/* <li>speciální LTV na míčích</li> */}
+                        {/* <li>reflexní masáže</li> */}
                         <li>poradenství o zdravém životním stylu</li>
                     </ul>
                 </li>
@@ -52,37 +52,169 @@ const AboutUs = () => {
             <CustomHr />
             <h3 className="about-us__mini-title">Náš tým</h3>
             <div className="about-us__grid-container">
-                <div>
+                <div className="team-member">
                     <p>Rehabilitačního lékaře</p>
                     <p>MUDr. Josef Bourek</p>
                     <a href="tel:+420602273579">+420 602 273 579</a>
                     <a href="mailto:pepabourek@gmail.com">
                         pepabourek@gmail.com
                     </a>
+                    <p>Pracovní doba</p>
+                    <table className="footer__nav-table">
+                        <tbody>
+                            <tr>
+                                <td>Pondělí:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Uterý:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Středa:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Ctvrtek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Pátek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Sobota:</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>Neděle:</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div>
+                <div className="team-member">
+                    <p>Rehabilitačního lékaře</p>
+                    <p>MUDr. Julia Cadorini</p>
+                    <a href="tel:+420602273579">+420 602 273 579</a>
+                    <a href="mailto:pepabourek@gmail.com">
+                        pepabourek@gmail.com
+                    </a>
+                    <p>Pracovní doba</p>
+                    <table className="footer__nav-table">
+                        <tbody>
+                            <tr>
+                                <td>Pondělí:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Uterý:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Středa:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Ctvrtek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Pátek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Sobota:</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>Neděle:</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="team-member">
                     <p>Rehabilitačního lékaře</p>
                     <p>Dr. Sarah Johnson</p>
                     <a href="tel:+420602273579">+420 602 273 579</a>
                     <a href="mailto:pepabourek@gmail.com">
                         pepabourek@gmail.com
                     </a>
+                    <p>Pracovní doba</p>
+                    <table className="footer__nav-table">
+                        <tbody>
+                            <tr>
+                                <td>Pondělí:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Uterý:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Středa:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Ctvrtek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Pátek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Sobota:</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>Neděle:</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div>
+                <div className="team-member">
                     <p>Rehabilitačního lékaře</p>
                     <p>Dr. Sarah Johnson</p>
                     <a href="tel:+420602273579">+420 602 273 579</a>
                     <a href="mailto:pepabourek@gmail.com">
                         pepabourek@gmail.com
                     </a>
-                </div>
-                <div>
-                    <p>Rehabilitačního lékaře</p>
-                    <p>Dr. Sarah Johnson</p>
-                    <a href="tel:+420602273579">+420 602 273 579</a>
-                    <a href="mailto:pepabourek@gmail.com">
-                        pepabourek@gmail.com
-                    </a>
+                    <p>Pracovní doba</p>
+                    <table className="footer__nav-table">
+                        <tbody>
+                            <tr>
+                                <td>Pondělí:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Uterý:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Středa:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Ctvrtek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Pátek:</td>
+                                <td>__:__ - __:__</td>
+                            </tr>
+                            <tr>
+                                <td>Sobota:</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>Neděle:</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <CustomHr />

@@ -26,41 +26,6 @@ const Footer = () => {
             <CustomHr />
             <div className="footer__nav">
                 <div>
-                    <p>Pracovní doba</p>
-                    <table className="footer__nav-table">
-                        <tbody>
-                            <tr>
-                                <td>Pondělí:</td>
-                                <td>7:00 - 17:00</td>
-                            </tr>
-                            <tr>
-                                <td>Uterý:</td>
-                                <td>7:00 - 14:30</td>
-                            </tr>
-                            <tr>
-                                <td>Středa:</td>
-                                <td>7:00 - 15:00</td>
-                            </tr>
-                            <tr>
-                                <td>Ctvrtek:</td>
-                                <td>7:00 - 14:30</td>
-                            </tr>
-                            <tr>
-                                <td>Pátek:</td>
-                                <td>7:00 - 14:00</td>
-                            </tr>
-                            <tr>
-                                <td>Sobota:</td>
-                                <td>Closed</td>
-                            </tr>
-                            <tr>
-                                <td>Neděle:</td>
-                                <td>Closed</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div>
                     <p>Navigace</p>
                     <ul>
                         <li>
@@ -121,7 +86,7 @@ const Footer = () => {
                         <li>
                             <img src={locationIcon} width={20} alt="Location" />
                             <a href="https://maps.app.goo.gl/zyvc7wwr1atb3N3m8">
-                                Pod Hroby 271/271 Kolín IV
+                                Pod Hroby 271 Kolín IV
                             </a>
                         </li>
                     </ul>

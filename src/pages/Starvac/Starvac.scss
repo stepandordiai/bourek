@@ -1,25 +1,3 @@
-.starvac {
-    padding: 0 20px;
-    margin-bottom: 40px;
-}
-
-.starvac__title {
-    text-align: center;
-    font-size: clamp(2.5rem, 5vw, 3rem);
-    padding: 100px 0;
-}
-
-.starvac__info {
-    width: 75%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    row-gap: 20px;
-    text-align: justify;
-}
-
 .img-text__container {
     img {
         float: left;
@@ -33,17 +11,5 @@
     }
     ::marker {
         color: var(--blue-clr);
-    }
-}
-
-@media (max-width: 1000px) {
-    .starvac__info {
-        width: 90%;
-    }
-}
-
-@media (max-width: 600px) {
-    .starvac__info {
-        width: 100%;
     }
 }

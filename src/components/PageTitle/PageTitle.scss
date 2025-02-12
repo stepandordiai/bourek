@@ -1,0 +1,23 @@
+.page-title {
+    text-align: center;
+    padding: 100px 0;
+    background: linear-gradient(-90deg, var(--blue-clr), rgb(15, 239, 206));
+
+    color: white;
+}
+
+.page-title__title {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+}
+
+.page-title__link {
+    color: white !important;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.page-title__link--inactive {
+    opacity: 0.5;
+}

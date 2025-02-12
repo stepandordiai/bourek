@@ -29,16 +29,30 @@ const Footer = () => {
                     <p>Navigace</p>
                     <ul>
                         <li>
-                            <NavLink to="/">Dům</NavLink>
+                            <NavLink to="/">Úvod</NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink to="/about-us">O nás</NavLink>
-                        </li>
+                        </li> */}
                         <li>
                             <NavLink to="/prices">Ceník</NavLink>
                         </li>
                         <li>
                             <NavLink to="/contact">Kontakty</NavLink>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>O nás</p>
+                    <ul>
+                        <li>
+                            <NavLink to="/">Co nabízíme</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/prices">Náš tým</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact">Galerie kliniky</NavLink>
                         </li>
                     </ul>
                 </div>

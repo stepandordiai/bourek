@@ -1,11 +1,8 @@
 @use "./../../mixins" as *;
 
-.contact {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 20px;
-    margin-bottom: 40px;
+.contact__wrapper {
+    padding: 40px;
+    text-align: center;
 }
 
 .contact__title {
@@ -14,7 +11,7 @@
 }
 
 .contact__list {
-    @include flex-center-evenly;
+    @include flex-evenly-center;
     flex-wrap: wrap;
     column-gap: 5px;
     row-gap: 20px;
@@ -50,6 +47,7 @@
     flex-direction: column;
     row-gap: 10px;
     width: 50%;
+    margin: 0 auto;
 }
 
 .contact-form__inputs {
@@ -113,18 +111,21 @@
 }
 
 .custom-select__list {
-    display: none;
     position: absolute;
     left: 0;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     background: #fff;
-    border: 3px solid var(--blue-clr-3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .custom-select__list--visible {
-    display: block;
+    pointer-events: all;
+    opacity: 1;
 }
 
 .custom-select__option {
@@ -188,6 +189,10 @@ label {
 }
 
 @media (max-width: 600px) {
+    .contact__wrapper {
+        padding: 15px;
+    }
+
     .contact-form__inputs {
         flex-direction: column;
         row-gap: 10px;

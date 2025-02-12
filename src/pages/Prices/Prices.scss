@@ -1,14 +1,5 @@
-.prices {
-    padding: 0 20px;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.prices__title {
-    font-size: clamp(2.5rem, 5vw, 3rem);
-    padding: 100px 0;
+.price-list__wrapper {
+    padding: 40px;
 }
 
 .prices__table {
@@ -16,7 +7,6 @@
     margin: 0 auto;
     border-collapse: collapse;
     font-size: clamp(14px, 3vw, 16px);
-
     tr:nth-child(odd) {
         background: var(--blue-clr-2);
     }
@@ -49,5 +39,8 @@
 @media (max-width: 600px) {
     .prices__table {
         width: 100%;
+    }
+    .price-list__wrapper {
+        padding: 15px;
     }
 }

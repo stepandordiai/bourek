@@ -66,8 +66,8 @@ const Header = () => {
                 <img src={logoImg} alt="Logo" />
                 <span>Pepa Bourek</span>
             </NavLink>
-            <ul className="header__list js-header__list">
-                <li>
+            <nav className="header__list js-header__list">
+                <div>
                     <NavLink
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
@@ -76,25 +76,47 @@ const Header = () => {
                     >
                         Úvod
                     </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        className={({ isActive }) =>
-                            isActive ? activeLink : inactiveLink
-                        }
-                        to="/about-us"
-                    >
-                        O nás
-                    </NavLink>
-                </li>
-                <li className="nav__custom-select">
+                </div>
+                <div className="nav__custom-select">
+                    <div className="nav__custom-select-item">
+                        <span>O nás</span>
+                        <span className="nav__dd-btn-icon">
+                            <i className="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div className="nav__custom-options">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/offer"
+                        >
+                            What we offer
+                        </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/our-team"
+                        >
+                            Our team
+                        </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLinkOption : inactiveLinkOption
+                            }
+                            to="/clinic-gallery"
+                        >
+                            Clinic gallery
+                        </NavLink>
+                    </div>
+                </div>
+                <div className="nav__custom-select">
                     <div className="nav__custom-select-item">
                         <span>Služby</span>
-                        <img
-                            src={downArrowImg}
-                            className="custom-select__down-arrow"
-                            alt="Down Arrow"
-                        />
+                        <span className="nav__dd-btn-icon">
+                            <i className="fa-solid fa-chevron-down"></i>
+                        </span>
                     </div>
                     <div className="nav__custom-options">
                         <NavLink
@@ -153,14 +175,9 @@ const Header = () => {
                         >
                             Individuální fyzioterapie
                         </NavLink>
-                        <img
-                            className="custom-options__down-arrow"
-                            src={downArrowImg}
-                            alt="Down arrow"
-                        />
                     </div>
-                </li>
-                <li>
+                </div>
+                <div>
                     <NavLink
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
@@ -169,8 +186,8 @@ const Header = () => {
                     >
                         Ceník
                     </NavLink>
-                </li>
-                <li>
+                </div>
+                <div>
                     <NavLink
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
@@ -179,16 +196,16 @@ const Header = () => {
                     >
                         Kontakty
                     </NavLink>
-                </li>
-                <li className="nav__btn">
+                </div>
+                {/* <div className="nav__btn">
                     <NavLink
                         className="nav__btn-link js-nav__link"
                         to="/appointment"
                     >
                         Rezervovat termín
                     </NavLink>
-                </li>
-            </ul>
+                </div> */}
+            </nav>
             <BurgerBtn />
             <BurgerMenu />
         </header>

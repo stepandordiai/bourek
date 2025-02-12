@@ -1,14 +1,17 @@
 import { useEffect } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import PageInfo from "../../components/PageInfo/PageInfo";
 import "./Laser.scss";
 
 const Laser = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Laser";
+        document.title = "Laser";
     }, []);
+
     return (
-        <section className="laser">
-            <h2 className="laser__title">Laser</h2>
-            <div className="laser__info">
+        <>
+            <PageTitle title="Laser" />
+            <PageInfo>
                 <p>
                     Laser je světlo zesilované pomocí stimulované emise záření.
                     Podstatu tohoto záření objasnily zákony kvantové fyziky.
@@ -17,8 +20,8 @@ const Laser = () => {
                     monochromatické záření v oblasti mikrovln, popřípadě
                     viditelného záření.
                 </p>
-            </div>
-        </section>
+            </PageInfo>
+        </>
     );
 };
 

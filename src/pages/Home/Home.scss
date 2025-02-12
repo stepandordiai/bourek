@@ -11,16 +11,12 @@
 
 .home__wrapper {
     min-height: calc(100svh - 140px);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex-evenly-center;
 }
 
 .home__wrapper > div {
-    display: flex;
+    @include flex-center-start;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     row-gap: 20px;
     h1 {
         opacity: 0;
@@ -119,8 +115,8 @@
 
     div {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
+        flex-direction: column;
         padding: 20px;
         width: 100%;
         height: 200px;
@@ -166,9 +162,7 @@
 }
 
 .home__faq {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-direction: column;
     row-gap: 5px;
 }
@@ -180,9 +174,7 @@
 }
 
 .faq__item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center;
     cursor: pointer;
     padding: 10px 0;
 

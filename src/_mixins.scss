@@ -4,7 +4,19 @@
     align-items: center;
 }
 
-@mixin flex-center-evenly {
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flex-evenly-center {
     display: flex;
     justify-content: space-evenly;
     align-items: center;

@@ -1,44 +1,10 @@
-@use "./../../mixins" as *;
-
-.about-us {
-    padding: 0 40px 40px;
-    @include flex-center;
-    flex-direction: column;
-}
-
-.about-us__title {
-    text-align: center;
-    font-size: clamp(2.5rem, 5vw, 3rem);
-    padding: 100px 0;
-}
-
-.about-us__mini-title {
-    font-size: 24px;
-    color: var(--blue-clr);
-    padding-bottom: 40px;
-}
-
-.about-us__offer-list {
-    li {
-        list-style: disc;
-        list-style-position: inside;
-        font-size: clamp(14px, 4vw, 16px);
-
-        ul {
-            padding-left: 20px;
-        }
-    }
-
-    ::marker {
-        color: var(--blue-clr);
-    }
-}
-
 .about-us__grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
     gap: 40px;
+    padding: 40px;
+
     .team-member {
         display: flex;
         justify-content: center;
@@ -79,16 +45,6 @@
     }
 }
 
-.about-us__gallery {
-    columns: 3;
-    gap: 40px;
-
-    img {
-        margin-bottom: 40px;
-        width: 100%;
-    }
-}
-
 @media (max-width: 1200px) {
     .about-us__grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -97,34 +53,14 @@
 }
 
 @media (max-width: 1000px) {
-    .about-us {
-        padding: 0 20px 40px;
-    }
-
     .about-us__grid-container {
         gap: 20px;
-    }
-
-    .about-us__gallery {
-        columns: 2;
-        gap: 20px;
-
-        img {
-            margin-bottom: 20px;
-        }
     }
 }
 
 @media (max-width: 600px) {
     .about-us__grid-container {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .about-us__gallery {
-        gap: 10px;
-
-        img {
-            margin-bottom: 10px;
-        }
+        padding: 15px;
     }
 }

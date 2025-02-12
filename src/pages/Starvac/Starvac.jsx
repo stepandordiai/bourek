@@ -1,16 +1,18 @@
 import { useEffect } from "react";
 import img1 from "./img/starvac.jpg";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import PageInfo from "../../components/PageInfo/PageInfo";
 import "./Starvac.scss";
 
 const Starvac = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Starvac";
+        document.title = "Starvac";
     }, []);
 
     return (
-        <section className="starvac">
-            <h2 className="starvac__title">Starvac</h2>
-            <div className="starvac__info">
+        <>
+            <PageTitle title="Starvac" />
+            <PageInfo>
                 <strong>
                     Nový pomocník při baňkování – masážní přístroj STARVAC SP2
                 </strong>
@@ -120,8 +122,8 @@ const Starvac = () => {
                     masáž je regulován programem s ohledem na tento velmi
                     citlivý orgán.
                 </p>
-            </div>
-        </section>
+            </PageInfo>
+        </>
     );
 };
 

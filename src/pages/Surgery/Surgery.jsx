@@ -1,15 +1,17 @@
 import { useEffect } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import PageInfo from "../../components/PageInfo/PageInfo";
 import "./Surgery.scss";
 
 const Surgery = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Ordinace";
+        document.title = "Ordinace";
     }, []);
 
     return (
-        <section className="surgery">
-            <h2 className="surgery__title">Ordinace</h2>
-            <div className="surgery__info">
+        <>
+            <PageTitle title="Ordinace" />
+            <PageInfo>
                 <p>
                     Naše ordinace poskytuje služby rehabilitačního lékaře s
                     atestací I. stupně z ortopedie (1983), atestace z fyziatrie,
@@ -61,8 +63,8 @@ const Surgery = () => {
                     Veškeré ostatní rehabilitační procedury jsou hrazeny z
                     veřejného zdravotního pojištění.
                 </p>
-            </div>
-        </section>
+            </PageInfo>
+        </>
     );
 };
 

@@ -1,14 +1,17 @@
 import { useEffect } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import PageInfo from "../../components/PageInfo/PageInfo";
 import "./PersonalData.scss";
 
 const PersonalData = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Osobní údaje";
+        document.title = "Osobní údaje";
     }, []);
+
     return (
-        <section className="personal-data">
-            <h2 className="personal-data__title">Osobní údaje</h2>
-            <div className="personal-data__info">
+        <>
+            <PageTitle title="Osobní údaje" />
+            <PageInfo>
                 <strong>Vážení pacienti,</strong>
                 <strong>
                     Vaše osobní údaje jsou zpracovávány ve zdravotnické
@@ -36,8 +39,8 @@ const PersonalData = () => {
                     Odpovědnou osobou , na kterou se můžete obracet, je Váš
                     ošetřující lékař.
                 </strong>
-            </div>
-        </section>
+            </PageInfo>
+        </>
     );
 };
 

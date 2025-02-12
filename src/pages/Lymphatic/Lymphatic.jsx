@@ -1,17 +1,19 @@
 import { useEffect } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import PageInfo from "../../components/PageInfo/PageInfo";
 import img1 from "./img/BTL-6000.jpg";
 import img2 from "./img/BTL-6000-1.jpg";
 import "./Lymphatic.scss";
 
 const Lymphatic = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Lymfodrenáž";
+        document.title = "Lymfodrenáž";
     }, []);
 
     return (
-        <section className="lymphatic">
-            <h2 className="lymphatic__title">Lymfodrenáž</h2>
-            <div className="lymphatic__info">
+        <>
+            <PageTitle title="Lymfodrenáž" />
+            <PageInfo>
                 <strong>Přístrojová lymfodrenáž</strong>
                 <strong>
                     Přístrojová lymfodrenáž pomáhá udržovat a vytvářet vyvážený
@@ -87,8 +89,8 @@ const Lymphatic = () => {
                     prostřednictvím lymfatického systému do krevního řečiště a
                     ven z těla.
                 </p>
-            </div>
-        </section>
+            </PageInfo>
+        </>
     );
 };
 

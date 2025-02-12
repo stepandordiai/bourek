@@ -1,7 +1,7 @@
 import "./CustomHr.scss";
 
 const CustomHr = () => {
-    return <hr className="custom-hr" />;
+    return <div className="custom-hr"></div>;
 };
 
 export default CustomHr;

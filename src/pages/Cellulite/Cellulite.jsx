@@ -1,15 +1,17 @@
 import { useEffect } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import PageInfo from "../../components/PageInfo/PageInfo";
 import "./Cellulite.scss";
 
 const Cellulite = () => {
     useEffect(() => {
-        document.title = "Pepa Bourek | Celulitida";
+        document.title = "Celulitida";
     }, []);
 
     return (
-        <section className="cellulite">
-            <h2 className="cellulite__title">Celulitida</h2>
-            <div className="cellulite__info">
+        <>
+            <PageTitle title="Celulitida" />
+            <PageInfo>
                 <strong>Kapitoly:</strong>
                 <ul className="cellulite__chapters-list">
                     <li>
@@ -292,8 +294,8 @@ const Cellulite = () => {
                     Boj s celulitidou je opravdu strastiplný, ale nezapomeňte,
                     milé dámy, že tímto bojem ozdravíte celý svůj organismus
                 </p>
-            </div>
-        </section>
+            </PageInfo>
+        </>
     );
 };
 

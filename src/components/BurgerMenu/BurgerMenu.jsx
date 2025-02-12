@@ -35,197 +35,170 @@ const BurgerMenu = () => {
     }, []);
 
     return (
-        <>
-            <div className="burger-menu">
-                <ul>
-                    <li>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive ? activeLink : inactiveLink
-                            }
-                            to="/"
-                        >
-                            Úvod
-                        </NavLink>
-                    </li>
-                    <li className="burger-menu__select">
-                        <div className="burger-menu__select-title js-burger-menu__dd-btn">
-                            {/* <NavLink
+        <div className="burger-menu">
+            <ul className="burger-menu__nav">
+                <li>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/"
+                    >
+                        Úvod
+                    </NavLink>
+                </li>
+                <li className="burger-menu__select">
+                    <div className="burger-menu__select-title js-burger-menu__dd-btn">
+                        <span>O nás</span>
+                        {/* TODO: dd is a shorthand for dropdown */}
+                        <span className="burger-menu__dd-btn ">
+                            <i className="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div className="burger-menu__dd-wrapper">
+                        <div className="burger-menu__dd">
+                            <NavLink
                                 className={({ isActive }) =>
-                                    isActive ? activeLink : inactiveLink
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
                                 }
-                                to="/about-us"
+                                to="/offer"
                             >
-                                O nás
-                            </NavLink> */}
-                            <span>O nás</span>
-                            {/* TODO: dd is a shorthand for dropdown */}
-                            <span className="burger-menu__dd-btn ">
-                                <i class="fa-solid fa-circle-chevron-down"></i>
-                            </span>
-                        </div>
-                        <div className="burger-menu__dd-wrapper">
-                            <div className="burger-menu__dd">
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/surgery"
-                                >
-                                    What we offer
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/surgery"
-                                >
-                                    Our team
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/surgery"
-                                >
-                                    Clinic gallery
-                                </NavLink>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="burger-menu__select">
-                        <div className="burger-menu__select-title js-burger-menu__dd-btn">
-                            {/* <NavLink
+                                What we offer
+                            </NavLink>
+                            <NavLink
                                 className={({ isActive }) =>
-                                    isActive ? activeLink : inactiveLink
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
                                 }
-                                to="/services"
+                                to="/our-team"
                             >
-                                Služby
-                            </NavLink> */}
-                            <span>Služby</span>
-                            {/* TODO: dd is a shorthand for dropdown */}
-                            <span className="burger-menu__dd-btn ">
-                                <i class="fa-solid fa-circle-chevron-down"></i>
-                            </span>
+                                Our team
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/clinic-gallery"
+                            >
+                                Clinic gallery
+                            </NavLink>
                         </div>
-                        <div className="burger-menu__dd-wrapper">
-                            <div className="burger-menu__dd">
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/surgery"
-                                >
-                                    Ordinace
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/starvac"
-                                >
-                                    Starvac
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/cellulite"
-                                >
-                                    Celulitida
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/lymphatic"
-                                >
-                                    Lymfodrenáž
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/laser"
-                                >
-                                    Laser
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/electrotherapy"
-                                >
-                                    Elektroléčba
-                                </NavLink>
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? activeLinkOption
-                                            : inactiveLinkOption
-                                    }
-                                    to="/ltv"
-                                >
-                                    Individuální fyzioterapie
-                                </NavLink>
-                                {/* <img
-                                className="custom-options__down-arrow"
-                                src={downArrowImg}
-                                alt="Down arrow"
-                            /> */}
-                            </div>
+                    </div>
+                </li>
+                <li className="burger-menu__select">
+                    <div className="burger-menu__select-title js-burger-menu__dd-btn">
+                        <span>Služby</span>
+                        {/* TODO: dd is a shorthand for dropdown */}
+                        <span className="burger-menu__dd-btn ">
+                            <i className="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div className="burger-menu__dd-wrapper">
+                        <div className="burger-menu__dd">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/surgery"
+                            >
+                                Ordinace
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/starvac"
+                            >
+                                Starvac
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/cellulite"
+                            >
+                                Celulitida
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/lymphatic"
+                            >
+                                Lymfodrenáž
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/laser"
+                            >
+                                Laser
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/electrotherapy"
+                            >
+                                Elektroléčba
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/ltv"
+                            >
+                                Individuální fyzioterapie
+                            </NavLink>
                         </div>
-                    </li>
-                    <li>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive ? activeLink : inactiveLink
-                            }
-                            to="/prices"
-                        >
-                            Ceník
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive ? activeLink : inactiveLink
-                            }
-                            to="/contact"
-                        >
-                            Kontakty
-                        </NavLink>
-                    </li>
-                    {/* <li className="nav__btn">
-                        <NavLink
-                            className="nav__btn-link js-nav__link"
-                            to="/appointment"
-                        >
-                            Rezervovat termín
-                        </NavLink>
-                    </li> */}
-                </ul>
+                    </div>
+                </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/prices"
+                    >
+                        Ceník
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/contact"
+                    >
+                        Kontakty
+                    </NavLink>
+                </li>
+            </ul>
+            <div className="burger-menu__contact">
+                <a href="tel:+420602273579">+420 602 273 579</a>
+                <a href="tel:+420607841622">+420 607 841 622</a>
             </div>
-        </>
+        </div>
     );
 };
 

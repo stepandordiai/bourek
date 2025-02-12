@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import logoImg from "./../../assets/logo/medical-symbol.png";
 import downArrowImg from "./../../assets/icons/down-arrow.png";
 import "./Header.scss";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = () => {
     const inactiveLink = "nav__link js-nav__link";
@@ -14,7 +15,7 @@ const Header = () => {
         "nav__link-option js-nav__link nav__link-option--active";
 
     useEffect(() => {
-        document.querySelectorAll(".js-nav__link").forEach((item) => {
+        document.querySelectorAll(".js-nav__link").forEach((item, index) => {
             item.addEventListener("click", () => {
                 document
                     .querySelector(".burger-13")
@@ -23,8 +24,22 @@ const Header = () => {
                     .querySelector(".burger-13__center-line")
                     .classList.remove("burger-13__center-line--active");
                 document
-                    .querySelector(".header__list")
-                    .classList.remove("header__list--mobile");
+                    .querySelector(".burger-menu")
+                    .classList.remove("burger-menu--active");
+                document
+                    .querySelectorAll(".burger-menu__dd-wrapper")
+                    .forEach((dropdown) => {
+                        dropdown.classList.remove(
+                            "burger-menu__dd-wrapper--active"
+                        );
+                    });
+                document
+                    .querySelectorAll(".burger-menu__dd-btn")
+                    .forEach((dropdownBtn) => {
+                        dropdownBtn.classList.remove(
+                            "burger-menu__dd-btn--active"
+                        );
+                    });
             });
         });
 
@@ -175,6 +190,7 @@ const Header = () => {
                 </li>
             </ul>
             <BurgerBtn />
+            <BurgerMenu />
         </header>
     );
 };

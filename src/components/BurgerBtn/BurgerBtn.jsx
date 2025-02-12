@@ -9,8 +9,8 @@ const BurgerBtn = () => {
             .querySelector(".burger-13__center-line")
             .classList.toggle("burger-13__center-line--active");
         document
-            .querySelector(".header__list")
-            .classList.toggle("header__list--mobile");
+            .querySelector(".burger-menu")
+            .classList.toggle("burger-menu--active");
     }
 
     return (

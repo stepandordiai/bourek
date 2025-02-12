@@ -32,9 +32,9 @@ const Home = () => {
                         <h2>Ordinace rehabilitačního lékaře</h2>
                         <h2>MUDr. Josef Bourek</h2>
                         <h2>MUDr. Julia Cadorini</h2>
-                        <NavLink className="home__btn-link" to="/appointment">
+                        {/* <NavLink className="home__btn-link" to="/appointment">
                             Rezervovat termín
-                        </NavLink>
+                        </NavLink> */}
                     </div>
                     <div>
                         <img

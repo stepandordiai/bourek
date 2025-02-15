@@ -20,7 +20,7 @@ const BurgerMenu = () => {
                         ".burger-menu__dd-wrapper"
                     );
                     const dropdownBtn = document.querySelectorAll(
-                        ".burger-menu__dd-btn"
+                        ".burger-menu__dd-btn-icon"
                     );
 
                     dropdown[index].classList.toggle(
@@ -28,7 +28,7 @@ const BurgerMenu = () => {
                     );
 
                     dropdownBtn[index].classList.toggle(
-                        "burger-menu__dd-btn--active"
+                        "burger-menu__dd-btn-icon--active"
                     );
                 });
             });
@@ -51,7 +51,7 @@ const BurgerMenu = () => {
                     <div className="burger-menu__select-title js-burger-menu__dd-btn">
                         <span>O nás</span>
                         {/* TODO: dd is a shorthand for dropdown */}
-                        <span className="burger-menu__dd-btn ">
+                        <span className="burger-menu__dd-btn-icon">
                             <i className="fa-solid fa-chevron-down"></i>
                         </span>
                     </div>
@@ -94,7 +94,7 @@ const BurgerMenu = () => {
                     <div className="burger-menu__select-title js-burger-menu__dd-btn">
                         <span>Služby</span>
                         {/* TODO: dd is a shorthand for dropdown */}
-                        <span className="burger-menu__dd-btn ">
+                        <span className="burger-menu__dd-btn-icon">
                             <i className="fa-solid fa-chevron-down"></i>
                         </span>
                     </div>

@@ -49,84 +49,93 @@ const Home = () => {
                     <span>Kliknutím přejděte dolů</span>
                 </a>
             </div>
-            <h2 id="departments" className="home__grid-container-title">
-                Služby
-            </h2>
-            <div className="home__grid-container">
-                <div>
-                    <span>Ordinace</span>
-                    <NavLink className="grid-container__link" to="/surgery">
-                        Zjistit víc
-                        <img
-                            src={arrowUpperRightIcon}
-                            alt="Arrow Upper Right"
-                        />
-                    </NavLink>
-                </div>
-                <div>
-                    <span>Starvac</span>
-                    <NavLink className="grid-container__link" to="/starvac">
-                        Zjistit víc
-                        <img
-                            src={arrowUpperRightIcon}
-                            alt="Arrow Upper Right"
-                        />
-                    </NavLink>
-                </div>
-                <div>
-                    <span>Celulitida</span>
-                    <NavLink className="grid-container__link" to="/cellulite">
-                        Zjistit víc
-                        <img
-                            src={arrowUpperRightIcon}
-                            alt="Arrow Upper Right"
-                        />
-                    </NavLink>
-                </div>
-                <div>
-                    <span>Lymfodrenáž</span>
-                    <NavLink className="grid-container__link" to="/lymphatic">
-                        Zjistit víc
-                        <img
-                            src={arrowUpperRightIcon}
-                            alt="Arrow Upper Right"
-                        />
-                    </NavLink>
-                </div>
-                <div>
-                    <span>Laser</span>
-                    <NavLink className="grid-container__link" to="/laser">
-                        Zjistit víc
-                        <img
-                            src={arrowUpperRightIcon}
-                            alt="Arrow Upper Right"
-                        />
-                    </NavLink>
-                </div>
-                <div>
-                    <span>Elektroléčba</span>
-                    <NavLink
-                        className="grid-container__link"
-                        to="/electrotherapy"
-                    >
-                        Zjistit víc
-                        <img
-                            src={arrowUpperRightIcon}
-                            alt="Arrow Upper Right"
-                        />
-                    </NavLink>
-                </div>
-                <div>
-                    <span>Individuální fyzioterapie</span>
-                    <NavLink className="grid-container__link" to="/ltv">
-                        Zjistit víc
-                        <img
-                            src={arrowUpperRightIcon}
-                            alt="Arrow Upper Right"
-                        />
-                    </NavLink>
+            <div className="home__services">
+                <h2 id="departments" className="home__grid-container-title">
+                    Služby
+                </h2>
+                <div className="home__grid-container">
+                    <div>
+                        <span>Ordinace</span>
+                        <NavLink className="grid-container__link" to="/surgery">
+                            Zjistit víc
+                            <img
+                                src={arrowUpperRightIcon}
+                                alt="Arrow Upper Right"
+                            />
+                        </NavLink>
+                    </div>
+                    <div>
+                        <span>Starvac</span>
+                        <NavLink className="grid-container__link" to="/starvac">
+                            Zjistit víc
+                            <img
+                                src={arrowUpperRightIcon}
+                                alt="Arrow Upper Right"
+                            />
+                        </NavLink>
+                    </div>
+                    <div>
+                        <span>Celulitida</span>
+                        <NavLink
+                            className="grid-container__link"
+                            to="/cellulite"
+                        >
+                            Zjistit víc
+                            <img
+                                src={arrowUpperRightIcon}
+                                alt="Arrow Upper Right"
+                            />
+                        </NavLink>
+                    </div>
+                    <div>
+                        <span>Lymfodrenáž</span>
+                        <NavLink
+                            className="grid-container__link"
+                            to="/lymphatic"
+                        >
+                            Zjistit víc
+                            <img
+                                src={arrowUpperRightIcon}
+                                alt="Arrow Upper Right"
+                            />
+                        </NavLink>
+                    </div>
+                    <div>
+                        <span>Laser</span>
+                        <NavLink className="grid-container__link" to="/laser">
+                            Zjistit víc
+                            <img
+                                src={arrowUpperRightIcon}
+                                alt="Arrow Upper Right"
+                            />
+                        </NavLink>
+                    </div>
+                    <div>
+                        <span>Elektroléčba</span>
+                        <NavLink
+                            className="grid-container__link"
+                            to="/electrotherapy"
+                        >
+                            Zjistit víc
+                            <img
+                                src={arrowUpperRightIcon}
+                                alt="Arrow Upper Right"
+                            />
+                        </NavLink>
+                    </div>
+                    <div>
+                        <span>Individuální fyzioterapie</span>
+                        <NavLink className="grid-container__link" to="/ltv">
+                            Zjistit víc
+                            <img
+                                src={arrowUpperRightIcon}
+                                alt="Arrow Upper Right"
+                            />
+                        </NavLink>
+                    </div>
                 </div>
             </div>
+
             <h3 className="home__testimonials-title">
                 Co říkají naši zákazníci
             </h3>

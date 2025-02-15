@@ -81,15 +81,8 @@
 }
 
 .footer__footer {
-    @include flex-center;
+    display: flex;
     flex-direction: column;
-}
-
-.copyright {
-    text-align: center;
-    br {
-        display: none;
-    }
 }
 
 .creator {
@@ -122,11 +115,11 @@
 
 @media (max-width: 500px) {
     .copyright {
-        span {
+        display: flex;
+        flex-direction: column;
+
+        span:nth-child(2) {
             display: none;
-        }
-        br {
-            display: initial;
         }
     }
 }

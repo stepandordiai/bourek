@@ -116,9 +116,9 @@ const Footer = () => {
             <div className="footer__footer">
                 <div>
                     <p className="copyright">
-                        &copy; 2025 Pepa Bourek<span> | </span>
-                        <br />
-                        Všechna práva vyhrazena
+                        <span>&copy; 2025 Pepa Bourek</span>
+                        <span> | </span>
+                        <span>Všechna práva vyhrazena</span>
                     </p>
                 </div>
                 <p className="creator">

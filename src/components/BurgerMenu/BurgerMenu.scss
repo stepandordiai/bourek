@@ -1,3 +1,5 @@
+@use "./../../mixins" as *;
+
 .burger-menu {
     position: fixed;
     top: 70px;
@@ -12,8 +14,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s;
-    overflow-y: scroll;
-    scrollbar-width: none;
+    overflow-y: auto;
 }
 
 .burger-menu--active {
@@ -22,19 +23,17 @@
 }
 
 .burger-menu__select-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center;
     cursor: pointer;
     font-size: 2rem;
 }
 
-.burger-menu__dd-btn {
+.burger-menu__dd-btn-icon {
     pointer-events: none;
     transition: transform 0.5s;
 }
 
-.burger-menu__dd-btn--active {
+.burger-menu__dd-btn-icon--active {
     transform: rotate(180deg);
 }
 
@@ -90,9 +89,7 @@
 }
 
 .burger-menu__contact {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    @include flex-center-start;
     flex-direction: column;
 
     a {

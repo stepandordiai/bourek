@@ -31,11 +31,8 @@ const Footer = () => {
                         <li>
                             <NavLink to="/">Úvod</NavLink>
                         </li>
-                        {/* <li>
-                            <NavLink to="/about-us">O nás</NavLink>
-                        </li> */}
                         <li>
-                            <NavLink to="/prices">Ceník</NavLink>
+                            <NavLink to="/price-list">Ceník</NavLink>
                         </li>
                         <li>
                             <NavLink to="/contact">Kontakty</NavLink>
@@ -49,10 +46,12 @@ const Footer = () => {
                             <NavLink to="/">Co nabízíme</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/prices">Náš tým</NavLink>
+                            <NavLink to="/our-team">Náš tým</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/contact">Galerie kliniky</NavLink>
+                            <NavLink to="/smile-gallery">
+                                Galerie kliniky
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -72,13 +71,13 @@ const Footer = () => {
                             <NavLink to="/lymphatic">Lymfodrenáž</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/lymphatic">Laser</NavLink>
+                            <NavLink to="/laser">Laser</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/lymphatic">Elektroléčba</NavLink>
+                            <NavLink to="/electrotherapy">Elektroléčba</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/lymphatic">
+                            <NavLink to="/ltv">
                                 Individuální fyzioterapie
                             </NavLink>
                         </li>
@@ -124,7 +123,7 @@ const Footer = () => {
                 <p className="creator">
                     Designed and developed by{" "}
                     <a
-                        href="https://stepandordiai.netlify.app/"
+                        href="https://heeeyooo-studio.netlify.app/"
                         target="_blank"
                     >
                         heeeyooo.studio

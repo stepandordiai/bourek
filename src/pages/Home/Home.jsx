@@ -32,9 +32,6 @@ const Home = () => {
                         <h2>Ordinace rehabilitačního lékaře</h2>
                         <h2>MUDr. Josef Bourek</h2>
                         <h2>MUDr. Julia Cadorini</h2>
-                        {/* <NavLink className="home__btn-link" to="/appointment">
-                            Rezervovat termín
-                        </NavLink> */}
                     </div>
                     <div>
                         <img
@@ -44,15 +41,13 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                <a className="home__scroll-down-btn" href="#departments">
+                <a className="home__scroll-down-btn" href="#services">
                     <img src={scrollBarIcon} alt="Scroll Bar" />
                     <span>Kliknutím přejděte dolů</span>
                 </a>
             </div>
-            <div className="home__services">
-                <h2 id="departments" className="home__grid-container-title">
-                    Služby
-                </h2>
+            <div className="home__services" id="services">
+                <h2 className="home__services-title">Služby</h2>
                 <div className="home__grid-container">
                     <div>
                         <span>Ordinace</span>
@@ -135,7 +130,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
             <h3 className="home__testimonials-title">
                 Co říkají naši zákazníci
             </h3>
@@ -143,7 +137,7 @@ const Home = () => {
                 className="elfsight-app-920cb37f-0313-49ff-89e7-0fff3ce90a52"
                 data-elfsight-app-lazy
             ></div>
-            <h3 className="home__testimonials-title">Často kladené dotazy</h3>
+            <h3 className="home__faq-title">Často kladené dotazy</h3>
             <div className="home__faq">
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">

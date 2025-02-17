@@ -29,7 +29,7 @@ import LTV from "./pages/LTV/LTV";
 
 //
 
-import Prices from "./pages/Prices/Prices";
+import PriceList from "./pages/PriceList/PriceList";
 import Contact from "./pages/Contact/Contact";
 // import Appointment from "./pages/Appointment/Appointment";
 import Footer from "./components/Footer/Footer";
@@ -75,7 +75,7 @@ function App() {
 
                     {/*  */}
 
-                    <Route path="/prices" element={<Prices />} />
+                    <Route path="/price-list" element={<PriceList />} />
                     <Route path="/contact" element={<Contact />} />
                     {/* <Route path="/appointment" element={<Appointment />} /> */}
                     <Route path="/personal-data" element={<PersonalData />} />

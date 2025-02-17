@@ -1,7 +1,7 @@
 @use "./../../mixins" as *;
 
 .home {
-    padding: 0 20px 40px;
+    padding: 0 40px 40px;
 }
 
 .home__container {
@@ -101,13 +101,10 @@
     }
 }
 
-.home__services {
-    padding: 20px;
-}
-
-.home__grid-container-title {
-    font-size: clamp(2.5rem, 5vw, 3rem);
+.home__services-title {
+    font-size: clamp(2rem, 5vw, 3rem);
     padding-top: 110px;
+    color: var(--blue-clr);
 }
 
 .home__grid-container {
@@ -126,15 +123,10 @@
         border-radius: 10px;
         background: linear-gradient(-90deg, var(--blue-clr), rgb(15, 239, 206));
         color: #fff;
-        transition: all 300ms;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
         span {
             font-size: 2rem;
-        }
-
-        &:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transform: scale(1.05);
         }
     }
 }
@@ -157,10 +149,10 @@
     }
 }
 
-.home__testimonials-title {
-    // text-align: center;
+.home__testimonials-title,
+.home__faq-title {
     padding: 100px 0 40px;
-    font-size: 24px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     color: var(--blue-clr);
 }
 
@@ -256,12 +248,32 @@
     }
 }
 
+@media (max-width: 900px) {
+    .home {
+        padding: 0 20px 40px;
+    }
+
+    .home__grid-container {
+        gap: 20px;
+    }
+}
+
 @media (max-width: 800px) {
+    .home {
+        padding: 0 20px 40px;
+    }
+
     .home__grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
+}
 
-    .home__services {
-        padding: 10px;
+@media (max-width: 600px) {
+    .home {
+        padding: 0 10px 40px;
+    }
+
+    .home__grid-container {
+        gap: 10px;
     }
 }

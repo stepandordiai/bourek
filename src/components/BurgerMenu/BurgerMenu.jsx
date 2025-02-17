@@ -178,7 +178,7 @@ const BurgerMenu = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
-                        to="/prices"
+                        to="/price-list"
                     >
                         Ceník
                     </NavLink>

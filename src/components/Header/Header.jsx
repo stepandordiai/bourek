@@ -2,9 +2,8 @@ import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import logoImg from "./../../assets/logo/medical-symbol.png";
-import downArrowImg from "./../../assets/icons/down-arrow.png";
-import "./Header.scss";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import "./Header.scss";
 
 const Header = () => {
     const inactiveLink = "nav__link js-nav__link";
@@ -182,7 +181,7 @@ const Header = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
-                        to="/prices"
+                        to="/price-list"
                     >
                         Ceník
                     </NavLink>

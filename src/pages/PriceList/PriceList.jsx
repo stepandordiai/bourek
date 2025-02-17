@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import "./Prices.scss";
+import "./PriceList.scss";
 
-const Prices = () => {
+const PriceList = () => {
     useEffect(() => {
         document.title = "Ceník";
     }, []);
@@ -91,4 +91,4 @@ const Prices = () => {
     );
 };
 
-export default Prices;
+export default PriceList;

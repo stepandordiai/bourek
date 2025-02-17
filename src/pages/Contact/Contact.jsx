@@ -80,121 +80,138 @@ const Contact = () => {
                     </li>
                 </ul>
                 <CustomHr />
-                <h3 className="contact__form-title">Domluvit si schůzku</h3>
-                <form
-                    className="contact__form"
-                    action="mailto:josef@bourek.cz"
-                    method="post"
-                    encType="text/plain"
-                >
-                    <div className="contact-form__inputs">
-                        <input
-                            className="first-name"
-                            type="text"
-                            name="First name"
-                            placeholder="Jméno *"
-                            required
-                        />
-                        <input
-                            className="last-name"
-                            type="text"
-                            name="Last name"
-                            placeholder="Příjmení *"
-                            required
-                        />
+                <div className="form-map-wrapper">
+                    <div className="form-wrapper">
+                        <h3 className="contact__form-title" id="contact-form">
+                            Domluvit si schůzku
+                        </h3>
+                        <form
+                            className="contact__form"
+                            action="mailto:josef@bourek.cz"
+                            method="post"
+                            encType="text/plain"
+                        >
+                            <div className="contact-form__inputs">
+                                <input
+                                    className="first-name"
+                                    type="text"
+                                    name="First name"
+                                    placeholder="Jméno *"
+                                    required
+                                />
+                                <input
+                                    className="last-name"
+                                    type="text"
+                                    name="Last name"
+                                    placeholder="Příjmení *"
+                                    required
+                                />
+                            </div>
+                            <div className="contact-form__inputs">
+                                <input
+                                    className="email"
+                                    type="text"
+                                    name="E-mail"
+                                    placeholder="E-mail"
+                                />
+                                <input
+                                    className="phone"
+                                    type="text"
+                                    name="Phone number"
+                                    placeholder="Telefonní číslo *"
+                                    required
+                                />
+                            </div>
+
+                            {/* Custom select */}
+
+                            <div className="custom-select">
+                                <button className="custom-select__btn">
+                                    Choose department
+                                </button>
+                                <ul className="custom-select__list">
+                                    <li
+                                        className="custom-select__option"
+                                        data-value="Not selected"
+                                    >
+                                        Select department
+                                    </li>
+                                    <li
+                                        className="custom-select__option"
+                                        data-value="Ordinace"
+                                    >
+                                        Ordinace
+                                    </li>
+                                    <li
+                                        className="custom-select__option"
+                                        data-value="Starvac"
+                                    >
+                                        Starvac
+                                    </li>
+                                    <li
+                                        className="custom-select__option"
+                                        data-value="Celulitida"
+                                    >
+                                        Celulitida
+                                    </li>
+                                    <li
+                                        className="custom-select__option"
+                                        data-value="Lymfodrenáž"
+                                    >
+                                        Lymfodrenáž
+                                    </li>
+                                </ul>
+                                <input
+                                    className="custom-select__input"
+                                    type="text"
+                                    name="Department"
+                                    defaultValue=""
+                                />
+                            </div>
+                            <div>
+                                <div className="date-container">
+                                    <label htmlFor="date">
+                                        Vyberte datum návštěvy
+                                    </label>
+                                    <input
+                                        id="date"
+                                        className="date"
+                                        defaultValue={formatedDate}
+                                        type="date"
+                                        name="Date"
+                                    />
+                                </div>
+                                <div className="time-container">
+                                    <label htmlFor="time">
+                                        Zvolit čas návštěvy
+                                    </label>
+                                    <input
+                                        id="time"
+                                        className="time"
+                                        defaultValue={`${formatedHours}:${formatedMinutes}`}
+                                        type="time"
+                                        name="Time"
+                                    />
+                                </div>
+                            </div>
+                            <button className="submit-btn" type="submit">
+                                Domluvit si schůzku
+                            </button>
+                        </form>
                     </div>
-                    <div className="contact-form__inputs">
-                        <input
-                            className="email"
-                            type="text"
-                            name="E-mail"
-                            placeholder="E-mail"
-                        />
-                        <input
-                            className="phone"
-                            type="text"
-                            name="Phone number"
-                            placeholder="Telefonní číslo *"
-                            required
-                        />
+                    <div className="map-wrapper">
+                        <h3 className="contact__map-title" id="contact-map">
+                            Kde jsme
+                        </h3>
+                        <iframe
+                            className="contact__google-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz"
+                            loading="lazy"
+                        ></iframe>
                     </div>
-                    {/* Custom select */}
-                    <div className="custom-select">
-                        <button className="custom-select__btn">
-                            Choose department
-                        </button>
-                        <ul className="custom-select__list">
-                            <li
-                                className="custom-select__option"
-                                data-value="Not selected"
-                            >
-                                Select department
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value="Ordinace"
-                            >
-                                Ordinace
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value="Starvac"
-                            >
-                                Starvac
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value="Celulitida"
-                            >
-                                Celulitida
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value="Lymfodrenáž"
-                            >
-                                Lymfodrenáž
-                            </li>
-                        </ul>
-                        <input
-                            className="custom-select__input"
-                            type="text"
-                            name="Department"
-                            defaultValue=""
-                        />
-                    </div>
-                    <div>
-                        <div className="date-container">
-                            <label htmlFor="date">Vyberte datum návštěvy</label>
-                            <input
-                                id="date"
-                                className="date"
-                                defaultValue={formatedDate}
-                                type="date"
-                                name="Date"
-                            />
-                        </div>
-                        <div className="time-container">
-                            <label htmlFor="time">Zvolit čas návštěvy</label>
-                            <input
-                                id="time"
-                                className="time"
-                                defaultValue={`${formatedHours}:${formatedMinutes}`}
-                                type="time"
-                                name="Time"
-                            />
-                        </div>
-                    </div>
-                    <button className="submit-btn" type="submit">
-                        Domluvit si schůzku
-                    </button>
-                </form>
-                <CustomHr />
-                <h3 className="contact__map-title">Kde jsme</h3>
-                <iframe
-                    className="contact__google-map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz"
-                    loading="lazy"
-                ></iframe>
+                </div>
+
+                {/* <CustomHr /> */}
             </div>
         </>
     );

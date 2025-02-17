@@ -52,15 +52,15 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .about-us__grid-container {
-        gap: 20px;
+        padding: 40px 20px;
     }
 }
 
 @media (max-width: 600px) {
     .about-us__grid-container {
         grid-template-columns: repeat(1, 1fr);
-        padding: 15px;
+        padding: 40px 10px;
     }
 }

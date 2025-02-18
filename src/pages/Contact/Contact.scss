@@ -2,23 +2,16 @@
 
 .contact__wrapper {
     padding: 40px;
-    text-align: center;
 }
 
 .contact__list {
     @include flex-evenly-center;
     flex-wrap: wrap;
-    column-gap: 5px;
-    row-gap: 20px;
-    width: 100%;
+    gap: 40px;
 
     li {
-        justify-self: center;
-    }
-
-    img {
-        vertical-align: middle;
-        margin-right: 5px;
+        @include flex-center;
+        column-gap: 5px;
     }
 
     a {
@@ -81,6 +74,7 @@
 }
 
 // Custom select
+
 .custom-select {
     position: relative;
     width: 100%;
@@ -93,7 +87,6 @@
     padding: 10px;
     text-align: left;
     background: var(--blue-clr-3);
-    color: #000;
     border-radius: 10px;
     border: 1px solid transparent;
     cursor: pointer;
@@ -114,7 +107,7 @@
     transform: translateY(-50%);
     right: 10px;
     width: 10px;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background: #000;
 }
@@ -124,7 +117,7 @@
     left: 0;
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     pointer-events: none;
@@ -138,7 +131,7 @@
 }
 
 .custom-select__option {
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     cursor: pointer;
 
@@ -154,9 +147,7 @@
 .date-container,
 .time-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include flex-center-start;
     flex-direction: column;
 }
 
@@ -180,6 +171,7 @@ label {
     color: #fff;
     font-weight: inherit;
     transition: background-color 200ms;
+
     &:hover {
         background: var(--blue-clr-8);
     }

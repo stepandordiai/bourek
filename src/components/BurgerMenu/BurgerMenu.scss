@@ -15,6 +15,7 @@
     pointer-events: none;
     transition: opacity 0.5s;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .burger-menu--active {
@@ -50,9 +51,7 @@
 
 .burger-menu__dd {
     overflow: hidden;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    @include flex-start;
     flex-direction: column;
     row-gap: 5px;
 }

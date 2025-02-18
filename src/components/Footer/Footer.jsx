@@ -7,6 +7,9 @@ import mailIcon from "./../../assets/icons/mail.png";
 import "./Footer.scss";
 
 const Footer = () => {
+    const inactiveFooterLink = "footer__link";
+    const activeFooterLink = "footer__link footer__link--active";
+
     return (
         <footer className="footer">
             <div className="footer__header">
@@ -29,13 +32,40 @@ const Footer = () => {
                     <p>Navigace</p>
                     <ul>
                         <li>
-                            <NavLink to="/">Úvod</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/"
+                            >
+                                Úvod
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/price-list">Ceník</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/price-list"
+                            >
+                                Ceník
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/contact">Kontakty</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/contact"
+                            >
+                                Kontakty
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -43,13 +73,38 @@ const Footer = () => {
                     <p>O nás</p>
                     <ul>
                         <li>
-                            <NavLink to="/">Co nabízíme</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/offer"
+                            >
+                                Co nabízíme
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/our-team">Náš tým</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/our-team"
+                            >
+                                Náš tým
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/smile-gallery">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/smile-gallery"
+                            >
                                 Galerie kliniky
                             </NavLink>
                         </li>
@@ -59,25 +114,86 @@ const Footer = () => {
                     <p>Služby</p>
                     <ul>
                         <li>
-                            <NavLink to="/surgery">Ordinace</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/surgery"
+                            >
+                                Ordinace
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/starvac">Starvac</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/starvac"
+                            >
+                                Starvac
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/cellulite">Celulitida</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/cellulite"
+                            >
+                                Celulitida
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/lymphatic">Lymfodrenáž</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/lymphatic"
+                            >
+                                Lymfodrenáž
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/laser">Laser</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/laser"
+                            >
+                                Laser
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/electrotherapy">Elektroléčba</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/electrotherapy"
+                            >
+                                Elektroléčba
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/ltv">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/ltv"
+                            >
                                 Individuální fyzioterapie
                             </NavLink>
                         </li>
@@ -106,7 +222,16 @@ const Footer = () => {
                     <p style={{ marginTop: 10 }}>O Pepa Bourek</p>
                     <ul>
                         <li>
-                            <NavLink to="/personal-data">Personal data</NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/personal-data"
+                            >
+                                Personal data
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

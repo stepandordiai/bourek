@@ -168,31 +168,29 @@ const Contact = () => {
                                     defaultValue=""
                                 />
                             </div>
-                            <div>
-                                <div className="date-container">
-                                    <label htmlFor="date">
-                                        Vyberte datum návštěvy
-                                    </label>
-                                    <input
-                                        id="date"
-                                        className="date"
-                                        defaultValue={formatedDate}
-                                        type="date"
-                                        name="Date"
-                                    />
-                                </div>
-                                <div className="time-container">
-                                    <label htmlFor="time">
-                                        Zvolit čas návštěvy
-                                    </label>
-                                    <input
-                                        id="time"
-                                        className="time"
-                                        defaultValue={`${formatedHours}:${formatedMinutes}`}
-                                        type="time"
-                                        name="Time"
-                                    />
-                                </div>
+                            <div className="date-container">
+                                <label htmlFor="date">
+                                    Vyberte datum návštěvy
+                                </label>
+                                <input
+                                    id="date"
+                                    className="date"
+                                    defaultValue={formatedDate}
+                                    type="date"
+                                    name="Date"
+                                />
+                            </div>
+                            <div className="time-container">
+                                <label htmlFor="time">
+                                    Zvolit čas návštěvy
+                                </label>
+                                <input
+                                    id="time"
+                                    className="time"
+                                    defaultValue={`${formatedHours}:${formatedMinutes}`}
+                                    type="time"
+                                    name="Time"
+                                />
                             </div>
                             <button className="submit-btn" type="submit">
                                 Domluvit si schůzku

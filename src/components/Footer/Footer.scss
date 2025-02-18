@@ -55,14 +55,18 @@
         flex-direction: column;
         row-gap: 5px;
     }
+}
 
-    a {
-        transition: color 200ms;
+.footer__link {
+    transition: color 200ms;
 
-        &:hover {
-            color: var(--blue-clr);
-        }
+    &:hover {
+        color: var(--blue-clr);
     }
+}
+
+.footer__link--active {
+    color: var(--blue-clr) !important;
 }
 
 .footer__contact-list {
@@ -87,8 +91,13 @@
 
 .creator {
     font-size: 0.9rem;
+
     a {
-        color: var(--blue-clr) !important;
+        transition: color 200ms;
+
+        &:hover {
+            color: var(--blue-clr);
+        }
     }
 }
 

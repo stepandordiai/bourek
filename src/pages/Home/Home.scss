@@ -87,17 +87,33 @@
     }
 }
 
-.home__scroll-down-btn {
-    @include flex-center;
-    flex-direction: column;
+// Scroll mouse btn
 
-    img {
-        width: 40px;
-    }
+.home__scroll-mouse-btn {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
 
-    span {
-        font-size: 14px;
-        font-weight: 200;
+.wheel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+    width: 5px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #000;
+    animation: animateWheel 2s infinite;
+}
+
+@keyframes animateWheel {
+    to {
+        top: 20px;
+        opacity: 0;
     }
 }
 

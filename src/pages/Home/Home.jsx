@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
-import scrollBarIcon from "./../../assets/icons/scroll-bar.png";
 import "./Home.scss";
 
 const Home = () => {
@@ -41,9 +40,8 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                <a className="home__scroll-down-btn" href="#services">
-                    <img src={scrollBarIcon} alt="Scroll Bar" />
-                    <span>Kliknutím přejděte dolů</span>
+                <a className="home__scroll-mouse-btn" href="#services">
+                    <div className="wheel"></div>
                 </a>
             </div>
             <div className="home__services" id="services">

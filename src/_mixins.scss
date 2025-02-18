@@ -33,3 +33,8 @@
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+@mixin grid-center {
+    display: grid;
+    place-content: center;
+}

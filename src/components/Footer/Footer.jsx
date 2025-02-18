@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import CustomHr from "../CustomHr/CustomHr";
+import CustomDivider from "../CustomDivider/CustomDivider";
 import logoImg from "./../../assets/logo/medical-symbol.png";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
@@ -26,7 +26,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <CustomHr />
+            <CustomDivider />
             <div className="footer__nav">
                 <div>
                     <p>Navigace</p>
@@ -236,7 +236,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <CustomHr />
+            <CustomDivider />
             <div className="footer__footer">
                 <div>
                     <p className="copyright">

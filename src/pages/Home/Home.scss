@@ -103,14 +103,13 @@
 
 .home__services-title {
     font-size: clamp(2rem, 5vw, 3rem);
-    padding-top: 110px;
+    padding: 120px 0 40px;
     color: var(--blue-clr);
 }
 
 .home__grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 40px 0;
     gap: 40px;
 
     div {
@@ -151,7 +150,7 @@
 
 .home__testimonials-title,
 .home__faq-title {
-    padding: 100px 0 40px;
+    padding: 120px 0 40px;
     font-size: clamp(1.5rem, 5vw, 3rem);
     color: var(--blue-clr);
 }

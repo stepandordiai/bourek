@@ -1,6 +1,7 @@
 @use "reset" as *;
 @use "variables" as *;
 @use "fonts" as *;
+@use "mixins" as *;
 
 html {
     scroll-behavior: smooth;
@@ -35,22 +36,26 @@ html {
     }
 }
 
-.phone-call__btn-link {
+.phone-btn {
     position: fixed;
     bottom: 80px;
     right: 20px;
     z-index: 1;
-    width: 50px;
+    @include grid-center;
+    width: 40px;
     aspect-ratio: 1 / 1;
-    padding: 10px;
     background: var(--blue-clr-8);
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;
-    animation: reveal 300ms 3.2s forwards;
+    animation: revealPhoneBtn 300ms 3.2s forwards;
+
+    img {
+        width: 25px;
+    }
 }
 
-@keyframes reveal {
+@keyframes revealPhoneBtn {
     to {
         opacity: 1;
         pointer-events: all;

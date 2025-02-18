@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import dayjs from "dayjs";
-import CustomHr from "../../components/CustomHr/CustomHr";
+import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
 import mailIcon from "./../../assets/icons/mail.png";
@@ -79,7 +79,7 @@ const Contact = () => {
                         </a>
                     </li>
                 </ul>
-                <CustomHr />
+                <CustomDivider />
                 <div className="form-map-wrapper">
                     <div className="form-wrapper">
                         <h3 className="contact__form-title" id="contact-form">
@@ -209,7 +209,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* <CustomHr /> */}
+                {/* <CustomDivider /> */}
             </div>
         </>
     );

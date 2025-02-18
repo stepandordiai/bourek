@@ -80,8 +80,8 @@ function App() {
                     {/* <Route path="/appointment" element={<Appointment />} /> */}
                     <Route path="/personal-data" element={<PersonalData />} />
                 </Routes>
-                <NavLink className="phone-call__btn-link" to="/contact">
-                    <img src={phoneCallIcon} alt="Phone call" />
+                <NavLink className="phone-btn" to="/contact">
+                    <img src={phoneCallIcon} alt="Phone" />
                 </NavLink>
                 <Footer />
             </div>

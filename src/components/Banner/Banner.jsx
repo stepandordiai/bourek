@@ -3,6 +3,7 @@ import "./Banner.scss";
 const Banner = () => {
     function removeBanner() {
         document.querySelector(".banner").remove();
+        document.querySelector(".burger-menu").style.top = "80px";
     }
 
     return (

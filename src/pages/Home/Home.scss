@@ -86,7 +86,7 @@
 .wheel {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     top: 5px;
     width: 5px;
     aspect-ratio: 1/1;
@@ -97,8 +97,8 @@
 }
 
 @keyframes animateWheel {
-    to {
-        top: 20px;
+    100% {
+        transform: translate(-50%, 15px);
         opacity: 0;
     }
 }

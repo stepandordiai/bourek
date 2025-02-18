@@ -1,0 +1,62 @@
+@use "./../../mixins" as *;
+
+.banner {
+    position: relative;
+    background: #000;
+    height: 40px;
+    @include flex-center;
+    padding: 0 40px;
+}
+
+.banner__txt {
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    @include bg-clr-text;
+    background-size: 200%;
+    background-position: 100%;
+    opacity: 0;
+    animation: animateBannerText 4s infinite linear;
+}
+
+@keyframes animateBannerText {
+    25% {
+        opacity: 1;
+        background-position: 100%;
+    }
+    75% {
+        background-position: 0%;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 0%;
+        opacity: 0;
+    }
+}
+
+.banner__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .banner {
+        padding: 0 20px;
+    }
+
+    .banner__btn {
+        right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        padding: 0 10px;
+    }
+
+    .banner__btn {
+        right: 10px;
+    }
+}

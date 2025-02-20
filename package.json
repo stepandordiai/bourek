@@ -11,8 +11,11 @@
     },
     "dependencies": {
         "dayjs": "^1.11.13",
+        "i18next": "^24.2.2",
+        "i18next-browser-languagedetector": "^8.0.4",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "react-i18next": "^15.4.1",
         "react-router-dom": "^7.1.1",
         "sass": "^1.83.4",
         "scss": "^0.2.4"

@@ -1,0 +1,45 @@
+{
+    "home_title": "Home",
+    "about_us_title": "About us",
+    "services_title": "Services",
+    "price_list_title": "Price list",
+    "contacts_title": "Contacts",
+    "offer_title": "What we offer",
+    "our_team_title": "Our team",
+    "clinic_gallery_title": "Clinic gallery",
+    "sevice_1": "Surgery",
+    "sevice_2": "Starvac",
+    "sevice_3": "Cellulite",
+    "sevice_4": "Lymphatic drainage",
+    "sevice_5": "Laser",
+    "sevice_6": "Electrotherapy",
+    "sevice_7": "Individual physiotherapy",
+
+    "banner": {
+        "title": "Important information will be announced here"
+    },
+
+    "header": {
+        "menu_title": "menu"
+    },
+
+    "home": {
+        "title": "For better health and flexibility",
+        "secondary_title": "Rehabilitation doctor's office",
+        "find_out_more": "Find out more",
+        "testimonials_title": "What our customers say",
+        "faq_title": "FAQ",
+        "faq_1": "Your question may be here soon.",
+        "faq_2": "Your question may be here soon.",
+        "faq_3": "Your question may be here soon.",
+        "faq_4": "Your question may be here soon.",
+        "faq_5": "Your question may be here soon."
+    },
+
+    "footer": {
+        "nav-title": "Navigation",
+        "about_title": "About",
+        "personal_data": "Personal data",
+        "copyright": "All rights reserved"
+    }
+}

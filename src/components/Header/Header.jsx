@@ -4,19 +4,15 @@ import { useEffect } from "react";
 import logoImg from "./../../assets/logo/medical-symbol.png";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Banner from "../Banner/Banner";
+import { useTranslation } from "react-i18next";
 import "./Header.scss";
 
 const Header = () => {
-    const inactiveLink = "nav__link js-nav__link";
-    const activeLink = "nav__link js-nav__link nav__link--active";
-
-    const inactiveLinkOption = "nav__link-option js-nav__link";
-    const activeLinkOption =
-        "nav__link-option js-nav__link nav__link-option--active";
+    const { t } = useTranslation();
 
     useEffect(() => {
-        document.querySelectorAll(".js-nav__link").forEach((item, index) => {
-            item.addEventListener("click", () => {
+        document.querySelectorAll(".js-nav__link").forEach((link) => {
+            link.addEventListener("click", () => {
                 document
                     .querySelector(".burger-13")
                     .classList.remove("burger-13--active");
@@ -28,16 +24,16 @@ const Header = () => {
                     .classList.remove("burger-menu--active");
                 document
                     .querySelectorAll(".burger-menu__dd-wrapper")
-                    .forEach((dropdown) => {
-                        dropdown.classList.remove(
+                    .forEach((wrapper) => {
+                        wrapper.classList.remove(
                             "burger-menu__dd-wrapper--active"
                         );
                     });
                 document
-                    .querySelectorAll(".burger-menu__dd-btn")
-                    .forEach((dropdownBtn) => {
-                        dropdownBtn.classList.remove(
-                            "burger-menu__dd-btn--active"
+                    .querySelectorAll(".burger-menu__dd-btn-icon")
+                    .forEach((btn) => {
+                        btn.classList.remove(
+                            "burger-menu__dd-btn-icon--active"
                         );
                     });
             });
@@ -60,6 +56,13 @@ const Header = () => {
             });
     }, []);
 
+    const inactiveLink = "nav__link js-nav__link";
+    const activeLink = "nav__link js-nav__link nav__link--active";
+
+    const inactiveLinkOption = "nav__link-option js-nav__link";
+    const activeLinkOption =
+        "nav__link-option js-nav__link nav__link-option--active";
+
     return (
         <header className="header">
             <Banner />
@@ -76,12 +79,12 @@ const Header = () => {
                             }
                             to="/"
                         >
-                            Úvod
+                            {t("home_title")}
                         </NavLink>
                     </div>
                     <div className="nav__custom-select">
                         <div className="nav__custom-select-item">
-                            <span>O nás</span>
+                            <span>{t("about_us_title")}</span>
                             <span className="nav__dd-btn-icon">
                                 <i className="fa-solid fa-chevron-down"></i>
                             </span>
@@ -95,7 +98,7 @@ const Header = () => {
                                 }
                                 to="/offer"
                             >
-                                What we offer
+                                {t("offer_title")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -105,7 +108,7 @@ const Header = () => {
                                 }
                                 to="/our-team"
                             >
-                                Our team
+                                {t("our_team_title")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -115,13 +118,13 @@ const Header = () => {
                                 }
                                 to="/clinic-gallery"
                             >
-                                Clinic gallery
+                                {t("clinic_gallery_title")}
                             </NavLink>
                         </div>
                     </div>
                     <div className="nav__custom-select">
                         <div className="nav__custom-select-item">
-                            <span>Služby</span>
+                            <span>{t("services_title")}</span>
                             <span className="nav__dd-btn-icon">
                                 <i className="fa-solid fa-chevron-down"></i>
                             </span>
@@ -135,7 +138,7 @@ const Header = () => {
                                 }
                                 to="/surgery"
                             >
-                                Ordinace
+                                {t("service_1")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -145,7 +148,7 @@ const Header = () => {
                                 }
                                 to="/starvac"
                             >
-                                Starvac
+                                {t("service_2")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -155,7 +158,7 @@ const Header = () => {
                                 }
                                 to="/cellulite"
                             >
-                                Celulitida
+                                {t("service_3")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -165,7 +168,7 @@ const Header = () => {
                                 }
                                 to="/lymphatic"
                             >
-                                Lymfodrenáž
+                                {t("service_4")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -175,7 +178,7 @@ const Header = () => {
                                 }
                                 to="/laser"
                             >
-                                Laser
+                                {t("service_5")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -185,7 +188,7 @@ const Header = () => {
                                 }
                                 to="/electrotherapy"
                             >
-                                Elektroléčba
+                                {t("service_6")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -195,7 +198,7 @@ const Header = () => {
                                 }
                                 to="/ltv"
                             >
-                                Individuální fyzioterapie
+                                {t("service_7")}
                             </NavLink>
                         </div>
                     </div>
@@ -206,7 +209,7 @@ const Header = () => {
                             }
                             to="/price-list"
                         >
-                            Ceník
+                            {t("price_list_title")}
                         </NavLink>
                     </div>
                     <div>
@@ -216,7 +219,7 @@ const Header = () => {
                             }
                             to="/contact"
                         >
-                            Kontakty
+                            {t("contacts_title")}
                         </NavLink>
                     </div>
                     {/* <div className="nav__btn">

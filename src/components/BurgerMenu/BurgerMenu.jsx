@@ -1,15 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./BurgerMenu.scss";
 
 const BurgerMenu = () => {
-    const inactiveLink = "burger-menu__nav-link js-nav__link";
-    const activeLink =
-        "burger-menu__nav-link js-nav__link burger-menu__nav-link--active";
-
-    const inactiveLinkOption = "burger-menu__dd-link js-nav__link";
-    const activeLinkOption =
-        "burger-menu__dd-link js-nav__link burger-menu__dd-link--active";
+    const { t } = useTranslation();
 
     useEffect(() => {
         document
@@ -34,6 +29,14 @@ const BurgerMenu = () => {
             });
     }, []);
 
+    const inactiveLink = "burger-menu__nav-link js-nav__link";
+    const activeLink =
+        "burger-menu__nav-link js-nav__link burger-menu__nav-link--active";
+
+    const inactiveLinkOption = "burger-menu__dd-link js-nav__link";
+    const activeLinkOption =
+        "burger-menu__dd-link js-nav__link burger-menu__dd-link--active";
+
     return (
         <div className="burger-menu">
             <ul className="burger-menu__nav">
@@ -44,13 +47,15 @@ const BurgerMenu = () => {
                         }
                         to="/"
                     >
-                        Úvod
+                        {t("home_title")}
                     </NavLink>
                 </li>
                 <li className="burger-menu__select">
                     <div className="burger-menu__select-title js-burger-menu__dd-btn">
-                        <span>O nás</span>
-                        {/* TODO: dd is a shorthand for dropdown */}
+                        <span>{t("about_us_title")}</span>
+
+                        {/* dd is a shorthand for dropdown */}
+
                         <span className="burger-menu__dd-btn-icon">
                             <i className="fa-solid fa-chevron-down"></i>
                         </span>
@@ -65,7 +70,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/offer"
                             >
-                                What we offer
+                                {t("offer_title")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -75,7 +80,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/our-team"
                             >
-                                Our team
+                                {t("our_team_title")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -85,15 +90,14 @@ const BurgerMenu = () => {
                                 }
                                 to="/clinic-gallery"
                             >
-                                Clinic gallery
+                                {t("clinic_gallery_title")}
                             </NavLink>
                         </div>
                     </div>
                 </li>
                 <li className="burger-menu__select">
                     <div className="burger-menu__select-title js-burger-menu__dd-btn">
-                        <span>Služby</span>
-                        {/* TODO: dd is a shorthand for dropdown */}
+                        <span>{t("services_title")}</span>
                         <span className="burger-menu__dd-btn-icon">
                             <i className="fa-solid fa-chevron-down"></i>
                         </span>
@@ -108,7 +112,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/surgery"
                             >
-                                Ordinace
+                                {t("service_1")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -118,7 +122,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/starvac"
                             >
-                                Starvac
+                                {t("service_2")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -128,7 +132,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/cellulite"
                             >
-                                Celulitida
+                                {t("service_3")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -138,7 +142,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/lymphatic"
                             >
-                                Lymfodrenáž
+                                {t("service_4")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -148,7 +152,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/laser"
                             >
-                                Laser
+                                {t("service_5")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -158,7 +162,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/electrotherapy"
                             >
-                                Elektroléčba
+                                {t("service_6")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -168,7 +172,7 @@ const BurgerMenu = () => {
                                 }
                                 to="/ltv"
                             >
-                                Individuální fyzioterapie
+                                {t("service_7")}
                             </NavLink>
                         </div>
                     </div>
@@ -180,7 +184,7 @@ const BurgerMenu = () => {
                         }
                         to="/price-list"
                     >
-                        Ceník
+                        {t("price_list_title")}
                     </NavLink>
                 </li>
                 <li>
@@ -190,7 +194,7 @@ const BurgerMenu = () => {
                         }
                         to="/contact"
                     >
-                        Kontakty
+                        {t("contacts_title")}
                     </NavLink>
                 </li>
             </ul>

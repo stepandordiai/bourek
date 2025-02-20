@@ -1,0 +1,45 @@
+{
+    "home_title": "Úvod",
+    "about_us_title": "O nás",
+    "services_title": "Služby",
+    "price_list_title": "Ceník",
+    "contacts_title": "Kontakty",
+    "offer_title": "Co nabízíme",
+    "our_team_title": "Náš tým",
+    "clinic_gallery_title": "Galerie kliniky",
+    "service_1": "Ordinace",
+    "service_2": "Starvac",
+    "service_3": "Celulitida",
+    "service_4": "Lymfodrenáž",
+    "service_5": "Laser",
+    "service_6": "Elektroléčba",
+    "service_7": "Individuální fyzioterapie",
+
+    "banner": {
+        "title": "Důležité informace budou oznámeny zde"
+    },
+
+    "header": {
+        "menu_title": "menu"
+    },
+
+    "home": {
+        "title": "Pro lepší zdraví a flexibilitu",
+        "secondary_title": "Ordinace rehabilitačního lékaře",
+        "find_out_more": "Zjistit víc",
+        "testimonials_title": "Co říkají naši zákazníci",
+        "faq_title": "Často kladené dotazy",
+        "faq_1": "Vaše otázka zde může být brzy",
+        "faq_2": "Vaše otázka zde může být brzy",
+        "faq_3": "Vaše otázka zde může být brzy",
+        "faq_4": "Vaše otázka zde může být brzy",
+        "faq_5": "Vaše otázka zde může být brzy"
+    },
+
+    "footer": {
+        "nav-title": "Navigace",
+        "about_title": "O",
+        "personal_data": "Osobní údaje",
+        "copyright": "Všechna práva vyhrazena"
+    }
+}

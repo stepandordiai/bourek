@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./BurgerMenu.scss";
 
+/* dd is a shorthand for dropdown */
+
 const BurgerMenu = () => {
     const { t } = useTranslation();
 
@@ -53,9 +55,6 @@ const BurgerMenu = () => {
                 <li className="burger-menu__select">
                     <div className="burger-menu__select-title js-burger-menu__dd-btn">
                         <span>{t("about_us_title")}</span>
-
-                        {/* dd is a shorthand for dropdown */}
-
                         <span className="burger-menu__dd-btn-icon">
                             <i className="fa-solid fa-chevron-down"></i>
                         </span>
@@ -71,6 +70,16 @@ const BurgerMenu = () => {
                                 to="/offer"
                             >
                                 {t("offer_title")}
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/price-list"
+                            >
+                                {t("price_list_title")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -176,16 +185,6 @@ const BurgerMenu = () => {
                             </NavLink>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <NavLink
-                        className={({ isActive }) =>
-                            isActive ? activeLink : inactiveLink
-                        }
-                        to="/price-list"
-                    >
-                        {t("price_list_title")}
-                    </NavLink>
                 </li>
                 <li>
                     <NavLink

@@ -5,6 +5,7 @@ import logoImg from "./../../assets/logo/medical-symbol.png";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Banner from "../Banner/Banner";
 import { useTranslation } from "react-i18next";
+import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import "./Header.scss";
 
 const Header = () => {
@@ -38,22 +39,6 @@ const Header = () => {
                     });
             });
         });
-
-        document
-            .querySelector(".nav__custom-options")
-            .addEventListener("scroll", () => {
-                if (
-                    document.querySelector(".nav__custom-options").scrollTop > 0
-                ) {
-                    document
-                        .querySelector(".custom-options__down-arrow")
-                        .classList.add("custom-options__down-arrow--active");
-                } else {
-                    document
-                        .querySelector(".custom-options__down-arrow")
-                        .classList.remove("custom-options__down-arrow--active");
-                }
-            });
     }, []);
 
     const inactiveLink = "nav__link js-nav__link";
@@ -71,7 +56,8 @@ const Header = () => {
                     <img src={logoImg} alt="Logo" />
                     <span>Pepa Bourek</span>
                 </NavLink>
-                <nav className="header__list js-header__list">
+                <LanguageSelect />
+                <nav className="header__list">
                     <div>
                         <NavLink
                             className={({ isActive }) =>
@@ -99,6 +85,16 @@ const Header = () => {
                                 to="/offer"
                             >
                                 {t("offer_title")}
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeLinkOption
+                                        : inactiveLinkOption
+                                }
+                                to="/price-list"
+                            >
+                                {t("price_list_title")}
                             </NavLink>
                             <NavLink
                                 className={({ isActive }) =>
@@ -207,16 +203,6 @@ const Header = () => {
                             className={({ isActive }) =>
                                 isActive ? activeLink : inactiveLink
                             }
-                            to="/price-list"
-                        >
-                            {t("price_list_title")}
-                        </NavLink>
-                    </div>
-                    <div>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive ? activeLink : inactiveLink
-                            }
                             to="/contact"
                         >
                             {t("contacts_title")}
@@ -229,7 +215,7 @@ const Header = () => {
                     >
                         Rezervovat termín
                     </NavLink>
-                </div> */}
+                    </div> */}
                 </nav>
                 <BurgerBtn />
                 <BurgerMenu />

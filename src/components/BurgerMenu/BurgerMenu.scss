@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background: white;
+    background: #fff;
     padding: 10px;
     opacity: 0;
     pointer-events: none;
@@ -54,6 +54,7 @@
     @include flex-start;
     flex-direction: column;
     row-gap: 5px;
+    padding-left: 10px;
 }
 
 .burger-menu__nav-link {

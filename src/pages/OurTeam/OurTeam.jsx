@@ -43,7 +43,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Uterý:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -51,7 +51,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Středa:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 15:00</span>
                             </li>
                             <li
                                 className={
@@ -59,7 +59,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Ctvrtek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -67,7 +67,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Pátek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:00</span>
                             </li>
                             <li
                                 className={
@@ -94,7 +94,7 @@ const OurTeam = () => {
                         <p>MUDr. Julia Cadorini</p>
                         <a href="tel:+420602273579">+420 602 273 579</a>
                         <a href="mailto:pepabourek@gmail.com">
-                            pepabourek@gmail.com
+                            cadorinij@seznam.cz
                         </a>
                     </div>
                     <div className="our-team__card-bottom">
@@ -114,7 +114,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Uterý:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -122,7 +122,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Středa:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 15:00</span>
                             </li>
                             <li
                                 className={
@@ -130,7 +130,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Ctvrtek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -138,7 +138,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Pátek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:00</span>
                             </li>
                             <li
                                 className={
@@ -185,7 +185,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Uterý:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -193,7 +193,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Středa:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 15:00</span>
                             </li>
                             <li
                                 className={
@@ -201,7 +201,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Ctvrtek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -209,7 +209,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Pátek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:00</span>
                             </li>
                             <li
                                 className={
@@ -256,7 +256,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Uterý:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -264,7 +264,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Středa:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 15:00</span>
                             </li>
                             <li
                                 className={
@@ -272,7 +272,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Ctvrtek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:30</span>
                             </li>
                             <li
                                 className={
@@ -280,7 +280,7 @@ const OurTeam = () => {
                                 }
                             >
                                 <span>Pátek:</span>
-                                <span>7:00 - 17:00</span>
+                                <span>7:00 - 14:00</span>
                             </li>
                             <li
                                 className={

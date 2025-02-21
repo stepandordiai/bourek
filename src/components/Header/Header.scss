@@ -64,7 +64,7 @@
 }
 
 .nav__custom-select-item {
-    @include flex-between-center;
+    @include flex-center;
     column-gap: 5px;
 }
 
@@ -78,6 +78,8 @@
 
 .nav__custom-options {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -103,22 +105,16 @@
     padding: 10px;
     font-weight: 300;
     white-space: nowrap;
-}
 
-.nav__link-option:hover {
-    background: var(--blue-clr);
-    color: #fff !important;
+    &:hover {
+        background: var(--blue-clr);
+        color: #fff;
+    }
 }
 
 .nav__link-option--active {
     background: var(--blue-clr);
     color: #fff !important;
-}
-
-@media (max-width: 1000px) {
-    .header__list {
-        width: 60%;
-    }
 }
 
 @media (max-width: 900px) {

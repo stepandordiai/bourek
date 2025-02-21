@@ -8,7 +8,7 @@ html {
 }
 
 * {
-    font-family: "Poppins", serif;
+    font-family: "Poppins", "Inter", serif;
 }
 
 #root {
@@ -43,7 +43,7 @@ html {
     z-index: 1;
     @include grid-center;
     width: 40px;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     background: var(--blue-clr-8);
     border-radius: 10px;
     opacity: 0;

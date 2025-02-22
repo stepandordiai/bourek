@@ -7,13 +7,13 @@
     "offer_title": "What we offer",
     "our_team_title": "Our team",
     "clinic_gallery_title": "Clinic gallery",
-    "sevice_1": "Surgery",
-    "sevice_2": "Starvac",
-    "sevice_3": "Cellulite",
-    "sevice_4": "Lymphatic drainage",
-    "sevice_5": "Laser",
-    "sevice_6": "Electrotherapy",
-    "sevice_7": "Individual physiotherapy",
+    "service_1": "Surgery",
+    "service_2": "Starvac",
+    "service_3": "Cellulite",
+    "service_4": "Lymphatic drainage",
+    "service_5": "Laser",
+    "service_6": "Electrotherapy",
+    "service_7": "Individual physiotherapy",
 
     "banner": {
         "title": "Important information will be announced here"

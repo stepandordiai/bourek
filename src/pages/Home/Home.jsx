@@ -1,12 +1,17 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
+import { useTranslation } from "react-i18next";
 import "./Home.scss";
 
 const Home = () => {
-    useEffect(() => {
-        document.title = "Pepa Bourek | Ordinace rehabilitačního lékaře";
+    const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = `Pepa Bourek | ${t("home.secondary_title")}`;
+    }, [t]);
+
+    useEffect(() => {
         document
             .querySelectorAll(".js-faq__item-header")
             .forEach((el, index) => {
@@ -24,13 +29,10 @@ const Home = () => {
             <div className="home__container">
                 <div className="home__wrapper">
                     <div>
-                        <h1 className="home__title">
-                            Pro lepší zdraví
-                            <br />a flexibilitu
-                        </h1>
-                        <h2>Ordinace rehabilitačního lékaře</h2>
-                        <h2>MUDr. Josef Bourek</h2>
-                        <h2>MUDr. Julia Cadorini</h2>
+                        <h1 className="home__title">{t("home.title")}</h1>
+                        <h2>{t("home.secondary_title")}</h2>
+                        <h3>MUDr. Josef Bourek</h3>
+                        <h3>MUDr. Julia Cadorini</h3>
                     </div>
                     <div>
                         <img
@@ -45,12 +47,12 @@ const Home = () => {
                 </a>
             </div>
             <div className="home__services" id="services">
-                <h2 className="home__services-title">Služby</h2>
+                <h2 className="home__services-title">{t("services_title")}</h2>
                 <div className="home__grid-container">
                     <div>
-                        <span>Ordinace</span>
+                        <span>{t("service_1")}</span>
                         <NavLink className="grid-container__link" to="/surgery">
-                            Zjistit víc
+                            {t("home.find_out_more")}
                             <img
                                 src={arrowUpperRightIcon}
                                 alt="Arrow Upper Right"
@@ -58,9 +60,9 @@ const Home = () => {
                         </NavLink>
                     </div>
                     <div>
-                        <span>Starvac</span>
+                        <span>{t("service_2")}</span>
                         <NavLink className="grid-container__link" to="/starvac">
-                            Zjistit víc
+                            {t("home.find_out_more")}
                             <img
                                 src={arrowUpperRightIcon}
                                 alt="Arrow Upper Right"
@@ -68,12 +70,12 @@ const Home = () => {
                         </NavLink>
                     </div>
                     <div>
-                        <span>Celulitida</span>
+                        <span>{t("service_3")}</span>
                         <NavLink
                             className="grid-container__link"
                             to="/cellulite"
                         >
-                            Zjistit víc
+                            {t("home.find_out_more")}
                             <img
                                 src={arrowUpperRightIcon}
                                 alt="Arrow Upper Right"
@@ -81,12 +83,12 @@ const Home = () => {
                         </NavLink>
                     </div>
                     <div>
-                        <span>Lymfodrenáž</span>
+                        <span>{t("service_4")}</span>
                         <NavLink
                             className="grid-container__link"
                             to="/lymphatic"
                         >
-                            Zjistit víc
+                            {t("home.find_out_more")}
                             <img
                                 src={arrowUpperRightIcon}
                                 alt="Arrow Upper Right"
@@ -94,9 +96,9 @@ const Home = () => {
                         </NavLink>
                     </div>
                     <div>
-                        <span>Laser</span>
+                        <span>{t("service_5")}</span>
                         <NavLink className="grid-container__link" to="/laser">
-                            Zjistit víc
+                            {t("home.find_out_more")}
                             <img
                                 src={arrowUpperRightIcon}
                                 alt="Arrow Upper Right"
@@ -104,12 +106,12 @@ const Home = () => {
                         </NavLink>
                     </div>
                     <div>
-                        <span>Elektroléčba</span>
+                        <span>{t("service_6")}</span>
                         <NavLink
                             className="grid-container__link"
                             to="/electrotherapy"
                         >
-                            Zjistit víc
+                            {t("home.find_out_more")}
                             <img
                                 src={arrowUpperRightIcon}
                                 alt="Arrow Upper Right"
@@ -117,9 +119,9 @@ const Home = () => {
                         </NavLink>
                     </div>
                     <div>
-                        <span>Individuální fyzioterapie</span>
+                        <span>{t("service_7")}</span>
                         <NavLink className="grid-container__link" to="/ltv">
-                            Zjistit víc
+                            {t("home.find_out_more")}
                             <img
                                 src={arrowUpperRightIcon}
                                 alt="Arrow Upper Right"
@@ -129,17 +131,17 @@ const Home = () => {
                 </div>
             </div>
             <h3 className="home__testimonials-title">
-                Co říkají naši zákazníci
+                {t("home.testimonials_title")}
             </h3>
             <div
                 className="elfsight-app-920cb37f-0313-49ff-89e7-0fff3ce90a52"
                 data-elfsight-app-lazy
             ></div>
-            <h3 className="home__faq-title">Často kladené dotazy</h3>
+            <h3 className="home__faq-title">{t("home.faq_title")}</h3>
             <div className="home__faq">
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">
-                        <p>Vaše otázka zde může být brzy</p>
+                        <p>{t("home.faq_1")}</p>
                         <div className="faq__btn"></div>
                     </div>
                     <div className="grid-line">
@@ -154,7 +156,7 @@ const Home = () => {
                 </div>
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">
-                        <p>Vaše otázka zde může být brzy</p>
+                        <p>{t("home.faq_2")}</p>
                         <div className="faq__btn"></div>
                     </div>
                     <div className="grid-line">
@@ -169,7 +171,7 @@ const Home = () => {
                 </div>
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">
-                        <p>Vaše otázka zde může být brzy</p>
+                        <p>{t("home.faq_3")}</p>
                         <div className="faq__btn"></div>
                     </div>
                     <div className="grid-line">
@@ -184,7 +186,7 @@ const Home = () => {
                 </div>
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">
-                        <p>Vaše otázka zde může být brzy</p>
+                        <p>{t("home.faq_4")}</p>
                         <div className="faq__btn"></div>
                     </div>
                     <div className="grid-line">
@@ -199,7 +201,7 @@ const Home = () => {
                 </div>
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">
-                        <p>Vaše otázka zde může být brzy</p>
+                        <p>{t("home.faq_5")}</p>
                         <div className="faq__btn"></div>
                     </div>
                     <div className="grid-line">

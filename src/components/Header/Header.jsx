@@ -1,11 +1,11 @@
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
-import logoImg from "./../../assets/logo/medical-symbol.png";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Banner from "../Banner/Banner";
 import { useTranslation } from "react-i18next";
 import LanguageSelect from "../LanguageSelect/LanguageSelect";
+import logoImg from "./../../assets/logo/pepa-bourek-logo.png";
 import "./Header.scss";
 
 const Header = () => {

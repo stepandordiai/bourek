@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import logoIcon from "./../../assets/logo/medical-symbol.png";
+import logoIcon from "./../../assets/logo/pepa-bourek-logo.png";
 import "./Loading.scss";
 
 const Loading = () => {
@@ -11,7 +11,7 @@ const Loading = () => {
 
     return (
         <div id="loading" className="loading-logo" style={{ display: "flex" }}>
-            <img src={logoIcon} alt="Logo icon" />
+            <img src={logoIcon} alt="Logo" />
             <div className="text-line">
                 <p>Pepa Bourek</p>
             </div>

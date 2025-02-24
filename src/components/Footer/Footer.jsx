@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import CustomDivider from "../CustomDivider/CustomDivider";
 import { useTranslation } from "react-i18next";
-import logoImg from "./../../assets/logo/medical-symbol.png";
+import logoImg from "./../../assets/logo/pepa-bourek-logo.png";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
 import mailIcon from "./../../assets/icons/mail.png";
@@ -235,7 +235,7 @@ const Footer = () => {
                                 }
                                 to="/personal-data"
                             >
-                                {t("footer.personal_data")}
+                                {t("personal_data_title")}
                             </NavLink>
                         </li>
                     </ul>

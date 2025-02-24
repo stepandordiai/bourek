@@ -1,45 +1,49 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
 import "./PriceList.scss";
 
 const PriceList = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
-        document.title = "Ceník";
-    }, []);
+        document.title = t("price_list_title");
+    }, [t]);
 
     return (
         <>
-            <PageTitle title="Ceník" />
+            <PageTitle title={t("price_list_title")} />
             <div className="price-list__wrapper">
                 <table className="prices__table">
                     <tbody>
                         <tr>
-                            <td>Laser</td>
+                            <td>{t("price_list.price_list_1")}</td>
                             <td>1 aplikace</td>
                             <td>80 Kč</td>
                         </tr>
                         <tr>
                             <td>
-                                Elektroléčba
-                                <br />
-                                (bez doporučení)
+                                {t("price_list.price_list_2")}
+                                <br />({t("price_list.without_recommendation")})
                             </td>
                             <td></td>
                             <td>60 Kč</td>
                         </tr>
                         <tr>
-                            <td>Starvac | masáž</td>
-                            <td>15 min</td>
+                            <td>Starvac | {t("price_list.price_list_3")}</td>
+                            <td>15 {t("price_list.min")}</td>
                             <td>200 Kč</td>
                         </tr>
                         <tr>
                             <td>
-                                <abbr title="Léčebná tělesná výchova">LTV</abbr>
+                                <abbr title={t("price_list.price_list_4")}>
+                                    LTV
+                                </abbr>
                             </td>
                             <td>
-                                30 min
+                                30 {t("price_list.min")}
                                 <br />
-                                60 min
+                                60 {t("price_list.min")}
                             </td>
                             <td>
                                 300 Kč
@@ -48,13 +52,13 @@ const PriceList = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td>Přístrojová lymfomasáž</td>
+                            <td>{t("price_list.price_list_5")}</td>
                             <td>
-                                30 min
+                                30 {t("price_list.min")}
                                 <br />
-                                45 min
+                                45 {t("price_list.min")}
                                 <br />
-                                60 min
+                                60 {t("price_list.min")}
                             </td>
                             <td>
                                 200 Kč
@@ -65,22 +69,22 @@ const PriceList = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td>10 procedur</td>
-                            <td>45 min</td>
+                            <td>10 {t("price_list.procedures")}</td>
+                            <td>45 {t("price_list.min")}</td>
                             <td>2000 Kč</td>
                         </tr>
                         <tr>
-                            <td>10 procedur</td>
-                            <td>60 min</td>
+                            <td>10 {t("price_list.procedures")}</td>
+                            <td>60 {t("price_list.min")}</td>
                             <td>2400 Kč</td>
                         </tr>
                         <tr>
-                            <td>Kinesiotape</td>
-                            <td>1 cm</td>
+                            <td>{t("price_list.price_list_6")}</td>
+                            <td>1 {t("price_list.cm")}</td>
                             <td>3 Kč</td>
                         </tr>
                         <tr>
-                            <td>Cross tape</td>
+                            <td>{t("price_list.price_list_7")}</td>
                             <td>1 ks</td>
                             <td>30 Kč</td>
                         </tr>

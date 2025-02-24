@@ -1,25 +1,21 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageInfo from "../../components/PageInfo/PageInfo";
+import { useTranslation } from "react-i18next";
 import "./Laser.scss";
 
 const Laser = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
-        document.title = "Laser";
-    }, []);
+        document.title = t("service_5");
+    }, [t]);
 
     return (
         <>
-            <PageTitle title="Laser" />
+            <PageTitle title={t("service_5")} />
             <PageInfo>
-                <p>
-                    Laser je světlo zesilované pomocí stimulované emise záření.
-                    Podstatu tohoto záření objasnily zákony kvantové fyziky.
-                    První podnět k hlubšímu studiu kvantové teorie dal Albert
-                    Einstein. V případě laseru se jedná o koherentní
-                    monochromatické záření v oblasti mikrovln, popřípadě
-                    viditelného záření.
-                </p>
+                <p>{t("laser.info_1")}</p>
             </PageInfo>
         </>
     );

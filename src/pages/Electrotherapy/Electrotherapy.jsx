@@ -1,23 +1,21 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageInfo from "../../components/PageInfo/PageInfo";
+import { useTranslation } from "react-i18next";
 import "./Electrotherapy.scss";
 
 const Electrotherapy = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
-        document.title = "Elektroléčba";
-    }, []);
+        document.title = t("service_6");
+    }, [t]);
 
     return (
         <>
-            <PageTitle title="Elektroléčba" />
+            <PageTitle title={t("service_6")} />
             <PageInfo>
-                <p>
-                    Elektroléčba je část fyzikální léčby, při které je využíván
-                    léčebný účinek různých forem elektrické energie.
-                    Elektroterapie a elektrodiagnostika prodělaly bouřlivý vývoj
-                    a v současné době je tento rozvoj dále urychlován.
-                </p>
+                <p>{t("electrotherapy.info_1")}</p>
             </PageInfo>
         </>
     );

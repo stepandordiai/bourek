@@ -1,8 +1,8 @@
+@use "./../../mixins" as *;
+
 .offer__wrapper {
     padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 }
 
 .about-us__offer-list {
@@ -21,8 +21,14 @@
     }
 }
 
+@media (max-width: 900px) {
+    .offer__wrapper {
+        padding: 40px 20px;
+    }
+}
+
 @media (max-width: 600px) {
     .offer__wrapper {
-        padding: 15px;
+        padding: 40px 10px;
     }
 }

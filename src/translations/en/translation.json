@@ -14,6 +14,7 @@
     "service_5": "Laser",
     "service_6": "Electrotherapy",
     "service_7": "Individual physiotherapy",
+    "personal_data_title": "Personal data",
 
     "banner": {
         "title": "Important information will be announced here"
@@ -36,10 +37,215 @@
         "faq_5": "Your question may be here soon."
     },
 
+    "offer": {
+        "offer_1": "services of a professional rehabilitation doctor",
+        "offer_2": "rehabilitation worker services",
+        "offer_3": "all complete rehabilitation services",
+        "offer_4": "massager starvac sp 2",
+        "offer_5": "complete electrotherapy, laser therapy, solux",
+        "offer_6": "healthy lifestyle advice",
+        "offer_7": "specialty healthcare retail"
+    },
+
+    "price_list": {
+        "price_list_1": "Laser",
+        "price_list_2": "Electrotherapy",
+        "price_list_3": "massage",
+        "price_list_4": "Therapeutic physical education",
+        "price_list_5": "Instrumental lymph massage",
+        "price_list_6": "Kinesiotape",
+        "price_list_7": "Cross tape",
+        "procedures": "procedures",
+        "without_recommendation": "without recommendation",
+        "min": "min",
+        "cm": "cm"
+    },
+
+    "our_team": {
+        "profession_1": "Rehabilitation doctor",
+        "profession_2": "Rehabilitation doctor",
+        "profession_3": "Rehabilitation doctor",
+        "profession_4": "Rehabilitation doctor",
+        "working_hours": "Working hours",
+        "mon": "Monday",
+        "tue": "Tuesday",
+        "wed": "Wednesday",
+        "thu": "Thursday",
+        "fri": "Friday",
+        "sat": "Saturday",
+        "sun": "Sunday",
+        "weekend": "Weekend"
+    },
+
+    "surgery": {
+        "info_1": "Our office provides services of a rehabilitation doctor with a first-degree certificate in orthopedics (1983), a certificate in physiatry, balneology and medical rehabilitation (1990), a course in mobilization and manipulation (1985 to 1986 with Professor Lewit) completed with an exam. Recently, Dr. Bourek completed an innovative course in mobilization and manipulation, also completed with an exam and a certificate /2010/",
+        "info_2": "WE DO ORDER IN OUR SURGERY!!!! Please respect this, we are not an intensive care unit or an ARO, so acute life-threatening or health-threatening conditions practically do not occur here!!!!!",
+        "info_3": "Thank you for your understanding.",
+        "info_4": "MUDr. Uhlířová closed her practice in Kolín. She can only be reached in Český Brod on Mondays, Wednesdays and Thursdays.",
+        "info_5": "Furthermore, two erudite rehabilitation workers are available to you almost all day long.",
+        "info_6": "Furthermore, our office offers complete electrotherapy, laser therapy, solux, therapeutic physical education, special LTV on balls, healthy lifestyle counseling, i.e. all comprehensive rehabilitation services.",
+        "info_7": "We provide complete electrotherapy and laser therapy using devices from the Czech company BTL s.r.o. We provide laser therapy, starvac, lymphatic drainage and solux for direct payment. The price list of these procedures is available in the offices of our physiotherapists.",
+        "info_8": "All other rehabilitation procedures are covered by public health insurance.",
+        "list_title": "Contractual insurance companies",
+        "list_item_1": "General Health Insurance Company of the Czech Republic",
+        "list_item_2": "Military Health Insurance Company",
+        "list_item_3": "Insurance Company of the Ministry of the Interior of the Czech Republic",
+        "list_item_4": "Sectoral health insurance for bank employees",
+        "list_item_5": "Czech Industrial Health Insurance Company",
+        "list_item_6": "ŠKOZAM – employee insurance company"
+    },
+
+    "starvac": {
+        "info_1": "A new cupping assistant – the STARVAC SP2 massage device",
+        "info_2": "The original ancient method used to purify the blood - cupping - is now becoming a new hit in therapeutic physiotherapy, as well as in the treatment of cellulite, support of the lymphatic system and subsequent detoxification of the whole body, improvement of blood circulation, weight reduction, body shaping and skin firming.",
+        "info_3": "STARVAC SP2 is a very modern device with an LCD screen, twenty-five preset programs: nine in beauty and body care and sixteen therapeutic applications and the ability to set your own programs (treatment length, frequency, cycle). The vacuum can be set up to 900 millibars in continuous or pulsed vacuum mode. The effect of the treatment is enhanced by a special massage cream with active ingredients, which is supplied with it.",
+        "list_1_title": "Using the device",
+        "list_secondary_1_title": "aesthetic indication",
+        "list_secondary_1_info_1": "cellulite treatment (slimming of problem areas and body shaping, reduction of subcutaneous fat)",
+        "list_secondary_1_info_2": "lymphatic drainage (improvement of lymphatic flow, effective body cleansing, support of blood circulation functionality)",
+        "list_secondary_1_info_3": "relaxing massage",
+        "list_secondary_1_info_4": "breast firming and volume increase",
+        "list_secondary_1_info_5": "facial lymphatic drainage (rejuvenation and firming of facial skin, smoothing wrinkles, removing bags under the eyes, sagging eyelids, double chins)",
+        "list_secondary_1_info_6": "support in acne treatment",
+        "list_secondary_1_info_7": "getting rid of the feeling of heavy, tired legs",
+        "list_secondary_2_title": "sports, rehabilitation, fitness",
+        "list_secondary_2_info_1": "muscle stiffness",
+        "list_secondary_2_info_2": "tendonitis",
+        "list_secondary_2_info_3": "treatment of hands and fingers",
+        "list_secondary_2_info_4": "lower limb – treatment of hips, knees, feet",
+        "list_secondary_2_info_5": "Traumatology (ankle sprain, hematoma, scars)",
+        "list_secondary_3_title": "therapeutic use",
+        "list_secondary_3_info_1": "Rheumatology (spine treatment - pain in the cervical vertebrae, back, hips, elbows, wrists, sciatic nerve inflammation)",
+        "list_secondary_3_info_2": "upper limb - treatment of the shoulder, elbow, wrist, treatment of hands and fingers",
+        "list_secondary_3_info_3": "lower limb - treatment of hips, knees, feet",
+        "list_secondary_3_info_4": "Traumatology (ankle sprain, hematoma, scars)",
+        "list_2_title": "Other advantages of STARVAC include",
+        "list_2_info_1": "original and pioneering design",
+        "list_2_info_2": "wide, touch LCD screen",
+        "list_2_info_3": "preset programs",
+        "list_2_info_4": "easy setting of your own programs",
+        "list_2_info_5": "13 massage attachments",
+        "list_2_info_6": "patented system",
+        "list_2_info_7": "low energy consumption",
+        "list_2_info_8": "painlessness of the procedure",
+        "list_2_info_9": "innovated suction head",
+        "list_3_title": "device accessories",
+        "list_3_info_1": "2 special suction heads: the skin is sucked under pressure between two movable rollers. The loose arrangement of the rollers allows for better adaptation to the individual thickness of the subcutaneous tissue. The patented 'roller' movement of the rollers increases the effectiveness of the massage. Suitable for rheumatological and traumatological treatments, relaxation, release massages, lymphatic drainage, cellulite treatment.",
+        "list_3_info_2": "4 patented double suction cups: used for vacuum pulse massage in automatic mode, suitable for rheumatological and traumatological treatments, therapeutic indications, body shaping and treatment of older types of cellulite.",
+        "list_3_info_3": "4 basic suction cups - for manual (with hole) or automatic mode (without hole), used for point or traction release in the treated area. Suitable for rheumatological and traumatological treatments, all types of massages.",
+        "list_3_info_4": "3 small suction cups - for automatic mode. Suitable for rheumatological and traumatological treatments, reflexology massages, for treating the face, neck, smoothing wrinkles and scars.",
+        "list_3_info_5": "1 pair of breast cups – optional accessory for firming and enlarging the bust. The vacuum setting for this special massage is regulated by the program with regard to this very sensitive organ."
+    },
+
+    "cellulite": {
+        "chapters": "Chapters",
+        "chapter_1": "Cellulite – how to treat it?",
+        "chapter_1_info_1": "Cellulite causes the skin to have an uneven, dimpled surface, resembling the peel of an orange. Cellulite affects more than 90% of women. The risk is increased during pregnancy, but it also affects women in menopause and girls during puberty.",
+        "chapter_1_info_2": "It is related to the action of the female hormone estrogen, which is why it is more common in women using contraceptives that contain these hormones. Cellulite is not related to being overweight, as even slim women suffer from it. The bumps on the skin are not formed by unnecessary fat deposits, but are the result of changes in the subcutaneous fatty tissue, in which water is retained. The skin structure disorder mainly affects the hips, thighs, and buttocks.",
+        "chapter_1_info_3": "In younger women, the changes in the skin are not very noticeable because their tissues are still elastic. As they age, they become more obvious, as fat deposits in the subcutaneous tissue increase and bumps and dimples appear on the surface of the skin.",
+        "chapter_1_info_4": "In more severe cases of cellulite, there is extensive swelling all over the body, which can be reduced by massage, which removes excess fluid from the affected areas. Cellulite can be hereditary. However, as with most diseases, heredity may not manifest itself unless other triggering factors are added.",
+        "chapter_1_info_5": "The cause of cellulite is also an incorrect lifestyle, when the body becomes clogged with toxins, undigested metabolites and suffers from a lack of minerals and vitamins. Lack of exercise, sedentary work, stress, smoking and a diet rich in animal proteins, fats and sugars also contribute to its development. Liver failure can also be the cause.",
+        "chapter_1_info_6": "Special massages, for example with our STARVAC SP2 device, can be supplemented in the treatment of cellulite by using preparations containing ginkgo biloba, clover, grape seeds and bladderwrack. These preparations will improve the internal nutrition of tissues, increase the breakdown of fats in cells and protect against changes in connective tissue. Hormonal disorders are therefore one of the causes of cellulite.",
+        "chapter_1_info_7": "According to some authors, birth control pills or other types of endocrine treatment may contribute to the development of cellulite. Estrogens block the action of vitamin E, which promotes blood circulation, and vitamin B6, which has a diuretic effect and removes retained fluid from the tissues. Disruption of the function of these two vitamins is enough to cause a deviation in fluid exchange - the formation of fat, which is a prerequisite for the development of cellulite.",
+        "chapter_1_info_8": "Estrogens burn folic acid, a very valuable element from the B vitamin group. They also block the function of vitamin C, which has an anti-aging effect, and vitamin B 12 (important for skin physiology). A common cause of cellulite is poor blood and lymphatic circulation, which is caused by lack of exercise. Lymph must flow in the body and remove toxic substances from it. However, it does not have its own pump like the blood circulation of the heart, so we must get it moving in the body, preferably twice a day, in the morning and in the evening, with half an hour of exercise. Also, brisk walking, swimming, and dancing are ideal movements.",
+        "chapter_1_info_9": "It is advisable to massage your entire body every morning and evening with a brush or a special glove. Start by stroking from the feet to the knees, then continue from the knees to the hips. Then a few circles on the stomach and chest. Then along the arms from the wrists to the shoulders, down the back as far as it will go and up the buttocks. Do this for as long as you feel comfortable. It is good to do the massage before bathing. Never massage varicose veins!!!!! You can also alternate hot and cold showers. You can also stimulate lymphatic circulation with essential oils (juniper, grapefruit, rosemary). Twice a week, a professional manual lymphatic massage or a massage with a device such as STARVAC SP2 should be performed at our physiotherapy workplace RELAX CENTRUM.",
+        "chapter_1_info_10": "It is important to release waste products and toxins from the tissues and also to try to keep harmful substances in our body as low as possible. When cleansing the body, you must try to eliminate all harmful substances from your diet - sugar, sweets, sausages, chips, instant products, white bread, ketchup, mayonnaise, etc. In the morning, you can eat only fruit in warm weather, and during the day, whole grain bread, poultry, fish, cereals, white yogurt, legumes, fresh vegetables. You can hold a fruit or vegetable fast one day a week. However, do not mix fruit and vegetables together!!!!!. It is important to drink enough, at least 2.5 - 3 liters a day, preferably pure water or pressed fruit or vegetable juices, teas with a detoxifying effect on liver function.",
+        "chapter_2": "Orange peel skin – a punishment for comfort",
+        "chapter_2_info_1": "It's called cellulite, but doctors prefer to use the technical term dermopañiculosis. The term orange peel is more poetic, but it's always the same thing - fat that accumulates under the skin like curdled cottage cheese.",
+        "chapter_2_info_2": "The result? Even the best swimsuits cannot cover up the many bumps - especially on the thighs and buttocks, but also on the arms - resembling the peel of a ripe orange. The sight of such skin certainly does not please any woman. Fat cells make their way through the loose tissues, and an uneven bumpy surface of the skin begins to form. And who is to blame for this? Chromosomes can contribute to the development of cellulite - classic heredity, but also so-called habitual heredity, which is the adoption of bad eating habits from the family. Lack of exercise - all this promotes dermopaniculosis. In a way, it is a civilization issue.",
+        "chapter_3": "Frequently asked questions and answers",
+        "chapter_3_info_1": "Does a daughter whose mother already has cellulite also have to come to terms with cellulite?",
+        "chapter_3_secondary_info_1": "It doesn't have to. The distribution of subcutaneous tissue and therefore the type of body are already given at birth, but the thickness of subcutaneous fat can be influenced. Through exercise, a suitable diet, massages - manual or machine - the STARVAC SP2 device.",
+        "chapter_3_info_2": "There is talk about the negative effects of bubble waters, do they promote the formation of cellulite?",
+        "chapter_3_secondary_info_2": "Everything that overacidifies the body (including coffee) increases cellulite, that's true. But carbonated water alone won't get rid of cellulite. What's more important is your drinking regimen. We should drink around 3 liters of fluid daily.",
+        "chapter_3_info_3": "Can liposuction be used to radically remove cellulite?",
+        "chapter_3_secondary_info_3": "Absolutely not. Liposuction will get rid of, for example, unpleasant lumps on your sides, but it is definitely not recommended as a solution to cellulite. Creams and definitely massages can improve the condition. These should follow every bath, even just as a prevention. After a massage, the skin will be well supplied with blood. If you drink enough fluids and do massages, the fat will also leave the body with the fluids, because it is soaked with water. In addition, a proper diet, enough exercise and the condition of the skin will improve.",
+        "chapter_3_info_4": "How to proceed with a massage?",
+        "chapter_3_secondary_info_4": "The massage starts from the feet up to the knees, then continues from the knees to the hips. The breasts and abdomen are massaged in gentle circular motions. The same goes for the hands, from the wrists to the elbows and then to the shoulders. How to proceed with the massage? How to proceed with the massage? And one final note for ladies! Do not wear short skirts in winter. When your legs freeze, the body protects itself by moving fat to the thighs and buttocks.",
+        "chapter_4": "Cellulite – a short summary at the end",
+        "chapter_4_info_1": "Cellulite - orange peel skin is considered primarily a cosmetic problem that affects more or less 90% of women. However, cellulite is related to insufficient activity of the lymphatic system and blood circulation. Due to an improper diet, the body is clogged with toxins and undigested metabolites that the lymphatic system is unable to eliminate. In such a situation, tissues suffer from insufficient nutrition, especially minerals and vitamins. The result is changes in the subcutaneous fatty tissue. Another factor in the development of cellulite is impaired fat metabolism, which may be related to impaired liver function.",
+        "chapter_4_info_2": "Cellulite mainly affects the hips, thighs, buttocks. Mild cellulite is only visible when we press the skin between our fingers. In stage 2, you can already see the orange peel when you stand, but it disappears as soon as you lie down. This means that in mild cellulite there is no inflammation yet. Stage 3, which is moderate cellulite, the orange peel is visible even when you lie down. A large amount of fluid has accumulated in the cellulite focus, sometimes there are also weakened blood capillaries and cooler skin.",
+        "chapter_5": "What promotes cellulite?",
+        "chapter_5_info_1": "Bad eating habits (sugar, cakes, chocolate, sausages, chips, instant and canned foods, white bread, mayonnaise, fatty meats and sauces, excessive salting), insufficient fluid intake.",
+        "chapter_5_info_2": "smoking, drinking coffee and alcohol",
+        "chapter_5_info_3": "stress",
+        "chapter_5_info_4": "overweight",
+        "chapter_5_info_5": "tight clothing",
+        "chapter_6": "What helps in the fight against cellulite?",
+        "chapter_6_info_1": "A healthy diet with a preference for fruits and vegetables, whole grains and breads, legumes, low-fat meats and dairy products.",
+        "chapter_6_info_2": "maintaining an optimal drinking regimen, which means drinking 2-3 liters of clean water, preferably without bubbles, herbal unsweetened tea, fruit and vegetable juices.",
+        "chapter_6_info_3": "movement in any form. Lymph must flow in the body and remove toxins from the body. However, it does not have its own pump like the blood circulation (heart), so we must get the lymph moving in the body.",
+        "chapter_6_info_4": "We can stimulate lymph flow with massages – for example, massaging the entire body with a clothes brush or a special sisal glove in the morning and evening.",
+        "chapter_6_info_5": "alternating hot and cold showers (shower for 60-80 seconds with hot water and 20 seconds with cold water)",
+        "chapter_6_info_6": "professionally performed anti-cellulite massage, manual or device - STARVAC SP2 massage device",
+        "chapter_6_info_7": "performing detoxification – e.g., hunger strike, fruit day once a week, or using YUCCA or DETOX products.",
+        "chapter_6_info_8": "Fighting cellulite is really painful, but don't forget, dear ladies, that by fighting this you will heal your entire body."
+    },
+
+    "lymphatic": {
+        "info_1": "Instrumental lymphatic drainage",
+        "info_2": "Instrumental lymphatic drainage helps maintain and create a balanced state of flow between the blood and lymphatic systems.",
+        "info_3": "Instrumental lymphatic drainage is based on intermittent compression of the limb and the creation of a pressure wave. The device stimulates the lymphatic vessels using special limb sleeves and a system of chambers in these sleeves that are gradually filled with air.",
+        "info_4": "Lymphatic drainage affects the lymphatic system, which is a system of nodes connected by lymphatic vessels, in which lymph circulates. The transport of lymph is ensured passively by a muscle pump and by the movement of the diaphragm during breathing. Due to prolonged standing or sitting, lack of movement, after injuries or due to infection, the function of the entire system deteriorates, pain and swelling of the limbs occur. Our lymphatic drainage relaxes the lymphatic vessels and nodes, improves the flow of lymph in the vessels, and improves blood circulation.",
+        "info_5": "Lymphatic drainage is suitable for detoxifying the body, for problems with varicose veins and venous insufficiency, for preventing and removing cellulite, for swelling of the limbs, for overweight, for relaxation and regeneration of the body, for muscle and spine pain, for a feeling of heavy and tired legs, after injuries or as a preventative measure, for both women and men. To achieve the greatest possible effect, it is advisable to perform lymphatic drainage repeatedly, in the number of 5-10 sessions per cycle.",
+        "info_6": "BTL-6000 Lymphastim 12Topline",
+        "info_7": "In our office, instrumental lymphatic drainage is performed using the BTL-6000 Lymfastim 12Topline device.",
+        "list_title": "10 programs offered",
+        "list_info_1": "cellulite",
+        "list_info_2": "detoxification",
+        "list_info_3": "Lipedema and swelling",
+        "list_info_4": "obesity",
+        "list_info_5": "liposuction care",
+        "list_info_6": "prevention of varicose veins",
+        "list_info_7": "regeneration",
+        "list_info_8": "heavy legs syndrome",
+        "list_info_9": "improving skin elasticity",
+        "list_info_10": "leg pain",
+        "info_8": "The most common cosmetic/aesthetic indications",
+        "info_9": "Regeneration, relaxation and detoxification of the body. Removal of excess fluids, e.g. during weight loss. Prevention and reduction of cellulite - at least 10 applications. Prevention of varicose veins/Polysuction care Improvement of skin elasticity Improvement of heavy legs syndrome All suitable for women and men!!!",
+        "info_10": "Why lymphatic drainage with us?",
+        "info_11": "The BTL-6000 Lymfastim 12Topline device is the most modern device in its category on the market, with immediately visible results!! Patients find this therapy pleasant, in which you rest for an hour and the lymphatic system works for you.",
+        "info_12": "The body is not burdened with drugs!!! The lymph and waste products of cellular metabolism are drained from the tissues through the lymphatic system into the bloodstream and out of the body."
+    },
+
+    "laser": {
+        "info_1": "A laser is light amplified by stimulated emission of radiation. The nature of this radiation has been explained by the laws of quantum physics. The first impetus for a deeper study of quantum theory was given by Albert Einstein. In the case of a laser, it is coherent monochromatic radiation in the microwave or visible range."
+    },
+
+    "electrotherapy": {
+        "info_1": "Electrotherapy is a part of physical therapy that utilizes the healing effects of various forms of electrical energy. Electrotherapy and electrodiagnostics have undergone a rapid development and are currently being further accelerated."
+    },
+
+    "ltv": {
+        "info_1": "Please cancel your physiotherapy appointment in a timely manner, i.e. 24 hours before, at the latest in the early morning hours of the same day by SMS. If your appointment is not cancelled in time, the therapy will be forfeited. In the event of 2 absences without an excuse, all treatment will be cancelled.",
+        "info_2": "Individual exercises are led by an experienced physiotherapist who has extensive experience in the field of rehabilitation and body care."
+    },
+
+    "contacts": {
+        "form_title": "Make an appointment",
+        "first_name": "First name",
+        "last_name": "Last name",
+        "email": "E-mail",
+        "phone": "Phone number",
+        "select_btn": "Select service",
+        "not_selected": "Not selected",
+        "visit_date": "Select a visit date",
+        "visit_time": "Select a visit time",
+        "form_btn": "Send",
+        "map_title": "Where we are"
+    },
+
+    "personal_data": {
+        "info_1": "Dear patients",
+        "info_2": "Your personal data is processed in medical documentation in full compliance with applicable legal regulations, in particular in accordance with Act No. 372/2011 Coll., on health services and conditions of their provision (Health Services Act) and its implementing regulations.",
+        "info_3": "Their security and protection is ensured in accordance with these regulations and in accordance with the General Data Protection Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR).",
+        "info_4": "In addition to the possibility of accessing your personal data processed by us, you have the right to request its correction or restriction of processing if you find that this data is incorrect, inaccurate, has changed, etc.",
+        "info_5": "Providing your personal data is a legal requirement and you as a patient are obliged to provide it, just as a healthcare professional has the right to request it from you. The responsible person you can contact is your treating physician."
+    },
+
     "footer": {
-        "nav-title": "Navigation",
+        "nav_title": "Navigation",
         "about_title": "About",
-        "personal_data": "Personal data",
         "copyright": "All rights reserved"
     }
 }

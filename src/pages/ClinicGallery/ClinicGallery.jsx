@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
 import img1 from "./../../assets/img/1.jpg";
 import img2 from "./../../assets/img/2.jpg";
 import img3 from "./../../assets/img/3.jpg";
@@ -24,13 +25,15 @@ import img22 from "./../../assets/img/22.jpg";
 import "./ClinicGallery.scss";
 
 const ClinicGallery = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
-        document.title = "Galerie kliniky";
-    }, []);
+        document.title = t("clinic_gallery_title");
+    }, [t]);
 
     return (
         <>
-            <PageTitle title="Galerie kliniky" />
+            <PageTitle title={t("clinic_gallery_title")} />
             <div className="clinic-gallery__wrapper">
                 <img src={img1} loading="lazy" alt="Image" />
                 <img src={img2} loading="lazy" alt="Image" />

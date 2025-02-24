@@ -14,6 +14,7 @@
     "service_5": "Laser",
     "service_6": "Elektroléčba",
     "service_7": "Individuální fyzioterapie",
+    "personal_data_title": "Osobní údaje",
 
     "banner": {
         "title": "Důležité informace budou oznámeny zde"
@@ -36,10 +37,215 @@
         "faq_5": "Vaše otázka zde může být brzy"
     },
 
+    "offer": {
+        "offer_1": "služby odborného rehabilitačního lékaře",
+        "offer_2": "služby rehabilitačních pracovnic",
+        "offer_3": "veškeré kompletní rehabilitační služby",
+        "offer_4": "masážní přístroj starvac sp 2",
+        "offer_5": "kompletní elektroléčba, laser terapie, solux",
+        "offer_6": "poradenství o zdravém životním stylu",
+        "offer_7": "speciální zdravotnický maloobchod"
+    },
+
+    "price_list": {
+        "price_list_1": "Laser",
+        "price_list_2": "Elektroléčba",
+        "price_list_3": "masáž",
+        "price_list_4": "Léčebná tělesná výchova",
+        "price_list_5": "Přístrojová lymfomasáž",
+        "price_list_6": "Kinesiotape",
+        "price_list_7": "Cross tape",
+        "procedures": "procedur",
+        "without_recommendation": "bez doporučení",
+        "min": "min",
+        "cm": "cm"
+    },
+
+    "our_team": {
+        "profession_1": "Rehabilitačního lékaře",
+        "profession_2": "Rehabilitačního lékaře",
+        "profession_3": "Rehabilitačního lékaře",
+        "profession_4": "Rehabilitačního lékaře",
+        "working_hours": "Pracovní doba",
+        "mon": "Pondělí",
+        "tue": "Uterý",
+        "wed": "Středa",
+        "thu": "Ctvrtek",
+        "fri": "Pátek",
+        "sat": "Sobota",
+        "sun": "Neděle",
+        "weekend": "Víkend"
+    },
+
+    "surgery": {
+        "info_1": "Naše ordinace poskytuje služby rehabilitačního lékaře s atestací I. stupně z ortopedie (1983), atestace z fyziatrie, balneologie a léčebné rehabilitace (1990), kurs mobilisací a manipulací (1985 až 1986 u profesora Lewita) ukončený zkouškou. Nově dr.Bourek absolvoval inovační kurz mobilisací a manipulací taktéž zakončen zkouškou a vydáním certifikátu/2010/",
+        "info_2": "V naší ordinaci OBJEDNÁVÁME !!!! Prosím , respektujte to , nejsme jednotka intensivní péče ani ARO , takže akutní stav ohrožující život nebo zdraví se u nás prakticky nevyskytuje!!!!!",
+        "info_3": "Děkujeme za pochopení.",
+        "info_4": "MUDr. Uhlířová ukončila svojí ordinaci v Kolíně.Je k zastižení pouze v Českém Brodě a to v pondělí, ve středu a ve čtvrtek",
+        "info_5": "Dále Vám jsou k dispozici dvě erudované rehabilitační pracovnice s dosažitelností téměř celý den.",
+        "info_6": "Dále naše ordinace nabízí kompletní elektroléčbu, laser therapii, solux, léčebnou tělesnou výchovu, speciální LTV na míčích,, poradenství o zdravém životním stylu, tj. veškeré komplexní rehabilitační služby.",
+        "info_7": "Kompletní elektroléčbu a lasertherapii poskytujeme na přístrojích české firmy BTL s.r.o. Lasertherapii, starvac ,lymfodrenáž a solux poskytujeme za přímou úhradu.Ceník těchto procedur je k disposici v ordinacích našich fyzioterapeutek.",
+        "info_8": "Veškeré ostatní rehabilitační procedury jsou hrazeny z veřejného zdravotního pojištění.",
+        "list_title": "Smluvní pojišťovny",
+        "list_item_1": "Všeobecná zdravotní pojišťovna ČR",
+        "list_item_2": "Vojenská zdravotní pojišťovna",
+        "list_item_3": "Pojišťovna ministerstva vnitra ČR",
+        "list_item_4": "Oborová zdravotní pojišťovna zaměstnanců bank",
+        "list_item_5": "Česká průmyslová zdravotní pojišťovna",
+        "list_item_6": "ŠKOZAM – zaměstnanecká pojišťovna"
+    },
+
+    "starvac": {
+        "info_1": "Nový pomocník při baňkování – masážní přístroj STARVAC SP2",
+        "info_2": "Původní starověká metoda sloužící k čištění krve – přikládání baněk se v dnešní doběstává novým hitem v léčebné fyzioterapii, dále při léčbě celulitidy, podpory lymfatického systemu a následné detoxikaci celého těla, zlepšení krevního oběhu, redukci hmotnosti, tvarování postavy a zpevňování pokožky.",
+        "info_3": "STARVAC SP2 je velmi moderní přístroj s LCD obrazovkou, dvaceti pěti přednastavitelnými programy: devět v kráse a péči o tělo a šestnáct terapeutických aplikací a možností nastavení vlastních programů (délka ošetření, frekvence, cyklus) nastavit podtlak se dá až do 900 milibarů v kontinuálním nebo plzním vakuovém módu. Účinek ošetření zvyšuje speciální masážní krém s aktivními složkami, který je k němu dodáván.",
+        "list_1_title": "Využití přístroje",
+        "list_secondary_1_title": "estetická indikace",
+        "list_secondary_1_info_1": "léčba celulitidy (zeštíhlení problematických partií a formování postavy, odbourávání podkožního tuku)",
+        "list_secondary_1_info_2": "lymfatická drenáž (zlepšení lymfatického toku, účinné pročišťování těla, podpoření funkčnosti krevního oběhu)",
+        "list_secondary_1_info_3": "relaxační masáž",
+        "list_secondary_1_info_4": "zpevnění a zvětšení objemu prsou",
+        "list_secondary_1_info_5": "lymfatická drenáž obličeje (omlazování a zpevňování pleti obličeje,vyhlazování vrásek,odstraňování váčků pod očima, ochablých očních víček, dvojité brady)",
+        "list_secondary_1_info_6": "podpora při léčbě akne",
+        "list_secondary_1_info_7": "zbavení pocitu těžkých , unavených nohou",
+        "list_secondary_2_title": "sport, rehabilitace, fitness",
+        "list_secondary_2_info_1": "svalová ztuhlost",
+        "list_secondary_2_info_2": "zánět šlach",
+        "list_secondary_2_info_3": "léčba rukou a prstů",
+        "list_secondary_2_info_4": "dolní končetina – léčba kyčlí, kolen, nohou",
+        "list_secondary_2_info_5": "Traumatologie (vymknutí kotníku, hematom, jizvy)",
+        "list_secondary_3_title": "terapeutické užití",
+        "list_secondary_3_info_1": "Revmatologie (léčba pateře-bolest krčních obratlů, zad, houser, lokte, zápěstí, zánět sedacího nervu)",
+        "list_secondary_3_info_2": "horní končetina-léčba ramene, lokte,zápěstí, léčba rukou a prstů",
+        "list_secondary_3_info_3": "dolní končetina-léčba kyčlí,kolen,nohou",
+        "list_secondary_3_info_4": "Traumatologie (vymknutí kotníku,hematom, jizvy)",
+        "list_2_title": "Mezi další přednosti STARVACu patří",
+        "list_2_info_1": "originální a průkopnický design",
+        "list_2_info_2": "široká, dotyková LCD obrazovka",
+        "list_2_info_3": "přednastavené programy",
+        "list_2_info_4": "snadná nastavitelnost vlastních programů",
+        "list_2_info_5": "13 masážních nástavců",
+        "list_2_info_6": "patentovaný systém",
+        "list_2_info_7": "nízká energetická náročnost",
+        "list_2_info_8": "nebolestivost prováděného výkonu",
+        "list_2_info_9": "inovovaná sací hlava",
+        "list_3_title": "příslušenství přístroje",
+        "list_3_info_1": "2 speciální sací hlavy: kůže je nasávána pod tlakem mezi dva pohyblivé válečky. Volné uložení válečků umožňuje lepší přizpůsobení individuální tloušťce podkožního vaziva. Patentovaný „roler“ pohyb válečků zvyšuje efektivitu masáže. Vhodné pro revmatologická a traumatologická ošetření, relaxační, uvolňovací masáže, lymfatickou drenáž, léčbu celulitidy.",
+        "list_3_info_2": "4 patentované double sací baňky: slouží k podtlakové pulzní masáži v automatickém módu vhodné pro revmatologická a traumatologická ošetření, terapeutické indikace, formování postavy a léčbě starších typů celulitidy.",
+        "list_3_info_3": "4 základní sací baňky – pro manuelní (s otvorem) nebo automatický mód (bez otvoru), slouží k uvolnění v ošetřované oblasti bodově nebo tahem.Vhodné pro revmatologická a traumatologická ošetření, všechny druhy masáží.",
+        "list_3_info_4": "3 malé sací baňky – pro automatický mód. Vhodné pro revmatologická a traumatologická ošetření, reflexní masáže, k ošetření obličeje, krku, vyhlazování vrásek a jizev.",
+        "list_3_info_5": "1 pár prsních baněk – volitelné příslušenství pro zpevňování a zvětšování poprsí. Nastavení podtlaku pro tuto speciální masáž je regulován programem s ohledem na tento velmi citlivý orgán."
+    },
+
+    "cellulite": {
+        "chapters": "Kapitoly",
+        "chapter_1": "Celulitida – jak na ni?",
+        "chapter_1_info_1": "Při celulitidě nabývá kůže nerovného, dolíčkovitého povrchu, připomínajícího kůru pomeranče. Celulitida trápí více než 90% žen. Zvýšené riziko je v těhotenství, ale postihuje i ženy v přechodu a dívky v pubertě.",
+        "chapter_1_info_2": "Souvisí s působením ženského hormonu estrogenu, proto jí trpí více ženy používající antikoncepční přípravky, které tyto hormony obsahují. Celulitida nesouvisí s nadváhou, neboť jí trpí i štíhlé ženy. Hrbolky na kůži nejsou totiž tvořeny zbytečnými zásobami tuku, ale jsou výsledkem změn podkožního tukového vaziva, v němž je zadržována voda. Porucha struktury kůže postihuje především boky, stehna, hýždě.",
+        "chapter_1_info_3": "U mladších žen nejsou změny na kůži příliš patrné, protože jejich tkáně jsou ještě pružné. S postupujícím věkem jsou zřetelnější, zásoby tuku v podkožním vazivu se zvětšují a vznikají hrbolky a důlky na povrchu kůže.",
+        "chapter_1_info_4": "Ve vyšším stupni celulitidy se po těle objevují i rozsáhlé otoky, které zmenší masáž, jež z postižených míst odvede přebytečnou tekutinu. Celulitida může být dědičná. Jako u většiny nemoci se však dědičnost nemusí projevit, pokud se nepřidají další spouštěcí faktory.",
+        "chapter_1_info_5": "Příčinou vzniku celulitidy je také nesprávná životospráva, kdy se tělo zanáší toxiny, nestrávenými metabolity a trpí nedostatkem minerálů a vitamínů. K jejímu vzniku přispívá i nedostatek pohybu, sedavé zaměstnání, stress, kouření a strava bohatá na živočišné bílkoviny, tuky a cukry. Příčinou může být i porucha jater.",
+        "chapter_1_info_6": "Speciální masáže např. naším přístrojem STARVAC SP2 lze při léčení celulitidy doplnit používáním přípravků s obsahem jinanu dvoulaločnatého, jetele, semen vinných hroznů a řasy mechýřnaté. Tyto přípravky zlepší vnitřní výživu tkání, zvýší odbourávaní tuků v buňkách a chrání před změnami pojivové tkáně. Hormonální poruchy jsou tedy jedním z původců celulitidy.",
+        "chapter_1_info_7": "Podle některých autorů ke vzniku celulitidy mohou přispět antikoncepční pilulky nebo jiné druhy endokrinologického léčení. Estrogeny blokují působení vitamín E, který podporuje oběh krve, a dále vitamínu B6, který má močopudný efekt a odstraňuje zadržovanou tekutinu z tkání. Narušení funkce těchto dvou vitamínů stačí ke vzniku deviace ve výměně tekutin – vznik tuků, což je předpoklad vzniku celulitidy.",
+        "chapter_1_info_8": "Estrogeny spalují kyselinu listovou, velmi cenný prvek ze skupiny vitamínů B. Dále blokují funkci vitaminu C, který působí proti stárnutí, a vitamínu B 12 (důležité pro fyziologii kůže). Častou příčinou celulitidy je špatný krevní lymfatický oběh, který je způsoben nedostatkem pohybu. Lymfa musí v těle proudit a odvádět z něj toxické látky. Nemá ale vlastní pumpu jako krevní oběh srdce, proto ji musíme v těle rozproudit nejlépe dvakrát denně ráno a večer půlhodinovým cvičením.Také rychlá chůze, plavání, tanec jsou ideálním pohybem.",
+        "chapter_1_info_9": "Je vhodné si denně ráno a večer masírovat celé tělo kartáčem či speciální rukavicí. Začněte hlazením od chodidel ke koleni, pak pokračujte od kolena k bokům. Potom pár kroužků na břiše a na prsou. Potom podél paží od zápěstí k ramenům, dolů po zádech , kam až to jde a vzhůru po hýždích. Provádějte tak dlouho, dokud je vám to příjemné. Dobré je provádět masáž před koupáním. Nikdy nemasírujte křečové žíly!!!!!. Můžete také střídat teplé a studené sprchy. Lymfatický oběh můžete taktéž stimulovat éterickými oleji (jalovcový, grapefruitový, rozmarýnový). Dvakrát do týdně by se měla provést odborná buď ruční lymfatická masáž nebo masáž přístrojem např. STARVAC SP2 na našem fyzioterapeutickém pracovišti RELAX CENTRUM .",
+        "chapter_1_info_10": "Důležité je uvolňovat zplodiny a toxiny z tkání a také se snažit, aby škodlivých látek v našem těle bylo co nejméně. Při pročišťování organismu se musíte snažit vyloučit ze svého jídelníčku všechny škodliviny – cukr, sladkosti, uzeniny, chipsy, instanční výrobky, bílé pečivo, kečup, majonézy,atd. Dopoledne můžete jíst při teplém počasí pouze ovoce, během dne pak celozrnné pečivo, drůbež, ryby, obiloviny, bílé jogurty, luštěniny, čerstvou zeleninu.Jeden den v týdnu můžete držet ovocný, či zeleninový půst. Nemíchejte však dohromady ovoce a zeleninu!!!!!. Důležité je dostatečně pít, alespon 2,5 – 3 liry denně, nejlépe čistou vodu nebo vylisované ovocné či zeleninové šťávy, čaje s detoxikačním účinkem na činnost jater.",
+        "chapter_2": "Pomerančová kůže – trest za pohodlí",
+        "chapter_2_info_1": "Říká se jí celulitida, lékaři používají raději odborný výraz dermopanikuloza. Označení pomerančová kůže je poetičtější, ale vždy se jedná o jedna a totéž-o tuk, který se pod pokožkou hromadí jako sražený tvaroh.",
+        "chapter_2_info_2": "Výsledek? Ani sebelepší plavky nepřekryjí spoustu hrbolků- zejména na stehnech a hýždích, ale také na pažích – připomínajících kůru zralého pomeranče. Pohled na takovou pokožku určitě žádnou ženu nepotěší. Tukové buňky si prorazí cestu přes uvolněné tkáně, a tak se začne vytvářet nerovnoměrný hrbolatý povrch pokožky. A kdo za to může? Na vzniku celulitidy se mohou podílet chromozomy – klasická dědičnost, ale i tzv. habituální dědičnost, což je přebírání špatných stravovacích návyků z rodiny. Nedostatek pohybu – to všechno dermopanikulozu podporuje. Svým způsobem je to civilizační záležitost.",
+        "chapter_3": "Časté dotazy a odpovědi",
+        "chapter_3_info_1": "Musí se s celulitidou smířit i dcera, jejíž matka už celulitidu má?",
+        "chapter_3_secondary_info_1": "Nemusí. Rozložení podkožního vaziva a tedy i typ postavy, jsou sice dané už při narození, ale tlouštku podkožního tuku lze ovlivnit. Pohybem, vhodnou stravou, masážemi – ruční nebo přístrojové – přístroj STARVAC SP2.",
+        "chapter_3_info_2": "Hovoří se o negativním vlivu bublinkových vod, podporují tyto vznik celulitidy?",
+        "chapter_3_secondary_info_2": "Všechno, co překyseluje organismus (včetně kávy) zvyšuje celulitidu, to je pravda. Ale jenom z perlivé vody se celulitida nedostane. Důležitější je pitný režim vůbec. Denně bychom měli vypít kolem 3 litrů tekutiny.",
+        "chapter_3_info_3": "Nelze pro radikální odstranění celulitidy použít liposukci?",
+        "chapter_3_secondary_info_3": "To rozhodně ne. Liposukce vás zbaví např. nepříjemných bochánků na bocích, ale jako řešení celulitidy se rozhodně nedoporučuje. Stav mohou zlepšit krémy a rozhodně masáže. Ty by měly následovat po každé koupeli, třeba jen jako prevence. Po masáži se pokožka dobře prokrví. Pokud budete přijímat dostatek tekutin a dělat masáže, odejde z tekutinami z těla i tuk, protože je prosáklý vodou. Navíc vhodná strava, dostatek pohybu a stav pokožky se vylepší.",
+        "chapter_3_info_4": "Jak postupovat při masáži?",
+        "chapter_3_secondary_info_4": "S masírovám se začíná od chodidel nahoru ke koleni, pak se pokračuje od kolen k bokům. Jemnými krouživými pohyby se masírují prsa a břicho. Obdobně se postupuje na rukou, od zápěstí k loktům a pak k ramenům. Jak postupovat při masáži? Jak postupovat při masáži? A jedna poznámka na konec pro dámy! V zimě nenoste krátké sukně.Když vám budou promrzat nohy, tělo se brání přesunem tuků právě do partií stehen a hýždí.",
+        "chapter_4": "Celulitida – krátké shrnutí na konec",
+        "chapter_4_info_1": "Celulitida – pomerančová kůže je považována především za kosmetický problém, který trápí více či méně 90% žen. Celulitida však souvisí s nedostatečnou činností lymfatického systemu a krevního oběhu. Nesprávnou životosprávou je tělo zanášeno toxiny a nestrávenými metabolity, které lymfatický systém není schopen vyloučit. Tkáně v takové situaci trpí nedostatečnou výživou, především minerály a vitamíny . Důsledkem jsou změny podkožního tukového vaziva. Dalším momentem vzniku celulitidy je zhoršený metabolismus tuků, což může souviset se zhoršenou funkcí jater.",
+        "chapter_4_info_2": "Celulitida postihuje především boky, stehna, hýždě. Lehká celulitida je viditelná pouze tehdy, když stiskneme kůži mezi prsty. Při 2.stupni už vidíte pomerančovou kůži když stojíte, ovšem jakmile lehnete, zmizí. Znamená to, že u lehké celulitidy ještě nevznikl zánět. 3.stupeň, což je střední celulitida, je pomerančová kůže vidět, i když ležíte.V ohnisku celulitidy se nahromadilo velké množství tekutiny, někdy jsou i oslabené krevní vlásečnice a chladnější kůže.",
+        "chapter_5": "Co celulitidu podporuje?",
+        "chapter_5_info_1": "Špatné stravovací návyky (cukr,dorty, čokoláda, uzeniny, chipsy, instatní a konzervované potraviny, bílé pečivo, majonézy, tučná masa a omáčky, přílišné solení), nedostatečný příjem tekutin.",
+        "chapter_5_info_2": "kouření, pití kávy a alkoholu",
+        "chapter_5_info_3": "stres",
+        "chapter_5_info_4": "nadváha",
+        "chapter_5_info_5": "těsné oblečení",
+        "chapter_6": "Co pomáhá v boji proti celulitidě?",
+        "chapter_6_info_1": "zdravý stravovací režim s preferováním ovoce a zeleniny, celozrnných obilovina a pečiva, luštěnina nízkotučných mas a mléčných výrobků.",
+        "chapter_6_info_2": "dodržování optimálního pitného režimu, což představuje vypít 2-3 litry čisté vody nejlépe bez bublinek, bylinné neslazené čaje, ovocné a zeleninové šťávy.",
+        "chapter_6_info_3": "pohyb v jakékoliv formě. Lymfa musí v těle proudit a odvádět z těla toxiny. Nemá však svoji vlastní pumpu jako krevní oběh(srdce) proto musíme lymfu v těle rozproudit.",
+        "chapter_6_info_4": "lymfu rozproudíme masážemi – např, masírovat celé tělo kartáčem na šaty nebo speciální sisalová rukavice ráno a večer.",
+        "chapter_6_info_5": "střídavé sprchování teplou a studenou vodou (60-80 sekund se sprchujte teplou a 20 sekund studenou vodou)",
+        "chapter_6_info_6": "odborně prováděná proticelulární masáž ruční nebo přístrojová- masážní přístroj STARVAC SP2",
+        "chapter_6_info_7": "provádění detoxikace – např, hladovka, ovocný den 1 x týdně, příp. používáním přípravků YUCCA nebo DETOX.",
+        "chapter_6_info_8": "Boj s celulitidou je opravdu strastiplný, ale nezapomeňte, milé dámy, že tímto bojem ozdravíte celý svůj organismus"
+    },
+
+    "lymphatic": {
+        "info_1": "Přístrojová lymfodrenáž",
+        "info_2": "Přístrojová lymfodrenáž pomáhá udržovat a vytvářet vyvážený stav proudění mezi krevním a lymfatickým systémem.",
+        "info_3": "Přístrojová lymfodrenáž je založena na přerušované kompresi končetiny a vytváření tlakové vlny.Přístroj se stará o stimulaci lymfatických cév pomocí speciálních návleků na končetiny a systémem komor v těchto návlecích postupně se naplňujících se vzduchem.",
+        "info_4": "Lymfodrenáž ovlivňuje lymfatický systém, což je soustava uzlin spojených mízními cévami, v nichž koluje míza/lymfa/.Transport mízy je zajištěn pasivně pomocí svalové pumpy a pohybem bránice při dýchání.Vlivem dlouhého stání či sezení, nedostatku pohybu, po úrazech nebo vlivem infekce dochází ke zhoršení funkce celého systému, bolestivosti a vzniku otoku končetin.Vlivem naší lymfodrenáže dochází k uvolnění mízních cév a uzlin, ke zlepšení průtoku mízy v cévách, zlepšení prokrvení.",
+        "info_5": "Lymfodrenáž je vhodná při detoxikaci organismu, při potížích s křečovými žílami a při žilních nedostatcích, při prevenci a odstraňování celulitidy, při otocích končetin,při nadváze,při relaxaci a regeneraci organismu, při bolesti svalů a pateře, při pocitu těžkých a unavených nohou, po úrazech nebo preventivně, jak pro ženy , tak pro muže.Pro dosažení co nejvyššího efektu je vhodné provádět lymfodrenáž opakovaně , v počtu 5-10 sezení na jeden cyklus.",
+        "info_6": "BTL-6000 Lymfastim 12Topline",
+        "info_7": "V naší ordinaci je přístrojová lymfodrenáž prováděna přístrojem BTL-6000 Lymfastim 12Topline.",
+        "list_title": "10 nabízených programů:",
+        "list_info_1": "celulitida",
+        "list_info_2": "detoxikace",
+        "list_info_3": "lipedem a otoky",
+        "list_info_4": "obezita",
+        "list_info_5": "péče o liposukci",
+        "list_info_6": "prevence křečových žil",
+        "list_info_7": "regenerace",
+        "list_info_8": "syndrom těžkých nohou",
+        "list_info_9": "zlepšení elasticity pokožky",
+        "list_info_10": "úponové bolesti nohou",
+        "info_8": "Nejběžnější kosmetické/estetické indikace",
+        "info_9": "Regenerace, relaxace a detoxikace organismu. Odstranění přebytečných tekutin např. při redukci hmotnosti. Prevence a redukce celulitidy-alespoň 10 aplikací. Prevence varixů/křečových žil/ Poliposukční péče Zlepšení elasticity kůže Zlepšení syndromu těžkých nohou Vše vhodné pro ženy i pro muže!!!",
+        "info_10": "Proč lymfodrenáž u nás?",
+        "info_11": "Přístroj BTL-6000 Lymfastim 12Topline je nejmodernější přístroj ve své kategorii na trhu, okamžitě viditelné výsledky!!Pacienty příjemně vnímaná terapie, při níž hodinu odpočíváte a lymfatický systém pracuje za Vás.",
+        "info_12": "Tělo není zatěžováno léky!!! Dochází k odvodu mízy a odpadních látek buněčného metabolismu ze tkání prostřednictvím lymfatického systému do krevního řečiště a ven z těla."
+    },
+
+    "laser": {
+        "info_1": "Laser je světlo zesilované pomocí stimulované emise záření. Podstatu tohoto záření objasnily zákony kvantové fyziky. První podnět k hlubšímu studiu kvantové teorie dal Albert Einstein. V případě laseru se jedná o koherentní monochromatické záření v oblasti mikrovln, popřípadě viditelného záření."
+    },
+
+    "electrotherapy": {
+        "info_1": "Elektroléčba je část fyzikální léčby, při které je využíván léčebný účinek různých forem elektrické energie. Elektroterapie a elektrodiagnostika prodělaly bouřlivý vývoj a v současné době je tento rozvoj dále urychlován."
+    },
+
+    "ltv": {
+        "info_1": "Prosíme o včasné zrušení termínu na fyzioterapii tj24h před ,nejdéle v brzkých ranních hodinách téhož dne po SMS Pakliže nebude váš termín včas zrušen terapie vám propadá, v případě 2 absenci bez omluvy bude zrušena veškerá léčba",
+        "info_2": "Individuální cvičení je vedené zkušeným fyzioterapeutem, jenž má bohaté zkušenosti v oblasti rehabilitace a péče o tělo."
+    },
+
+    "contacts": {
+        "form_title": "Domluvit si schůzku",
+        "first_name": "Jméno",
+        "last_name": "Příjmení",
+        "email": "E-mail",
+        "phone": "Telefonní číslo",
+        "select_btn": "Vybrat služby",
+        "not_selected": "Není vybráno",
+        "visit_date": "Vyberte datum návštěvy",
+        "visit_time": "Vyberte čas návštěvy",
+        "form_btn": "Poslat",
+        "map_title": "Kde jsme"
+    },
+
+    "personal_data": {
+        "info_1": "Vážení pacienti",
+        "info_2": "Vaše osobní údaje jsou zpracovávány ve zdravotnické dokumentaci v plném souladu s platnými právními předpisy zejména v souladu se zákonem č. 372/2011 Sb., o zdravotních službách a podmínkách jejich poskytování (zákon o zdravotních službách) a jeho prováděcími předpisy.",
+        "info_3": "Jejich zabezpečení a ochrana je zajištěna v souladu s těmito předpisy i v souladu s Obecným nařízením Evropského parlamentu a Rady EU 2016/679 o ochraně osobních údajů (tzv. GDPR).",
+        "info_4": "Kromě možnosti přístupu k Vašim osobním údajům námi zpracovávaných, máte právo požadovat jejich opravu či omezení zpracování pokud zjistíte, že jsou tyto údaje nesprávné, nepřesné,změnily se atd.",
+        "info_5": "Poskytování Vašich osobních údajů je zákonným požadavkem a máte jako pacient povinnost je poskytnout, stejně jako zdravotnický pracovník má právo je po Vás požadovat. Odpovědnou osobou , na kterou se můžete obracet, je Váš ošetřující lékař."
+    },
+
     "footer": {
-        "nav-title": "Navigace",
+        "nav_title": "Navigace",
         "about_title": "O",
-        "personal_data": "Osobní údaje",
         "copyright": "Všechna práva vyhrazena"
     }
 }

@@ -1,17 +1,23 @@
 import { useEffect } from "react";
 import dayjs from "dayjs";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
 import mailIcon from "./../../assets/icons/mail.png";
-import PageTitle from "../../components/PageTitle/PageTitle";
 import "./Contact.scss";
 
 const Contact = () => {
-    useEffect(() => {
-        document.title = "Kontakty";
+    const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = t("contacts_title");
+    }, [t]);
+
+    useEffect(() => {
         // Listener for multiple custom selectors
+
         document.querySelectorAll(".custom-select").forEach((select) => {
             const selectBtn = select.querySelector(".custom-select__btn");
             const selectList = select.querySelector(".custom-select__list");
@@ -22,6 +28,7 @@ const Contact = () => {
 
             selectBtn.addEventListener("click", (e) => {
                 // Prevent from submitting a form
+
                 e.preventDefault();
                 selectList.classList.toggle("custom-select__list--visible");
                 selectBtn.classList.add("custom-select__btn--active");
@@ -30,6 +37,7 @@ const Contact = () => {
             selectOptions.forEach((option) => {
                 option.addEventListener("click", (e) => {
                     // TODO:
+
                     e.stopPropagation();
                     selectBtn.textContent = option.textContent;
                     selectBtn.focus();
@@ -59,7 +67,7 @@ const Contact = () => {
 
     return (
         <>
-            <PageTitle title="Kontakty" />
+            <PageTitle title={t("contacts_title")} />
             <div className="contact__wrapper">
                 <ul className="contact__list">
                     <li>
@@ -83,11 +91,11 @@ const Contact = () => {
                 <div className="form-map-wrapper">
                     <div className="form-wrapper">
                         <h3 className="contact__form-title" id="contact-form">
-                            Domluvit si schůzku
+                            {t("contacts.form_title")}
                         </h3>
                         <form
                             className="contact__form"
-                            action="mailto:josef@bourek.cz"
+                            action="mailto:pepabourek@gmail.com"
                             method="post"
                             encType="text/plain"
                         >
@@ -95,15 +103,15 @@ const Contact = () => {
                                 <input
                                     className="first-name"
                                     type="text"
-                                    name="First name"
-                                    placeholder="Jméno *"
+                                    name="Jméno"
+                                    placeholder={t("contacts.first_name")}
                                     required
                                 />
                                 <input
                                     className="last-name"
                                     type="text"
-                                    name="Last name"
-                                    placeholder="Příjmení *"
+                                    name="Příjmení"
+                                    placeholder={t("contacts.last_name")}
                                     required
                                 />
                             </div>
@@ -112,13 +120,13 @@ const Contact = () => {
                                     className="email"
                                     type="text"
                                     name="E-mail"
-                                    placeholder="E-mail"
+                                    placeholder={t("contacts.email")}
                                 />
                                 <input
                                     className="phone"
                                     type="text"
-                                    name="Phone number"
-                                    placeholder="Telefonní číslo *"
+                                    name="Telefonní číslo"
+                                    placeholder={t("contacts.phone")}
                                     required
                                 />
                             </div>
@@ -127,79 +135,97 @@ const Contact = () => {
 
                             <div className="custom-select">
                                 <button className="custom-select__btn">
-                                    Choose department
+                                    {t("contacts.select_btn")}
                                 </button>
                                 <ul className="custom-select__list">
                                     <li
                                         className="custom-select__option"
-                                        data-value="Not selected"
+                                        data-value={t("contacts.not_selected")}
                                     >
-                                        Select department
+                                        {t("contacts.select_btn")}
                                     </li>
                                     <li
                                         className="custom-select__option"
-                                        data-value="Ordinace"
+                                        data-value={t("service_1")}
                                     >
-                                        Ordinace
+                                        {t("service_1")}
                                     </li>
                                     <li
                                         className="custom-select__option"
-                                        data-value="Starvac"
+                                        data-value={t("service_2")}
                                     >
-                                        Starvac
+                                        {t("service_2")}
                                     </li>
                                     <li
                                         className="custom-select__option"
-                                        data-value="Celulitida"
+                                        data-value={t("service_3")}
                                     >
-                                        Celulitida
+                                        {t("service_3")}
                                     </li>
                                     <li
                                         className="custom-select__option"
-                                        data-value="Lymfodrenáž"
+                                        data-value={t("service_4")}
                                     >
-                                        Lymfodrenáž
+                                        {t("service_4")}
+                                    </li>
+                                    <li
+                                        className="custom-select__option"
+                                        data-value={t("service_5")}
+                                    >
+                                        {t("service_5")}
+                                    </li>
+                                    <li
+                                        className="custom-select__option"
+                                        data-value={t("service_6")}
+                                    >
+                                        {t("service_6")}
+                                    </li>
+                                    <li
+                                        className="custom-select__option"
+                                        data-value={t("service_7")}
+                                    >
+                                        {t("service_7")}
                                     </li>
                                 </ul>
                                 <input
                                     className="custom-select__input"
                                     type="text"
-                                    name="Department"
+                                    name="Služby"
                                     defaultValue=""
                                 />
                             </div>
                             <div className="date-container">
                                 <label htmlFor="date">
-                                    Vyberte datum návštěvy
+                                    {t("contacts.visit_date")}
                                 </label>
                                 <input
                                     id="date"
                                     className="date"
                                     defaultValue={formatedDate}
                                     type="date"
-                                    name="Date"
+                                    name="Datum"
                                 />
                             </div>
                             <div className="time-container">
                                 <label htmlFor="time">
-                                    Zvolit čas návštěvy
+                                    {t("contacts.visit_time")}
                                 </label>
                                 <input
                                     id="time"
                                     className="time"
                                     defaultValue={`${formatedHours}:${formatedMinutes}`}
                                     type="time"
-                                    name="Time"
+                                    name="Čas"
                                 />
                             </div>
                             <button className="submit-btn" type="submit">
-                                Domluvit si schůzku
+                                {t("contacts.form_btn")}
                             </button>
                         </form>
                     </div>
                     <div className="map-wrapper">
                         <h3 className="contact__map-title" id="contact-map">
-                            Kde jsme
+                            {t("contacts.map_title")}
                         </h3>
                         <iframe
                             className="contact__google-map"
@@ -208,8 +234,6 @@ const Contact = () => {
                         ></iframe>
                     </div>
                 </div>
-
-                {/* <CustomDivider /> */}
             </div>
         </>
     );

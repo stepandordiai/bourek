@@ -1,34 +1,35 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
 import "./Offer.scss";
 
 const Offer = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
-        document.title = "Co nabízíme";
-    }, []);
+        document.title = t("offer_title");
+    }, [t]);
 
     return (
         <>
-            <PageTitle title="Co nabízíme" />
+            <PageTitle title={t("offer_title")} />
             <div className="offer__wrapper">
                 <ul className="about-us__offer-list">
-                    <li>služby odborného rehabilitačního lékaře</li>
+                    <li>{t("offer.offer_1")}</li>
                     {/* <li>služby odborného neurologického lékaře</li> */}
-                    <li>služby rehabilitačních pracovnic</li>
+                    <li>{t("offer.offer_2")}</li>
                     <li>
-                        veškeré kompletní rehabilitační služby:
+                        {t("offer.offer_3")}:
                         <ul>
-                            <li>masážní přístroj starvac sp 2</li>
-                            <li>
-                                kompletní elektroléčba, laser terapie, solux
-                            </li>
+                            <li>{t("offer.offer_4")}</li>
+                            <li>{t("offer.offer_5")}</li>
                             {/* <li>léčebná tělesná výchova</li> */}
                             {/* <li>speciální LTV na míčích</li> */}
                             {/* <li>reflexní masáže</li> */}
-                            <li>poradenství o zdravém životním stylu</li>
+                            <li>{t("offer.offer_6")}</li>
                         </ul>
                     </li>
-                    <li>speciální zdravotnický maloobchod</li>
+                    <li>{t("offer.offer_7")}</li>
                 </ul>
             </div>
         </>

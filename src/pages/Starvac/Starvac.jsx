@@ -2,126 +2,72 @@ import { useEffect } from "react";
 import img1 from "./img/starvac.jpg";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageInfo from "../../components/PageInfo/PageInfo";
+import { useTranslation } from "react-i18next";
 import "./Starvac.scss";
 
 const Starvac = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
-        document.title = "Starvac";
-    }, []);
+        document.title = t("service_2");
+    }, [t]);
 
     return (
         <>
-            <PageTitle title="Starvac" />
+            <PageTitle title={t("service_2")} />
             <PageInfo>
-                <strong>
-                    Nový pomocník při baňkování – masážní přístroj STARVAC SP2
-                </strong>
+                <strong>{t("starvac.info_1")}</strong>
                 <p className="img-text__container">
                     <img src={img1} loading="lazy" alt="Starvac" />
-                    Původní starověká metoda sloužící k čištění krve –
-                    přikládání baněk se v dnešní doběstává novým hitem v léčebné
-                    fyzioterapii, dále při léčbě celulitidy, podpory
-                    lymfatického systemu a následné detoxikaci celého těla,
-                    zlepšení krevního oběhu, redukci hmotnosti, tvarování
-                    postavy a zpevňování pokožky.
+                    {t("starvac.info_2")}
                     <br />
                     <br />
-                    STARVAC SP2 je velmi moderní přístroj s LCD obrazovkou,
-                    dvaceti pěti přednastavitelnými programy: devět v kráse a
-                    péči o tělo a šestnáct terapeutických aplikací a možností
-                    nastavení vlastních programů (délka ošetření, frekvence,
-                    cyklus) nastavit podtlak se dá až do 900 milibarů v
-                    kontinuálním nebo plzním vakuovém módu. Účinek ošetření
-                    zvyšuje speciální masážní krém s aktivními složkami, který
-                    je k němu dodáván.
+                    {t("starvac.info_3")}
                 </p>
-                <strong>Využití přístroje:</strong>
-                <strong>estetická indikace</strong>
+                <strong>{t("starvac.list_1_title")}:</strong>
+                <strong>{t("starvac.list_secondary_1_title")}</strong>
                 <ul className="starvac__ul-list">
-                    <li>
-                        léčba celulitidy (zeštíhlení problematických partií a
-                        formování postavy, odbourávání podkožního tuku)
-                    </li>
-                    <li>
-                        lymfatická drenáž (zlepšení lymfatického toku, účinné
-                        pročišťování těla, podpoření funkčnosti krevního oběhu)
-                    </li>
-                    <li>relaxační masáž</li>
-                    <li>zpevnění a zvětšení objemu prsou</li>
-                    <li>
-                        lymfatická drenáž obličeje (omlazování a zpevňování
-                        pleti obličeje,vyhlazování vrásek,odstraňování váčků pod
-                        očima, ochablých očních víček, dvojité brady)
-                    </li>
-                    <li>podpora při léčbě akne</li>
-                    <li>zbavení pocitu těžkých , unavených nohou</li>
+                    <li>{t("starvac.list_secondary_1_info_1")}</li>
+                    <li>{t("starvac.list_secondary_1_info_2")}</li>
+                    <li>{t("starvac.list_secondary_1_info_3")}</li>
+                    <li>{t("starvac.list_secondary_1_info_4")}</li>
+                    <li>{t("starvac.list_secondary_1_info_5")}</li>
+                    <li>{t("starvac.list_secondary_1_info_6")}</li>
+                    <li>{t("starvac.list_secondary_1_info_7")}</li>
                 </ul>
-                <strong>sport, rehabilitace, fitness</strong>
+                <strong>{t("starvac.list_secondary_2_title")}</strong>
                 <ul className="starvac__ul-list">
-                    <li>svalová ztuhlost</li>
-                    <li>zánět šlach</li>
-                    <li>léčba rukou a prstů</li>
-                    <li>dolní končetina – léčba kyčlí, kolen, nohou</li>
-                    <li>Traumatologie (vymknutí kotníku, hematom, jizvy)</li>
+                    <li>{t("starvac.list_secondary_2_info_1")}</li>
+                    <li>{t("starvac.list_secondary_2_info_2")}</li>
+                    <li>{t("starvac.list_secondary_2_info_3")}</li>
+                    <li>{t("starvac.list_secondary_2_info_4")}</li>
+                    <li>{t("starvac.list_secondary_2_info_5")}</li>
                 </ul>
-                <strong>terapeutické užití</strong>
+                <strong>{t("starvac.list_secondary_3_title")}</strong>
                 <ul className="starvac__ul-list">
-                    <li>
-                        Revmatologie (léčba pateře-bolest krčních obratlů, zad,
-                        houser, lokte, zápěstí, zánět sedacího nervu)
-                    </li>
-                    <li>
-                        horní končetina-léčba ramene, lokte,zápěstí, léčba rukou
-                        a prstů
-                    </li>
-                    <li>dolní končetina-léčba kyčlí,kolen,nohou</li>
-                    <li>Traumatologie (vymknutí kotníku,hematom, jizvy)</li>
+                    <li>{t("starvac.list_secondary_3_info_1")}</li>
+                    <li>{t("starvac.list_secondary_3_info_2")}</li>
+                    <li>{t("starvac.list_secondary_3_info_3")}</li>
+                    <li>{t("starvac.list_secondary_3_info_4")}</li>
                 </ul>
-                <strong>Mezi další přednosti STARVACu patří:</strong>
+                <strong>{t("starvac.list_2_title")}:</strong>
                 <ul className="starvac__ul-list">
-                    <li>originální a průkopnický design</li>
-                    <li>široká, dotyková LCD obrazovka</li>
-                    <li>přednastavené programy</li>
-                    <li>snadná nastavitelnost vlastních programů</li>
-                    <li>13 masážních nástavců</li>
-                    <li>patentovaný systém</li>
-                    <li>nízká energetická náročnost</li>
-                    <li>nebolestivost prováděného výkonu</li>
-                    <li>inovovaná sací hlava</li>
+                    <li>{t("starvac.list_2_info_1")}</li>
+                    <li>{t("starvac.list_2_info_2")}</li>
+                    <li>{t("starvac.list_2_info_3")}</li>
+                    <li>{t("starvac.list_2_info_4")}</li>
+                    <li>{t("starvac.list_2_info_5")}</li>
+                    <li>{t("starvac.list_2_info_6")}</li>
+                    <li>{t("starvac.list_2_info_7")}</li>
+                    <li>{t("starvac.list_2_info_8")}</li>
+                    <li>{t("starvac.list_2_info_9")}</li>
                 </ul>
-                <strong>příslušenství přístroje:</strong>
-                <p>
-                    2 speciální sací hlavy: kůže je nasávána pod tlakem mezi dva
-                    pohyblivé válečky. Volné uložení válečků umožňuje lepší
-                    přizpůsobení individuální tloušťce podkožního vaziva.
-                    Patentovaný „roler“ pohyb válečků zvyšuje efektivitu masáže.
-                    Vhodné pro revmatologická a traumatologická ošetření,
-                    relaxační, uvolňovací masáže, lymfatickou drenáž, léčbu
-                    celulitidy.
-                </p>
-                <p>
-                    4 patentované double sací baňky: slouží k podtlakové pulzní
-                    masáži v automatickém módu vhodné pro revmatologická a
-                    traumatologická ošetření, terapeutické indikace, formování
-                    postavy a léčbě starších typů celulitidy.
-                </p>
-                <p>
-                    4 základní sací baňky – pro manuelní (s otvorem) nebo
-                    automatický mód (bez otvoru), slouží k uvolnění v ošetřované
-                    oblasti bodově nebo tahem.Vhodné pro revmatologická a
-                    traumatologická ošetření, všechny druhy masáží.
-                </p>
-                <p>
-                    3 malé sací baňky – pro automatický mód. Vhodné pro
-                    revmatologická a traumatologická ošetření, reflexní masáže,
-                    k ošetření obličeje, krku, vyhlazování vrásek a jizev.
-                </p>
-                <p>
-                    1 pár prsních baněk – volitelné příslušenství pro zpevňování
-                    a zvětšování poprsí. Nastavení podtlaku pro tuto speciální
-                    masáž je regulován programem s ohledem na tento velmi
-                    citlivý orgán.
-                </p>
+                <strong>{t("starvac.list_3_title")}:</strong>
+                <p>{t("starvac.list_3_info_1")}</p>
+                <p>{t("starvac.list_3_info_2")}</p>
+                <p>{t("starvac.list_3_info_3")}</p>
+                <p>{t("starvac.list_3_info_4")}</p>
+                <p>{t("starvac.list_3_info_5")}</p>
             </PageInfo>
         </>
     );

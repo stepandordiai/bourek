@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import CustomDivider from "../CustomDivider/CustomDivider";
+import { useTranslation } from "react-i18next";
 import logoImg from "./../../assets/logo/medical-symbol.png";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
@@ -7,6 +8,8 @@ import mailIcon from "./../../assets/icons/mail.png";
 import "./Footer.scss";
 
 const Footer = () => {
+    const { t } = useTranslation();
+
     const inactiveFooterLink = "footer__link";
     const activeFooterLink = "footer__link footer__link--active";
 
@@ -29,7 +32,7 @@ const Footer = () => {
             <CustomDivider />
             <div className="footer__nav">
                 <div>
-                    <p>Navigace</p>
+                    <p>{t("footer.nav_title")}</p>
                     <ul>
                         <li>
                             <NavLink
@@ -40,7 +43,7 @@ const Footer = () => {
                                 }
                                 to="/"
                             >
-                                Úvod
+                                {t("home_title")}
                             </NavLink>
                         </li>
                         <li>
@@ -52,7 +55,7 @@ const Footer = () => {
                                 }
                                 to="/price-list"
                             >
-                                Ceník
+                                {t("price_list_title")}
                             </NavLink>
                         </li>
                         <li>
@@ -64,13 +67,13 @@ const Footer = () => {
                                 }
                                 to="/contact"
                             >
-                                Kontakty
+                                {t("contacts_title")}
                             </NavLink>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <p>O nás</p>
+                    <p>{t("about_us_title")}</p>
                     <ul>
                         <li>
                             <NavLink
@@ -81,7 +84,7 @@ const Footer = () => {
                                 }
                                 to="/offer"
                             >
-                                Co nabízíme
+                                {t("offer_title")}
                             </NavLink>
                         </li>
                         <li>
@@ -93,7 +96,7 @@ const Footer = () => {
                                 }
                                 to="/our-team"
                             >
-                                Náš tým
+                                {t("our_team_title")}
                             </NavLink>
                         </li>
                         <li>
@@ -105,13 +108,13 @@ const Footer = () => {
                                 }
                                 to="/smile-gallery"
                             >
-                                Galerie kliniky
+                                {t("clinic_gallery_title")}
                             </NavLink>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <p>Služby</p>
+                    <p>{t("services_title")}</p>
                     <ul>
                         <li>
                             <NavLink
@@ -122,7 +125,7 @@ const Footer = () => {
                                 }
                                 to="/surgery"
                             >
-                                Ordinace
+                                {t("service_1")}
                             </NavLink>
                         </li>
                         <li>
@@ -134,7 +137,7 @@ const Footer = () => {
                                 }
                                 to="/starvac"
                             >
-                                Starvac
+                                {t("service_2")}
                             </NavLink>
                         </li>
                         <li>
@@ -146,7 +149,7 @@ const Footer = () => {
                                 }
                                 to="/cellulite"
                             >
-                                Celulitida
+                                {t("service_3")}
                             </NavLink>
                         </li>
                         <li>
@@ -158,7 +161,7 @@ const Footer = () => {
                                 }
                                 to="/lymphatic"
                             >
-                                Lymfodrenáž
+                                {t("service_4")}
                             </NavLink>
                         </li>
                         <li>
@@ -170,7 +173,7 @@ const Footer = () => {
                                 }
                                 to="/laser"
                             >
-                                Laser
+                                {t("service_5")}
                             </NavLink>
                         </li>
                         <li>
@@ -182,7 +185,7 @@ const Footer = () => {
                                 }
                                 to="/electrotherapy"
                             >
-                                Elektroléčba
+                                {t("service_6")}
                             </NavLink>
                         </li>
                         <li>
@@ -194,13 +197,13 @@ const Footer = () => {
                                 }
                                 to="/ltv"
                             >
-                                Individuální fyzioterapie
+                                {t("service_7")}
                             </NavLink>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <p>Kontakty</p>
+                    <p>{t("contacts_title")}</p>
                     <ul className="footer__contact-list">
                         <li>
                             <img src={phoneIcon} width={20} alt="Phone" />
@@ -219,7 +222,9 @@ const Footer = () => {
                             </a>
                         </li>
                     </ul>
-                    <p style={{ marginTop: 10 }}>O Pepa Bourek</p>
+                    <p style={{ marginTop: 10 }}>
+                        {t("footer.about_title")} Pepa Bourek
+                    </p>
                     <ul>
                         <li>
                             <NavLink
@@ -230,7 +235,7 @@ const Footer = () => {
                                 }
                                 to="/personal-data"
                             >
-                                Personal data
+                                {t("footer.personal_data")}
                             </NavLink>
                         </li>
                     </ul>
@@ -242,7 +247,7 @@ const Footer = () => {
                     <p className="copyright">
                         <span>&copy; 2025 Pepa Bourek</span>
                         <span> | </span>
-                        <span>Všechna práva vyhrazena</span>
+                        <span>{t("footer.copyright")}</span>
                     </p>
                 </div>
                 <p className="creator">

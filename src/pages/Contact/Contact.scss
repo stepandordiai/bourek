@@ -164,12 +164,12 @@ label {
 }
 
 .submit-btn {
-    background: var(--blue-clr);
     align-self: flex-end;
     border-radius: 10px;
     padding: 10px;
     color: #fff;
     font-weight: inherit;
+    background: var(--blue-clr);
     transition: background-color 200ms;
 
     &:hover {

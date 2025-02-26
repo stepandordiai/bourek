@@ -90,7 +90,7 @@ const Contact = () => {
                 <CustomDivider />
                 <div className="form-map-wrapper">
                     <div className="form-wrapper">
-                        <h3 className="contact__form-title" id="contact-form">
+                        <h3 className="contact__form-title">
                             {t("contacts.form_title")}
                         </h3>
                         <form
@@ -103,29 +103,28 @@ const Contact = () => {
                                 <input
                                     className="first-name"
                                     type="text"
-                                    name="Jméno"
+                                    name="First name"
                                     placeholder={t("contacts.first_name")}
                                     required
                                 />
                                 <input
                                     className="last-name"
                                     type="text"
-                                    name="Příjmení"
+                                    name="Last name"
                                     placeholder={t("contacts.last_name")}
-                                    required
                                 />
                             </div>
                             <div className="contact-form__inputs">
                                 <input
                                     className="email"
-                                    type="text"
+                                    type="email"
                                     name="E-mail"
                                     placeholder={t("contacts.email")}
                                 />
                                 <input
                                     className="phone"
-                                    type="text"
-                                    name="Telefonní číslo"
+                                    type="tel"
+                                    name="Phone number"
                                     placeholder={t("contacts.phone")}
                                     required
                                 />
@@ -190,7 +189,7 @@ const Contact = () => {
                                 <input
                                     className="custom-select__input"
                                     type="text"
-                                    name="Služby"
+                                    name="Service"
                                     defaultValue=""
                                 />
                             </div>
@@ -203,7 +202,7 @@ const Contact = () => {
                                     className="date"
                                     defaultValue={formatedDate}
                                     type="date"
-                                    name="Datum"
+                                    name="Date"
                                 />
                             </div>
                             <div className="time-container">
@@ -215,7 +214,7 @@ const Contact = () => {
                                     className="time"
                                     defaultValue={`${formatedHours}:${formatedMinutes}`}
                                     type="time"
-                                    name="Čas"
+                                    name="Time"
                                 />
                             </div>
                             <button className="submit-btn" type="submit">
@@ -224,7 +223,7 @@ const Contact = () => {
                         </form>
                     </div>
                     <div className="map-wrapper">
-                        <h3 className="contact__map-title" id="contact-map">
+                        <h3 className="contact__map-title">
                             {t("contacts.map_title")}
                         </h3>
                         <iframe

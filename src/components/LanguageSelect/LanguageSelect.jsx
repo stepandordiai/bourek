@@ -8,18 +8,6 @@ const LanguageSelect = () => {
 
         const handleChangeLanguage = (lng) => {
             i18n.changeLanguage(lng);
-
-            // Active state for language options
-
-            document
-                .querySelectorAll(".lang-select__option")
-                .forEach((option) => {
-                    if (option.dataset.value === lng) {
-                        option.classList.add("lang-select__option--active");
-                    } else {
-                        option.classList.remove("lang-select__option--active");
-                    }
-                });
         };
 
         document.querySelectorAll(".lang-select").forEach((select) => {
@@ -68,17 +56,29 @@ const LanguageSelect = () => {
             });
         });
     }, []);
+
+    const lngStorage = localStorage.getItem("i18nextLng") || "cz";
+
+    const selectBtnTxt = lngStorage.toUpperCase() || "CZ";
+
+    const inactiveLngOption = "lang-select__option";
+    const activeLngOption = "lang-select__option lang-select__option--active";
+
     return (
         <div className="lang-select">
             <button className="lang-select__btn">
-                <span className="lang-select__btn-value">CZ</span>
+                <span className="lang-select__btn-value">{selectBtnTxt}</span>
                 <span className="lang-select__btn-icon">
                     <i className="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
             <ul className="lang-select__list">
                 <li
-                    className="lang-select__option lang-select__option--active"
+                    className={
+                        lngStorage === "cz"
+                            ? activeLngOption
+                            : inactiveLngOption
+                    }
                     data-value="cz"
                 >
                     <span>CZ</span>
@@ -88,7 +88,14 @@ const LanguageSelect = () => {
                         alt="CZ"
                     />
                 </li>
-                <li className="lang-select__option" data-value="ua">
+                <li
+                    className={
+                        lngStorage === "ua"
+                            ? activeLngOption
+                            : inactiveLngOption
+                    }
+                    data-value="ua"
+                >
                     <span>UA</span>
                     <img
                         width={20}
@@ -96,7 +103,14 @@ const LanguageSelect = () => {
                         alt="UA"
                     />
                 </li>
-                <li className="lang-select__option" data-value="en">
+                <li
+                    className={
+                        lngStorage === "en"
+                            ? activeLngOption
+                            : inactiveLngOption
+                    }
+                    data-value="en"
+                >
                     <span>EN</span>
                     <img
                         width={20}

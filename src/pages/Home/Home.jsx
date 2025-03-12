@@ -30,9 +30,13 @@ const Home = () => {
                 <div className="home__wrapper">
                     <div>
                         <h1 className="home__title">{t("home.title")}</h1>
-                        <h2>{t("home.secondary_title")}</h2>
-                        <h3>MUDr. Josef Bourek</h3>
-                        <h3>MUDr. Julia Cadorini</h3>
+                        <h2 className="home__sec-title">
+                            {t("home.secondary_title")}
+                        </h2>
+                        <h3 className="home__sec-title">MUDr. Josef Bourek</h3>
+                        <h3 className="home__sec-title">
+                            MUDr. Julia Cadorini
+                        </h3>
                     </div>
                     <div>
                         <img

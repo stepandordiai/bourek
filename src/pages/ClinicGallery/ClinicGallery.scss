@@ -1,39 +1,42 @@
 .clinic-gallery__wrapper {
-    columns: 3;
-    gap: 40px;
-    padding: 40px 40px 0;
+    // columns: 3;
+    // gap: 40px;
+    text-align: center;
+    padding: 40px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: var(--blue-clr);
 
-    img {
-        margin-bottom: 40px;
-        width: 100%;
-    }
+    // img {
+    //     margin-bottom: 40px;
+    //     width: 100%;
+    // }
 }
 
-@media (max-width: 1000px) {
-    .clinic-gallery__wrapper {
-        columns: 2;
-    }
-}
+// @media (max-width: 1000px) {
+//     .clinic-gallery__wrapper {
+//         columns: 2;
+//     }
+// }
 
-@media (max-width: 900px) {
-    .clinic-gallery__wrapper {
-        columns: 2;
-        gap: 20px;
-        padding: 20px 20px 0;
+// @media (max-width: 900px) {
+//     .clinic-gallery__wrapper {
+//         columns: 2;
+//         gap: 20px;
+//         padding: 20px 20px 0;
 
-        img {
-            margin-bottom: 20px;
-        }
-    }
-}
+//         img {
+//             margin-bottom: 20px;
+//         }
+//     }
+// }
 
-@media (max-width: 600px) {
-    .clinic-gallery__wrapper {
-        gap: 10px;
-        padding: 10px 10px 0;
+// @media (max-width: 600px) {
+//     .clinic-gallery__wrapper {
+//         gap: 10px;
+//         padding: 10px 10px 0;
 
-        img {
-            margin-bottom: 10px;
-        }
-    }
-}
+//         img {
+//             margin-bottom: 10px;
+//         }
+//     }
+// }

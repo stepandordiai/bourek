@@ -15,20 +15,13 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <div className="footer__header">
-                <NavLink className="footer__header-logo" to="/">
-                    <img src={logoImg} alt="Logo" />
-                    <span>Pepa Bourek</span>
-                </NavLink>
-                <ul className="footer__header-socials-list">
-                    <li>
-                        <a href="">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="">Instagram</a>
-                    </li>
-                </ul>
-            </div>
+            <NavLink className="footer__logo" to="/">
+                <img src={logoImg} alt="Logo" />
+                <span>Pepa Bourek</span>
+            </NavLink>
+            <p className="footer__logo-details">
+                Ordinace rehabilitačního lékaře
+            </p>
             <CustomDivider />
             <div className="footer__nav">
                 <div>
@@ -106,7 +99,7 @@ const Footer = () => {
                                         ? activeFooterLink
                                         : inactiveFooterLink
                                 }
-                                to="/smile-gallery"
+                                to="/clinic-gallery"
                             >
                                 {t("clinic_gallery_title")}
                             </NavLink>
@@ -251,8 +244,9 @@ const Footer = () => {
                     </p>
                 </div>
                 <p className="creator">
-                    Designed and developed by{" "}
+                    Site by{" "}
                     <a
+                        className="footer__creator-link"
                         href="https://heeeyooo-studio.netlify.app/"
                         target="_blank"
                     >

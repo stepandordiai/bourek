@@ -75,7 +75,7 @@
 
 .footer__footer {
     display: flex;
-    flex-direction: column;
+    gap: 40px;
 }
 
 .footer__creator-link {
@@ -99,6 +99,20 @@
 
     .footer__nav-table {
         width: 100%;
+    }
+
+    .footer__footer {
+        flex-direction: column-reverse;
+    }
+}
+
+.related-sites-container {
+    a {
+        transition: color 200ms;
+
+        &:hover {
+            color: var(--blue-clr);
+        }
     }
 }
 

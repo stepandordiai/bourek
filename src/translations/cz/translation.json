@@ -7,6 +7,8 @@
     "offer_title": "Co nabízíme",
     "our_team_title": "Náš tým",
     "clinic_gallery_title": "Galerie kliniky",
+    "testimonials_title": "Co o nás říkají klienti",
+    "faq_title": "Často kladené otázky",
     "service_1": "Ordinace",
     "service_2": "Starvac",
     "service_3": "Celulitida",
@@ -16,6 +18,7 @@
     "service_7": "Individuální fyzioterapie",
     "personal_data_title": "Osobní údaje",
     "coming_soon": "Již brzy",
+    "related_websites": "Související webové stránky",
 
     "banner": {
         "title": "Důležité informace budou oznámeny zde"
@@ -29,8 +32,6 @@
         "title": "Pro lepší zdraví a flexibilitu",
         "secondary_title": "Ordinace rehabilitačního lékaře",
         "find_out_more": "Zjistit víc",
-        "testimonials_title": "Co o nás říkají klienti",
-        "faq_title": "Často kladené otázky",
         "faq_1": "Vaše otázka zde může být brzy",
         "faq_2": "Vaše otázka zde může být brzy",
         "faq_3": "Vaše otázka zde může být brzy",

@@ -134,14 +134,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <h3 className="home__testimonials-title">
-                {t("home.testimonials_title")}
+            <h3 className="home__testimonials-title" id="testimonials">
+                {t("testimonials_title")}
             </h3>
             <div
                 className="elfsight-app-920cb37f-0313-49ff-89e7-0fff3ce90a52"
                 data-elfsight-app-lazy
             ></div>
-            <h3 className="home__faq-title">{t("home.faq_title")}</h3>
+            <h3 className="home__faq-title" id="faq">
+                {t("faq_title")}
+            </h3>
             <div className="home__faq">
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">

@@ -7,6 +7,8 @@
     "offer_title": "What we offer",
     "our_team_title": "Our team",
     "clinic_gallery_title": "Clinic gallery",
+    "testimonials_title": "What our customers say",
+    "faq_title": "FAQ",
     "service_1": "Surgery",
     "service_2": "Starvac",
     "service_3": "Cellulite",
@@ -16,6 +18,7 @@
     "service_7": "Individual physiotherapy",
     "personal_data_title": "Personal data",
     "coming_soon": "Coming soon",
+    "related_websites": "Related websites",
 
     "banner": {
         "title": "Important information will be announced here"
@@ -29,8 +32,6 @@
         "title": "For better health and flexibility",
         "secondary_title": "Rehabilitation doctor's office",
         "find_out_more": "Find out more",
-        "testimonials_title": "What our customers say",
-        "faq_title": "FAQ",
         "faq_1": "Your question may be here soon.",
         "faq_2": "Your question may be here soon.",
         "faq_3": "Your question may be here soon.",

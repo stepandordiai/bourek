@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
 import CustomDivider from "../CustomDivider/CustomDivider";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import logoImg from "./../../assets/logo/pepa-bourek-logo.png";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
@@ -46,22 +47,31 @@ const Footer = () => {
                                         ? activeFooterLink
                                         : inactiveFooterLink
                                 }
-                                to="/price-list"
-                            >
-                                {t("price_list_title")}
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeFooterLink
-                                        : inactiveFooterLink
-                                }
                                 to="/contact"
                             >
                                 {t("contacts_title")}
                             </NavLink>
+                        </li>
+                        <li>
+                            <HashLink
+                                className={"footer__link"}
+                                to="/#services"
+                            >
+                                {t("services_title")}
+                            </HashLink>
+                        </li>
+                        <li>
+                            <HashLink
+                                className={"footer__link"}
+                                to="/#testimonials"
+                            >
+                                {t("testimonials_title")}
+                            </HashLink>
+                        </li>
+                        <li>
+                            <HashLink className={"footer__link"} to="/#faq">
+                                {t("faq_title")}
+                            </HashLink>
                         </li>
                     </ul>
                 </div>
@@ -78,6 +88,18 @@ const Footer = () => {
                                 to="/offer"
                             >
                                 {t("offer_title")}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeFooterLink
+                                        : inactiveFooterLink
+                                }
+                                to="/price-list"
+                            >
+                                {t("price_list_title")}
                             </NavLink>
                         </li>
                         <li>
@@ -237,22 +259,38 @@ const Footer = () => {
             <CustomDivider />
             <div className="footer__footer">
                 <div>
-                    <p className="copyright">
-                        <span>&copy; 2025 Pepa Bourek</span>
-                        <span> | </span>
-                        <span>{t("footer.copyright")}</span>
+                    <div>
+                        <p className="copyright">
+                            <span>&copy; 2025 Pepa Bourek</span>
+                            <span> | </span>
+                            <span>{t("footer.copyright")}</span>
+                        </p>
+                    </div>
+                    <p>
+                        Site by{" "}
+                        <a
+                            className="footer__creator-link"
+                            href="https://heeeyooo-studio.netlify.app/"
+                            target="_blank"
+                        >
+                            heeeyooo.studio
+                        </a>
                     </p>
                 </div>
-                <p className="creator">
-                    Site by{" "}
-                    <a
-                        className="footer__creator-link"
-                        href="https://heeeyooo-studio.netlify.app/"
-                        target="_blank"
-                    >
-                        heeeyooo.studio
-                    </a>
-                </p>
+                <div>
+                    <p>{t("related_websites")}</p>
+                    <div className="related-sites-container">
+                        <a href="https://prozubik.cz/" target="_blank">
+                            prozubik.cz
+                        </a>{" "}
+                        <a
+                            href="https://neresen-cz.netlify.app/"
+                            target="_blank"
+                        >
+                            neresen.cz
+                        </a>
+                    </div>
+                </div>
             </div>
         </footer>
     );

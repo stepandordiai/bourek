@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     opacity: 1;
-    pointer-events: all;
+    // pointer-events: all;
     animation: animateLoading 2s forwards;
 
     img {
@@ -30,6 +30,7 @@
     grid-template-columns: 0fr;
     overflow: hidden;
     animation: revealLoadingText 700ms 500ms forwards ease;
+
     p {
         font-size: clamp(1.5rem, 5vw, 2.5rem);
         overflow: hidden;

@@ -5,7 +5,7 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Banner from "../Banner/Banner";
 import { useTranslation } from "react-i18next";
 import LanguageSelect from "../LanguageSelect/LanguageSelect";
-import logoImg from "./../../assets/logo/pepa-bourek-logo.png";
+import logo from "./../../assets/logo/bourek.png";
 import "./Header.scss";
 
 const Header = () => {
@@ -53,7 +53,7 @@ const Header = () => {
             <Banner />
             <div className="header-wrapper">
                 <NavLink className="header__logo" to="/">
-                    <img src={logoImg} alt="Logo" />
+                    <img src={logo} alt="Logo" />
                     <span>Bourek</span>
                 </NavLink>
                 <LanguageSelect />

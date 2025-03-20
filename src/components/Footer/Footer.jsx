@@ -2,7 +2,7 @@ import CustomDivider from "../CustomDivider/CustomDivider";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logoImg from "./../../assets/logo/pepa-bourek-logo.png";
+import logo from "./../../assets/logo/bourek.png";
 import locationIcon from "./../../assets/icons/location.png";
 import phoneIcon from "./../../assets/icons/telephone.png";
 import mailIcon from "./../../assets/icons/mail.png";
@@ -17,7 +17,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <NavLink className="footer__logo" to="/">
-                <img src={logoImg} alt="Logo" />
+                <img src={logo} alt="Logo" />
                 <span>Bourek</span>
             </NavLink>
             <p className="footer__logo-details">

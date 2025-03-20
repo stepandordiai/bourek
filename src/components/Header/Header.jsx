@@ -54,7 +54,7 @@ const Header = () => {
             <div className="header-wrapper">
                 <NavLink className="header__logo" to="/">
                     <img src={logoImg} alt="Logo" />
-                    <span>Pepa Bourek</span>
+                    <span>Bourek</span>
                 </NavLink>
                 <LanguageSelect />
                 <nav className="header__list">

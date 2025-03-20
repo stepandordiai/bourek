@@ -8,7 +8,7 @@ const Home = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = `Pepa Bourek | ${t("home.secondary_title")}`;
+        document.title = `Bourek | ${t("home.secondary_title")}`;
     }, [t]);
 
     useEffect(() => {
@@ -30,12 +30,14 @@ const Home = () => {
                 <div className="home__wrapper">
                     <div>
                         <h1 className="home__title">{t("home.title")}</h1>
-                        <h2 className="home__sec-title">
-                            {t("home.secondary_title")}
+                        <h2 className="home__sec-title accent-title">
+                            MUDr. Josef Bourek
                         </h2>
-                        <h3 className="home__sec-title">MUDr. Josef Bourek</h3>
-                        <h3 className="home__sec-title">
+                        <h2 className="home__sec-title">
                             MUDr. Julia Cadorini
+                        </h2>
+                        <h3 className="home__sec-title">
+                            {t("home.secondary_title")}
                         </h3>
                     </div>
                     <div>

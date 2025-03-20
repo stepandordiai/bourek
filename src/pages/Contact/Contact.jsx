@@ -76,9 +76,7 @@ const Contact = () => {
                     </li>
                     <li>
                         <img src={mailIcon} width={30} alt="E-mail" />
-                        <a href="mailto:josef@bourek.cz">
-                            pepabourek@gmail.com
-                        </a>
+                        <a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
                     </li>
                     <li>
                         <img src={locationIcon} width={30} alt="Location" />
@@ -95,7 +93,7 @@ const Contact = () => {
                         </h3>
                         <form
                             className="contact__form"
-                            action="mailto:pepabourek@gmail.com"
+                            action="mailto:josef@bourek.cz"
                             method="post"
                             encType="text/plain"
                         >

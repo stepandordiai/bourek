@@ -1,1 +1,1 @@
-# Pepa Bourek (CZ)
+# Bourek

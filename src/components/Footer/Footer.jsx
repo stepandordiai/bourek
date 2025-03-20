@@ -18,7 +18,7 @@ const Footer = () => {
         <footer className="footer">
             <NavLink className="footer__logo" to="/">
                 <img src={logoImg} alt="Logo" />
-                <span>Pepa Bourek</span>
+                <span>Bourek</span>
             </NavLink>
             <p className="footer__logo-details">
                 Ordinace rehabilitačního lékaře
@@ -226,9 +226,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <img src={mailIcon} width={20} alt="E-mail" />
-                            <a href="mailto:josef@bourek.cz">
-                                pepabourek@gmail.com
-                            </a>
+                            <a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
                         </li>
                         <li>
                             <img src={locationIcon} width={20} alt="Location" />
@@ -238,7 +236,7 @@ const Footer = () => {
                         </li>
                     </ul>
                     <p style={{ marginTop: 10 }}>
-                        {t("footer.about_title")} Pepa Bourek
+                        {t("footer.about_title")} Bourek
                     </p>
                     <ul>
                         <li>
@@ -261,7 +259,7 @@ const Footer = () => {
                 <div>
                     <div>
                         <p className="copyright">
-                            <span>&copy; 2025 Pepa Bourek</span>
+                            <span>&copy; 2025 Bourek</span>
                             <span> | </span>
                             <span>{t("footer.copyright")}</span>
                         </p>

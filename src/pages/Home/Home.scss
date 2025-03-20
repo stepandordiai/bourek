@@ -48,11 +48,15 @@
     font-size: clamp(36px, 5vw, 56px);
     background: linear-gradient(-90deg, var(--blue-clr), rgb(15, 239, 206));
     @include bg-clr-text;
-    text-align: left;
 }
 
 .home__sec-title {
     font-size: clamp(1.25rem, 2vw, 2rem);
+}
+
+.accent-title {
+    background: linear-gradient(-90deg, var(--blue-clr), rgb(15, 239, 206));
+    @include bg-clr-text;
 }
 
 .home__img {

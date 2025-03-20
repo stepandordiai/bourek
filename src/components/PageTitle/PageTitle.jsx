@@ -12,7 +12,7 @@ const PageTitle = ({ title }) => {
                 <NavLink className="page-title__link" to="/">
                     {t("home_title")}
                 </NavLink>
-                <span className="page-title__link--inactive"> | </span>
+                <span> | </span>
                 <span className="page-title__link--inactive">{title}</span>
             </div>
         </div>

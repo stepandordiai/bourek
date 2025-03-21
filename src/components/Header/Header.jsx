@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Banner from "../Banner/Banner";
 import { useTranslation } from "react-i18next";
-import LanguageSelect from "../LanguageSelect/LanguageSelect";
+import LngSelect from "../LngSelect/LngSelect";
 import logo from "./../../assets/logo/bourek.png";
 import "./Header.scss";
 
@@ -56,7 +56,7 @@ const Header = () => {
                     <img src={logo} alt="Logo" />
                     <span>Bourek</span>
                 </NavLink>
-                <LanguageSelect />
+                <LngSelect />
                 <nav className="header__list">
                     <div>
                         <NavLink

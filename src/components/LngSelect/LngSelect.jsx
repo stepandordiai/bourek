@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import i18n from "i18next";
-import "./LanguageSelect.scss";
+import "./LngSelect.scss";
 
 const LanguageSelect = () => {
     useEffect(() => {
@@ -16,11 +16,8 @@ const LanguageSelect = () => {
             const selectOptions = selectList.querySelectorAll(
                 ".lang-select__option"
             );
-            const selectInput = document.querySelector(".lang-select__input");
 
-            selectBtn.addEventListener("click", (e) => {
-                // Prevent from submitting a form
-                e.preventDefault();
+            selectBtn.addEventListener("click", () => {
                 selectList.classList.toggle("lang-select__list--visible");
                 selectBtn.classList.toggle("lang-select__btn--active");
                 document
@@ -30,13 +27,8 @@ const LanguageSelect = () => {
 
             selectOptions.forEach((option) => {
                 option.addEventListener("click", (e) => {
-                    // TODO:
                     e.stopPropagation();
-                    document.querySelector(
-                        ".lang-select__btn-value"
-                    ).textContent = option.textContent;
-                    selectInput.value = option.dataset.value;
-                    handleChangeLanguage(selectInput.value);
+                    handleChangeLanguage(option.dataset.value);
                     selectBtn.classList.remove("lang-select__btn--active");
                     selectList.classList.remove("lang-select__list--visible");
                     document
@@ -119,11 +111,6 @@ const LanguageSelect = () => {
                     />
                 </li>
             </ul>
-            <input
-                className="lang-select__input"
-                type="text"
-                defaultValue="cz"
-            />
         </div>
     );
 };

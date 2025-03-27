@@ -2,7 +2,7 @@
     text-align: center;
     padding: 80px 0;
     background: linear-gradient(-90deg, var(--blue-clr), rgb(15, 239, 206));
-    color: white;
+    color: #fff;
 }
 
 .page-title__title {
@@ -10,7 +10,7 @@
 }
 
 .page-title__link {
-    color: white !important;
+    color: #fff !important;
     transition: opacity 0.2s;
 
     &:hover {

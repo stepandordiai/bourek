@@ -88,9 +88,9 @@ const Contact = () => {
                 <CustomDivider />
                 <div className="form-map-wrapper">
                     <div className="form-wrapper">
-                        <h3 className="contact__form-title">
+                        <h2 className="contact__form-title">
                             {t("contacts.form_title")}
-                        </h3>
+                        </h2>
                         <form
                             className="contact__form"
                             action="mailto:josef@bourek.cz"
@@ -127,9 +127,6 @@ const Contact = () => {
                                     required
                                 />
                             </div>
-
-                            {/* Custom select */}
-
                             <div className="custom-select">
                                 <button className="custom-select__btn">
                                     {t("contacts.select_btn")}
@@ -221,9 +218,9 @@ const Contact = () => {
                         </form>
                     </div>
                     <div className="map-wrapper">
-                        <h3 className="contact__map-title">
+                        <h2 className="contact__map-title">
                             {t("contacts.map_title")}
-                        </h3>
+                        </h2>
                         <iframe
                             className="contact__google-map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz"

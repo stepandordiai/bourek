@@ -8,7 +8,7 @@ const Home = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = `Bourek | ${t("home.secondary_title")}`;
+        document.title = `MUDr. Josef Bourek | ${t("home.secondary_title")}`;
     }, [t]);
 
     useEffect(() => {
@@ -29,13 +29,13 @@ const Home = () => {
             <div className="home__container">
                 <div className="home__wrapper">
                     <div>
-                        <h1 className="home__title">{t("home.title")}</h1>
-                        <h2 className="home__sec-title accent-title">
+                        <h1 className="home__sec-title accent-title">
                             MUDr. Josef Bourek
-                        </h2>
+                        </h1>
                         <h2 className="home__sec-title">
                             MUDr. Julia Cadorini
                         </h2>
+                        <h2 className="home__title">{t("home.title")}</h2>
                         <h3 className="home__sec-title">
                             {t("home.secondary_title")}
                         </h3>
@@ -136,16 +136,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <h3 className="home__testimonials-title" id="testimonials">
+            <h2 className="home__testimonials-title" id="testimonials">
                 {t("testimonials_title")}
-            </h3>
+            </h2>
             <div
                 className="elfsight-app-920cb37f-0313-49ff-89e7-0fff3ce90a52"
                 data-elfsight-app-lazy
             ></div>
-            <h3 className="home__faq-title" id="faq">
+            <h2 className="home__faq-title" id="faq">
                 {t("faq_title")}
-            </h3>
+            </h2>
             <div className="home__faq">
                 <div className="faq__item">
                     <div className="faq__item-header js-faq__item-header">

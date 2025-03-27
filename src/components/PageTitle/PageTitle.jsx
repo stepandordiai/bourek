@@ -7,8 +7,8 @@ const PageTitle = ({ title }) => {
 
     return (
         <div className="page-title">
-            <h2 className="page-title__title">{title}</h2>
-            <div className="page-title__links">
+            <h1 className="page-title__title">{title}</h1>
+            <div>
                 <NavLink className="page-title__link" to="/">
                     {t("home_title")}
                 </NavLink>

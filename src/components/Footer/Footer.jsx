@@ -18,7 +18,7 @@ const Footer = () => {
         <footer className="footer">
             <NavLink className="footer__logo" to="/">
                 <img src={logo} alt="Logo" />
-                <span>Bourek</span>
+                <span>MUDr. Josef Bourek</span>
             </NavLink>
             <p className="footer__logo-details">
                 Ordinace rehabilitačního lékaře

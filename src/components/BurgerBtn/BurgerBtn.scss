@@ -59,3 +59,11 @@
         display: flex;
     }
 }
+
+@media (max-width: 450px) {
+    .burger__container {
+        p {
+            display: none;
+        }
+    }
+}

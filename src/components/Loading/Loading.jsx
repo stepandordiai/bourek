@@ -13,7 +13,7 @@ const Loading = () => {
         <div id="loading" className="loading-logo" style={{ display: "flex" }}>
             <img src={logo} alt="Logo" />
             <div className="text-line">
-                <p>Bourek</p>
+                <p>MUDr. Josef Bourek</p>
             </div>
         </div>
     );

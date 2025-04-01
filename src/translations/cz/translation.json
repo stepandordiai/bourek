@@ -64,10 +64,9 @@
     },
 
     "our_team": {
-        "profession_1": "Rehabilitačního lékaře",
-        "profession_2": "Rehabilitačního lékaře",
-        "profession_3": "Rehabilitačního lékaře",
-        "profession_4": "Rehabilitačního lékaře",
+        "profession_type_1": "Rehabilitačního lékaře",
+        "profession_type_2": "Fizioterapeut",
+        "profession_type_3": "Zdravotní sestra",
         "working_hours": "Pracovní doba",
         "mon": "Pondělí",
         "tue": "Uterý",

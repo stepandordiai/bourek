@@ -64,10 +64,9 @@
     },
 
     "our_team": {
-        "profession_1": "Rehabilitation doctor",
-        "profession_2": "Rehabilitation doctor",
-        "profession_3": "Rehabilitation doctor",
-        "profession_4": "Rehabilitation doctor",
+        "profession_type_1": "Rehabilitation doctor",
+        "profession_type_2": "Physiotherapist",
+        "profession_type_3": "Nurse",
         "working_hours": "Working hours",
         "mon": "Monday",
         "tue": "Tuesday",

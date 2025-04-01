@@ -64,10 +64,9 @@
     },
 
     "our_team": {
-        "profession_1": "Лікар реабілітолог",
-        "profession_2": "Лікар реабілітолог",
-        "profession_3": "Лікар реабілітолог",
-        "profession_4": "Лікар реабілітолог",
+        "profession_type_1": "Лікар реабілітолог",
+        "profession_type_2": "Фізіотерапевт",
+        "profession_type_3": "Медсестра",
         "working_hours": "Робочий час",
         "mon": "Понеділок",
         "tue": "Вівторок",

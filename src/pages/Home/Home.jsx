@@ -33,7 +33,7 @@ const Home = () => {
                             MUDr. Josef Bourek
                         </h1>
                         <h2 className="home__sec-title">
-                            MUDr. Julia Cadorini
+                            MUDr. Julie Cadorini
                         </h2>
                         <h2 className="home__title">{t("home.title")}</h2>
                         <h3 className="home__sec-title">

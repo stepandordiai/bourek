@@ -236,7 +236,7 @@ const Footer = () => {
                         </li>
                     </ul>
                     <p style={{ marginTop: 10 }}>
-                        {t("footer.about_title")} Bourek
+                        {t("footer.about_title")} MUDr. Josef Bourek
                     </p>
                     <ul>
                         <li>
@@ -276,16 +276,13 @@ const Footer = () => {
                     </p>
                 </div>
                 <div>
-                    <p>{t("related_websites")}</p>
+                    <p>Related sites</p>
                     <div className="related-sites-container">
                         <a href="https://prozubik.cz/" target="_blank">
-                            prozubik.cz
-                        </a>{" "}
-                        <a
-                            href="https://neresen-cz.netlify.app/"
-                            target="_blank"
-                        >
-                            neresen.cz
+                            www.prozubik.cz
+                        </a>
+                        <a href="https://neresen.cz/" target="_blank">
+                            www.neresen.cz
                         </a>
                     </div>
                 </div>

@@ -49,9 +49,21 @@ const LanguageSelect = () => {
         });
     }, []);
 
-    const lngStorage = localStorage.getItem("i18nextLng") || "cz";
+    const lngStorage = localStorage.getItem("i18nextLng") || "cs";
 
-    const selectBtnTxt = lngStorage.toUpperCase() || "CZ";
+    let selectBtnTxt = "CZ";
+
+    switch (lngStorage) {
+        case "cs":
+            selectBtnTxt = "CZ";
+            break;
+        case "uk":
+            selectBtnTxt = "UA";
+            break;
+        case "en":
+            selectBtnTxt = "EN";
+            break;
+    }
 
     const inactiveLngOption = "lang-select__option";
     const activeLngOption = "lang-select__option lang-select__option--active";
@@ -67,32 +79,32 @@ const LanguageSelect = () => {
             <ul className="lang-select__list">
                 <li
                     className={
-                        lngStorage === "cz"
+                        lngStorage === "cs"
                             ? activeLngOption
                             : inactiveLngOption
                     }
-                    data-value="cz"
+                    data-value="cs"
                 >
                     <span>CZ</span>
                     <img
                         width={20}
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
-                        alt="CZ"
+                        alt="Flag"
                     />
                 </li>
                 <li
                     className={
-                        lngStorage === "ua"
+                        lngStorage === "uk"
                             ? activeLngOption
                             : inactiveLngOption
                     }
-                    data-value="ua"
+                    data-value="uk"
                 >
                     <span>UA</span>
                     <img
                         width={20}
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
-                        alt="UA"
+                        alt="Flag"
                     />
                 </li>
                 <li
@@ -107,7 +119,7 @@ const LanguageSelect = () => {
                     <img
                         width={20}
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
-                        alt="EN"
+                        alt="Flag"
                     />
                 </li>
             </ul>

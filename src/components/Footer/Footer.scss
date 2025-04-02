@@ -78,6 +78,19 @@
     gap: 40px;
 }
 
+.related-sites-container {
+    display: flex;
+    column-gap: 40px;
+
+    a {
+        transition: color 200ms;
+
+        &:hover {
+            color: var(--blue-clr);
+        }
+    }
+}
+
 .footer__creator-link {
     transition: color 200ms;
 
@@ -104,15 +117,9 @@
     .footer__footer {
         flex-direction: column-reverse;
     }
-}
 
-.related-sites-container {
-    a {
-        transition: color 200ms;
-
-        &:hover {
-            color: var(--blue-clr);
-        }
+    .related-sites-container {
+        flex-direction: column;
     }
 }
 

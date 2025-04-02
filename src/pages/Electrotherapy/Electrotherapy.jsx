@@ -8,7 +8,7 @@ const Electrotherapy = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("service_6");
+        document.title = t("service_6") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

@@ -8,7 +8,7 @@ const PersonalData = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("personal_data_title");
+        document.title = t("personal_data_title") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

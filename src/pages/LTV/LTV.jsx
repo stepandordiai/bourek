@@ -8,7 +8,7 @@ const LTV = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("service_7");
+        document.title = t("service_7") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

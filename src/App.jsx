@@ -22,7 +22,6 @@ import Laser from "./pages/Laser/Laser";
 import Electrotherapy from "./pages/Electrotherapy/Electrotherapy";
 import LTV from "./pages/LTV/LTV";
 import Contact from "./pages/Contact/Contact";
-// import Appointment from "./pages/Appointment/Appointment";
 import PersonalData from "./pages/PersonalData/PersonalData";
 import phoneCallIcon from "/assets/icons/phone-call.png";
 import Footer from "./components/Footer/Footer";
@@ -60,7 +59,6 @@ function App() {
                     />
                     <Route path="/ltv" element={<LTV />} />
                     <Route path="/contact" element={<Contact />} />
-                    {/* <Route path="/appointment" element={<Appointment />} /> */}
                     <Route path="/personal-data" element={<PersonalData />} />
                 </Routes>
                 <NavLink className="phone-btn" to="/contact">

@@ -10,7 +10,7 @@ const Lymphatic = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("service_4");
+        document.title = t("service_4") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

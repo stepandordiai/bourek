@@ -8,7 +8,7 @@ const Home = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = `MUDr. Josef Bourek | ${t("home.secondary_title")}`;
+        document.title = t("home.secondary_title") + " - MUDr. Josef Bourek";
     }, [t]);
 
     useEffect(() => {

@@ -12,7 +12,7 @@ const Contact = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("contacts_title");
+        document.title = t("contacts_title") + " - MUDr. Josef Bourek";
     }, [t]);
 
     useEffect(() => {

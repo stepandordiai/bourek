@@ -208,14 +208,6 @@ const Header = () => {
                             {t("contacts_title")}
                         </NavLink>
                     </div>
-                    {/* <div className="nav__btn">
-                    <NavLink
-                        className="nav__btn-link js-nav__link"
-                        to="/appointment"
-                    >
-                        Rezervovat termín
-                    </NavLink>
-                    </div> */}
                 </nav>
                 <BurgerBtn />
                 <BurgerMenu />

@@ -7,7 +7,7 @@ const PriceList = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("price_list_title");
+        document.title = t("price_list_title") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

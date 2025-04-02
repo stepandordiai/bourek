@@ -9,7 +9,7 @@ const Starvac = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("service_2");
+        document.title = t("service_2") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

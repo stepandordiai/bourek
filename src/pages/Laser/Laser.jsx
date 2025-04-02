@@ -8,7 +8,7 @@ const Laser = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("service_5");
+        document.title = t("service_5") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

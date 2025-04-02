@@ -7,7 +7,7 @@ const Offer = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("offer_title");
+        document.title = t("offer_title") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

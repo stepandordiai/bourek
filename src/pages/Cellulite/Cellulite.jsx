@@ -8,7 +8,7 @@ const Cellulite = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("service_3");
+        document.title = t("service_3") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

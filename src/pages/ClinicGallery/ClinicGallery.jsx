@@ -7,7 +7,7 @@ const ClinicGallery = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("clinic_gallery_title");
+        document.title = t("clinic_gallery_title") + " - MUDr. Josef Bourek";
     }, [t]);
 
     return (

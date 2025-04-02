@@ -1,4 +1,4 @@
-import upArrowIcon from "./../../assets/icons/up-arrow.png";
+import upArrowIcon from "/assets/icons/up-arrow.png";
 import "./ScrollToTopBtn.scss";
 
 const ScrollToTopBtn = () => {

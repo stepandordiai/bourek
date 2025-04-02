@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import arrowUpperRightIcon from "./../../assets/icons/arrow-upper-right.png";
+import arrowUpperRightIcon from "/assets/icons/arrow-upper-right.png";
 import { useTranslation } from "react-i18next";
 import "./Home.scss";
 

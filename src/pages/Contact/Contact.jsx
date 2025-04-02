@@ -3,9 +3,9 @@ import dayjs from "dayjs";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
-import locationIcon from "./../../assets/icons/location.png";
-import phoneIcon from "./../../assets/icons/telephone.png";
-import mailIcon from "./../../assets/icons/mail.png";
+import locationIcon from "/assets/icons/location.png";
+import phoneIcon from "/assets/icons/telephone.png";
+import mailIcon from "/assets/icons/mail.png";
 import "./Contact.scss";
 
 const Contact = () => {

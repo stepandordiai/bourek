@@ -5,7 +5,7 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Banner from "../Banner/Banner";
 import { useTranslation } from "react-i18next";
 import LngSelect from "../LngSelect/LngSelect";
-import logo from "./../../assets/logo/bourek.png";
+import logo from "/assets/logo/bourek.png";
 import "./Header.scss";
 
 const Header = () => {

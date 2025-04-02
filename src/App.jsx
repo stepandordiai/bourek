@@ -24,7 +24,7 @@ import LTV from "./pages/LTV/LTV";
 import Contact from "./pages/Contact/Contact";
 // import Appointment from "./pages/Appointment/Appointment";
 import PersonalData from "./pages/PersonalData/PersonalData";
-import phoneCallIcon from "./assets/icons/phone-call.png";
+import phoneCallIcon from "/assets/icons/phone-call.png";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
 import "./App.scss";

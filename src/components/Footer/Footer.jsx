@@ -2,10 +2,10 @@ import CustomDivider from "../CustomDivider/CustomDivider";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo from "./../../assets/logo/bourek.png";
-import locationIcon from "./../../assets/icons/location.png";
-import phoneIcon from "./../../assets/icons/telephone.png";
-import mailIcon from "./../../assets/icons/mail.png";
+import logo from "/assets/logo/bourek.png";
+import locationIcon from "/assets/icons/location.png";
+import phoneIcon from "/assets/icons/telephone.png";
+import mailIcon from "/assets/icons/mail.png";
 import "./Footer.scss";
 
 const Footer = () => {

@@ -27,6 +27,7 @@ import phoneCallIcon from "/assets/icons/phone-call.png";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
 import "./App.scss";
+import Banner from "./components/Banner/Banner";
 
 function App() {
     useEffect(() => {
@@ -64,6 +65,7 @@ function App() {
                 <NavLink className="phone-btn" to="/contact">
                     <img src={phoneCallIcon} alt="Phone" />
                 </NavLink>
+                <Banner />
                 <Footer />
             </div>
         </Router>

@@ -50,7 +50,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <Banner />
+            {/* <Banner /> */}
             <div className="header-wrapper">
                 <NavLink className="header__logo" to="/">
                     <img src={logo} alt="Logo" />

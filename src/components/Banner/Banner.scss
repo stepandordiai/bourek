@@ -1,62 +1,76 @@
 @use "./../../mixins" as *;
 
 .banner {
-    position: relative;
-    background: #000;
-    height: 40px;
-    @include flex-center;
-    padding: 0 40px;
-}
-
-.banner__txt {
-    background: linear-gradient(90deg, transparent, #ffffff, transparent);
-    @include bg-clr-text;
-    background-size: 200%;
-    background-position: 100%;
-    opacity: 0;
-    animation: animateBannerText 4s infinite linear;
-}
-
-@keyframes animateBannerText {
-    25% {
-        opacity: 1;
-        background-position: 100%;
-    }
-    75% {
-        background-position: 0%;
-        opacity: 1;
-    }
-
-    100% {
-        background-position: 0%;
-        opacity: 0;
-    }
-}
-
-.banner__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: fixed;
     right: 40px;
+    bottom: 40px;
+    left: 40px;
+    height: calc(50% - 40px);
+    z-index: 11;
+    border-radius: 10px;
+    background: var(--blue-clr);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    animation: revealBanner 0.5s 2s forwards;
+}
+
+@keyframes revealBanner {
+    to {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.banner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner__title {
     color: #fff;
+}
+
+.banner__close-btn {
+    position: relative;
+    color: #fff;
+}
+
+.banner__close-btn::before {
+    content: "Kliknutím sem zavřete 👇";
+    position: absolute;
+    right: 0;
+    top: calc(-100% - 20px);
+    white-space: nowrap;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    animation: revealBanner 0.5s 3s forwards;
+}
+
+.banner__divider {
+    height: 4px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+}
+
+.banner-list__option {
+    color: #fff;
+    list-style-type: disc;
 }
 
 @media (max-width: 900px) {
     .banner {
-        padding: 0 20px;
-    }
-
-    .banner__btn {
         right: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .banner {
-        padding: 0 10px;
-    }
-
-    .banner__btn {
-        right: 10px;
+        bottom: 20px;
+        left: 20px;
+        height: calc(50% - 20px);
     }
 }

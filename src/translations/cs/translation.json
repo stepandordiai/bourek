@@ -73,8 +73,7 @@
         "thu": "Ctvrtek",
         "fri": "Pátek",
         "sat": "Sobota",
-        "sun": "Neděle",
-        "weekend": "Víkend"
+        "sun": "Neděle"
     },
 
     "surgery": {

@@ -16,6 +16,13 @@
     align-items: center;
 }
 
+@mixin flex($justify-content: "", $align-items: "", $flex-direction: "") {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+
 @mixin flex-between-center {
     display: flex;
     justify-content: space-between;

@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import arrowUpperRightIcon from "/assets/icons/arrow-upper-right.png";
 import { useTranslation } from "react-i18next";
+import Testimonials from "../../components/Testimonials/Testimonials";
+import arrowUpperRightIcon from "/assets/icons/arrow-upper-right.png";
 import "./Home.scss";
 
 const Home = () => {
@@ -136,13 +137,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <h2 className="home__testimonials-title" id="testimonials">
-                {t("testimonials_title")}
-            </h2>
-            <div
-                className="elfsight-app-920cb37f-0313-49ff-89e7-0fff3ce90a52"
-                data-elfsight-app-lazy
-            ></div>
+            <Testimonials />
             <h2 className="home__faq-title" id="faq">
                 {t("faq_title")}
             </h2>

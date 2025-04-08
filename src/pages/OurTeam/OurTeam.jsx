@@ -17,13 +17,8 @@ const OurTeam = () => {
             number: "+420 602 273 579",
             email: "josef@bourek.cz",
             workingHours: {
-                mon: "7:00 - 17:00",
-                tue: "7:00 - 14:30",
-                wed: "7:00 - 15:00",
-                thu: "7:00 - 14:30",
-                fri: "7:00 - 14:00",
-                sat: t("our_team.weekend"),
-                sun: t("our_team.weekend"),
+                wed: "12:30 - 17:00",
+                thu: "8:30 - 11:30",
             },
         },
         {
@@ -36,8 +31,6 @@ const OurTeam = () => {
                 wed: "7:00 - 15:00",
                 thu: "7:00 - 14:30",
                 fri: "7:00 - 14:00",
-                sat: t("our_team.weekend"),
-                sun: t("our_team.weekend"),
             },
         },
         {
@@ -50,8 +43,6 @@ const OurTeam = () => {
                 wed: "6:00 - 18:00",
                 thu: "6:00 - 13:30",
                 fri: "6:00 - 13:00",
-                sat: t("our_team.weekend"),
-                sun: t("our_team.weekend"),
             },
         },
         {
@@ -63,8 +54,6 @@ const OurTeam = () => {
                 wed: "7:00 - 15:00",
                 thu: "7:00 - 14:30",
                 fri: "7:00 - 14:00",
-                sat: t("our_team.weekend"),
-                sun: t("our_team.weekend"),
             },
         },
         {
@@ -76,8 +65,17 @@ const OurTeam = () => {
                 wed: "7:00 - 15:00",
                 thu: "7:00 - 14:30",
                 fri: "7:00 - 14:00",
-                sat: t("our_team.weekend"),
-                sun: t("our_team.weekend"),
+            },
+        },
+        {
+            profession: t("our_team.profession_type_3"),
+            name: "Soňa Minovska",
+            workingHours: {
+                mon: "7:00 - 17:00",
+                tue: "7:00 - 14:30",
+                wed: "7:00 - 15:00",
+                thu: "7:00 - 14:30",
+                fri: "7:00 - 14:00",
             },
         },
     ];
@@ -112,7 +110,6 @@ const OurTeam = () => {
                                             {number}
                                         </a>
                                     )}
-
                                     {email && (
                                         <a href="mailto:josef@gmail.com">
                                             {email}
@@ -130,7 +127,9 @@ const OurTeam = () => {
                                             }
                                         >
                                             <span>{t("our_team.mon")}:</span>
-                                            <span>{workingHours.mon}</span>
+                                            {workingHours.mon && (
+                                                <span>{workingHours.mon}</span>
+                                            )}
                                         </li>
                                         <li
                                             className={
@@ -140,7 +139,9 @@ const OurTeam = () => {
                                             }
                                         >
                                             <span>{t("our_team.tue")}:</span>
-                                            <span>{workingHours.tue}</span>
+                                            {workingHours.tue && (
+                                                <span>{workingHours.tue}</span>
+                                            )}
                                         </li>
                                         <li
                                             className={
@@ -150,7 +151,9 @@ const OurTeam = () => {
                                             }
                                         >
                                             <span>{t("our_team.wed")}:</span>
-                                            <span>{workingHours.wed}</span>
+                                            {workingHours.wed && (
+                                                <span>{workingHours.wed}</span>
+                                            )}
                                         </li>
                                         <li
                                             className={
@@ -160,7 +163,9 @@ const OurTeam = () => {
                                             }
                                         >
                                             <span>{t("our_team.thu")}:</span>
-                                            <span>{workingHours.thu}</span>
+                                            {workingHours.thu && (
+                                                <span>{workingHours.thu}</span>
+                                            )}
                                         </li>
                                         <li
                                             className={
@@ -170,7 +175,9 @@ const OurTeam = () => {
                                             }
                                         >
                                             <span>{t("our_team.fri")}:</span>
-                                            <span>{workingHours.fri}</span>
+                                            {workingHours.fri && (
+                                                <span>{workingHours.fri}</span>
+                                            )}
                                         </li>
                                         <li
                                             className={
@@ -180,7 +187,9 @@ const OurTeam = () => {
                                             }
                                         >
                                             <span>{t("our_team.sat")}:</span>
-                                            <span>{workingHours.sat}</span>
+                                            {workingHours.sat && (
+                                                <span>{workingHours.sat}</span>
+                                            )}
                                         </li>
                                         <li
                                             className={
@@ -190,7 +199,9 @@ const OurTeam = () => {
                                             }
                                         >
                                             <span>{t("our_team.sun")}:</span>
-                                            <span>{workingHours.sun}</span>
+                                            {workingHours.sun && (
+                                                <span>{workingHours.sun}</span>
+                                            )}
                                         </li>
                                     </ul>
                                 </div>

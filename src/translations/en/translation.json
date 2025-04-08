@@ -73,8 +73,7 @@
         "thu": "Thursday",
         "fri": "Friday",
         "sat": "Saturday",
-        "sun": "Sunday",
-        "weekend": "Weekend"
+        "sun": "Sunday"
     },
 
     "surgery": {

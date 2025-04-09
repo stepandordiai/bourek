@@ -80,7 +80,7 @@
 
 .related-sites-container {
     display: flex;
-    column-gap: 40px;
+    flex-direction: column;
 
     a {
         transition: color 200ms;
@@ -107,7 +107,7 @@
     .footer__nav {
         flex-direction: column;
         justify-content: center;
-        row-gap: 50px;
+        row-gap: 40px;
     }
 
     .footer__nav-table {
@@ -118,9 +118,6 @@
         flex-direction: column-reverse;
     }
 
-    .related-sites-container {
-        flex-direction: column;
-    }
 }
 
 @media (max-width: 600px) {

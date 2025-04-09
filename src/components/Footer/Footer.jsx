@@ -219,6 +219,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <p>{t("contacts_title")}</p>
+                    <p style={{ marginTop: 10 }}>Kolín</p>
                     <ul className="footer__contact-list">
                         <li>
                             <img src={phoneIcon} width={20} alt="Phone" />
@@ -235,8 +236,25 @@ const Footer = () => {
                             </a>
                         </li>
                     </ul>
+                    <p style={{ marginTop: 10 }}>Český Brod</p>
+                    <ul className="footer__contact-list">
+                        <li>
+                            <img src={phoneIcon} width={20} alt="Phone" />
+                            <a href="tel:+420601369198">+420 601 369 198</a>
+                        </li>
+                        <li>
+                            <img src={mailIcon} width={20} alt="E-mail" />
+                            <a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
+                        </li>
+                        <li>
+                            <img src={locationIcon} width={20} alt="Location" />
+                            <a href="https://maps.app.goo.gl/zyvc7wwr1atb3N3m8">
+                                Český Brod
+                            </a>
+                        </li>
+                    </ul>
                     <p style={{ marginTop: 10 }}>
-                        {t("footer.about_title")} MUDr. Josef Bourek
+                        {t("footer.about_title")} MUDr. Josef Bourek s.r.o.
                     </p>
                     <ul>
                         <li>
@@ -268,7 +286,7 @@ const Footer = () => {
                         Site by{" "}
                         <a
                             className="footer__creator-link"
-                            href="https://heeeyooo-studio.netlify.app/"
+                            href="https://heeeyooo.studio"
                             target="_blank"
                         >
                             heeeyooo.studio
@@ -283,6 +301,9 @@ const Footer = () => {
                         </a>
                         <a href="https://neresen.cz/" target="_blank">
                             www.neresen.cz
+                        </a>
+                        <a href="https://fvestavby.cz/" target="_blank">
+                            www.fvestavby.cz
                         </a>
                     </div>
                 </div>

@@ -198,8 +198,10 @@ const BurgerMenu = () => {
                 </li>
             </ul>
             <div className="burger-menu__contact">
+                <p style={{ color: "var(--blue-clr)" }}>Kolín</p>
                 <a href="tel:+420602273579">+420 602 273 579</a>
-                <a href="tel:+420607841622">+420 607 841 622</a>
+                <p style={{ color: "var(--blue-clr)" }}>Český Brod</p>
+                <a href="tel:+420607841622">+420 601 369 198</a>
             </div>
         </div>
     );

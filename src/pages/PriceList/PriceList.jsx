@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
 import "./PriceList.scss";
@@ -6,12 +6,12 @@ import "./PriceList.scss";
 const PriceList = () => {
     const { t } = useTranslation();
 
-    useEffect(() => {
-        document.title = t("price_list_title") + " - MUDr. Josef Bourek";
-    }, [t]);
-
     return (
         <>
+            <Helmet>
+                <title>{t("price_list_title")} - MUDr. Josef Bourek</title>
+                <link rel="canonical" href="https://bourek.cz/price-list" />
+            </Helmet>
             <PageTitle title={t("price_list_title")} />
             <div className="price-list__wrapper">
                 <table className="prices__table">

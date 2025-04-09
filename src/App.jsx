@@ -26,8 +26,8 @@ import PersonalData from "./pages/PersonalData/PersonalData";
 import phoneCallIcon from "/assets/icons/phone-call.png";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
-import "./App.scss";
 import Banner from "./components/Banner/Banner";
+import "./App.scss";
 
 function App() {
     useEffect(() => {
@@ -45,10 +45,14 @@ function App() {
                 <ScrollToTopBtn />
                 <Routes>
                     <Route path="/" element={<Home />} />
+
+                    {/* about-us */}
                     <Route path="/offer" element={<Offer />} />
                     <Route path="/price-list" element={<PriceList />} />
                     <Route path="/our-team" element={<OurTeam />} />
                     <Route path="/clinic-gallery" element={<ClinicGallery />} />
+
+                    {/* Services */}
                     <Route path="/surgery" element={<Surgery />} />
                     <Route path="/starvac" element={<Starvac />} />
                     <Route path="/cellulite" element={<Cellulite />} />

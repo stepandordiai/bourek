@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
@@ -10,10 +11,6 @@ import "./Contact.scss";
 
 const Contact = () => {
     const { t } = useTranslation();
-
-    useEffect(() => {
-        document.title = t("contacts_title") + " - MUDr. Josef Bourek";
-    }, [t]);
 
     useEffect(() => {
         // Listener for multiple custom selectors
@@ -93,6 +90,10 @@ const Contact = () => {
 
     return (
         <>
+            <Helmet>
+                <title>{t("contacts_title")} - MUDr. Josef Bourek</title>
+                <link rel="canonical" href="https://bourek.cz/contact" />
+            </Helmet>
             <PageTitle title={t("contacts_title")} />
             <div className="contact__wrapper">
                 <div>

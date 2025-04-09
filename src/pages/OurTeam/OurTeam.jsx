@@ -1,14 +1,10 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
 import "./OurTeam.scss";
 
 const OurTeam = () => {
     const { t } = useTranslation();
-
-    useEffect(() => {
-        document.title = t("our_team_title") + " - MUDr. Josef Bourek";
-    }, [t]);
 
     const ourTeamData = [
         {
@@ -103,6 +99,10 @@ const OurTeam = () => {
 
     return (
         <>
+            <Helmet>
+                <title>{t("our_team_title")} - MUDr. Josef Bourek</title>
+                <link rel="canonical" href="https://bourek.cz/our-team" />
+            </Helmet>
             <PageTitle title={t("our_team_title")} />
             <div className="our-team">
                 <p className="our-team__title">Kolín</p>

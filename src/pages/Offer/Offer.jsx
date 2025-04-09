@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
 import "./Offer.scss";
@@ -6,12 +6,12 @@ import "./Offer.scss";
 const Offer = () => {
     const { t } = useTranslation();
 
-    useEffect(() => {
-        document.title = t("offer_title") + " - MUDr. Josef Bourek";
-    }, [t]);
-
     return (
         <>
+            <Helmet>
+                <title>{t("offer_title")} - MUDr. Josef Bourek</title>
+                <link rel="canonical" href="https://bourek.cz/offer" />
+            </Helmet>
             <PageTitle title={t("offer_title")} />
             <div className="offer__wrapper">
                 <ul className="offer__list">

@@ -1,19 +1,19 @@
-import { useEffect } from "react";
-import img1 from "./img/starvac.jpg";
+import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageInfo from "../../components/PageInfo/PageInfo";
 import { useTranslation } from "react-i18next";
+import img1 from "/assets/img/starvac.jpg";
 import "./Starvac.scss";
 
 const Starvac = () => {
     const { t } = useTranslation();
 
-    useEffect(() => {
-        document.title = t("service_2") + " - MUDr. Josef Bourek";
-    }, [t]);
-
     return (
         <>
+            <Helmet>
+                <title>{t("service_2")} - MUDr. Josef Bourek</title>
+                <link rel="canonical" href="https://bourek.cz/starvac" />
+            </Helmet>
             <PageTitle title={t("service_2")} />
             <PageInfo>
                 <strong>{t("starvac.info_1")}</strong>

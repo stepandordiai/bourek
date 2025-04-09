@@ -6,6 +6,14 @@
     color: var(--blue-clr);
 }
 
+.testimonials__link {
+    display: inline-block;
+    background: var(--blue-clr);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff !important;
+}
+
 .testimonials__card {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

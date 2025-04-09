@@ -87,6 +87,7 @@ const OurTeam = () => {
         {
             profession: t("our_team.profession_type_3"),
             name: "Elena Zajičkova",
+            number: "+420 601 369 198",
             workingHours: {
                 tue: "8:30 - 14:30",
             },

@@ -20,6 +20,12 @@ const Testimonials = () => {
             >
                 {t("testimonials_title")}
             </h2>
+            <a
+                className={styles["testimonials__link"]}
+                href="https://g.page/r/CeuGELtmU6ALEAE/review"
+            >
+                Napsat recenzi
+            </a>
             <Swiper
                 breakpoints={{
                     1200: {

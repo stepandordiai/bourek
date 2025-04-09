@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
@@ -58,6 +58,32 @@ const Contact = () => {
     const addressLink =
         "https://www.google.com/maps/place/Pepa+Bourek/@50.0241827,15.2118482,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x470c153bee9daf87:0xc91ccf8d204d4cb!2sPod+Hroby+271%2F271,+280+02+Kol%C3%ADn+IV!3b1!8m2!3d50.0240306!4d15.2143025!16s%2Fg%2F11cpkpjyq9!3m5!1s0x470c1567f730be5f:0xba05366bb1086eb!8m2!3d50.0241793!4d15.2144231!16s%2Fg%2F11ybt54v3c?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D";
 
+    // Kolin
+    const mapOption1 =
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz";
+
+    // Cesky Brod
+    const mapOption2 =
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37503.0678967374!2d14.860131349999993!3d50.07384145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adbf3a61443%3A0xccfd1bd77ac3cf3a!2zxIxlc2vDvSBCcm9kLCAyODIgMDEgxIxlc2vDvSBCcm9k!5e1!3m2!1sen!2scz!4v1744183535629!5m2!1sen!2scz";
+
+    const [filterMapSrc, setFilterMapSrc] = useState("option1");
+
+    const toggleMapSrc = (option) => {
+        setFilterMapSrc(option);
+    };
+
+    useEffect(() => {
+        if (filterMapSrc === "option2") {
+            document
+                .querySelector(".active-bg")
+                .classList.add("active-bg--active");
+        } else {
+            document
+                .querySelector(".active-bg")
+                .classList.remove("active-bg--active");
+        }
+    }, [filterMapSrc]);
+
     const dateNow = dayjs();
     const formatedDate = dateNow.format("YYYY-MM-DD");
     const hoursNow = dateNow.hour();
@@ -69,24 +95,104 @@ const Contact = () => {
         <>
             <PageTitle title={t("contacts_title")} />
             <div className="contact__wrapper">
-                <ul className="contact__list">
-                    <li>
-                        <img src={phoneIcon} width={30} alt="Phone" />
-                        <a href="tel:+420602273579">+420 602 273 579</a>
-                    </li>
-                    <li>
-                        <img src={mailIcon} width={30} alt="E-mail" />
-                        <a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
-                    </li>
-                    <li>
-                        <img src={locationIcon} width={30} alt="Location" />
-                        <a href={addressLink} target="_blank">
-                            Pod Hroby 271 Kolín IV
-                        </a>
-                    </li>
-                </ul>
+                <div>
+                    <p className="contact-details__title">Kolín</p>
+                    <ul
+                        className={
+                            filterMapSrc === "option1"
+                                ? "contact__list contact__list--active"
+                                : "contact__list"
+                        }
+                    >
+                        <li>
+                            <a href="tel:+420602273579">
+                                <img src={phoneIcon} width={30} alt="Phone" />
+                                <span>+420 602 273 579</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:josef@bourek.cz">
+                                <img src={mailIcon} width={30} alt="E-mail" />
+                                <span>josef@bourek.cz</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://maps.app.goo.gl/kUhCYgSemMPPKG36A"
+                                target="_blank"
+                            >
+                                <img
+                                    src={locationIcon}
+                                    width={30}
+                                    alt="Location"
+                                />
+                                <span>Pod Hroby 271 Kolín IV</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <CustomDivider />
+                <div>
+                    <p className="contact-details__title">Český Brod</p>
+                    <ul
+                        className={
+                            filterMapSrc === "option2"
+                                ? "contact__list contact__list--active"
+                                : "contact__list"
+                        }
+                    >
+                        <li>
+                            <a href="tel:+420601369198">
+                                <img src={phoneIcon} width={30} alt="Phone" />
+                                <span>+420 601 369 198</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:josef@bourek.cz">
+                                <img src={mailIcon} width={30} alt="E-mail" />
+                                <span>josef@bourek.cz</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={addressLink} target="_blank">
+                                <img
+                                    src={locationIcon}
+                                    width={30}
+                                    alt="Location"
+                                />
+                                <span>Český Brod</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <CustomDivider />
                 <div className="form-map-wrapper">
+                    <div className="map-wrapper">
+                        <div className="map-wrapper__header">
+                            <h2 className="contact__map-title">
+                                {t("contacts.map_title")}
+                            </h2>
+                            <div className="map-wrapper__header-container">
+                                <button onClick={() => toggleMapSrc("option1")}>
+                                    Kolín
+                                </button>
+                                <button onClick={() => toggleMapSrc("option2")}>
+                                    Český Brod
+                                </button>
+                                <div className="active-bg"></div>
+                            </div>
+                        </div>
+                        <iframe
+                            className="contact__google-map"
+                            src={
+                                filterMapSrc === "option1"
+                                    ? mapOption1
+                                    : mapOption2
+                            }
+                            loading="lazy"
+                        ></iframe>
+                    </div>
+                    <CustomDivider className=" custom-divider--hide" />
                     <div className="form-wrapper">
                         <h2 className="contact__form-title">
                             {t("contacts.form_title")}
@@ -216,16 +322,6 @@ const Contact = () => {
                                 {t("contacts.form_btn")}
                             </button>
                         </form>
-                    </div>
-                    <div className="map-wrapper">
-                        <h2 className="contact__map-title">
-                            {t("contacts.map_title")}
-                        </h2>
-                        <iframe
-                            className="contact__google-map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz"
-                            loading="lazy"
-                        ></iframe>
                     </div>
                 </div>
             </div>

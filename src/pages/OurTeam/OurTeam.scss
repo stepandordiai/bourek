@@ -1,10 +1,20 @@
 @use "./../../mixins" as *;
 
 .our-team {
+    padding: 0 40px 40px;
+}
+
+.our-team__title {
+    font-size: 2rem;
+    color: var(--blue-clr);
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.our-team__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    padding: 40px;
 }
 
 .our-team__card {
@@ -55,22 +65,28 @@
 }
 
 @media (max-width: 1200px) {
-    .our-team {
+    .our-team__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 900px) {
     .our-team {
-        padding: 40px 20px;
+        padding: 0 20px 40px;
+    }
+
+    .our-team__grid {
         gap: 20px;
     }
 }
 
 @media (max-width: 600px) {
     .our-team {
+        padding: 0 10px 40px;
+    }
+
+    .our-team__grid {
         grid-template-columns: repeat(1, 1fr);
-        padding: 40px 10px;
         gap: 10px;
     }
 }

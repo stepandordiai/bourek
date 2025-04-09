@@ -1,7 +1,7 @@
 import "./CustomDivider.scss";
 
-const CustomDivider = () => {
-    return <div className="custom-divider"></div>;
+const CustomDivider = ({ className = "" }) => {
+    return <div className={`custom-divider${className}`}></div>;
 };
 
 export default CustomDivider;

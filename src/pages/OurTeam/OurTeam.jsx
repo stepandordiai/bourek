@@ -20,6 +20,7 @@ const OurTeam = () => {
                 wed: "12:30 - 17:00",
                 thu: "8:30 - 11:30",
             },
+            place: 1,
         },
         {
             profession: t("our_team.profession_type_1"),
@@ -32,6 +33,7 @@ const OurTeam = () => {
                 thu: "7:00 - 14:30",
                 fri: "7:00 - 14:00",
             },
+            place: 1,
         },
         {
             profession: t("our_team.profession_type_2"),
@@ -44,6 +46,7 @@ const OurTeam = () => {
                 thu: "6:00 - 13:30",
                 fri: "6:00 - 13:00",
             },
+            place: 1,
         },
         {
             profession: t("our_team.profession_type_2"),
@@ -55,6 +58,7 @@ const OurTeam = () => {
                 thu: "7:00 - 14:30",
                 fri: "7:00 - 14:00",
             },
+            place: 1,
         },
         {
             profession: t("our_team.profession_type_3"),
@@ -66,6 +70,7 @@ const OurTeam = () => {
                 thu: "7:00 - 14:30",
                 fri: "7:00 - 14:00",
             },
+            place: 1,
         },
         {
             profession: t("our_team.profession_type_3"),
@@ -77,6 +82,15 @@ const OurTeam = () => {
                 thu: "7:00 - 14:30",
                 fri: "7:00 - 14:00",
             },
+            place: 1,
+        },
+        {
+            profession: t("our_team.profession_type_3"),
+            name: "Elena Zajičkova",
+            workingHours: {
+                tue: "8:30 - 14:30",
+            },
+            place: 2,
         },
     ];
 
@@ -90,125 +104,322 @@ const OurTeam = () => {
         <>
             <PageTitle title={t("our_team_title")} />
             <div className="our-team">
-                {ourTeamData.map(
-                    (
-                        { profession, name, number, email, workingHours },
-                        index
-                    ) => {
-                        return (
-                            <div key={index} className="our-team__card">
-                                <div className="our-team__card-top">
-                                    <p>{profession}</p>
-                                    <p>{name}</p>
-                                    {number && (
-                                        <a
-                                            href={`tel:${number.replaceAll(
-                                                " ",
-                                                ""
-                                            )}`}
-                                        >
-                                            {number}
-                                        </a>
-                                    )}
-                                    {email && (
-                                        <a href="mailto:josef@gmail.com">
-                                            {email}
-                                        </a>
-                                    )}
-                                </div>
-                                <div className="our-team__card-bottom">
-                                    <p>{t("our_team.working_hours")}</p>
-                                    <ul className="our-team__working-hours">
-                                        <li
-                                            className={
-                                                dayNow === 1
-                                                    ? activeDay
-                                                    : inactiveDay
-                                            }
-                                        >
-                                            <span>{t("our_team.mon")}:</span>
-                                            {workingHours.mon && (
-                                                <span>{workingHours.mon}</span>
+                <p className="our-team__title">Kolín</p>
+                <div className="our-team__grid">
+                    {ourTeamData
+                        .filter((member) => member.place === 1)
+                        .map(
+                            (
+                                {
+                                    profession,
+                                    name,
+                                    number,
+                                    email,
+                                    workingHours,
+                                },
+                                index
+                            ) => {
+                                return (
+                                    <div key={index} className="our-team__card">
+                                        <div className="our-team__card-top">
+                                            <p>{profession}</p>
+                                            <p>{name}</p>
+                                            {number && (
+                                                <a
+                                                    href={`tel:${number.replaceAll(
+                                                        " ",
+                                                        ""
+                                                    )}`}
+                                                >
+                                                    {number}
+                                                </a>
                                             )}
-                                        </li>
-                                        <li
-                                            className={
-                                                dayNow === 2
-                                                    ? activeDay
-                                                    : inactiveDay
-                                            }
-                                        >
-                                            <span>{t("our_team.tue")}:</span>
-                                            {workingHours.tue && (
-                                                <span>{workingHours.tue}</span>
+                                            {email && (
+                                                <a href="mailto:josef@gmail.com">
+                                                    {email}
+                                                </a>
                                             )}
-                                        </li>
-                                        <li
-                                            className={
-                                                dayNow === 3
-                                                    ? activeDay
-                                                    : inactiveDay
-                                            }
-                                        >
-                                            <span>{t("our_team.wed")}:</span>
-                                            {workingHours.wed && (
-                                                <span>{workingHours.wed}</span>
+                                        </div>
+                                        <div className="our-team__card-bottom">
+                                            <p>{t("our_team.working_hours")}</p>
+                                            <ul className="our-team__working-hours">
+                                                <li
+                                                    className={
+                                                        dayNow === 1
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.mon")}:
+                                                    </span>
+                                                    {workingHours.mon && (
+                                                        <span>
+                                                            {workingHours.mon}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 2
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.tue")}:
+                                                    </span>
+                                                    {workingHours.tue && (
+                                                        <span>
+                                                            {workingHours.tue}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 3
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.wed")}:
+                                                    </span>
+                                                    {workingHours.wed && (
+                                                        <span>
+                                                            {workingHours.wed}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 4
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.thu")}:
+                                                    </span>
+                                                    {workingHours.thu && (
+                                                        <span>
+                                                            {workingHours.thu}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 5
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.fri")}:
+                                                    </span>
+                                                    {workingHours.fri && (
+                                                        <span>
+                                                            {workingHours.fri}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 6
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.sat")}:
+                                                    </span>
+                                                    {workingHours.sat && (
+                                                        <span>
+                                                            {workingHours.sat}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 0
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.sun")}:
+                                                    </span>
+                                                    {workingHours.sun && (
+                                                        <span>
+                                                            {workingHours.sun}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                );
+                            }
+                        )}
+                </div>
+                <p className="our-team__title">Český Brod</p>
+                <div className="our-team__grid">
+                    {ourTeamData
+                        .filter((member) => member.place === 2)
+                        .map(
+                            (
+                                {
+                                    profession,
+                                    name,
+                                    number,
+                                    email,
+                                    workingHours,
+                                },
+                                index
+                            ) => {
+                                return (
+                                    <div key={index} className="our-team__card">
+                                        <div className="our-team__card-top">
+                                            <p>{profession}</p>
+                                            <p>{name}</p>
+                                            {number && (
+                                                <a
+                                                    href={`tel:${number.replaceAll(
+                                                        " ",
+                                                        ""
+                                                    )}`}
+                                                >
+                                                    {number}
+                                                </a>
                                             )}
-                                        </li>
-                                        <li
-                                            className={
-                                                dayNow === 4
-                                                    ? activeDay
-                                                    : inactiveDay
-                                            }
-                                        >
-                                            <span>{t("our_team.thu")}:</span>
-                                            {workingHours.thu && (
-                                                <span>{workingHours.thu}</span>
+                                            {email && (
+                                                <a href="mailto:josef@gmail.com">
+                                                    {email}
+                                                </a>
                                             )}
-                                        </li>
-                                        <li
-                                            className={
-                                                dayNow === 5
-                                                    ? activeDay
-                                                    : inactiveDay
-                                            }
-                                        >
-                                            <span>{t("our_team.fri")}:</span>
-                                            {workingHours.fri && (
-                                                <span>{workingHours.fri}</span>
-                                            )}
-                                        </li>
-                                        <li
-                                            className={
-                                                dayNow === 6
-                                                    ? activeDay
-                                                    : inactiveDay
-                                            }
-                                        >
-                                            <span>{t("our_team.sat")}:</span>
-                                            {workingHours.sat && (
-                                                <span>{workingHours.sat}</span>
-                                            )}
-                                        </li>
-                                        <li
-                                            className={
-                                                dayNow === 0
-                                                    ? activeDay
-                                                    : inactiveDay
-                                            }
-                                        >
-                                            <span>{t("our_team.sun")}:</span>
-                                            {workingHours.sun && (
-                                                <span>{workingHours.sun}</span>
-                                            )}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        );
-                    }
-                )}
+                                        </div>
+                                        <div className="our-team__card-bottom">
+                                            <p>{t("our_team.working_hours")}</p>
+                                            <ul className="our-team__working-hours">
+                                                <li
+                                                    className={
+                                                        dayNow === 1
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.mon")}:
+                                                    </span>
+                                                    {workingHours.mon && (
+                                                        <span>
+                                                            {workingHours.mon}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 2
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.tue")}:
+                                                    </span>
+                                                    {workingHours.tue && (
+                                                        <span>
+                                                            {workingHours.tue}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 3
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.wed")}:
+                                                    </span>
+                                                    {workingHours.wed && (
+                                                        <span>
+                                                            {workingHours.wed}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 4
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.thu")}:
+                                                    </span>
+                                                    {workingHours.thu && (
+                                                        <span>
+                                                            {workingHours.thu}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 5
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.fri")}:
+                                                    </span>
+                                                    {workingHours.fri && (
+                                                        <span>
+                                                            {workingHours.fri}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 6
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.sat")}:
+                                                    </span>
+                                                    {workingHours.sat && (
+                                                        <span>
+                                                            {workingHours.sat}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    className={
+                                                        dayNow === 0
+                                                            ? activeDay
+                                                            : inactiveDay
+                                                    }
+                                                >
+                                                    <span>
+                                                        {t("our_team.sun")}:
+                                                    </span>
+                                                    {workingHours.sun && (
+                                                        <span>
+                                                            {workingHours.sun}
+                                                        </span>
+                                                    )}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                );
+                            }
+                        )}
+                </div>
             </div>
         </>
     );

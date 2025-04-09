@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /private/
 Allow: /
-Sitemap: https://www.bourek.cz/sitemap.xml
+Sitemap: https://bourek.cz/sitemap.xml

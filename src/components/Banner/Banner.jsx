@@ -1,25 +1,61 @@
+import axios from "axios";
 import "./Banner.scss";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Banner = () => {
+    const [info, setInfo] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     function removeBanner() {
         document.querySelector(".banner").remove();
     }
 
+    const getInfo = async () => {
+        try {
+            const response = await axios(
+                "https://stepan-dordiai-backend.onrender.com/api/product"
+            );
+            setInfo(response.data);
+            console.log(response.data);
+            setLoading(false);
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getInfo();
+    }, []);
+
     return (
         <div className="banner">
             <div className="banner-header">
-                <p className="banner__title">Důležité informace k 02.04.2025</p>
+                <p className="banner__title">
+                    Důležité informace k {loading ? "Loading..." : info[0].date}
+                </p>
                 <button className="banner__close-btn" onClick={removeBanner}>
                     zavřít <i className="fa-solid fa-xmark"></i>
                 </button>
             </div>
             <div className="banner__divider"></div>
             <ul className="banner-list">
-                <li className="banner-list__option">Informace 1</li>
-                <li className="banner-list__option">Informace 2</li>
-                <li className="banner-list__option">Informace 3</li>
-                <li className="banner-list__option">Informace 4</li>
-                <li className="banner-list__option">Informace 5</li>
+                <li className="banner-list__option">
+                    {loading ? "Loading..." : info[0].info1}
+                </li>
+                <li className="banner-list__option">
+                    {loading ? "Loading..." : info[0].info1}
+                </li>
+                <li className="banner-list__option">
+                    {loading ? "Loading..." : info[0].info1}
+                </li>
+                <li className="banner-list__option">
+                    {loading ? "Loading..." : info[0].info1}
+                </li>
+                <li className="banner-list__option">
+                    {loading ? "Loading..." : info[0].info1}
+                </li>
             </ul>
         </div>
     );

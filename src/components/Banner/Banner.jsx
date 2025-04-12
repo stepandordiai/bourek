@@ -42,20 +42,20 @@ const Banner = () => {
             <div className="banner__divider"></div>
             <ul className="banner-list">
                 <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info1}
+                    {loading ? "Loading..." : info[0].info}
+                </li>
+                {/* <li className="banner-list__option">
+                    {loading ? "Loading..." : info[0].info2}
                 </li>
                 <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info1}
+                    {loading ? "Loading..." : info[0].info3}
                 </li>
                 <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info1}
+                    {loading ? "Loading..." : info[0].info4}
                 </li>
                 <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info1}
-                </li>
-                <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info1}
-                </li>
+                    {loading ? "Loading..." : info[0].info5}
+                </li> */}
             </ul>
         </div>
     );

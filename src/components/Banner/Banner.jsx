@@ -1,64 +1,59 @@
 import axios from "axios";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./Banner.scss";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const Banner = () => {
-    const [info, setInfo] = useState([]);
-    const [loading, setLoading] = useState(true);
+	const [info, setInfo] = useState([]);
+	const [loading, setLoading] = useState(true);
 
-    function removeBanner() {
-        document.querySelector(".banner").remove();
-    }
+	function removeBanner() {
+		document.querySelector(".banner").remove();
+	}
 
-    const getInfo = async () => {
-        try {
-            const response = await axios(
-                "https://stepan-dordiai-backend.onrender.com/api/product"
-            );
-            setInfo(response.data);
-            console.log(response.data);
-            setLoading(false);
-        } catch (error) {
-            console.log(error);
-            setLoading(false);
-        }
-    };
+	const getInfo = async () => {
+		try {
+			const response = await axios(
+				"https://stepan-dordiai-backend.onrender.com/api/product"
+			);
+			setInfo(response.data);
+			setLoading(false);
+		} catch (error) {
+			console.log(error);
+			setLoading(false);
+		}
+	};
 
-    useEffect(() => {
-        getInfo();
-    }, []);
+	useEffect(() => {
+		getInfo();
+	}, []);
 
-    return (
-        <div className="banner">
-            <div className="banner-header">
-                <p className="banner__title">
-                    Důležité informace k {loading ? "Loading..." : info[0].date}
-                </p>
-                <button className="banner__close-btn" onClick={removeBanner}>
-                    zavřít <i className="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div className="banner__divider"></div>
-            <ul className="banner-list">
-                <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info}
-                </li>
-                {/* <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info2}
-                </li>
-                <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info3}
-                </li>
-                <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info4}
-                </li>
-                <li className="banner-list__option">
-                    {loading ? "Loading..." : info[0].info5}
-                </li> */}
-            </ul>
-        </div>
-    );
+	const { t } = useTranslation();
+
+	return (
+		<>
+			{info && (
+				<div className="banner">
+					<div className="banner-header">
+						<p className="banner__title">
+							{t("banner.title")} {!loading && info[0].date}
+						</p>
+						<button
+							className="banner__close-btn"
+							onClick={removeBanner}
+							data-hint-value={t("banner.close_btn_hint") + " 👇"}
+						>
+							{t("banner.close_btn")} <i className="fa-solid fa-xmark"></i>
+						</button>
+					</div>
+					<div className="banner__divider"></div>
+					<ul className="banner-list">
+						<li className="banner-list__option">{!loading && info[0].info}</li>
+					</ul>
+				</div>
+			)}
+		</>
+	);
 };
 
 export default Banner;

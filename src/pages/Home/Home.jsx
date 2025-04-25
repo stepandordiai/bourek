@@ -41,52 +41,52 @@ const Home = () => {
 				<div className="home__services" id="services">
 					<h2 className="home__services-title">{t("services_title")}</h2>
 					<div className="home__grid-container">
-						<div>
-							<span>{t("service_1")}</span>
+						<div className="home__service-card">
+							<p>{t("service_1")}</p>
 							<NavLink className="grid-container__link" to="/surgery">
-								{t("home.find_out_more")}
+								<span>{t("home.find_out_more")}</span>
 								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
 							</NavLink>
 						</div>
-						<div>
-							<span>{t("service_2")}</span>
+						<div className="home__service-card">
+							<p>{t("service_2")}</p>
 							<NavLink className="grid-container__link" to="/starvac">
-								{t("home.find_out_more")}
+								<span>{t("home.find_out_more")}</span>
 								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
 							</NavLink>
 						</div>
-						<div>
-							<span>{t("service_3")}</span>
+						<div className="home__service-card">
+							<p>{t("service_3")}</p>
 							<NavLink className="grid-container__link" to="/cellulite">
-								{t("home.find_out_more")}
+								<span>{t("home.find_out_more")}</span>
 								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
 							</NavLink>
 						</div>
-						<div>
-							<span>{t("service_4")}</span>
+						<div className="home__service-card">
+							<p>{t("service_4")}</p>
 							<NavLink className="grid-container__link" to="/lymphatic">
-								{t("home.find_out_more")}
+								<span>{t("home.find_out_more")}</span>
 								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
 							</NavLink>
 						</div>
-						<div>
-							<span>{t("service_5")}</span>
+						<div className="home__service-card">
+							<p>{t("service_5")}</p>
 							<NavLink className="grid-container__link" to="/laser">
-								{t("home.find_out_more")}
+								<span>{t("home.find_out_more")}</span>
 								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
 							</NavLink>
 						</div>
-						<div>
-							<span>{t("service_6")}</span>
+						<div className="home__service-card">
+							<p>{t("service_6")}</p>
 							<NavLink className="grid-container__link" to="/electrotherapy">
-								{t("home.find_out_more")}
+								<span>{t("home.find_out_more")}</span>
 								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
 							</NavLink>
 						</div>
-						<div>
-							<span>{t("service_7")}</span>
+						<div className="home__service-card">
+							<p>{t("service_7")}</p>
 							<NavLink className="grid-container__link" to="/ltv">
-								{t("home.find_out_more")}
+								<span>{t("home.find_out_more")}</span>
 								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
 							</NavLink>
 						</div>

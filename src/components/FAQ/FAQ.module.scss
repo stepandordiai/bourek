@@ -1,0 +1,145 @@
+@use "./../../mixins" as *;
+
+.home__faq-title {
+	padding: 120px 0 40px;
+	font-size: clamp(1.5rem, 5vw, 3rem);
+	color: var(--blue-clr);
+}
+
+.faq {
+	display: flex;
+	gap: 40px;
+}
+
+.faq__nav {
+	flex-shrink: 0;
+}
+
+.faq__nav-list {
+	position: sticky;
+	top: 120px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.js-link-section {
+	display: inline-block;
+	background: transparent;
+	color: #000;
+	border-radius: 10px;
+	padding: 10px;
+	width: 100%;
+
+	&:hover {
+		background: var(--blue-clr);
+		color: #fff;
+	}
+}
+
+.faq-section-link--active {
+	background: var(--blue-clr) !important;
+	color: #fff !important;
+}
+
+.js-faq-section {
+	padding-bottom: 40px;
+	scroll-margin-top: 120px;
+}
+
+.faq__section-title {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+
+	&:not(:nth-of-type(1)) {
+		margin-top: 40px;
+	}
+}
+
+.home__faq {
+	@include flex-center;
+	flex-direction: column;
+	row-gap: 5px;
+}
+
+.faq__item {
+	border: 2px solid var(--blue-clr-4);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.faq__item-header {
+	@include flex-between-center;
+	cursor: pointer;
+	padding: 10px 0;
+}
+
+.faq__btn {
+	position: relative;
+	width: 20px;
+	height: 20px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+		width: 2px;
+		background: #000;
+		transform-origin: center center;
+		transition: transform 300ms;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 2px;
+		width: 100%;
+		background: #000;
+		transform-origin: center;
+	}
+}
+
+.faq__btn--active::before {
+	transform: rotate(90deg) !important;
+}
+
+.grid-line {
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: all 0.3s;
+
+	p {
+		overflow: hidden;
+		font-weight: 200;
+	}
+}
+
+.grid-line--active {
+	grid-template-rows: 1fr !important;
+}
+
+@media (max-width: 900px) {
+	.faq {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.js-faq-section {
+		padding-bottom: 40px;
+		scroll-margin-top: 100px;
+	}
+
+	.faq__section-title {
+		&:not(:nth-of-type(1)) {
+			margin-top: 40px;
+		}
+	}
+}

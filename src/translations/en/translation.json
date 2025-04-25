@@ -8,7 +8,7 @@
 	"our_team_title": "Our team",
 	"clinic_gallery_title": "Clinic gallery",
 	"testimonials_title": "What our customers say",
-	"faq_title": "FAQ",
+	"faq_title": "Frequently Asked Questions",
 	"service_1": "Surgery",
 	"service_2": "Starvac",
 	"service_3": "Cellulite",
@@ -33,12 +33,7 @@
 	"home": {
 		"title": "For better health and flexibility",
 		"secondary_title": "Rehabilitation doctor's office",
-		"find_out_more": "Find out more",
-		"faq_1": "Your question may be here soon.",
-		"faq_2": "Your question may be here soon.",
-		"faq_3": "Your question may be here soon.",
-		"faq_4": "Your question may be here soon.",
-		"faq_5": "Your question may be here soon."
+		"find_out_more": "Find out more"
 	},
 
 	"offer": {

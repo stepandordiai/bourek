@@ -4,60 +4,62 @@
 @use "mixins" as *;
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 * {
-    font-family: "Poppins", "Inter", serif;
+	font-family: "Poppins", "Inter", serif;
 }
 
 #root {
-    // position: relative;
-    // min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-    overflow-x: hidden;
+	// position: relative;
+	// min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	// padding-top: 80px;
+	margin-top: 80px;
+	// ???
+	// overflow-x: hidden;
 }
 
 .none {
-    display: none;
+	display: none;
 }
 
 .wrapper {
-    display: none;
-    opacity: 0;
-    animation: revealWrapper 500ms forwards;
+	display: none;
+	opacity: 0;
+	animation: revealWrapper 500ms forwards;
 }
 
 @keyframes revealWrapper {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 .phone-btn {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    z-index: 1;
-    @include grid-center;
-    width: 40px;
-    aspect-ratio: 1/1;
-    background: var(--blue-clr-8);
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    animation: revealPhoneBtn 300ms 3.2s forwards;
+	position: fixed;
+	bottom: 80px;
+	right: 20px;
+	z-index: 1;
+	@include grid-center;
+	width: 40px;
+	aspect-ratio: 1/1;
+	background: var(--blue-clr-8);
+	border-radius: 10px;
+	opacity: 0;
+	pointer-events: none;
+	animation: revealPhoneBtn 300ms 3.2s forwards;
 
-    img {
-        width: 25px;
-    }
+	img {
+		width: 25px;
+	}
 }
 
 @keyframes revealPhoneBtn {
-    to {
-        opacity: 1;
-        pointer-events: all;
-    }
+	to {
+		opacity: 1;
+		pointer-events: all;
+	}
 }

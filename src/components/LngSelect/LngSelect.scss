@@ -1,83 +1,84 @@
 @use "./../../mixins" as *;
 
 .lang-select {
-    position: relative;
-    z-index: 99;
+	position: relative;
+	z-index: 99;
 }
 
 .lang-select__btn {
-    @include flex-center;
-    column-gap: 5px;
+	@include flex-center;
+	column-gap: 5px;
 }
 
 .lang-select__btn--active {
-    background: var(--accent-clr);
+	background: var(--accent-clr);
 }
 
 .lang-select__btn-value {
-    pointer-events: none;
+	pointer-events: none;
 }
 
 .lang-select__btn-icon {
-    pointer-events: none;
-    transition: rotate 0.3s;
+	@include grid-center;
+	pointer-events: none;
+	transition: rotate 0.3s;
 }
 
 .lang-select__btn-icon--active {
-    rotate: 180deg;
+	rotate: 180deg;
 }
 
 .lang-select__list {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border-radius: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
 }
 
 .lang-select__list--visible {
-    opacity: 1;
-    pointer-events: all;
+	opacity: 1;
+	pointer-events: all;
 }
 
 .lang-select__option {
-    @include flex-center;
-    column-gap: 5px;
-    background: transparent;
-    color: #000;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 300;
-    cursor: pointer;
+	@include flex-center;
+	column-gap: 5px;
+	background: transparent;
+	color: #000;
+	border-radius: 10px;
+	padding: 10px;
+	font-weight: 300;
+	cursor: pointer;
 
-    &:hover {
-        background: var(--blue-clr);
-        color: #fff !important;
-    }
+	&:hover {
+		background: var(--blue-clr);
+		color: #fff !important;
+	}
 }
 
 .lang-select__option--active {
-    background: var(--blue-clr);
-    color: #fff !important;
+	background: var(--blue-clr);
+	color: #fff !important;
 }
 
 .lang-select__input {
-    display: none;
+	display: none;
 }
 
 @media (max-width: 700px) {
-    .lang-select {
-        margin-left: auto;
-        margin-right: 15px;
-    }
+	.lang-select {
+		margin-left: auto;
+		margin-right: 15px;
+	}
 }

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    NavLink,
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	NavLink,
 } from "react-router-dom";
 import Loading from "./components/Loading/Loading";
 import Header from "./components/Header/Header";
@@ -27,53 +27,102 @@ import phoneCallIcon from "/assets/icons/phone-call.png";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
 import Banner from "./components/Banner/Banner";
+import dotsIcon from "/assets/icons/dots.png";
+import facebookIcon from "/assets/icons/facebook.png";
+import instagramIcon from "/assets/icons/instagram.png";
 import "./App.scss";
 
 function App() {
-    useEffect(() => {
-        setTimeout(() => {
-            document.querySelector(".wrapper").style.display = "initial";
-        }, 2000);
-    }, []);
+	useEffect(() => {
+		setTimeout(() => {
+			document.querySelector(".wrapper").style.display = "initial";
+		}, 2000);
 
-    return (
-        <Router>
-            <Loading />
-            <div className="wrapper">
-                <Header />
-                <ScrollToTop />
-                <ScrollToTopBtn />
-                <Routes>
-                    <Route path="/" element={<Home />} />
+		document.addEventListener("scroll", () => {
+			document
+				.querySelector(".fixed-link")
+				.classList.remove("fixed-link--active");
+			document
+				.querySelector(".fixed-link1")
+				.classList.remove("fixed-link1--active");
+			document
+				.querySelector(".fixed-link2")
+				.classList.remove("fixed-link2--active");
+		});
+	}, []);
 
-                    {/* about-us */}
-                    <Route path="/offer" element={<Offer />} />
-                    <Route path="/price-list" element={<PriceList />} />
-                    <Route path="/our-team" element={<OurTeam />} />
-                    <Route path="/clinic-gallery" element={<ClinicGallery />} />
+	function toogleFixedLinks() {
+		document
+			.querySelector(".fixed-link")
+			.classList.toggle("fixed-link--active");
+		document
+			.querySelector(".fixed-link1")
+			.classList.toggle("fixed-link1--active");
+		document
+			.querySelector(".fixed-link2")
+			.classList.toggle("fixed-link2--active");
+	}
 
-                    {/* Services */}
-                    <Route path="/surgery" element={<Surgery />} />
-                    <Route path="/starvac" element={<Starvac />} />
-                    <Route path="/cellulite" element={<Cellulite />} />
-                    <Route path="/lymphatic" element={<Lymphatic />} />
-                    <Route path="/laser" element={<Laser />} />
-                    <Route
-                        path="/electrotherapy"
-                        element={<Electrotherapy />}
-                    />
-                    <Route path="/ltv" element={<LTV />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/personal-data" element={<PersonalData />} />
-                </Routes>
-                <NavLink className="phone-btn" to="/contact">
-                    <img src={phoneCallIcon} alt="Phone" />
-                </NavLink>
-                <Banner />
-                <Footer />
-            </div>
-        </Router>
-    );
+	return (
+		<Router>
+			<Loading />
+			<div className="wrapper">
+				<Header />
+				<ScrollToTop />
+				<ScrollToTopBtn />
+				<Routes>
+					<Route path="/" element={<Home />} />
+
+					{/* about-us */}
+					<Route path="/offer" element={<Offer />} />
+					<Route path="/price-list" element={<PriceList />} />
+					<Route path="/our-team" element={<OurTeam />} />
+					<Route path="/clinic-gallery" element={<ClinicGallery />} />
+
+					{/* Services */}
+					<Route path="/surgery" element={<Surgery />} />
+					<Route path="/starvac" element={<Starvac />} />
+					<Route path="/cellulite" element={<Cellulite />} />
+					<Route path="/lymphatic" element={<Lymphatic />} />
+					<Route path="/laser" element={<Laser />} />
+					<Route path="/electrotherapy" element={<Electrotherapy />} />
+					<Route path="/ltv" element={<LTV />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/personal-data" element={<PersonalData />} />
+				</Routes>
+				<div className="fixed-link-container">
+					<a title="Telefon" className="fixed-link" href="tel:+420602273579">
+						<img src={phoneCallIcon} alt="Phone" />
+					</a>
+					<a
+						title="Instagram"
+						className="fixed-link1"
+						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
+						target="_blank"
+					>
+						<img src={instagramIcon} alt="Phone" />
+					</a>
+					<a
+						title="Facebook"
+						className="fixed-link2"
+						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
+						target="_blank"
+					>
+						<img src={facebookIcon} alt="Phone" />
+					</a>
+					<button
+						onClick={toogleFixedLinks}
+						className="fixed-link-container-btn"
+					>
+						<img src={dotsIcon} alt="" />
+					</button>
+				</div>
+
+				<Banner />
+				<Footer />
+			</div>
+		</Router>
+	);
 }
 
 export default App;

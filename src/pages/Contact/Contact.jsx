@@ -180,7 +180,7 @@ const Contact = () => {
 						<h2 className="contact__form-title">{t("contacts.form_title")}</h2>
 						<form
 							className="contact__form"
-							action="mailto:josef@bourek.cz"
+							action="https://formsubmit.co/josef@bourek.cz"
 							method="post"
 							// encType="text/plain"
 						>

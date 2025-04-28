@@ -182,7 +182,7 @@ const Contact = () => {
 							className="contact__form"
 							action="mailto:josef@bourek.cz"
 							method="post"
-							encType="text/plain"
+							// encType="text/plain"
 						>
 							<div className="contact-form__inputs">
 								<input

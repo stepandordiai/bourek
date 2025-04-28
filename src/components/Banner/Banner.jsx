@@ -32,7 +32,7 @@ const Banner = () => {
 
 	return (
 		<>
-			{info && (
+			{!loading && (
 				<div className="banner">
 					<div className="banner-header">
 						<p className="banner__title">

@@ -1,92 +1,97 @@
 @use "./../../mixins" as *;
 
 .our-team {
-    padding: 0 40px 40px;
+	padding: 0 40px 40px;
 }
 
 .our-team__title {
-    font-size: 2rem;
-    color: var(--blue-clr);
-    padding-top: 40px;
-    padding-bottom: 20px;
+	font-size: 2rem;
+	color: var(--blue-clr);
+	padding-top: 40px;
+	padding-bottom: 20px;
 }
 
 .our-team__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
 }
 
 .our-team__card {
-    @include flex-center;
-    flex-direction: column;
-    row-gap: 5px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 10px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	row-gap: 5px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	padding: 10px;
 }
 
 .our-team__card-top {
-    width: 100%;
-    @include flex-center;
-    flex-direction: column;
+	width: 100%;
+	@include flex-center;
+	flex-direction: column;
 
-    p:nth-of-type(1) {
-        opacity: 0.5;
-    }
+	p:nth-of-type(1) {
+		opacity: 0.5;
+	}
 
-    a {
-        transition: color 200ms;
+	a {
+		transition: color 200ms;
 
-        &:hover {
-            color: var(--blue-clr);
-        }
-    }
+		&:hover {
+			color: var(--blue-clr);
+		}
+	}
 }
 
 .our-team__card-bottom {
-    width: 100%;
+	width: 100%;
 
-    p {
-        color: var(--blue-clr);
-    }
+	p {
+		color: var(--blue-clr);
+	}
+}
+
+.our-team__working-hours {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
 }
 
 .day {
-    @include flex-between-center;
-    padding: 5px;
-    border-radius: 10px;
+	@include flex-between-center;
 }
 
 .day--active {
-    background: var(--blue-clr);
-    color: #fff;
+	background: var(--blue-clr);
+	color: #fff;
 }
 
 @media (max-width: 1200px) {
-    .our-team__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.our-team__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (max-width: 900px) {
-    .our-team {
-        padding: 0 20px 40px;
-    }
+	.our-team {
+		padding: 0 20px 40px;
+	}
 
-    .our-team__grid {
-        gap: 20px;
-    }
+	.our-team__grid {
+		gap: 20px;
+	}
 }
 
 @media (max-width: 600px) {
-    .our-team {
-        padding: 0 10px 40px;
-    }
+	.our-team {
+		padding: 0 10px 40px;
+	}
 
-    .our-team__grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
-    }
+	.our-team__grid {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 10px;
+	}
 }

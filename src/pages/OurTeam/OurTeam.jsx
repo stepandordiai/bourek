@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import profileIcon from "/assets/icons/profile-icon.png";
 import "./OurTeam.scss";
@@ -92,7 +92,7 @@ const OurTeam = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("our_team_title")} - MUDr. Josef Bourek</title>
+				<title>{t("our_team_title")} | MUDr. Josef Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/our-team" />
 			</Helmet>
 			<PageTitle title={t("our_team_title")} />

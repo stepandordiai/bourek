@@ -1,12 +1,12 @@
+import { useTranslation } from "react-i18next";
+import googleIcon from "/assets/icons/google.png";
+import starIcon from "/assets/icons/star.png";
+
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
-
-import { useTranslation } from "react-i18next";
-import googleIcon from "/assets/icons/google.png";
-import starIcon from "/assets/icons/star.png";
 import styles from "./Testimonials.module.scss";
 
 const Testimonials = () => {

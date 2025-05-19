@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import arrowUpperRightIcon from "/assets/icons/arrow-upper-right.png";
 import FAQ from "../../components/FAQ/FAQ";
@@ -12,8 +12,8 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("home.secondary_title")} - MUDr. Josef Bourek</title>
-				<link rel="canonical" href="https://bourek.cz" />
+				<title>{t("home.secondary_title")} | MUDr. Josef Bourek</title>
+				<link rel="canonical" href="https://bourek.cz/" />
 			</Helmet>
 			<section className="home">
 				<div className="home__container">

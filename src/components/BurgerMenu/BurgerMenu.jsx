@@ -1,13 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import downArrowIcon from "/assets/icons/down-arrow.png";
 import facebookIcon from "/assets/icons/facebook.png";
 import instagramIcon from "/assets/icons/instagram.png";
 import "./BurgerMenu.scss";
 
 /* dd is a shorthand for dropdown */
-
 const BurgerMenu = () => {
 	const { t } = useTranslation();
 

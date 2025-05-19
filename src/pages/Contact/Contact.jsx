@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
@@ -52,14 +52,13 @@ const Contact = () => {
 		});
 	}, []);
 
-	const addressLink =
-		"https://www.google.com/maps/place/Pepa+Bourek/@50.0241827,15.2118482,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x470c153bee9daf87:0xc91ccf8d204d4cb!2sPod+Hroby+271%2F271,+280+02+Kol%C3%ADn+IV!3b1!8m2!3d50.0240306!4d15.2143025!16s%2Fg%2F11cpkpjyq9!3m5!1s0x470c1567f730be5f:0xba05366bb1086eb!8m2!3d50.0241793!4d15.2144231!16s%2Fg%2F11ybt54v3c?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D";
-
 	// Kolin
+	const addressUrl1 = "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9";
 	const mapOption1 =
 		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz";
 
 	// Cesky Brod
+	const addressUrl2 = "https://maps.app.goo.gl/Jew8NoioiT1w8vUE8";
 	const mapOption2 =
 		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37503.0678967374!2d14.860131349999993!3d50.07384145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adbf3a61443%3A0xccfd1bd77ac3cf3a!2zxIxlc2vDvSBCcm9kLCAyODIgMDEgxIxlc2vDvSBCcm9k!5e1!3m2!1sen!2scz!4v1744183535629!5m2!1sen!2scz";
 
@@ -89,7 +88,7 @@ const Contact = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("contacts_title")} - MUDr. Josef Bourek</title>
+				<title>{t("contacts_title")} | MUDr. Josef Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/contact" />
 			</Helmet>
 			<PageTitle title={t("contacts_title")} />
@@ -116,10 +115,7 @@ const Contact = () => {
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://maps.app.goo.gl/kUhCYgSemMPPKG36A"
-								target="_blank"
-							>
+							<a href={addressUrl1} target="_blank">
 								<img src={locationIcon} width={30} alt="Location" />
 								<span>Pod Hroby 271 Kolín IV</span>
 							</a>
@@ -149,7 +145,7 @@ const Contact = () => {
 							</a>
 						</li>
 						<li>
-							<a href={addressLink} target="_blank">
+							<a href={addressUrl2} target="_blank">
 								<img src={locationIcon} width={30} alt="Location" />
 								<span>Český Brod</span>
 							</a>
@@ -182,7 +178,6 @@ const Contact = () => {
 							className="contact__form"
 							action="https://formsubmit.co/josef@bourek.cz"
 							method="post"
-							// encType="text/plain"
 						>
 							<div className="contact-form__inputs">
 								<input

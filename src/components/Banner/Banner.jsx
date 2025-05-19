@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import "./Banner.scss";
 
 const Banner = () => {
+	const { t } = useTranslation();
+
 	const [info, setInfo] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -28,16 +30,14 @@ const Banner = () => {
 		getInfo();
 	}, []);
 
-	const { t } = useTranslation();
-
 	return (
 		<>
 			{!loading && (
 				<div className="banner">
 					<div className="banner-header">
-						<p className="banner__title">
+						<strong className="banner__title">
 							{t("banner.title")} {!loading && info[0].date}
-						</p>
+						</strong>
 						<button
 							className="banner__close-btn"
 							onClick={removeBanner}
@@ -47,9 +47,7 @@ const Banner = () => {
 						</button>
 					</div>
 					<div className="banner__divider"></div>
-					<ul className="banner-list">
-						<li className="banner-list__option">{!loading && info[0].info}</li>
-					</ul>
+					<strong className="banner__info">{!loading && info[0].info}</strong>
 				</div>
 			)}
 		</>

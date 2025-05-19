@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import googleIcon from "/assets/icons/google.png";
-import starIcon from "/assets/icons/star.png";
+import googleIcon from "/icons/google.png";
+import starIcon from "/icons/star.png";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";

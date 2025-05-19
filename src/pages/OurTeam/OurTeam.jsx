@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import profileIcon from "/assets/icons/profile-icon.png";
+import profileIcon from "/icons/profile-icon.png";
 import "./OurTeam.scss";
 
 const OurTeam = () => {

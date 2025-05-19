@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageInfo from "../../components/PageInfo/PageInfo";
-import img1 from "/assets/img/BTL-6000.jpg";
-import img2 from "/assets/img/BTL-6000-1.jpg";
+import img1 from "/img/BTL-6000.jpg";
+import img2 from "/img/BTL-6000-1.jpg";
 import "./Lymphatic.scss";
 
 const Lymphatic = () => {

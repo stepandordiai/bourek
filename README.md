@@ -1,3 +1,3 @@
 # Bourek
 
-<img src='./public/assets/screenshots/bourek-screenshot.png' />
+<img src='./public/assets/screenshot/bourek-screenshot.png' />

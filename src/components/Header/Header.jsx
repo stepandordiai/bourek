@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import LngSelect from "../LngSelect/LngSelect";
-import logo from "/assets/logo/bourek.png";
+import logo from "/logo/bourek.png";
 import "./Header.scss";
 
 const Header = () => {

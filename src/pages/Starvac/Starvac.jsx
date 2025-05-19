@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageInfo from "../../components/PageInfo/PageInfo";
-import img1 from "/assets/img/starvac.jpg";
+import img1 from "/img/starvac.jpg";
 import "./Starvac.scss";
 
 const Starvac = () => {

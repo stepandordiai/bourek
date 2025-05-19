@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import i18n from "i18next";
-import downArrowIcon from "/assets/icons/down-arrow.png";
+import downArrowIcon from "/icons/down-arrow.png";
 import "./LngSelect.scss";
 
 const LanguageSelect = () => {

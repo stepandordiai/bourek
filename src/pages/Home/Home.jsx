@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import arrowUpperRightIcon from "/assets/icons/arrow-upper-right.png";
 import FAQ from "../../components/FAQ/FAQ";
+import arrowUpperRightIcon from "/icons/arrow-upper-right.png";
 import "./Home.scss";
 
 const Home = () => {

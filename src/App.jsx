@@ -1,10 +1,5 @@
 import { useEffect } from "react";
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading/Loading";
 import Header from "./components/Header/Header";
 import ScrollToTop from "./utils/ScrollToTop";
@@ -23,13 +18,13 @@ import Electrotherapy from "./pages/Electrotherapy/Electrotherapy";
 import LTV from "./pages/LTV/LTV";
 import Contact from "./pages/Contact/Contact";
 import PersonalData from "./pages/PersonalData/PersonalData";
-import phoneCallIcon from "/assets/icons/phone-call.png";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
 import Banner from "./components/Banner/Banner";
-import dotsIcon from "/assets/icons/dots.png";
-import facebookIcon from "/assets/icons/facebook.png";
-import instagramIcon from "/assets/icons/instagram.png";
+import phoneCallIcon from "/icons/phone-call.png";
+import dotsIcon from "/icons/dots.png";
+import facebookIcon from "/icons/facebook.png";
+import instagramIcon from "/icons/instagram.png";
 import "./App.scss";
 
 function App() {

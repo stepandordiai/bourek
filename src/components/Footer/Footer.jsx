@@ -203,7 +203,9 @@ const Footer = () => {
 						</li>
 						<li>
 							<img src={locationIcon} width={20} alt="Location" />
-							<a href={addressUrl1}>Pod Hroby 271 Kolín IV</a>
+							<a href={addressUrl1} target="_blank">
+								Pod Hroby 271 Kolín IV
+							</a>
 						</li>
 					</ul>
 					<p style={{ marginTop: 10 }}>Český Brod</p>
@@ -218,7 +220,9 @@ const Footer = () => {
 						</li>
 						<li>
 							<img src={locationIcon} width={20} alt="Location" />
-							<a href={addressUrl2}>Český Brod</a>
+							<a href={addressUrl2} target="_blank">
+								Český Brod
+							</a>
 						</li>
 					</ul>
 					<p style={{ marginTop: 10 }}>

@@ -1,144 +1,145 @@
 @use "./../../mixins" as *;
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
 }
 
 .header-wrapper {
-    @include flex-between-center;
-    min-height: 80px;
-    padding: 0 40px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	@include flex-between-center;
+	min-height: 80px;
+	padding: 0 40px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header__logo {
-    @include flex-center;
+	@include flex-center;
 
-    img {
-        width: 40px;
-    }
+	img {
+		width: 40px;
+	}
 
-    span {
-        font-size: 1.5rem;
-        color: #000;
-    }
+	span {
+		font-size: 1.5rem;
+		color: #000;
+	}
 }
 
 .header__list {
-    @include flex-between-center;
-    width: 50%;
+	@include flex-between-center;
+	width: 50%;
 }
 
 .nav__link {
-    position: relative;
-    color: #000;
+	position: relative;
+	color: #000;
 }
 
 .nav__link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    transform: scaleX(0);
-    background: var(--blue-clr);
-    transition: transform 300ms ease-out;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	height: 2px;
+	width: 100%;
+	transform: scaleX(0);
+	background: var(--blue-clr);
+	transition: transform 300ms ease-out;
 }
 
 .nav__link:hover:before {
-    transform: scaleX(1);
+	transform: scaleX(1);
 }
 
 .nav__link--active::before {
-    transform: scaleX(1);
+	transform: scaleX(1);
 }
 
 .nav__custom-select {
-    position: relative;
-    cursor: pointer;
+	position: relative;
+	cursor: pointer;
 }
 
 .nav__custom-select-item {
-    @include flex-center;
-    column-gap: 5px;
+	@include flex-center;
+	column-gap: 5px;
 }
 
 .nav__dd-btn-icon {
-    transition: transform 0.3s;
+	@include grid-center;
+	transition: transform 0.3s;
 }
 
 .nav__custom-select:hover .nav__dd-btn-icon {
-    transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 .nav__custom-options {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border-radius: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
 }
 
 .nav__custom-select:hover .nav__custom-options {
-    pointer-events: all;
-    opacity: 1;
+	pointer-events: all;
+	opacity: 1;
 }
 
 .nav__link-option {
-    background: transparent;
-    color: #000;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 300;
-    white-space: nowrap;
+	background: transparent;
+	color: #000;
+	border-radius: 10px;
+	padding: 10px;
+	font-weight: 300;
+	white-space: nowrap;
 
-    &:hover {
-        background: var(--blue-clr);
-        color: #fff;
-    }
+	&:hover {
+		background: var(--blue-clr);
+		color: #fff;
+	}
 }
 
 .nav__link-option--active {
-    background: var(--blue-clr);
-    color: #fff !important;
+	background: var(--blue-clr);
+	color: #fff !important;
 }
 
 @media (max-width: 900px) {
-    .header-wrapper {
-        padding: 0 20px;
-    }
+	.header-wrapper {
+		padding: 0 20px;
+	}
 }
 
 @media (max-width: 700px) {
-    .header__list {
-        display: none;
-    }
+	.header__list {
+		display: none;
+	}
 }
 
 @media (max-width: 600px) {
-    .header-wrapper {
-        padding: 0 10px;
-    }
+	.header-wrapper {
+		padding: 0 10px;
+	}
 }
 
 @media (max-width: 350px) {
-    .header__logo {
-        span {
-            display: none;
-        }
-    }
+	.header__logo {
+		span {
+			display: none;
+		}
+	}
 }

@@ -6,7 +6,6 @@ import "./LngSelect.scss";
 const LanguageSelect = () => {
 	useEffect(() => {
 		// Function that change language
-
 		const handleChangeLanguage = (lng) => {
 			i18n.changeLanguage(lng);
 		};
@@ -72,7 +71,6 @@ const LanguageSelect = () => {
 			<button className="lang-select__btn">
 				<span className="lang-select__btn-value">{selectBtnTxt}</span>
 				<span className="lang-select__btn-icon">
-					{/* <i className="fa-solid fa-chevron-down"></i> */}
 					<img width={20} src={downArrowIcon} alt="" />
 				</span>
 			</button>
@@ -85,7 +83,7 @@ const LanguageSelect = () => {
 					<img
 						width={20}
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
-						alt="Flag"
+						alt=""
 					/>
 				</li>
 				<li
@@ -96,7 +94,7 @@ const LanguageSelect = () => {
 					<img
 						width={20}
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
-						alt="Flag"
+						alt=""
 					/>
 				</li>
 				<li
@@ -107,7 +105,7 @@ const LanguageSelect = () => {
 					<img
 						width={20}
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
-						alt="Flag"
+						alt=""
 					/>
 				</li>
 			</ul>

@@ -19,6 +19,7 @@
 	"personal_data_title": "Особисті дані",
 	"coming_soon": "Незабаром",
 	"testimonials_btn": "Написати відгук",
+	"appointment_title": "Записатись на прийом",
 
 	"banner": {
 		"title": "Важлива інформація від",
@@ -219,7 +220,6 @@
 	},
 
 	"contacts": {
-		"form_title": "Домовитися про зустріч",
 		"first_name": "Ім'я",
 		"last_name": "Прізвище",
 		"email": "Електронна адреса",

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import LngSelect from "../LngSelect/LngSelect";
 import logo from "/logo/bourek.png";
+import downArrowIcon from "/icons/down-arrow.png";
 import "./Header.scss";
 
 const Header = () => {
@@ -66,7 +67,7 @@ const Header = () => {
 						<div className="nav__custom-select-item">
 							<span>{t("about_us_title")}</span>
 							<span className="nav__dd-btn-icon">
-								<i className="fa-solid fa-chevron-down"></i>
+								<img width={20} src={downArrowIcon} alt="" />
 							</span>
 						</div>
 						<div className="nav__custom-options">
@@ -108,7 +109,7 @@ const Header = () => {
 						<div className="nav__custom-select-item">
 							<span>{t("services_title")}</span>
 							<span className="nav__dd-btn-icon">
-								<i className="fa-solid fa-chevron-down"></i>
+								<img width={20} src={downArrowIcon} alt="" />
 							</span>
 						</div>
 						<div className="nav__custom-options">

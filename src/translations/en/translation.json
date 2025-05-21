@@ -19,6 +19,7 @@
 	"personal_data_title": "Personal data",
 	"coming_soon": "Coming soon",
 	"testimonials_btn": "Write a review",
+	"appointment_title": "Make an appointment",
 
 	"banner": {
 		"title": "Important information from",
@@ -219,7 +220,6 @@
 	},
 
 	"contacts": {
-		"form_title": "Make an appointment",
 		"first_name": "First name",
 		"last_name": "Last name",
 		"email": "E-mail",

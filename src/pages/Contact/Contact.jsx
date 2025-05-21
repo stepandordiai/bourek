@@ -173,7 +173,7 @@ const Contact = () => {
 					</div>
 					<CustomDivider className=" custom-divider--hide" />
 					<div className="form-wrapper">
-						<h2 className="contact__form-title">{t("contacts.form_title")}</h2>
+						<h2 className="contact__form-title">{t("appointment_title")}</h2>
 						<form
 							className="contact__form"
 							action="https://formsubmit.co/josef@bourek.cz"

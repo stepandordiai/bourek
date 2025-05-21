@@ -19,12 +19,20 @@ const Home = () => {
 				<div className="home__container">
 					<div className="home__wrapper">
 						<div>
-							<h1 className="home__sec-title accent-title">
-								MUDr. Josef Bourek
-							</h1>
-							<h2 className="home__sec-title">MUDr. Julie Cadorini</h2>
-							<h2 className="home__title">{t("home.title")}</h2>
-							<h3 className="home__sec-title">{t("home.secondary_title")}</h3>
+							<div className="home__title-container">
+								<h1 className="home__title accent">MUDr. Josef Bourek</h1>
+								<p className="home__title">MUDr. Julie Cadorini</p>
+							</div>
+							<h2 className="home__sec-title accent">{t("home.title")}</h2>
+							<h3 className="home__title">{t("home.secondary_title")}</h3>
+							<div className="home__link-container">
+								<a className="home__link" href="#services">
+									{t("services_title")}
+								</a>
+								<a className="home__link" href="tel:+420602273579">
+									{t("appointment_title")}
+								</a>
+							</div>
 						</div>
 						<div>
 							<img

@@ -19,6 +19,7 @@
 	"personal_data_title": "Osobní údaje",
 	"coming_soon": "Již brzy",
 	"testimonials_btn": "Napsat recenzi",
+	"appointment_title": "Domluvte si schůzku",
 
 	"banner": {
 		"title": "Důležité informace od",
@@ -219,7 +220,6 @@
 	},
 
 	"contacts": {
-		"form_title": "Domluvit si schůzku",
 		"first_name": "Jméno",
 		"last_name": "Příjmení",
 		"email": "E-mail",

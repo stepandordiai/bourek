@@ -15,7 +15,7 @@ const Home = () => {
 				<title>{t("home.secondary_title")} | MUDr. Josef Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/" />
 			</Helmet>
-			<section className="home">
+			<div className="home">
 				<div className="home__container">
 					<div className="home__wrapper">
 						<div>
@@ -53,56 +53,56 @@ const Home = () => {
 							<p>{t("service_1")}</p>
 							<NavLink className="grid-container__link" to="/surgery">
 								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
+								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
 							</NavLink>
 						</div>
 						<div className="home__service-card">
 							<p>{t("service_2")}</p>
 							<NavLink className="grid-container__link" to="/starvac">
 								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
+								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
 							</NavLink>
 						</div>
 						<div className="home__service-card">
 							<p>{t("service_3")}</p>
 							<NavLink className="grid-container__link" to="/cellulite">
 								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
+								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
 							</NavLink>
 						</div>
 						<div className="home__service-card">
 							<p>{t("service_4")}</p>
 							<NavLink className="grid-container__link" to="/lymphatic">
 								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
+								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
 							</NavLink>
 						</div>
 						<div className="home__service-card">
 							<p>{t("service_5")}</p>
 							<NavLink className="grid-container__link" to="/laser">
 								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
+								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
 							</NavLink>
 						</div>
 						<div className="home__service-card">
 							<p>{t("service_6")}</p>
 							<NavLink className="grid-container__link" to="/electrotherapy">
 								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
+								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
 							</NavLink>
 						</div>
 						<div className="home__service-card">
 							<p>{t("service_7")}</p>
 							<NavLink className="grid-container__link" to="/ltv">
 								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} alt="Arrow Upper Right" />
+								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
 							</NavLink>
 						</div>
 					</div>
 				</div>
 				<Testimonials />
 				<FAQ />
-			</section>
+			</div>
 		</>
 	);
 };

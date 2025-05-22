@@ -87,7 +87,6 @@
 }
 
 // Scroll mouse btn
-
 .home__scroll-mouse-btn {
 	position: relative;
 	display: inline-block;
@@ -162,7 +161,6 @@
 	color: #fff !important;
 
 	img {
-		width: 20px;
 		transition: transform 300ms;
 	}
 
@@ -193,7 +191,7 @@
 	}
 }
 
-@media (width <= 894px) {
+@media (width <= 800px) {
 	.home__wrapper {
 		flex-direction: column-reverse;
 	}

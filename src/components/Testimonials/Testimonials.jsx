@@ -12,6 +12,29 @@ import styles from "./Testimonials.module.scss";
 const Testimonials = () => {
 	const { t } = useTranslation();
 
+	const testimonialsData = [
+		{
+			name: "Cathy Mattson",
+			date: "April 2, 2025",
+			info: "Naprosto perfekní přístup a profesionální chování. Neumím si představit lepší a příjemnější místo na rehabilitaci. Doporučuji všem známým!",
+		},
+		{
+			name: "Valeria Novitskaia",
+			date: "January 10, 2025",
+			info: "Všechno probíhalo na jedničku. Velice milý a profesionální přístup.",
+		},
+		{
+			name: "Jan Šmída",
+			date: "March 16, 2025",
+			info: "Velmi pozitivní a přátelský přístup. Pár cviků a obrovský posun.",
+		},
+		{
+			name: "Jiri Capek",
+			date: "March 25, 2025",
+			info: "Nádherné, moderní a čisté prostředí. Extrémně empatický, milý a trpělivý personál. Celkově místo působí profesionálním, ale zároveň přívětivým dojmem.",
+		},
+	];
+
 	return (
 		<>
 			<h2 className={styles["home__testimonials-title"]} id="testimonials">
@@ -46,111 +69,35 @@ const Testimonials = () => {
 				modules={[Autoplay]}
 				className="mySwiper"
 			>
-				<SwiperSlide>
-					<div className={styles["testimonials__card"]}>
-						<div className={styles["testimonials-card__header"]}>
-							<div>
-								<p className={styles["testimonials-card__header-name"]}>
-									Cathy Mattson
-								</p>
-								<p className={styles["testimonials-card__header-date"]}>
-									April 2, 2025
-								</p>
+				{testimonialsData.map((testimonial) => {
+					return (
+						<SwiperSlide>
+							<div className={styles["testimonials__card"]}>
+								<div className={styles["testimonials-card__header"]}>
+									<div>
+										<p className={styles["testimonials-card__header-name"]}>
+											{testimonial.name}
+										</p>
+										<p className={styles["testimonials-card__header-date"]}>
+											{testimonial.date}
+										</p>
+									</div>
+									<img src={googleIcon} width={40} height={40} alt="" />
+								</div>
+								<div className={styles["testimonials-card__rating"]}>
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
+								</div>
+								<div className={styles["testimonials-card__info"]}>
+									{testimonial.info}
+								</div>
 							</div>
-							<img src={googleIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__rating"]}>
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__info"]}>
-							Naprosto perfekní přístup a profesionální chování. Neumím si
-							představit lepší a příjemnější místo na rehabilitaci. Doporučuji
-							všem známým!
-						</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide>
-					<div className={styles["testimonials__card"]}>
-						<div className={styles["testimonials-card__header"]}>
-							<div>
-								<p className={styles["testimonials-card__header-name"]}>
-									Valeria Novitskaia
-								</p>
-								<p className={styles["testimonials-card__header-date"]}>
-									January 10, 2025
-								</p>
-							</div>
-							<img src={googleIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__rating"]}>
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__info"]}>
-							Všechno probíhalo na jedničku. Velice milý a profesionální
-							přístup.
-						</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide>
-					<div className={styles["testimonials__card"]}>
-						<div className={styles["testimonials-card__header"]}>
-							<div>
-								<p className={styles["testimonials-card__header-name"]}>
-									Jan Šmída
-								</p>
-								<p className={styles["testimonials-card__header-date"]}>
-									March 16, 2025
-								</p>
-							</div>
-							<img src={googleIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__rating"]}>
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__info"]}>
-							Velmi pozitivní a přátelský přístup. Pár cviků a obrovský posun
-						</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide>
-					<div className={styles["testimonials__card"]}>
-						<div className={styles["testimonials-card__header"]}>
-							<div>
-								<p className={styles["testimonials-card__header-name"]}>
-									Jiri Capek
-								</p>
-								<p className={styles["testimonials-card__header-date"]}>
-									March 25, 2025
-								</p>
-							</div>
-							<img src={googleIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__rating"]}>
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-							<img src={starIcon} alt="" />
-						</div>
-						<div className={styles["testimonials-card__info"]}>
-							Nádherné, moderní a čisté prostředí. Extrémně empatický, milý a
-							trpělivý personál. Celkově místo působí profesionálním, ale
-							zároveň přívětivým dojmem.
-						</div>
-					</div>
-				</SwiperSlide>
+						</SwiperSlide>
+					);
+				})}
 			</Swiper>
 		</>
 	);

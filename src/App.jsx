@@ -61,20 +61,16 @@ function App() {
 	return (
 		<Router>
 			<Loading />
-			<div className="wrapper">
+			<div className="wrapper" style={{ display: "none" }}>
 				<Header />
 				<ScrollToTop />
 				<ScrollToTopBtn />
 				<Routes>
 					<Route path="/" element={<Home />} />
-
-					{/* about-us */}
 					<Route path="/offer" element={<Offer />} />
 					<Route path="/price-list" element={<PriceList />} />
 					<Route path="/our-team" element={<OurTeam />} />
 					<Route path="/clinic-gallery" element={<ClinicGallery />} />
-
-					{/* Services */}
 					<Route path="/surgery" element={<Surgery />} />
 					<Route path="/starvac" element={<Starvac />} />
 					<Route path="/cellulite" element={<Cellulite />} />
@@ -112,7 +108,6 @@ function App() {
 						<img width={20} height={20} src={dotsIcon} alt="" />
 					</button>
 				</div>
-
 				<Banner />
 				<Footer />
 			</div>

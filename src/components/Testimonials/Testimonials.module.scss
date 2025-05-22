@@ -1,53 +1,44 @@
-@use './../../mixins' as *;
+@use "./../../mixins" as *;
 
 .home__testimonials-title {
-    padding: 120px 0 40px;
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    color: var(--blue-clr);
+	padding: 120px 0 40px;
+	font-size: clamp(1.5rem, 5vw, 3rem);
+	color: var(--blue-clr);
 }
 
 .testimonials__link {
-    display: inline-block;
-    background: var(--blue-clr);
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff !important;
+	display: inline-block;
+	background: var(--blue-clr);
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff !important;
 }
 
 .testimonials__card {
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 300px;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	height: 300px;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
 }
 
 .testimonials-card__header {
-    @include flex(space-between, flex-start);
-
-    img {
-        width: 40px
-    }
+	@include flex(space-between, flex-start);
 }
 
 .testimonials-card__header-name {
-    font-weight: 500;
-    margin-bottom: 5px;
+	font-weight: 500;
+	margin-bottom: 5px;
 }
 
-
 .testimonials-card__header-date {
-    font-weight: 300;
+	font-weight: 300;
 }
 
 .testimonials-card__rating {
-    display: flex;
-
-    img {
-        width: 20px;
-    }
+	display: flex;
 }

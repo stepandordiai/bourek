@@ -247,7 +247,7 @@ const Footer = () => {
 				<div>
 					<div>
 						<p className="copyright">
-							<span>&copy; 2025 MUDr. Josef Bourek s.r.o</span>
+							<span>&copy; 2025 MUDr. Josef Bourek s.r.o.</span>
 							<span> | </span>
 							<span>{t("footer.copyright")}</span>
 						</p>
@@ -263,20 +263,6 @@ const Footer = () => {
 						</a>
 					</p>
 				</div>
-				{/* <div>
-					<p>Related sites</p>
-					<div className="related-sites-container">
-						<a href="https://prozubik.cz/" target="_blank">
-							www.prozubik.cz
-						</a>
-						<a href="https://neresen.cz/" target="_blank">
-							www.neresen.cz
-						</a>
-						<a href="https://fvestavby.cz/" target="_blank">
-							www.fvestavby.cz
-						</a>
-					</div>
-				</div> */}
 			</div>
 		</footer>
 	);

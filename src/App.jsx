@@ -88,7 +88,7 @@ function App() {
 					<a
 						title="Instagram"
 						className="fixed-link1"
-						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
+						href="https://www.facebook.com/profile.php?id=61575622597789"
 						target="_blank"
 					>
 						<img width={20} height={20} src={instagramIcon} alt="" />
@@ -96,7 +96,7 @@ function App() {
 					<a
 						title="Facebook"
 						className="fixed-link2"
-						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
+						href="https://www.facebook.com/profile.php?id=61575622597789"
 						target="_blank"
 					>
 						<img width={20} height={20} src={facebookIcon} alt="" />

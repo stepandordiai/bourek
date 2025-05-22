@@ -176,24 +176,24 @@ const BurgerMenu = () => {
 					<p style={{ color: "var(--blue-clr)" }}>Kolín</p>
 					<a href="tel:+420602273579">+420 602 273 579</a>
 					<p style={{ color: "var(--blue-clr)" }}>Český Brod</p>
-					<a href="tel:+420607841622">+420 601 369 198</a>
+					<a href="tel:+420601369198">+420 601 369 198</a>
 				</div>
 				<div className="burger-menu__footer-link-container">
 					<a
 						className="burger-menu__footer-link"
 						title="Instagram"
-						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
+						href="https://www.facebook.com/profile.php?id=61575622597789"
 						target="_blank"
 					>
-						<img width={20} height={20} src={instagramIcon} alt="Phone" />
+						<img width={20} height={20} src={instagramIcon} alt="" />
 					</a>
 					<a
 						className="burger-menu__footer-link"
 						title="Facebook"
-						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
+						href="https://www.facebook.com/profile.php?id=61575622597789"
 						target="_blank"
 					>
-						<img width={20} height={20} src={facebookIcon} alt="Phone" />
+						<img width={20} height={20} src={facebookIcon} alt="" />
 					</a>
 				</div>
 			</footer>

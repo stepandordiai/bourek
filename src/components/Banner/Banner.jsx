@@ -15,9 +15,7 @@ const Banner = () => {
 
 	const getInfo = async () => {
 		try {
-			const response = await axios(
-				"https://stepan-dordiai-backend.onrender.com/api/product"
-			);
+			const response = await axios("https://bourek-crud.onrender.com/api");
 			setInfo(response.data);
 			setLoading(false);
 		} catch (error) {
@@ -36,7 +34,7 @@ const Banner = () => {
 				<div className="banner">
 					<div className="banner-header">
 						<strong className="banner__title">
-							{t("banner.title")} {!loading && info[0].date}
+							{t("banner.title")} {info[0].date}
 						</strong>
 						<button
 							className="banner__close-btn"
@@ -47,7 +45,7 @@ const Banner = () => {
 						</button>
 					</div>
 					<div className="banner__divider"></div>
-					<strong className="banner__info">{!loading && info[0].info}</strong>
+					<strong className="banner__info">{info[0].info}</strong>
 				</div>
 			)}
 		</>

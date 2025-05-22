@@ -38,7 +38,7 @@ const Home = () => {
 							<img
 								className="home__img"
 								src="https://ld-wp73.template-help.com/wordpress/prod_29195/v1/wp-content/uploads/2020/05/Rectangle-64.png"
-								alt="Home Image"
+								alt="MUDr. Josef Bourek"
 							/>
 						</div>
 					</div>

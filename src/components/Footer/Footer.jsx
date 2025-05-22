@@ -23,7 +23,7 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<NavLink className="footer__logo" to="/">
-				<img src={logo} alt="Logo" />
+				<img width={40} height={40} src={logo} alt="MUDr. Josef Bourek" />
 				<span>MUDr. Josef Bourek</span>
 			</NavLink>
 			<p className="footer__logo-details">Ordinace rehabilitačního lékaře</p>
@@ -194,15 +194,15 @@ const Footer = () => {
 					<p style={{ marginTop: 10 }}>Kolín</p>
 					<ul className="footer__contact-list">
 						<li>
-							<img src={phoneIcon} width={20} alt="Phone" />
+							<img src={phoneIcon} width={20} height={20} alt="" />
 							<a href="tel:+420602273579">+420 602 273 579</a>
 						</li>
 						<li>
-							<img src={mailIcon} width={20} alt="E-mail" />
+							<img src={mailIcon} width={20} height={20} alt="" />
 							<a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
 						</li>
 						<li>
-							<img src={locationIcon} width={20} alt="Location" />
+							<img src={locationIcon} width={20} height={20} alt="" />
 							<a href={addressUrl1} target="_blank">
 								Pod Hroby 271 Kolín IV
 							</a>
@@ -211,15 +211,15 @@ const Footer = () => {
 					<p style={{ marginTop: 10 }}>Český Brod</p>
 					<ul className="footer__contact-list">
 						<li>
-							<img src={phoneIcon} width={20} alt="Phone" />
+							<img src={phoneIcon} width={20} height={20} alt="" />
 							<a href="tel:+420601369198">+420 601 369 198</a>
 						</li>
 						<li>
-							<img src={mailIcon} width={20} alt="E-mail" />
+							<img src={mailIcon} width={20} height={20} alt="" />
 							<a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
 						</li>
 						<li>
-							<img src={locationIcon} width={20} alt="Location" />
+							<img src={locationIcon} width={20} height={20} alt="" />
 							<a href={addressUrl2} target="_blank">
 								Český Brod
 							</a>
@@ -247,7 +247,7 @@ const Footer = () => {
 				<div>
 					<div>
 						<p className="copyright">
-							<span>&copy; 2025 MUDr. Josef Bourek</span>
+							<span>&copy; 2025 MUDr. Josef Bourek s.r.o</span>
 							<span> | </span>
 							<span>{t("footer.copyright")}</span>
 						</p>

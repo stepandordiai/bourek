@@ -54,7 +54,7 @@ const BurgerMenu = () => {
 					<div className="burger-menu__select-title js-burger-menu__dd-btn">
 						<span>{t("about_us_title")}</span>
 						<span className="burger-menu__dd-btn-icon">
-							<img width={40} src={downArrowIcon} alt="" />
+							<img width={40} height={40} src={downArrowIcon} alt="" />
 						</span>
 					</div>
 					<div className="burger-menu__dd-wrapper">
@@ -98,7 +98,7 @@ const BurgerMenu = () => {
 					<div className="burger-menu__select-title js-burger-menu__dd-btn">
 						<span>{t("services_title")}</span>
 						<span className="burger-menu__dd-btn-icon">
-							<img width={40} src={downArrowIcon} alt="" />
+							<img width={40} height={40} src={downArrowIcon} alt="" />
 						</span>
 					</div>
 					<div className="burger-menu__dd-wrapper">
@@ -185,7 +185,7 @@ const BurgerMenu = () => {
 						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
 						target="_blank"
 					>
-						<img src={instagramIcon} alt="Phone" />
+						<img width={20} height={20} src={instagramIcon} alt="Phone" />
 					</a>
 					<a
 						className="burger-menu__footer-link"
@@ -193,7 +193,7 @@ const BurgerMenu = () => {
 						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
 						target="_blank"
 					>
-						<img src={facebookIcon} alt="Phone" />
+						<img width={20} height={20} src={facebookIcon} alt="Phone" />
 					</a>
 				</div>
 			</footer>

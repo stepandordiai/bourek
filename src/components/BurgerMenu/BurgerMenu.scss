@@ -114,10 +114,10 @@
 }
 
 .burger-menu__footer-link {
-	display: grid;
-	place-content: center;
+	@include grid-center;
+	width: 40px;
+	aspect-ratio: 1/1;
 	background: var(--blue-clr);
-	padding: 10px;
 	border-radius: 10px;
 
 	img {

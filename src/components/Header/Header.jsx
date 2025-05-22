@@ -48,7 +48,7 @@ const Header = () => {
 		<header className="header">
 			<div className="header-wrapper">
 				<NavLink className="header__logo" to="/">
-					<img src={logo} alt="Logo" />
+					<img src={logo} width={40} height={40} alt="MUDr. Josef Bourek" />
 					<span>MUDr. Josef Bourek</span>
 				</NavLink>
 				<LngSelect />
@@ -67,7 +67,7 @@ const Header = () => {
 						<div className="nav__custom-select-item">
 							<span>{t("about_us_title")}</span>
 							<span className="nav__dd-btn-icon">
-								<img width={20} src={downArrowIcon} alt="" />
+								<img width={20} height={20} src={downArrowIcon} alt="" />
 							</span>
 						</div>
 						<div className="nav__custom-options">
@@ -109,7 +109,7 @@ const Header = () => {
 						<div className="nav__custom-select-item">
 							<span>{t("services_title")}</span>
 							<span className="nav__dd-btn-icon">
-								<img width={20} src={downArrowIcon} alt="" />
+								<img width={20} height={20} src={downArrowIcon} alt="" />
 							</span>
 						</div>
 						<div className="nav__custom-options">

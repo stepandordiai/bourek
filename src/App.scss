@@ -12,14 +12,7 @@ html {
 }
 
 #root {
-	// position: relative;
-	// min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	// padding-top: 80px;
 	margin-top: 80px;
-	// ???
-	// overflow-x: hidden;
 }
 
 .none {
@@ -47,10 +40,6 @@ html {
 	flex-direction: column;
 	row-gap: 5px;
 	pointer-events: none;
-
-	img {
-		width: 25px;
-	}
 }
 
 .fixed-link-container-btn {

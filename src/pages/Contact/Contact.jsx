@@ -104,19 +104,19 @@ const Contact = () => {
 					>
 						<li>
 							<a href="tel:+420602273579">
-								<img src={phoneIcon} width={30} alt="Phone" />
+								<img src={phoneIcon} width={25} height={25} alt="" />
 								<span>+420 602 273 579</span>
 							</a>
 						</li>
 						<li>
 							<a href="mailto:josef@bourek.cz">
-								<img src={mailIcon} width={30} alt="E-mail" />
+								<img src={mailIcon} width={25} height={25} alt="" />
 								<span>josef@bourek.cz</span>
 							</a>
 						</li>
 						<li>
 							<a href={addressUrl1} target="_blank">
-								<img src={locationIcon} width={30} alt="Location" />
+								<img src={locationIcon} width={25} height={25} alt="" />
 								<span>Pod Hroby 271 Kolín IV</span>
 							</a>
 						</li>
@@ -134,19 +134,19 @@ const Contact = () => {
 					>
 						<li>
 							<a href="tel:+420601369198">
-								<img src={phoneIcon} width={30} alt="Phone" />
+								<img src={phoneIcon} width={25} height={25} alt="" />
 								<span>+420 601 369 198</span>
 							</a>
 						</li>
 						<li>
 							<a href="mailto:josef@bourek.cz">
-								<img src={mailIcon} width={30} alt="E-mail" />
+								<img src={mailIcon} width={25} height={25} alt="" />
 								<span>josef@bourek.cz</span>
 							</a>
 						</li>
 						<li>
 							<a href={addressUrl2} target="_blank">
-								<img src={locationIcon} width={30} alt="Location" />
+								<img src={locationIcon} width={25} height={25} alt="" />
 								<span>Český Brod</span>
 							</a>
 						</li>

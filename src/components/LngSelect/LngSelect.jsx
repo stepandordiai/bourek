@@ -71,7 +71,7 @@ const LanguageSelect = () => {
 			<button className="lang-select__btn">
 				<span className="lang-select__btn-value">{selectBtnTxt}</span>
 				<span className="lang-select__btn-icon">
-					<img width={20} src={downArrowIcon} alt="" />
+					<img width={20} height={20} src={downArrowIcon} alt="" />
 				</span>
 			</button>
 			<ul className="lang-select__list">
@@ -82,6 +82,7 @@ const LanguageSelect = () => {
 					<span>CZ</span>
 					<img
 						width={20}
+						height={20}
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
 						alt=""
 					/>
@@ -93,6 +94,7 @@ const LanguageSelect = () => {
 					<span>UA</span>
 					<img
 						width={20}
+						height={20}
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
 						alt=""
 					/>
@@ -104,6 +106,7 @@ const LanguageSelect = () => {
 					<span>EN</span>
 					<img
 						width={20}
+						height={20}
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
 						alt=""
 					/>

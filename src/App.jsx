@@ -87,7 +87,7 @@ function App() {
 				</Routes>
 				<div className="fixed-link-container">
 					<a title="Telefon" className="fixed-link" href="tel:+420602273579">
-						<img src={phoneCallIcon} alt="Phone" />
+						<img width={20} height={20} src={phoneCallIcon} alt="" />
 					</a>
 					<a
 						title="Instagram"
@@ -95,7 +95,7 @@ function App() {
 						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
 						target="_blank"
 					>
-						<img src={instagramIcon} alt="Phone" />
+						<img width={20} height={20} src={instagramIcon} alt="" />
 					</a>
 					<a
 						title="Facebook"
@@ -103,13 +103,13 @@ function App() {
 						href="https://www.facebook.com/profile.php?id=61575622597789&mibextid=wwXIfr&rdid=Fudc2wWAiGqfWI1d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWJjQUX1G%2F%3Fmibextid%3DwwXIfr#"
 						target="_blank"
 					>
-						<img src={facebookIcon} alt="Phone" />
+						<img width={20} height={20} src={facebookIcon} alt="" />
 					</a>
 					<button
 						onClick={toogleFixedLinks}
 						className="fixed-link-container-btn"
 					>
-						<img src={dotsIcon} alt="" />
+						<img width={20} height={20} src={dotsIcon} alt="" />
 					</button>
 				</div>
 

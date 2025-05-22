@@ -22,12 +22,8 @@ const ScrollToTopBtn = () => {
 	});
 
 	return (
-		<button
-			className="to-top-btn"
-			onClick={scrollOnClick}
-			title="Scroll to top button"
-		>
-			<img src={upArrowIcon} alt="Up Arrow" loading="lazy" />
+		<button className="to-top-btn" onClick={scrollOnClick}>
+			<img src={upArrowIcon} width={20} height={20} alt="" loading="lazy" />
 		</button>
 	);
 };

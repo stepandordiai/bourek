@@ -179,7 +179,21 @@
 	}
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
+	.home {
+		padding: 0 20px 0;
+	}
+
+	.home__wrapper > div {
+		row-gap: 10px;
+	}
+
+	.home__grid-container {
+		gap: 20px;
+	}
+}
+
+@media (max-width: 895px) {
 	.home__wrapper {
 		flex-direction: column-reverse;
 	}
@@ -190,16 +204,6 @@
 
 	.home__wrapper > div {
 		align-items: center;
-	}
-}
-
-@media (max-width: 900px) {
-	.home {
-		padding: 0 20px 0;
-	}
-
-	.home__grid-container {
-		gap: 20px;
 	}
 }
 

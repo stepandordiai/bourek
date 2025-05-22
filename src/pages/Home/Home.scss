@@ -193,7 +193,7 @@
 	}
 }
 
-@media (max-width: 895px) {
+@media (width <= 894px) {
 	.home__wrapper {
 		flex-direction: column-reverse;
 	}

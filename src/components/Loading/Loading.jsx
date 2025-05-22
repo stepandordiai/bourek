@@ -11,7 +11,7 @@ const Loading = () => {
 
 	return (
 		<div id="loading" className="loading-logo" style={{ display: "flex" }}>
-			<img src={logo} alt="" />
+			<img src={logo} width={50} height={50} alt="MUDr. Josef Bourek" />
 			<div className="text-line">
 				<p>MUDr. Josef Bourek</p>
 			</div>

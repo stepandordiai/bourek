@@ -1,45 +1,40 @@
 .loading-logo {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    // pointer-events: all;
-    animation: animateLoading 2s forwards;
-
-    img {
-        width: clamp(60px, 12vw, 100px);
-    }
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	animation: animateLoading 2s forwards;
 }
 
 @keyframes animateLoading {
-    75% {
-        opacity: 1;
-    }
+	75% {
+		opacity: 1;
+	}
 
-    100% {
-        opacity: 0;
-    }
+	100% {
+		opacity: 0;
+	}
 }
 
 .text-line {
-    display: grid;
-    grid-template-columns: 0fr;
-    overflow: hidden;
-    animation: revealLoadingText 700ms 500ms forwards ease;
+	display: grid;
+	grid-template-columns: 0fr;
+	overflow: hidden;
+	animation: revealLoadingText 700ms 500ms forwards ease;
 
-    p {
-        font-size: clamp(1.5rem, 5vw, 2.5rem);
-        overflow: hidden;
-        white-space: nowrap;
-    }
+	p {
+		font-size: clamp(1.5rem, 2vw, 2rem);
+		overflow: hidden;
+		white-space: nowrap;
+	}
 }
 
 @keyframes revealLoadingText {
-    to {
-        grid-template-columns: 1fr;
-    }
+	to {
+		grid-template-columns: 1fr;
+	}
 }

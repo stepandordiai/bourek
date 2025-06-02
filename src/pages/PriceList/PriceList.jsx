@@ -9,7 +9,11 @@ const PriceList = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("price_list_title")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Aktuální ceník rehabilitačních služeb MUDr. Josef Bourek v Kolíně a Českém Brodě – fyzioterapie, elektroterapie, laser, lymfodrenáž, Starvac a další."
+				/>
+				<title>{t("price_list_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/price-list" />
 			</Helmet>
 			<PageTitle title={t("price_list_title")} />

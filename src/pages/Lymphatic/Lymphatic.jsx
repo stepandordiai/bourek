@@ -12,7 +12,11 @@ const Lymphatic = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("service_4")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Přístrojová lymfodrenáž v ordinaci MUDr. Josef Bourek v Kolíně – moderní terapie pro detoxikaci, úlevu od otoků a podporu lymfatického systému."
+				/>
+				<title>{t("service_4")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/lymphatic" />
 			</Helmet>
 			<PageTitle title={t("service_4")} />

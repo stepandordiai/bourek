@@ -9,7 +9,11 @@ const Offer = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("offer_title")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Komplexní rehabilitační péče v ordinaci MUDr. Josef Bourek v Kolíně – odborné lékařské služby, fyzioterapie, elektroterapie, lymfodrenáž a další moderní terapie."
+				/>
+				<title>{t("offer_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/offer" />
 			</Helmet>
 			<PageTitle title={t("offer_title")} />

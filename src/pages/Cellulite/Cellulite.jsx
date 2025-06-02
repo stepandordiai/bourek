@@ -10,7 +10,11 @@ const Cellulite = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("service_3")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Zjistěte, jak účinně bojovat proti celulitidě. Ordinace MUDr. Josef Bourek v Kolíně nabízí terapie, masáže a přístrojové ošetření pro hladší pokožku."
+				/>
+				<title>{t("service_3")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/cellulite" />
 			</Helmet>
 			<PageTitle title={t("service_3")} />

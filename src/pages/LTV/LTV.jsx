@@ -10,7 +10,11 @@ const LTV = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("service_7")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Zlepšete své zdraví pomocí léčebné tělesné výchovy v ordinaci MUDr. Josef Bourek v Kolíně. Individuální cvičení pro prevenci a léčbu pohybových obtíží."
+				/>
+				<title>{t("service_7")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/ltv" />
 			</Helmet>
 			<PageTitle title={t("service_7")} />

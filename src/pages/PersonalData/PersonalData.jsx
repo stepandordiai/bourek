@@ -10,7 +10,11 @@ const PersonalData = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("personal_data_title")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Zásady ochrany osobních údajů v ordinaci MUDr. Josef Bourek v Kolíně a Českém Brodě – informace o zpracování a zabezpečení vašich dat v souladu s GDPR."
+				/>
+				<title>{t("personal_data_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/personal-data" />
 			</Helmet>
 			<PageTitle title={t("personal_data_title")} />

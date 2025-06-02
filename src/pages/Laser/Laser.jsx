@@ -10,7 +10,11 @@ const Laser = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("service_5")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Využijte moderní laserovou terapii v ordinaci MUDr. Josef Bourek v Kolíně. Účinná léčba bolesti, podpora hojení a regenerace pohybového aparátu."
+				/>
+				<title>{t("service_5")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/laser" />
 			</Helmet>
 			<PageTitle title={t("service_5")} />

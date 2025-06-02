@@ -12,7 +12,11 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("home.secondary_title")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Ordinace MUDr. Josef Bourek – odborná rehabilitační péče v Kolíně. Fyzioterapie, elektroléčba, lymfodrenáže a moderní terapie pro úlevu od bolesti."
+				/>
+				<title>{t("home.secondary_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/" />
 			</Helmet>
 			<div className="home">

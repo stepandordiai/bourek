@@ -92,7 +92,11 @@ const OurTeam = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("our_team_title")} | MUDr. Josef Bourek</title>
+				<meta
+					name="description"
+					content="Seznamte se s týmem odborníků v ordinaci MUDr. Josef Bourek v Kolíně. Zkušení fyzioterapeuti a zdravotnický personál poskytují individuální rehabilitační péči."
+				/>
+				<title>{t("our_team_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/our-team" />
 			</Helmet>
 			<PageTitle title={t("our_team_title")} />

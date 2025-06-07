@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import profileIcon from "/icons/profile-icon.png";
 import "./OurTeam.scss";
@@ -99,177 +99,187 @@ const OurTeam = () => {
 				<title>{t("our_team_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/our-team" />
 			</Helmet>
-			<PageTitle title={t("our_team_title")} />
-			<div className="our-team">
-				<p className="our-team__title">Kolín</p>
-				<div className="our-team__grid">
-					{ourTeamData
-						.filter((member) => member.place === 1)
-						.map(({ profession, name, number, email, workingHours }, index) => {
-							return (
-								<div key={index} className="our-team__card">
-									<img src={profileIcon} alt="" />
-									<div className="our-team__card-top">
-										<p>{profession}</p>
-										<p>{name}</p>
-										{number && (
-											<a href={`tel:${number.replaceAll(" ", "")}`}>{number}</a>
-										)}
-										{email && <a href="mailto:josef@gmail.com">{email}</a>}
-									</div>
-									<div className="our-team__card-bottom">
-										<p style={{ marginBottom: 5 }}>
-											{t("our_team.working_hours")}
-										</p>
-										<ul className="our-team__working-hours">
-											{workingHours.mon && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.mon")}:</span>
-														<span>{workingHours.mon}</span>
-													</>
-												</li>
-											)}
-											{workingHours.tue && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.tue")}:</span>
-														<span>{workingHours.tue}</span>
-													</>
-												</li>
-											)}
+			<main>
+				<PageTitle title={t("our_team_title")} />
+				<div className="our-team">
+					<p className="our-team__title">Kolín</p>
+					<div className="our-team__grid">
+						{ourTeamData
+							.filter((member) => member.place === 1)
+							.map(
+								({ profession, name, number, email, workingHours }, index) => {
+									return (
+										<div key={index} className="our-team__card">
+											<img src={profileIcon} alt="" />
+											<div className="our-team__card-top">
+												<p>{profession}</p>
+												<p>{name}</p>
+												{number && (
+													<a href={`tel:${number.replaceAll(" ", "")}`}>
+														{number}
+													</a>
+												)}
+												{email && <a href="mailto:josef@gmail.com">{email}</a>}
+											</div>
+											<div className="our-team__card-bottom">
+												<p style={{ marginBottom: 5 }}>
+													{t("our_team.working_hours")}
+												</p>
+												<ul className="our-team__working-hours">
+													{workingHours.mon && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.mon")}:</span>
+																<span>{workingHours.mon}</span>
+															</>
+														</li>
+													)}
+													{workingHours.tue && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.tue")}:</span>
+																<span>{workingHours.tue}</span>
+															</>
+														</li>
+													)}
 
-											{workingHours.wed && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.wed")}:</span>
-														<span>{workingHours.wed}</span>
-													</>
-												</li>
-											)}
-											{workingHours.thu && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.thu")}:</span>
-														<span>{workingHours.thu}</span>
-													</>
-												</li>
-											)}
-											{workingHours.fri && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.fri")}:</span>
-														<span>{workingHours.fri}</span>
-													</>
-												</li>
-											)}
-											{workingHours.sat && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.sat")}:</span>
-														<span>{workingHours.sat}</span>
-													</>
-												</li>
-											)}
-											{workingHours.sun && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.sun")}:</span>
-														<span>{workingHours.sun}</span>
-													</>
-												</li>
-											)}
-										</ul>
-									</div>
-								</div>
-							);
-						})}
-				</div>
-				<p className="our-team__title">Český Brod</p>
-				<div className="our-team__grid">
-					{ourTeamData
-						.filter((member) => member.place === 2)
-						.map(({ profession, name, number, email, workingHours }, index) => {
-							return (
-								<div key={index} className="our-team__card">
-									<img src={profileIcon} alt="" />
-									<div className="our-team__card-top">
-										<p>{profession}</p>
-										<p>{name}</p>
-										{number && (
-											<a href={`tel:${number.replaceAll(" ", "")}`}>{number}</a>
-										)}
-										{email && <a href="mailto:josef@gmail.com">{email}</a>}
-									</div>
-									<div className="our-team__card-bottom">
-										<p style={{ marginBottom: 5 }}>
-											{t("our_team.working_hours")}
-										</p>
-										<ul className="our-team__working-hours">
-											{workingHours.mon && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.mon")}:</span>
-														<span>{workingHours.mon}</span>
-													</>
-												</li>
-											)}
-											{workingHours.tue && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.tue")}:</span>
-														<span>{workingHours.tue}</span>
-													</>
-												</li>
-											)}
+													{workingHours.wed && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.wed")}:</span>
+																<span>{workingHours.wed}</span>
+															</>
+														</li>
+													)}
+													{workingHours.thu && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.thu")}:</span>
+																<span>{workingHours.thu}</span>
+															</>
+														</li>
+													)}
+													{workingHours.fri && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.fri")}:</span>
+																<span>{workingHours.fri}</span>
+															</>
+														</li>
+													)}
+													{workingHours.sat && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.sat")}:</span>
+																<span>{workingHours.sat}</span>
+															</>
+														</li>
+													)}
+													{workingHours.sun && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.sun")}:</span>
+																<span>{workingHours.sun}</span>
+															</>
+														</li>
+													)}
+												</ul>
+											</div>
+										</div>
+									);
+								}
+							)}
+					</div>
+					<p className="our-team__title">Český Brod</p>
+					<div className="our-team__grid">
+						{ourTeamData
+							.filter((member) => member.place === 2)
+							.map(
+								({ profession, name, number, email, workingHours }, index) => {
+									return (
+										<div key={index} className="our-team__card">
+											<img src={profileIcon} alt="" />
+											<div className="our-team__card-top">
+												<p>{profession}</p>
+												<p>{name}</p>
+												{number && (
+													<a href={`tel:${number.replaceAll(" ", "")}`}>
+														{number}
+													</a>
+												)}
+												{email && <a href="mailto:josef@gmail.com">{email}</a>}
+											</div>
+											<div className="our-team__card-bottom">
+												<p style={{ marginBottom: 5 }}>
+													{t("our_team.working_hours")}
+												</p>
+												<ul className="our-team__working-hours">
+													{workingHours.mon && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.mon")}:</span>
+																<span>{workingHours.mon}</span>
+															</>
+														</li>
+													)}
+													{workingHours.tue && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.tue")}:</span>
+																<span>{workingHours.tue}</span>
+															</>
+														</li>
+													)}
 
-											{workingHours.wed && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.wed")}:</span>
-														<span>{workingHours.wed}</span>
-													</>
-												</li>
-											)}
-											{workingHours.thu && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.thu")}:</span>
-														<span>{workingHours.thu}</span>
-													</>
-												</li>
-											)}
-											{workingHours.fri && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.fri")}:</span>
-														<span>{workingHours.fri}</span>
-													</>
-												</li>
-											)}
-											{workingHours.sat && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.sat")}:</span>
-														<span>{workingHours.sat}</span>
-													</>
-												</li>
-											)}
-											{workingHours.sun && (
-												<li className={"day"}>
-													<>
-														<span>{t("our_team.sun")}:</span>
-														<span>{workingHours.sun}</span>
-													</>
-												</li>
-											)}
-										</ul>
-									</div>
-								</div>
-							);
-						})}
+													{workingHours.wed && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.wed")}:</span>
+																<span>{workingHours.wed}</span>
+															</>
+														</li>
+													)}
+													{workingHours.thu && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.thu")}:</span>
+																<span>{workingHours.thu}</span>
+															</>
+														</li>
+													)}
+													{workingHours.fri && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.fri")}:</span>
+																<span>{workingHours.fri}</span>
+															</>
+														</li>
+													)}
+													{workingHours.sat && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.sat")}:</span>
+																<span>{workingHours.sat}</span>
+															</>
+														</li>
+													)}
+													{workingHours.sun && (
+														<li className={"day"}>
+															<>
+																<span>{t("our_team.sun")}:</span>
+																<span>{workingHours.sun}</span>
+															</>
+														</li>
+													)}
+												</ul>
+											</div>
+										</div>
+									);
+								}
+							)}
+					</div>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };

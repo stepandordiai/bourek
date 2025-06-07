@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import FAQ from "../../components/FAQ/FAQ";
@@ -19,7 +19,7 @@ const Home = () => {
 				<title>{t("home.secondary_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/" />
 			</Helmet>
-			<div className="home">
+			<main className="home">
 				<div className="home__container">
 					<div className="home__wrapper">
 						<div>
@@ -106,7 +106,7 @@ const Home = () => {
 				</div>
 				<Testimonials />
 				<FAQ />
-			</div>
+			</main>
 		</>
 	);
 };

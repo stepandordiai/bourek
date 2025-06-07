@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
@@ -95,216 +95,220 @@ const Contact = () => {
 				<title>{t("contacts_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/contact" />
 			</Helmet>
-			<PageTitle title={t("contacts_title")} />
-			<div className="contact__wrapper">
-				<div>
-					<p className="contact-details__title">Kolín</p>
-					<ul
-						className={
-							filterMapSrc === "option1"
-								? "contact__list contact__list--active"
-								: "contact__list"
-						}
-					>
-						<li>
-							<a href="tel:+420602273579">
-								<img src={phoneIcon} width={25} height={25} alt="" />
-								<span>+420 602 273 579</span>
-							</a>
-						</li>
-						<li>
-							<a href="mailto:josef@bourek.cz">
-								<img src={mailIcon} width={25} height={25} alt="" />
-								<span>josef@bourek.cz</span>
-							</a>
-						</li>
-						<li>
-							<a href={addressUrl1} target="_blank">
-								<img src={locationIcon} width={25} height={25} alt="" />
-								<span>Pod Hroby 271 Kolín IV</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<CustomDivider />
-				<div>
-					<p className="contact-details__title">Český Brod</p>
-					<ul
-						className={
-							filterMapSrc === "option2"
-								? "contact__list contact__list--active"
-								: "contact__list"
-						}
-					>
-						<li>
-							<a href="tel:+420601369198">
-								<img src={phoneIcon} width={25} height={25} alt="" />
-								<span>+420 601 369 198</span>
-							</a>
-						</li>
-						<li>
-							<a href="mailto:josef@bourek.cz">
-								<img src={mailIcon} width={25} height={25} alt="" />
-								<span>josef@bourek.cz</span>
-							</a>
-						</li>
-						<li>
-							<a href={addressUrl2} target="_blank">
-								<img src={locationIcon} width={25} height={25} alt="" />
-								<span>Český Brod</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<CustomDivider />
-				<div className="form-map-wrapper">
-					<div className="map-wrapper">
-						<div className="map-wrapper__header">
-							<h2 className="contact__map-title">{t("contacts.map_title")}</h2>
-							<div className="map-wrapper__header-container">
-								<button onClick={() => toggleMapSrc("option1")}>Kolín</button>
-								<button onClick={() => toggleMapSrc("option2")}>
-									Český Brod
-								</button>
-								<div className="active-bg"></div>
-							</div>
-						</div>
-						<iframe
-							className="contact__google-map"
-							src={filterMapSrc === "option1" ? mapOption1 : mapOption2}
-							loading="lazy"
-						></iframe>
-					</div>
-					<CustomDivider className=" custom-divider--hide" />
-					<div className="form-wrapper">
-						<h2 className="contact__form-title">{t("appointment_title")}</h2>
-						<form
-							className="contact__form"
-							action="https://formsubmit.co/josef@bourek.cz"
-							method="post"
+			<main>
+				<PageTitle title={t("contacts_title")} />
+				<div className="contact__wrapper">
+					<div>
+						<p className="contact-details__title">Kolín</p>
+						<ul
+							className={
+								filterMapSrc === "option1"
+									? "contact__list contact__list--active"
+									: "contact__list"
+							}
 						>
-							<div className="contact-form__inputs">
-								<input
-									className="first-name"
-									type="text"
-									name="firstName"
-									autoComplete="given-name"
-									placeholder={t("contacts.first_name")}
-									required
-								/>
-								<input
-									className="last-name"
-									type="text"
-									name="lastName"
-									autoComplete="family-name"
-									placeholder={t("contacts.last_name")}
-								/>
+							<li>
+								<a href="tel:+420602273579">
+									<img src={phoneIcon} width={25} height={25} alt="" />
+									<span>+420 602 273 579</span>
+								</a>
+							</li>
+							<li>
+								<a href="mailto:josef@bourek.cz">
+									<img src={mailIcon} width={25} height={25} alt="" />
+									<span>josef@bourek.cz</span>
+								</a>
+							</li>
+							<li>
+								<a href={addressUrl1} target="_blank">
+									<img src={locationIcon} width={25} height={25} alt="" />
+									<span>Pod Hroby 271 Kolín IV</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<CustomDivider />
+					<div>
+						<p className="contact-details__title">Český Brod</p>
+						<ul
+							className={
+								filterMapSrc === "option2"
+									? "contact__list contact__list--active"
+									: "contact__list"
+							}
+						>
+							<li>
+								<a href="tel:+420601369198">
+									<img src={phoneIcon} width={25} height={25} alt="" />
+									<span>+420 601 369 198</span>
+								</a>
+							</li>
+							<li>
+								<a href="mailto:josef@bourek.cz">
+									<img src={mailIcon} width={25} height={25} alt="" />
+									<span>josef@bourek.cz</span>
+								</a>
+							</li>
+							<li>
+								<a href={addressUrl2} target="_blank">
+									<img src={locationIcon} width={25} height={25} alt="" />
+									<span>Český Brod</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<CustomDivider />
+					<div className="form-map-wrapper">
+						<div className="map-wrapper">
+							<div className="map-wrapper__header">
+								<h2 className="contact__map-title">
+									{t("contacts.map_title")}
+								</h2>
+								<div className="map-wrapper__header-container">
+									<button onClick={() => toggleMapSrc("option1")}>Kolín</button>
+									<button onClick={() => toggleMapSrc("option2")}>
+										Český Brod
+									</button>
+									<div className="active-bg"></div>
+								</div>
 							</div>
-							<div className="contact-form__inputs">
-								<input
-									className="email"
-									type="email"
-									name="email"
-									autoComplete="email"
-									placeholder={t("contacts.email")}
-								/>
-								<input
-									className="phone"
-									type="tel"
-									name="tel"
-									autoComplete="tel"
-									placeholder={t("contacts.phone")}
-									required
-								/>
-							</div>
-							<div className="custom-select">
-								<button className="custom-select__btn">
-									{t("contacts.select_btn")}
-								</button>
-								<ul className="custom-select__list">
-									<li
-										className="custom-select__option"
-										data-value={t("contacts.not_selected")}
-									>
+							<iframe
+								className="contact__google-map"
+								src={filterMapSrc === "option1" ? mapOption1 : mapOption2}
+								loading="lazy"
+							></iframe>
+						</div>
+						<CustomDivider className=" custom-divider--hide" />
+						<div className="form-wrapper">
+							<h2 className="contact__form-title">{t("appointment_title")}</h2>
+							<form
+								className="contact__form"
+								action="https://formsubmit.co/josef@bourek.cz"
+								method="post"
+							>
+								<div className="contact-form__inputs">
+									<input
+										className="first-name"
+										type="text"
+										name="firstName"
+										autoComplete="given-name"
+										placeholder={t("contacts.first_name")}
+										required
+									/>
+									<input
+										className="last-name"
+										type="text"
+										name="lastName"
+										autoComplete="family-name"
+										placeholder={t("contacts.last_name")}
+									/>
+								</div>
+								<div className="contact-form__inputs">
+									<input
+										className="email"
+										type="email"
+										name="email"
+										autoComplete="email"
+										placeholder={t("contacts.email")}
+									/>
+									<input
+										className="phone"
+										type="tel"
+										name="tel"
+										autoComplete="tel"
+										placeholder={t("contacts.phone")}
+										required
+									/>
+								</div>
+								<div className="custom-select">
+									<button className="custom-select__btn">
 										{t("contacts.select_btn")}
-									</li>
-									<li
-										className="custom-select__option"
-										data-value={t("service_1")}
-									>
-										{t("service_1")}
-									</li>
-									<li
-										className="custom-select__option"
-										data-value={t("service_2")}
-									>
-										{t("service_2")}
-									</li>
-									<li
-										className="custom-select__option"
-										data-value={t("service_3")}
-									>
-										{t("service_3")}
-									</li>
-									<li
-										className="custom-select__option"
-										data-value={t("service_4")}
-									>
-										{t("service_4")}
-									</li>
-									<li
-										className="custom-select__option"
-										data-value={t("service_5")}
-									>
-										{t("service_5")}
-									</li>
-									<li
-										className="custom-select__option"
-										data-value={t("service_6")}
-									>
-										{t("service_6")}
-									</li>
-									<li
-										className="custom-select__option"
-										data-value={t("service_7")}
-									>
-										{t("service_7")}
-									</li>
-								</ul>
-								<input
-									className="custom-select__input"
-									type="text"
-									name="Service"
-									defaultValue=""
-								/>
-							</div>
-							<div className="date-container">
-								<label htmlFor="date">{t("contacts.visit_date")}</label>
-								<input
-									id="date"
-									className="date"
-									defaultValue={formatedDate}
-									type="date"
-									name="Date"
-								/>
-							</div>
-							<div className="time-container">
-								<label htmlFor="time">{t("contacts.visit_time")}</label>
-								<input
-									id="time"
-									className="time"
-									defaultValue={`${formatedHours}:${formatedMinutes}`}
-									type="time"
-									name="Time"
-								/>
-							</div>
-							<button className="submit-btn" type="submit">
-								{t("contacts.form_btn")}
-							</button>
-						</form>
+									</button>
+									<ul className="custom-select__list">
+										<li
+											className="custom-select__option"
+											data-value={t("contacts.not_selected")}
+										>
+											{t("contacts.select_btn")}
+										</li>
+										<li
+											className="custom-select__option"
+											data-value={t("service_1")}
+										>
+											{t("service_1")}
+										</li>
+										<li
+											className="custom-select__option"
+											data-value={t("service_2")}
+										>
+											{t("service_2")}
+										</li>
+										<li
+											className="custom-select__option"
+											data-value={t("service_3")}
+										>
+											{t("service_3")}
+										</li>
+										<li
+											className="custom-select__option"
+											data-value={t("service_4")}
+										>
+											{t("service_4")}
+										</li>
+										<li
+											className="custom-select__option"
+											data-value={t("service_5")}
+										>
+											{t("service_5")}
+										</li>
+										<li
+											className="custom-select__option"
+											data-value={t("service_6")}
+										>
+											{t("service_6")}
+										</li>
+										<li
+											className="custom-select__option"
+											data-value={t("service_7")}
+										>
+											{t("service_7")}
+										</li>
+									</ul>
+									<input
+										className="custom-select__input"
+										type="text"
+										name="Service"
+										defaultValue=""
+									/>
+								</div>
+								<div className="date-container">
+									<label htmlFor="date">{t("contacts.visit_date")}</label>
+									<input
+										id="date"
+										className="date"
+										defaultValue={formatedDate}
+										type="date"
+										name="Date"
+									/>
+								</div>
+								<div className="time-container">
+									<label htmlFor="time">{t("contacts.visit_time")}</label>
+									<input
+										id="time"
+										className="time"
+										defaultValue={`${formatedHours}:${formatedMinutes}`}
+										type="time"
+										name="Time"
+									/>
+								</div>
+								<button className="submit-btn" type="submit">
+									{t("contacts.form_btn")}
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };

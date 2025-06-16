@@ -86,16 +86,8 @@ function App() {
 						<img width={20} height={20} src={phoneCallIcon} alt="" />
 					</a>
 					<a
-						title="Instagram"
-						className="fixed-link1"
-						href="https://www.facebook.com/profile.php?id=61575622597789"
-						target="_blank"
-					>
-						<img width={20} height={20} src={instagramIcon} alt="" />
-					</a>
-					<a
 						title="Facebook"
-						className="fixed-link2"
+						className="fixed-link1"
 						href="https://www.facebook.com/profile.php?id=61575622597789"
 						target="_blank"
 					>

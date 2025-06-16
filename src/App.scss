@@ -87,21 +87,6 @@ body {
 	}
 }
 
-.fixed-link2 {
-	@include grid-center;
-	width: 40px;
-	aspect-ratio: 1/1;
-	background: var(--blue-clr-8);
-	border-radius: 10px;
-	opacity: 0;
-	pointer-events: none;
-	transition: all 0.3s 0.2s, scale 0.3s;
-
-	&:hover {
-		scale: 1.1;
-	}
-}
-
 .fixed-link--active {
 	opacity: 1;
 	pointer-events: all;
@@ -112,12 +97,6 @@ body {
 	opacity: 1;
 	pointer-events: all;
 	transition: all 0.3s 0.1s, scale 0.3s;
-}
-
-.fixed-link2--active {
-	opacity: 1;
-	pointer-events: all;
-	transition: all 0.3s, scale 0.3s;
 }
 
 .phone-btn {

@@ -8,29 +8,32 @@ const Banner = () => {
 
 	const [info, setInfo] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
 
 	function removeBanner() {
 		document.querySelector(".banner").remove();
 	}
 
-	const getInfo = async () => {
-		try {
-			const response = await axios("https://bourek-crud.onrender.com/api");
-			setInfo(response.data);
-			setLoading(false);
-		} catch (error) {
-			console.log(error);
-			setLoading(false);
-		}
-	};
-
 	useEffect(() => {
+		const getInfo = async () => {
+			try {
+				const response = await axios("https://bourek-crud.onrender.com/api");
+				setInfo(response.data);
+				setLoading(false);
+			} catch (error) {
+				console.log(error);
+				setError(error);
+			} finally {
+				setLoading(false);
+			}
+		};
+
 		getInfo();
 	}, []);
 
 	return (
 		<>
-			{!loading && (
+			{!loading && !error && (
 				<div className="banner">
 					<div className="banner-header">
 						<strong className="banner__title">

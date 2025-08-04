@@ -38,13 +38,13 @@
 	},
 
 	"offer": {
-		"offer_1": "services of a professional rehabilitation doctor",
-		"offer_2": "rehabilitation worker services",
-		"offer_3": "all complete rehabilitation services",
-		"offer_4": "massager starvac sp 2",
-		"offer_5": "complete electrotherapy, laser therapy, solux",
-		"offer_6": "healthy lifestyle advice",
-		"offer_7": "specialty healthcare retail"
+		"1": "Services of a professional rehabilitation doctor",
+		"2": "Rehabilitation worker services",
+		"3": "All complete rehabilitation services",
+		"4": "Massager starvac sp 2",
+		"5": "Complete electrotherapy, laser therapy, solux",
+		"6": "Healthy lifestyle advice",
+		"7": "Specialty healthcare retail"
 	},
 
 	"price_list": {

@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import "./Offer.scss";
 
@@ -16,22 +16,37 @@ const Offer = () => {
 				<title>{t("offer_title")} | Bourek</title>
 				<link rel="canonical" href="https://bourek.cz/offer" />
 			</Helmet>
-			<main>
+			<main className="offer">
 				<PageTitle title={t("offer_title")} />
-				<div className="offer__wrapper">
-					<ul className="offer__list">
-						<li>{t("offer.offer_1")}</li>
-						<li>{t("offer.offer_2")}</li>
-						<li>
-							{t("offer.offer_3")}:
-							<ul>
-								<li>{t("offer.offer_4")}</li>
-								<li>{t("offer.offer_5")}</li>
-								<li>{t("offer.offer_6")}</li>
-							</ul>
-						</li>
-						<li>{t("offer.offer_7")}</li>
-					</ul>
+				<div className="offer__grid">
+					<div className="offer__grid-card">
+						<div></div>
+						<p>{t("offer.1")}</p>
+					</div>
+					<div className="offer__grid-card">
+						<div></div>
+						<p>{t("offer.2")}</p>
+					</div>
+					<div className="offer__grid-card">
+						<div></div>
+						<p>{t("offer.3")}</p>
+					</div>
+					<div className="offer__grid-card">
+						<div></div>
+						<p>{t("offer.4")}</p>
+					</div>
+					<div className="offer__grid-card">
+						<div></div>
+						<p>{t("offer.5")}</p>
+					</div>
+					<div className="offer__grid-card">
+						<div></div>
+						<p>{t("offer.6")}</p>
+					</div>
+					<div className="offer__grid-card">
+						<div></div>
+						<p>{t("offer.7")}</p>
+					</div>
 				</div>
 			</main>
 		</>

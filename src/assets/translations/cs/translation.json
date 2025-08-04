@@ -38,13 +38,13 @@
 	},
 
 	"offer": {
-		"offer_1": "služby odborného rehabilitačního lékaře",
-		"offer_2": "služby rehabilitačních pracovnic",
-		"offer_3": "veškeré kompletní rehabilitační služby",
-		"offer_4": "masážní přístroj starvac sp 2",
-		"offer_5": "kompletní elektroléčba, laser terapie, solux",
-		"offer_6": "poradenství o zdravém životním stylu",
-		"offer_7": "speciální zdravotnický maloobchod"
+		"1": "Služby odborného rehabilitačního lékaře",
+		"2": "Služby rehabilitačních pracovnic",
+		"3": "Veškeré kompletní rehabilitační služby",
+		"4": "Masážní přístroj starvac sp 2",
+		"5": "Kompletní elektroléčba, laser terapie, solux",
+		"6": "Poradenství o zdravém životním stylu",
+		"7": "Speciální zdravotnický maloobchod"
 	},
 
 	"price_list": {

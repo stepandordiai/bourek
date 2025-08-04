@@ -110,7 +110,7 @@ const OurTeam = () => {
 								({ profession, name, number, email, workingHours }, index) => {
 									return (
 										<div key={index} className="our-team__card">
-											<img src={profileIcon} alt="" />
+											<img src={profileIcon} alt={name} loading="lazy" />
 											<div className="our-team__card-top">
 												<p>{profession}</p>
 												<p>{name}</p>

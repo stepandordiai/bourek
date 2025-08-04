@@ -1,2 +1,1 @@
-Update OurTeam with lazy loading
 Update Offer

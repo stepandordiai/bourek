@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import googleIcon from "/icons/google.png";
-import starIcon from "/icons/star.png";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
-import styles from "./Testimonials.module.scss";
+import googleIcon from "/icons/google.png";
+import starIcon from "/icons/star.png";
+import "./Testimonials.scss";
 
 const Testimonials = () => {
 	const { t } = useTranslation();
@@ -16,33 +16,38 @@ const Testimonials = () => {
 		{
 			name: "Cathy Mattson",
 			date: "April 2, 2025",
-			info: "Naprosto perfekní přístup a profesionální chování. Neumím si představit lepší a příjemnější místo na rehabilitaci. Doporučuji všem známým!",
+			review:
+				"Naprosto perfekní přístup a profesionální chování. Neumím si představit lepší a příjemnější místo na rehabilitaci. Doporučuji všem známým!",
 		},
 		{
 			name: "Valeria Novitskaia",
 			date: "January 10, 2025",
-			info: "Všechno probíhalo na jedničku. Velice milý a profesionální přístup.",
+			review:
+				"Všechno probíhalo na jedničku. Velice milý a profesionální přístup.",
 		},
 		{
 			name: "Jan Šmída",
 			date: "March 16, 2025",
-			info: "Velmi pozitivní a přátelský přístup. Pár cviků a obrovský posun.",
+			review:
+				"Velmi pozitivní a přátelský přístup. Pár cviků a obrovský posun.",
 		},
 		{
 			name: "Jiri Capek",
 			date: "March 25, 2025",
-			info: "Nádherné, moderní a čisté prostředí. Extrémně empatický, milý a trpělivý personál. Celkově místo působí profesionálním, ale zároveň přívětivým dojmem.",
+			review:
+				"Nádherné, moderní a čisté prostředí. Extrémně empatický, milý a trpělivý personál. Celkově místo působí profesionálním, ale zároveň přívětivým dojmem.",
 		},
 	];
 
 	return (
 		<>
-			<h2 className={styles["home__testimonials-title"]} id="testimonials">
+			<h2 className="home__testimonials-title" id="testimonials">
 				{t("testimonials_title")}
 			</h2>
 			<a
-				className={styles["testimonials__link"]}
+				className="testimonials__link"
 				href="https://g.page/r/CeuGELtmU6ALEAE/review"
+				target="_blank"
 			>
 				{t("testimonials_btn")}
 			</a>
@@ -67,33 +72,66 @@ const Testimonials = () => {
 					disableOnInteraction: false,
 				}}
 				modules={[Autoplay]}
-				className="mySwiper"
 			>
-				{testimonialsData.map((testimonial) => {
+				{testimonialsData.map((testimonial, index) => {
 					return (
-						<SwiperSlide>
-							<div className={styles["testimonials__card"]}>
-								<div className={styles["testimonials-card__header"]}>
+						<SwiperSlide key={index}>
+							<div className="testimonials__card">
+								<div className="testimonials-card__header">
 									<div>
-										<p className={styles["testimonials-card__header-name"]}>
+										<p className="testimonials-card__header-name">
 											{testimonial.name}
 										</p>
-										<p className={styles["testimonials-card__header-date"]}>
+										<p className="testimonials-card__header-date">
 											{testimonial.date}
 										</p>
 									</div>
-									<img src={googleIcon} width={40} height={40} alt="" />
+									<img
+										src={googleIcon}
+										width={40}
+										height={40}
+										alt=""
+										loading="lazy"
+									/>
 								</div>
-								<div className={styles["testimonials-card__rating"]}>
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
+								<div className="testimonials-card__rating">
+									<img
+										src={starIcon}
+										width={20}
+										height={20}
+										alt=""
+										loading="lazy"
+									/>
+									<img
+										src={starIcon}
+										width={20}
+										height={20}
+										alt=""
+										loading="lazy"
+									/>
+									<img
+										src={starIcon}
+										width={20}
+										height={20}
+										alt=""
+										loading="lazy"
+									/>
+									<img
+										src={starIcon}
+										width={20}
+										height={20}
+										alt=""
+										loading="lazy"
+									/>
+									<img
+										src={starIcon}
+										width={20}
+										height={20}
+										alt=""
+										loading="lazy"
+									/>
 								</div>
-								<div className={styles["testimonials-card__info"]}>
-									{testimonial.info}
-								</div>
+								<p>{testimonial.review}</p>
 							</div>
 						</SwiperSlide>
 					);

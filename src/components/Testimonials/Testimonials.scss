@@ -12,15 +12,15 @@
 	padding: 10px;
 	border-radius: 10px;
 	color: #fff !important;
+	margin-bottom: 20px;
 }
 
 .testimonials__card {
 	background: #fff;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	height: 300px;
+	border: 2px solid var(--blue-clr-2);
+	min-height: 300px;
 	border-radius: 10px;
 	padding: 20px;
-	margin: 20px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;

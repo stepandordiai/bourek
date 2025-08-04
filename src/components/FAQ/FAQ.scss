@@ -9,6 +9,7 @@
 .faq {
 	display: flex;
 	gap: 40px;
+	margin-bottom: 40px;
 }
 
 .faq__nav {
@@ -45,8 +46,11 @@
 }
 
 .js-faq-section {
-	padding-bottom: 40px;
 	scroll-margin-top: 120px;
+
+	&:not(:nth-last-child(1)) {
+		padding-bottom: 40px;
+	}
 }
 
 .faq__section-title {

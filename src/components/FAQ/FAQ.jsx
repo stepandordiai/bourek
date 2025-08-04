@@ -1,101 +1,85 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import styles from "./FAQ.module.scss";
+import "./FAQ.scss";
 
 const FAQ = () => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		const faqItemHeaders = document.querySelectorAll(
-			`.${styles["js-faq__item-header"]}`
-		);
+		const faqItemHeaders = document.querySelectorAll(".js-faq__item-header");
 		faqItemHeaders.forEach((faqItemHeader, index) => {
-			const classBtn = document.querySelectorAll(`.${styles["faq__btn"]}`);
-			const classGridLine = document.querySelectorAll(
-				`.${styles["grid-line"]}`
-			);
+			const classBtn = document.querySelectorAll(".faq__btn");
+			const classGridLine = document.querySelectorAll(".grid-line");
 			faqItemHeader.addEventListener("click", () => {
 				// Close old items when click on new
 				for (let i = 0; i < faqItemHeaders.length; i++) {
-					classBtn[i].classList.remove(styles["faq__btn--active"]);
-					classGridLine[i].classList.remove(styles["grid-line--active"]);
+					classBtn[i].classList.remove("faq__btn--active");
+					classGridLine[i].classList.remove("grid-line--active");
 				}
-				classBtn[index].classList.toggle(styles["faq__btn--active"]);
-				classGridLine[index].classList.toggle(styles["grid-line--active"]);
+				classBtn[index].classList.toggle("faq__btn--active");
+				classGridLine[index].classList.toggle("grid-line--active");
 			});
 		});
 
 		document.addEventListener("scroll", () => {
-			const faqSection = document.querySelectorAll(
-				`.${styles["js-faq-section"]}`
-			);
-			const faqSectionLink = document.querySelectorAll(
-				`.${styles["js-link-section"]}`
-			);
+			const faqSection = document.querySelectorAll(".js-faq-section");
+			const faqSectionLink = document.querySelectorAll(".js-link-section");
 			for (let i = 0; i < faqSectionLink.length; i++) {
-				faqSectionLink[i].classList.remove(styles["faq-section-link--active"]);
+				faqSectionLink[i].classList.remove("faq-section-link--active");
 			}
 			faqSection.forEach((section, index) => {
 				const sectionRect = section.getBoundingClientRect();
 				if (sectionRect.top <= 120 && sectionRect.bottom > 120) {
-					faqSectionLink[index].classList.add(
-						styles["faq-section-link--active"]
-					);
+					faqSectionLink[index].classList.add("faq-section-link--active");
 				}
 			});
 		});
 	}, []);
 	return (
 		<>
-			<h2 className={styles["home__faq-title"]} id="faq">
+			<h2 className="home__faq-title" id="faq">
 				{t("faq_title")}
 			</h2>
-			<div className={styles["faq"]}>
-				<div className={styles["faq__nav"]}>
-					<ul className={styles["faq__nav-list"]}>
+			<div className="faq">
+				<div className="faq__nav">
+					<ul className="faq__nav-list">
 						<li>
-							<a className={styles["js-link-section"]} href="#faq1">
+							<a className="js-link-section" href="#faq1">
 								O fyzioterapii
 							</a>
 						</li>
 						<li>
-							<a className={styles["js-link-section"]} href="#faq2">
+							<a className="js-link-section" href="#faq2">
 								Výběr fyzioterapeuta
 							</a>
 						</li>
 						<li>
-							<a className={styles["js-link-section"]} href="#faq3">
+							<a className="js-link-section" href="#faq3">
 								Fyzioterapie na klinice
 							</a>
 						</li>
 						<li>
-							<a className={styles["js-link-section"]} href="#faq4">
+							<a className="js-link-section" href="#faq4">
 								Fyzioterapie doma
 							</a>
 						</li>
 						<li>
-							<a className={styles["js-link-section"]} href="#faq5">
+							<a className="js-link-section" href="#faq5">
 								Platba a fakturace
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div>
-					<div className={styles["js-faq-section"]} id="faq1">
-						<p className={styles["faq__section-title"]}>O fyzioterapii</p>
-						<div className={styles["home__faq"]}>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+					<div className="js-faq-section" id="faq1">
+						<p className="faq__section-title">O fyzioterapii</p>
+						<div className="home__faq">
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Co je fyzioterapie?</p>
-									<div
-										className={`${styles["faq__btn"]} ${styles["faq__btn--active"]}`}
-									></div>
+									<div className="faq__btn faq__btn--active"></div>
 								</div>
-								<div
-									className={`${styles["grid-line"]} ${styles["grid-line--active"]}`}
-								>
+								<div className="grid-line grid-line--active">
 									<p>
 										Fyzioterapie, také nazývaná fyzikální terapie, je léčba k
 										obnovení, udržení a maximálnímu využití mobility, funkce a
@@ -109,14 +93,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jaké problémy může léčit fyzioterapeut?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Fyzioterapeut může léčit různé problémy, jako jsou sportovní
 										úrazy, muskuloskeletální, neurologické problémy, dětská péče
@@ -132,14 +114,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jaké postupy se používají ve fyzioterapii?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Posouzení pacienta provádí v prvé řadě fyzioterapeut, který
 										určuje průběh léčby. Ve fyzioterapeutické léčbě se používají
@@ -151,14 +131,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Existují specializace ve fyzioterapii?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Muskuloskeletální/ortopedická fyzioterapie: Používá se k
 										léčbě stavů, jako jsou poranění kostí, podvrtnutí, bolesti
@@ -180,17 +158,15 @@ const FAQ = () => {
 							</div>
 						</div>
 					</div>
-					<div className={styles["js-faq-section"]} id="faq2">
-						<p className={styles["faq__section-title"]}>Výběr fyzioterapeuta</p>
-						<div className={styles["home__faq"]}>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+					<div className="js-faq-section" id="faq2">
+						<p className="faq__section-title">Výběr fyzioterapeuta</p>
+						<div className="home__faq">
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jak se liší chiropraktik od fyzioterapeuta?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Fyzioterapeuti i chiropraktici pracují s pacienty, kteří
 										pociťují bolest nebo mají potíže s prováděním různých
@@ -203,14 +179,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Kdo je pro mě správný fyzioterapeut?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Nalezení správné fyzioterapie závisí na stavu pacienta a
 										typu léčby, kterou musí pacient projít. Předpokládejme, že
@@ -229,14 +203,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jak je fyzioterapie přiřazena CB fyzioterapií?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										CB Physiotherapy má síť zkušených fyzioterapeutů dostupných
 										v mnoha oblastech. Spolu s požadavky na stav pacienta/léčbu
@@ -253,14 +225,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Mohu cvičit sám?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Ano, pokud fyzioterapeut navrhne, abyste cvičili sami,
 										začněte dělat totéž. Někdy cvičení cvičí fyzioterapeut v
@@ -275,19 +245,15 @@ const FAQ = () => {
 							</div>
 						</div>
 					</div>
-					<div className={styles["js-faq-section"]} id="faq3">
-						<p className={styles["faq__section-title"]}>
-							Fyzioterapie na klinice
-						</p>
-						<div className={styles["home__faq"]}>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+					<div className="js-faq-section" id="faq3">
+						<p className="faq__section-title">Fyzioterapie na klinice</p>
+						<div className="home__faq">
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Je nutný lékařský předpis?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Ne, fyzioterapii předepsanou lékařem není povinné. V
 										některých případech lékař předepíše pacientovi fyzioterapii,
@@ -299,14 +265,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Je léčba na klinice lepší než domácí péče?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										V některých případech, kdy je problém s mobilitou pacienta,
 										není jiná možnost, než absolvovat fyzioterapii doma. V
@@ -325,14 +289,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Rezervace předem vs Walkins?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										V některých případech, kdy je problém s mobilitou pacienta,
 										není jiná možnost, než absolvovat fyzioterapii doma. V
@@ -351,14 +313,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Máte v mém okolí nějakou kliniku?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										You can directly visit our website, enter your location and
 										you will find our experts nearby you. In case there is some
@@ -372,17 +332,15 @@ const FAQ = () => {
 							</div>
 						</div>
 					</div>
-					<div className={styles["js-faq-section"]} id="faq4">
-						<p className={styles["faq__section-title"]}>Fyzioterapie doma</p>
-						<div className={styles["home__faq"]}>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+					<div className="js-faq-section" id="faq4">
+						<p className="faq__section-title">Fyzioterapie doma</p>
+						<div className="home__faq">
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Kdy si vzít domácí fyzioterapeutickou službu?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Záleží na stavu a pohodlí pacienta. V některých případech je
 										to pro pacienta jediná schůdná možnost, např. Pacient po
@@ -395,14 +353,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Je v mém okolí k dispozici fyzioterapie doma?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Působíme ve více městech, např. Bangalore, Mumbai, Dillí-NCR
 										a Ahmedabad, pokud chcete využít fyzioterapeutických služeb
@@ -414,14 +370,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jaká je délka každé relace?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Obvykle trvá sezení 30-45 minut, avšak v případě, že je
 										ošetření potřeba delší dobu, lze délku sezení prodloužit až
@@ -435,14 +389,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Kolik relací a v jaké frekvenci je potřeba?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Neexistuje žádný předem stanovený počet sezení pro konkrétní
 										stav, protože zcela závisí na stavu pacienta. Pokud je
@@ -460,17 +412,15 @@ const FAQ = () => {
 							</div>
 						</div>
 					</div>
-					<div className={styles["js-faq-section"]} id="faq5">
-						<p className={styles["faq__section-title"]}>Platba a fakturace</p>
-						<div className={styles["home__faq"]}>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+					<div className="js-faq-section" id="faq5">
+						<p className="faq__section-title">Platba a fakturace</p>
+						<div className="home__faq">
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jaké jsou poplatky za fyzioterapii?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										CB fyzioterapie si klade za cíl učinit léčbu šetrnější.
 										Poplatky se však v jednotlivých městech liší. Poplatky za
@@ -482,14 +432,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jaké platební režimy jsou přijímány?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Způsob, jakým se pacient rozhodne kompenzovat CBP, je také
 										přijatelný. Platební metody nabízené CB Physiotherapy
@@ -499,14 +447,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Budete poskytovat účty na proplacení pojištění?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										CB Physiotherapy poskytuje pacientům skutečné účty za léčbu,
 										takže může být pohodlné a jednoduché uplatnit nárok na
@@ -517,14 +463,12 @@ const FAQ = () => {
 									</p>
 								</div>
 							</div>
-							<div className={styles["faq__item"]}>
-								<div
-									className={`${styles["faq__item-header"]} ${styles["js-faq__item-header"]}`}
-								>
+							<div className="faq__item">
+								<div className="faq__item-header js-faq__item-header">
 									<p>Jaké jsou vaše zásady pro zrušení a vrácení peněz?</p>
-									<div className={styles["faq__btn"]}></div>
+									<div className="faq__btn"></div>
 								</div>
-								<div className={styles["grid-line"]}>
+								<div className="grid-line">
 									<p>
 										Za nevyužité služby účtujeme storno poplatky. Pokud pacient
 										požádá o zrušení nevyužitých služeb, budou mu účtovány

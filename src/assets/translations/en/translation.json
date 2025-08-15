@@ -20,6 +20,7 @@
 	"coming_soon": "Coming soon",
 	"testimonials_btn": "Write a review",
 	"appointment_title": "Make an appointment",
+	"page_not_found": "Page not found",
 
 	"banner": {
 		"title": "Important information from",
@@ -243,6 +244,6 @@
 	"footer": {
 		"nav_title": "Navigation",
 		"about_title": "About",
-		"copyright": "All rights reserved"
+		"all_rights_reserved": "All rights reserved"
 	}
 }

@@ -249,7 +249,7 @@ const Footer = () => {
 						<p className="copyright">
 							<span>&copy; 2025 MUDr. Josef Bourek s.r.o.</span>
 							<span> | </span>
-							<span>{t("footer.copyright")}</span>
+							<span>{t("footer.all_rights_reserved")}</span>
 						</p>
 					</div>
 					<p>

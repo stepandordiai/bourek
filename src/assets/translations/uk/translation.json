@@ -20,6 +20,7 @@
 	"coming_soon": "Незабаром",
 	"testimonials_btn": "Написати відгук",
 	"appointment_title": "Записатись на прийом",
+	"page_not_found": "Сторінку не знайдено",
 
 	"banner": {
 		"title": "Важлива інформація від",
@@ -243,6 +244,6 @@
 	"footer": {
 		"nav_title": "Навігація",
 		"about_title": "Про",
-		"copyright": "Всі права захищено"
+		"all_rights_reserved": "Всі права захищено"
 	}
 }

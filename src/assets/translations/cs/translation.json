@@ -20,6 +20,7 @@
 	"coming_soon": "Již brzy",
 	"testimonials_btn": "Napsat recenzi",
 	"appointment_title": "Domluvte si schůzku",
+	"page_not_found": "Stránka nenalezena",
 
 	"banner": {
 		"title": "Důležité informace od",
@@ -243,6 +244,6 @@
 	"footer": {
 		"nav_title": "Navigace",
 		"about_title": "O",
-		"copyright": "Všechna práva vyhrazena"
+		"all_rights_reserved": "Všechna práva vyhrazena"
 	}
 }

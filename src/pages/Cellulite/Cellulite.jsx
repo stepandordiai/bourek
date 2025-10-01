@@ -15,7 +15,7 @@ const Cellulite = () => {
 					content="Zjistěte, jak účinně bojovat proti celulitidě. Ordinace MUDr. Josef Bourek v Kolíně nabízí terapie, masáže a přístrojové ošetření pro hladší pokožku."
 				/>
 				<title>{t("service_3")} | Bourek</title>
-				<link rel="canonical" href="https://bourek.cz/cellulite" />
+				<link rel="canonical" href="https://www.bourek.cz/cellulite" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("service_3")} />

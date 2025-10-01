@@ -14,7 +14,7 @@ const PriceList = () => {
 					content="Aktuální ceník rehabilitačních služeb MUDr. Josef Bourek v Kolíně a Českém Brodě – fyzioterapie, elektroterapie, laser, lymfodrenáž, Starvac a další."
 				/>
 				<title>{t("price_list_title")} | Bourek</title>
-				<link rel="canonical" href="https://bourek.cz/price-list" />
+				<link rel="canonical" href="https://www.bourek.cz/price-list" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("price_list_title")} />

@@ -17,7 +17,7 @@ const Home = () => {
 					content="Ordinace MUDr. Josef Bourek – odborná rehabilitační péče v Kolíně. Fyzioterapie, elektroléčba, lymfodrenáže a moderní terapie pro úlevu od bolesti."
 				/>
 				<title>{t("home.secondary_title")} | Bourek</title>
-				<link rel="canonical" href="https://bourek.cz/" />
+				<link rel="canonical" href="https://www.bourek.cz/" />
 			</Helmet>
 			<main className="home">
 				<div className="home__container">

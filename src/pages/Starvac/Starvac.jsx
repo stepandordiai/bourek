@@ -16,7 +16,7 @@ const Starvac = () => {
 					content="Starvac terapie v ordinaci MUDr. Josef Bourek v Kolíně – moderní podtlaková masáž pro redukci celulitidy, lymfodrenáž, zpevnění pokožky a úlevu od bolesti."
 				/>
 				<title>{t("service_2")} | Bourek</title>
-				<link rel="canonical" href="https://bourek.cz/starvac" />
+				<link rel="canonical" href="https://www.bourek.cz/starvac" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("service_2")} />

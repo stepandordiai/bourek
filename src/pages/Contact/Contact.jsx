@@ -93,7 +93,7 @@ const Contact = () => {
 					content="Kontaktujte ordinaci MUDr. Josef Bourek v Kolíně nebo Českém Brodě. Objednejte se na rehabilitaci, fyzioterapii či další služby online nebo telefonicky."
 				/>
 				<title>{t("contacts_title")} | Bourek</title>
-				<link rel="canonical" href="https://bourek.cz/contact" />
+				<link rel="canonical" href="https://www.bourek.cz/contact" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("contacts_title")} />

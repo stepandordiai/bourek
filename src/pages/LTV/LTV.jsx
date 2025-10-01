@@ -15,7 +15,7 @@ const LTV = () => {
 					content="Zlepšete své zdraví pomocí léčebné tělesné výchovy v ordinaci MUDr. Josef Bourek v Kolíně. Individuální cvičení pro prevenci a léčbu pohybových obtíží."
 				/>
 				<title>{t("service_7")} | Bourek</title>
-				<link rel="canonical" href="https://bourek.cz/ltv" />
+				<link rel="canonical" href="https://www.bourek.cz/ltv" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("service_7")} />

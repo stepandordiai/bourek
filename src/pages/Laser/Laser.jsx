@@ -15,7 +15,7 @@ const Laser = () => {
 					content="Využijte moderní laserovou terapii v ordinaci MUDr. Josef Bourek v Kolíně. Účinná léčba bolesti, podpora hojení a regenerace pohybového aparátu."
 				/>
 				<title>{t("service_5")} | Bourek</title>
-				<link rel="canonical" href="https://bourek.cz/laser" />
+				<link rel="canonical" href="https://www.bourek.cz/laser" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("service_5")} />

@@ -244,6 +244,7 @@
 	"footer": {
 		"nav_title": "Навігація",
 		"about_title": "Про",
-		"all_rights_reserved": "Всі права захищено"
+		"all_rights_reserved": "Всі права захищено",
+		"website_created_by": "Сайт створено"
 	}
 }

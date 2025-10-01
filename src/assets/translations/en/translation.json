@@ -244,6 +244,7 @@
 	"footer": {
 		"nav_title": "Navigation",
 		"about_title": "About",
-		"all_rights_reserved": "All rights reserved"
+		"all_rights_reserved": "All rights reserved",
+		"website_created_by": "Website created by"
 	}
 }

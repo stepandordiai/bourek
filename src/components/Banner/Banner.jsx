@@ -17,7 +17,8 @@ const Banner = () => {
 	useEffect(() => {
 		const getInfo = async () => {
 			try {
-				const response = await axios("https://bourek-crud.onrender.com/api");
+				// TODO:
+				const response = await axios(import.meta.env.VITE_API_URL);
 				setInfo(response.data);
 				setLoading(false);
 			} catch (error) {

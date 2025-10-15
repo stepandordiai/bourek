@@ -1,5 +1,5 @@
 # Bourek
 
-January | 2025
+January 2025
 
-<img src='./public/screenshot/bourek-ss-v5-c.png' />
+![Bourek hero screenshot](./public/screenshot/bourek-ss-v5-c.png)

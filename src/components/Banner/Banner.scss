@@ -11,16 +11,12 @@
 	background: var(--blue-clr);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding: 20px;
-	opacity: 0;
-	pointer-events: none;
-	animation: revealBanner 0.5s 2s forwards;
+	transition: all 0.5s;
 }
 
-@keyframes revealBanner {
-	to {
-		opacity: 1;
-		pointer-events: all;
-	}
+.banner--hide {
+	opacity: 0;
+	pointer-events: none;
 }
 
 .banner-header {
@@ -51,7 +47,14 @@
 	padding: 10px;
 	opacity: 0;
 	pointer-events: none;
-	animation: revealBanner 0.5s 3s forwards;
+	animation: animateBannerCloseBtn 0.5s 1s forwards;
+}
+
+@keyframes animateBannerCloseBtn {
+	to {
+		opacity: 1;
+		pointer-events: all;
+	}
 }
 
 .banner__divider {

@@ -6,53 +6,52 @@ import "./Banner.scss";
 const Banner = () => {
 	const { t } = useTranslation();
 
-	const [info, setInfo] = useState([]);
-	const [loading, setLoading] = useState(true);
+	const [infoData, setInfoData] = useState([]);
 	const [error, setError] = useState(null);
-
-	function removeBanner() {
-		document.querySelector(".banner").remove();
-	}
+	const [isVisible, setIsVisible] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		const getInfo = async () => {
+		const getInfoData = async (timeout) => {
+			await new Promise((resolve) => setTimeout(resolve, timeout));
 			try {
-				// TODO:
 				const response = await axios(import.meta.env.VITE_API_URL);
-				setInfo(response.data);
-				setLoading(false);
+				setInfoData(response.data);
 			} catch (error) {
 				console.log(error);
 				setError(error);
 			} finally {
 				setLoading(false);
+				setIsVisible(true);
 			}
 		};
 
-		getInfo();
+		getInfoData(4000);
 	}, []);
 
+	if (error) return;
+
 	return (
-		<>
-			{!loading && !error && (
-				<div className="banner">
+		<div className={isVisible ? "banner" : "banner banner--hide"}>
+			{!loading && (
+				<>
 					<div className="banner-header">
-						<strong className="banner__title">
-							{t("banner.title")} {info[0].date}
-						</strong>
+						<p className="banner__title">
+							{t("banner.title")} {infoData[0].date}
+						</p>
 						<button
 							className="banner__close-btn"
-							onClick={removeBanner}
+							onClick={() => setIsVisible(false)}
 							data-hint-value={t("banner.close_btn_hint") + " 👇"}
 						>
 							{t("banner.close_btn")} <i className="fa-solid fa-xmark"></i>
 						</button>
 					</div>
 					<div className="banner__divider"></div>
-					<strong className="banner__info">{info[0].info}</strong>
-				</div>
+					<p className="banner__info">{infoData[0].info}</p>
+				</>
 			)}
-		</>
+		</div>
 	);
 };
 

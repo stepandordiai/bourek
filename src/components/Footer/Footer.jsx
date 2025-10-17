@@ -253,7 +253,7 @@ const Footer = () => {
 						</p>
 					</div>
 					<p>
-						{t("footer.website_created_by")}{" "}
+						Website created by{" "}
 						<a
 							className="footer__creator-link"
 							href="https://www.heeeyooo.studio/"

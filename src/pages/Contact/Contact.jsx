@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
+import { Helmet } from "react-helmet-async";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import locationIcon from "/icons/location.png";
@@ -12,9 +12,21 @@ import "./Contact.scss";
 const Contact = () => {
 	const { t } = useTranslation();
 
+	// Kolin
+	const addressUrl1 = "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9";
+	const mapOption1 =
+		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz";
+
+	// Cesky Brod
+	const addressUrl2 = "https://maps.app.goo.gl/Jew8NoioiT1w8vUE8";
+	const mapOption2 =
+		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37503.0678967374!2d14.860131349999993!3d50.07384145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adbf3a61443%3A0xccfd1bd77ac3cf3a!2zxIxlc2vDvSBCcm9kLCAyODIgMDEgxIxlc2vDvSBCcm9k!5e1!3m2!1sen!2scz!4v1744183535629!5m2!1sen!2scz";
+
+	const [filterMapSrc, setFilterMapSrc] = useState(1);
+
+	// TODO: FIX
 	useEffect(() => {
 		// Listener for multiple custom selectors
-
 		document.querySelectorAll(".custom-select").forEach((select) => {
 			const selectBtn = select.querySelector(".custom-select__btn");
 			const selectList = select.querySelector(".custom-select__list");
@@ -52,24 +64,9 @@ const Contact = () => {
 		});
 	}, []);
 
-	// Kolin
-	const addressUrl1 = "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9";
-	const mapOption1 =
-		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz";
-
-	// Cesky Brod
-	const addressUrl2 = "https://maps.app.goo.gl/Jew8NoioiT1w8vUE8";
-	const mapOption2 =
-		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37503.0678967374!2d14.860131349999993!3d50.07384145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adbf3a61443%3A0xccfd1bd77ac3cf3a!2zxIxlc2vDvSBCcm9kLCAyODIgMDEgxIxlc2vDvSBCcm9k!5e1!3m2!1sen!2scz!4v1744183535629!5m2!1sen!2scz";
-
-	const [filterMapSrc, setFilterMapSrc] = useState("option1");
-
-	const toggleMapSrc = (option) => {
-		setFilterMapSrc(option);
-	};
-
+	// TODO: FIX
 	useEffect(() => {
-		if (filterMapSrc === "option2") {
+		if (filterMapSrc === 2) {
 			document.querySelector(".active-bg").classList.add("active-bg--active");
 		} else {
 			document
@@ -79,10 +76,11 @@ const Contact = () => {
 	}, [filterMapSrc]);
 
 	const dateNow = dayjs();
-	const formatedDate = dateNow.format("YYYY-MM-DD");
 	const hoursNow = dateNow.hour();
-	const formatedHours = hoursNow < 10 ? "0" + hoursNow : hoursNow;
 	const minutesNow = dateNow.minute();
+
+	const formatedDate = dateNow.format("YYYY-MM-DD");
+	const formatedHours = hoursNow < 10 ? "0" + hoursNow : hoursNow;
 	const formatedMinutes = minutesNow < 10 ? "0" + minutesNow : minutesNow;
 
 	return (
@@ -102,7 +100,7 @@ const Contact = () => {
 						<p className="contact-details__title">Kolín</p>
 						<ul
 							className={
-								filterMapSrc === "option1"
+								filterMapSrc === 1
 									? "contact__list contact__list--active"
 									: "contact__list"
 							}
@@ -132,7 +130,7 @@ const Contact = () => {
 						<p className="contact-details__title">Český Brod</p>
 						<ul
 							className={
-								filterMapSrc === "option2"
+								filterMapSrc === 2
 									? "contact__list contact__list--active"
 									: "contact__list"
 							}
@@ -165,16 +163,14 @@ const Contact = () => {
 									{t("contacts.map_title")}
 								</h2>
 								<div className="map-wrapper__header-container">
-									<button onClick={() => toggleMapSrc("option1")}>Kolín</button>
-									<button onClick={() => toggleMapSrc("option2")}>
-										Český Brod
-									</button>
+									<button onClick={() => setFilterMapSrc(1)}>Kolín</button>
+									<button onClick={() => setFilterMapSrc(2)}>Český Brod</button>
 									<div className="active-bg"></div>
 								</div>
 							</div>
 							<iframe
 								className="contact__google-map"
-								src={filterMapSrc === "option1" ? mapOption1 : mapOption2}
+								src={filterMapSrc === 1 ? mapOption1 : mapOption2}
 								loading="lazy"
 							></iframe>
 						</div>

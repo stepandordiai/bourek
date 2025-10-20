@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import profileIcon from "/icons/profile-icon.png";
 import "./OurTeam.scss";

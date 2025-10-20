@@ -11,9 +11,6 @@ import "./Footer.scss";
 const Footer = () => {
 	const { t } = useTranslation();
 
-	const inactiveFooterLink = "footer__link";
-	const activeFooterLink = "footer__link footer__link--active";
-
 	// Kolin
 	const addressUrl1 = "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9";
 
@@ -35,7 +32,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/"
 							>
@@ -45,7 +42,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/contact"
 							>
@@ -53,17 +50,17 @@ const Footer = () => {
 							</NavLink>
 						</li>
 						<li>
-							<HashLink className={"footer__link"} to="/#services">
+							<HashLink className="footer__link" to="/#services">
 								{t("services_title")}
 							</HashLink>
 						</li>
 						<li>
-							<HashLink className={"footer__link"} to="/#testimonials">
+							<HashLink className="footer__link" to="/#testimonials">
 								{t("testimonials_title")}
 							</HashLink>
 						</li>
 						<li>
-							<HashLink className={"footer__link"} to="/#faq">
+							<HashLink className="footer__link" to="/#faq">
 								{t("faq_title")}
 							</HashLink>
 						</li>
@@ -75,7 +72,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/offer"
 							>
@@ -85,7 +82,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/price-list"
 							>
@@ -95,7 +92,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/our-team"
 							>
@@ -105,7 +102,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/clinic-gallery"
 							>
@@ -120,7 +117,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/surgery"
 							>
@@ -130,7 +127,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/starvac"
 							>
@@ -140,7 +137,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/cellulite"
 							>
@@ -150,7 +147,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/lymphatic"
 							>
@@ -160,7 +157,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/laser"
 							>
@@ -170,7 +167,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/electrotherapy"
 							>
@@ -180,7 +177,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/ltv"
 							>
@@ -232,7 +229,7 @@ const Footer = () => {
 						<li>
 							<NavLink
 								className={({ isActive }) =>
-									isActive ? activeFooterLink : inactiveFooterLink
+									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
 								to="/personal-data"
 							>

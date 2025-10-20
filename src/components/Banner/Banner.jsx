@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import axios from "axios";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import "./Banner.scss";
 
 const Banner = () => {
@@ -32,7 +32,7 @@ const Banner = () => {
 	if (error) return;
 
 	return (
-		<div className={isVisible ? "banner" : "banner banner--hide"}>
+		<div className={`banner ${isVisible ? "" : "banner--hide"}`}>
 			{!loading && (
 				<>
 					<div className="banner-header">

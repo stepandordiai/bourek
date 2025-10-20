@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import FAQ from "../../components/FAQ/FAQ";

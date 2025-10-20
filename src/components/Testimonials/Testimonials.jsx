@@ -86,50 +86,14 @@ const Testimonials = () => {
 											{testimonial.date}
 										</p>
 									</div>
-									<img
-										src={googleIcon}
-										width={40}
-										height={40}
-										alt=""
-										loading="lazy"
-									/>
+									<img src={googleIcon} width={40} height={40} alt="" />
 								</div>
 								<div className="testimonials-card__rating">
-									<img
-										src={starIcon}
-										width={20}
-										height={20}
-										alt=""
-										loading="lazy"
-									/>
-									<img
-										src={starIcon}
-										width={20}
-										height={20}
-										alt=""
-										loading="lazy"
-									/>
-									<img
-										src={starIcon}
-										width={20}
-										height={20}
-										alt=""
-										loading="lazy"
-									/>
-									<img
-										src={starIcon}
-										width={20}
-										height={20}
-										alt=""
-										loading="lazy"
-									/>
-									<img
-										src={starIcon}
-										width={20}
-										height={20}
-										alt=""
-										loading="lazy"
-									/>
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
+									<img src={starIcon} width={20} height={20} alt="" />
 								</div>
 								<p>{testimonial.review}</p>
 							</div>

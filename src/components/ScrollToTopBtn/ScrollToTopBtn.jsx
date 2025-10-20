@@ -1,7 +1,18 @@
+import { useEffect, useState } from "react";
 import upArrowIcon from "/icons/up-arrow.png";
 import "./ScrollToTopBtn.scss";
 
 const ScrollToTopBtn = () => {
+	const [visible, setVisible] = useState(false);
+
+	const handleBtnOnScroll = () => {
+		if (window.scrollY >= 500) {
+			setVisible(true);
+		} else {
+			setVisible(false);
+		}
+	};
+
 	function scrollOnClick() {
 		window.scrollTo({
 			top: 0,
@@ -9,21 +20,18 @@ const ScrollToTopBtn = () => {
 		});
 	}
 
-	addEventListener("scroll", () => {
-		if (window.scrollY >= 500) {
-			document
-				.querySelector(".to-top-btn")
-				.classList.add("to-top-btn--visible");
-		} else {
-			document
-				.querySelector(".to-top-btn")
-				.classList.remove("to-top-btn--visible");
-		}
-	});
+	useEffect(() => {
+		window.addEventListener("scroll", handleBtnOnScroll);
+
+		return () => window.removeEventListener("scroll", handleBtnOnScroll);
+	}, []);
 
 	return (
-		<button className="to-top-btn" onClick={scrollOnClick}>
-			<img src={upArrowIcon} width={20} height={20} alt="" loading="lazy" />
+		<button
+			className={`to-top-btn ${visible ? "to-top-btn--visible" : ""}`}
+			onClick={scrollOnClick}
+		>
+			<img src={upArrowIcon} width={20} height={20} alt="" />
 		</button>
 	);
 };

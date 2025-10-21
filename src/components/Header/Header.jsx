@@ -5,7 +5,6 @@ import navLinksData from "./../../data/nav-links-data.json";
 import React from "react";
 import LngSelect from "../LngSelect/LngSelect";
 import facebookIcon from "/icons/facebook.png";
-import instagramIcon from "/icons/instagram.png";
 import logo from "/logo/bourek.png";
 import downArrowIcon from "/icons/down-arrow.png";
 import "./Header.scss";
@@ -207,24 +206,14 @@ const Header = () => {
 							<p style={{ color: "var(--blue-clr)" }}>Český Brod</p>
 							<a href="tel:+420601369198">+420 601 369 198</a>
 						</div>
-						<div className="burger-menu__footer-link-container">
-							<a
-								className="burger-menu__footer-link"
-								title="Instagram"
-								href="https://www.facebook.com/profile.php?id=61575622597789"
-								target="_blank"
-							>
-								<img width={20} height={20} src={instagramIcon} alt="" />
-							</a>
-							<a
-								className="burger-menu__footer-link"
-								title="Facebook"
-								href="https://www.facebook.com/profile.php?id=61575622597789"
-								target="_blank"
-							>
-								<img width={20} height={20} src={facebookIcon} alt="" />
-							</a>
-						</div>
+						<a
+							className="burger-menu__footer-link"
+							title="Facebook"
+							href="https://www.facebook.com/profile.php?id=61575622597789"
+							target="_blank"
+						>
+							<img width={20} height={20} src={facebookIcon} alt="" />
+						</a>
 					</footer>
 				</div>
 			</div>

@@ -286,11 +286,6 @@
 	align-items: flex-end;
 }
 
-.burger-menu__footer-link-container {
-	display: flex;
-	gap: 10px;
-}
-
 .burger-menu__footer-link {
 	@include grid-center;
 	width: 40px;

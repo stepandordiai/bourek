@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import navLinksData from "./../../data/nav-links-data.json";
+import React from "react";
 import LngSelect from "../LngSelect/LngSelect";
 import facebookIcon from "/icons/facebook.png";
 import instagramIcon from "/icons/instagram.png";
@@ -12,27 +14,27 @@ const Header = () => {
 	const { t } = useTranslation();
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [firstMenuDropdown, setFirstMenuDropdown] = useState(false);
-	const [secondMenuDropdown, setSecondMenuDropdown] = useState(false);
+
+	const [menuDropdown, setMenuDropdown] = useState(
+		new Array(navLinksData.length).fill(false)
+	);
 
 	const toggleBurgerBtn = () => {
 		setIsMenuOpen((prev) => !prev);
-		setFirstMenuDropdown((prev) => (prev ? false : prev));
-		setSecondMenuDropdown((prev) => (prev ? false : prev));
+		setMenuDropdown((prev) => prev.map(() => false));
 	};
 
-	const toggleFirstMenuDropdown = () => {
-		setFirstMenuDropdown((prev) => !prev);
-	};
-
-	const toggleSecondMenuDropdown = () => {
-		setSecondMenuDropdown((prev) => !prev);
+	const toggleMenuDropdown = (index) => {
+		setMenuDropdown((prev) => {
+			const updated = [...prev];
+			updated[index] = !updated[index];
+			return updated;
+		});
 	};
 
 	const closeMenu = () => {
 		setIsMenuOpen(false);
-		setFirstMenuDropdown((prev) => (prev ? false : prev));
-		setSecondMenuDropdown((prev) => (prev ? false : prev));
+		setMenuDropdown((prev) => prev.map(() => false));
 	};
 
 	// Close menu on Esc
@@ -45,7 +47,7 @@ const Header = () => {
 
 		document.addEventListener("keydown", closeMenuOnEsc);
 
-		return () => document.removeEventListener("keydown", closeMenu);
+		return () => document.removeEventListener("keydown", closeMenuOnEsc);
 	}, []);
 
 	return (
@@ -57,156 +59,55 @@ const Header = () => {
 				</NavLink>
 				<LngSelect />
 				<nav className="header__list">
-					<div>
-						<NavLink
-							className={({ isActive }) =>
-								`nav__link ${isActive ? "nav__link--active" : ""}`
-							}
-							to="/"
-						>
-							{t("home_title")}
-						</NavLink>
-					</div>
-					<div className="nav__custom-select">
-						<div className="nav__custom-select-item">
-							<span>{t("about_us_title")}</span>
-							<span className="nav__dd-btn-icon">
-								<img width={20} height={20} src={downArrowIcon} alt="" />
-							</span>
-						</div>
-						<div className="nav__custom-options">
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/offer"
-							>
-								{t("offer_title")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/price-list"
-							>
-								{t("price_list_title")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/our-team"
-							>
-								{t("our_team_title")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/clinic-gallery"
-							>
-								{t("clinic_gallery_title")}
-							</NavLink>
-						</div>
-					</div>
-					<div className="nav__custom-select">
-						<div className="nav__custom-select-item">
-							<span>{t("services_title")}</span>
-							<span className="nav__dd-btn-icon">
-								<img width={20} height={20} src={downArrowIcon} alt="" />
-							</span>
-						</div>
-						<div className="nav__custom-options">
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/surgery"
-							>
-								{t("service_1")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/starvac"
-							>
-								{t("service_2")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/cellulite"
-							>
-								{t("service_3")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/lymphatic"
-							>
-								{t("service_4")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/laser"
-							>
-								{t("service_5")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/electrotherapy"
-							>
-								{t("service_6")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									`nav__link-option ${
-										isActive ? "nav__link-option--active" : ""
-									}`
-								}
-								to="/ltv"
-							>
-								{t("service_7")}
-							</NavLink>
-						</div>
-					</div>
-					<div>
-						<NavLink
-							className={({ isActive }) =>
-								`nav__link ${isActive ? "nav__link--active" : ""}`
-							}
-							to="/contact"
-						>
-							{t("contacts_title")}
-						</NavLink>
-					</div>
+					{navLinksData.map((link) => {
+						return (
+							<React.Fragment key={link.id}>
+								{!link.nestedLinks ? (
+									<div>
+										<NavLink
+											className={({ isActive }) =>
+												`nav__link ${isActive ? "nav__link--active" : ""}`
+											}
+											to={link.path}
+										>
+											{t(link.name)}
+										</NavLink>
+									</div>
+								) : (
+									<div className="nav__custom-select">
+										<div className="nav__custom-select-item">
+											<span>{t(link.name)}</span>
+											<span className="nav__dd-btn-icon">
+												<img
+													width={20}
+													height={20}
+													src={downArrowIcon}
+													alt=""
+												/>
+											</span>
+										</div>
+										<div className="nav__custom-options">
+											{link.nestedLinks.map((nestedLink) => {
+												return (
+													<NavLink
+														key={nestedLink.id}
+														className={({ isActive }) =>
+															`nav__link-option ${
+																isActive ? "nav__link-option--active" : ""
+															}`
+														}
+														to={`/${nestedLink.id}`}
+													>
+														{t(nestedLink.name)}
+													</NavLink>
+												);
+											})}
+										</div>
+									</div>
+								)}
+							</React.Fragment>
+						);
+					})}
 				</nav>
 				{/* burger-btn */}
 				<div onClick={toggleBurgerBtn} className="burger__container">
@@ -226,199 +127,78 @@ const Header = () => {
 					className={`burger-menu ${isMenuOpen ? "burger-menu--active" : ""}`}
 				>
 					<ul className="burger-menu__nav">
-						<li>
-							<NavLink
-								onClick={closeMenu}
-								className={({ isActive }) =>
-									`burger-menu__nav-link ${
-										isActive ? "burger-menu__nav-link--active" : ""
-									}`
-								}
-								to="/"
-							>
-								{t("home_title")}
-							</NavLink>
-						</li>
-						<li className="burger-menu__select">
-							<div
-								onClick={toggleFirstMenuDropdown}
-								className="burger-menu__select-title"
-							>
-								<span>{t("about_us_title")}</span>
-								<span
-									className={`burger-menu__dd-btn-icon ${
-										firstMenuDropdown ? "burger-menu__dd-btn-icon--active" : ""
-									}`}
-								>
-									<img width={40} height={40} src={downArrowIcon} alt="" />
-								</span>
-							</div>
-							<div
-								className={`burger-menu__dd-wrapper ${
-									firstMenuDropdown ? "burger-menu__dd-wrapper--active" : ""
-								}`}
-							>
-								<div className="burger-menu__dd">
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/offer"
-									>
-										{t("offer_title")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/price-list"
-									>
-										{t("price_list_title")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/our-team"
-									>
-										{t("our_team_title")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/clinic-gallery"
-									>
-										{t("clinic_gallery_title")}
-									</NavLink>
-								</div>
-							</div>
-						</li>
-						<li className="burger-menu__select">
-							<div
-								onClick={toggleSecondMenuDropdown}
-								className="burger-menu__select-title"
-							>
-								<span>{t("services_title")}</span>
-								<span
-									className={`burger-menu__dd-btn-icon ${
-										secondMenuDropdown ? "burger-menu__dd-btn-icon--active" : ""
-									}`}
-								>
-									<img width={40} height={40} src={downArrowIcon} alt="" />
-								</span>
-							</div>
-							<div
-								className={`burger-menu__dd-wrapper ${
-									secondMenuDropdown ? "burger-menu__dd-wrapper--active" : ""
-								}`}
-							>
-								<div className="burger-menu__dd">
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/surgery"
-									>
-										{t("service_1")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/starvac"
-									>
-										{t("service_2")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/cellulite"
-									>
-										{t("service_3")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/lymphatic"
-									>
-										{t("service_4")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/laser"
-									>
-										{t("service_5")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/electrotherapy"
-									>
-										{t("service_6")}
-									</NavLink>
-									<NavLink
-										onClick={closeMenu}
-										className={({ isActive }) =>
-											`burger-menu__dd-link ${
-												isActive ? "burger-menu__dd-link--active" : ""
-											}`
-										}
-										to="/ltv"
-									>
-										{t("service_7")}
-									</NavLink>
-								</div>
-							</div>
-						</li>
-						<li>
-							<NavLink
-								onClick={closeMenu}
-								className={({ isActive }) =>
-									`burger-menu__nav-link ${
-										isActive ? "burger-menu__nav-link--active" : ""
-									}`
-								}
-								to="/contact"
-							>
-								{t("contacts_title")}
-							</NavLink>
-						</li>
+						{navLinksData.map((link, index) => {
+							return (
+								<React.Fragment key={link.id}>
+									{!link.nestedLinks ? (
+										<li>
+											<NavLink
+												onClick={closeMenu}
+												className={({ isActive }) =>
+													`burger-menu__nav-link ${
+														isActive ? "burger-menu__nav-link--active" : ""
+													}`
+												}
+												to={link.path}
+											>
+												{t(link.name)}
+											</NavLink>
+										</li>
+									) : (
+										<li className="burger-menu__select">
+											<div
+												onClick={() => toggleMenuDropdown(index)}
+												className="burger-menu__select-title"
+											>
+												<span>{t(link.name)}</span>
+												<span
+													className={`burger-menu__dd-btn-icon ${
+														menuDropdown[index]
+															? "burger-menu__dd-btn-icon--active"
+															: ""
+													}`}
+												>
+													<img
+														width={40}
+														height={40}
+														src={downArrowIcon}
+														alt=""
+													/>
+												</span>
+											</div>
+											<div
+												className={`burger-menu__dd-wrapper ${
+													menuDropdown[index]
+														? "burger-menu__dd-wrapper--active"
+														: ""
+												}`}
+											>
+												<div className="burger-menu__dd">
+													{link.nestedLinks.map((nestedLink) => {
+														return (
+															<NavLink
+																key={nestedLink.id}
+																onClick={closeMenu}
+																className={({ isActive }) =>
+																	`burger-menu__dd-link ${
+																		isActive
+																			? "burger-menu__dd-link--active"
+																			: ""
+																	}`
+																}
+																to={`/${nestedLink.id}`}
+															>
+																{t(nestedLink.name)}
+															</NavLink>
+														);
+													})}
+												</div>
+											</div>
+										</li>
+									)}
+								</React.Fragment>
+							);
+						})}
 					</ul>
 					<footer className="burger-menu__footer">
 						<div className="burger-menu__contact">

@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import { Helmet } from "react-helmet-async";
+import navLinksData from "./../../data/nav-links-data.json";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import locationIcon from "/icons/location.png";
@@ -23,6 +24,9 @@ const Contact = () => {
 		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37503.0678967374!2d14.860131349999993!3d50.07384145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adbf3a61443%3A0xccfd1bd77ac3cf3a!2zxIxlc2vDvSBCcm9kLCAyODIgMDEgxIxlc2vDvSBCcm9k!5e1!3m2!1sen!2scz!4v1744183535629!5m2!1sen!2scz";
 
 	const [filterMapSrc, setFilterMapSrc] = useState(1);
+
+	const services =
+		navLinksData.find((link) => link.id === 3)?.nestedLinks || [];
 
 	// TODO: FIX
 	useEffect(() => {
@@ -227,48 +231,16 @@ const Contact = () => {
 										>
 											{t("contacts.select_btn")}
 										</li>
-										<li
-											className="custom-select__option"
-											data-value={t("service_1")}
-										>
-											{t("service_1")}
-										</li>
-										<li
-											className="custom-select__option"
-											data-value={t("service_2")}
-										>
-											{t("service_2")}
-										</li>
-										<li
-											className="custom-select__option"
-											data-value={t("service_3")}
-										>
-											{t("service_3")}
-										</li>
-										<li
-											className="custom-select__option"
-											data-value={t("service_4")}
-										>
-											{t("service_4")}
-										</li>
-										<li
-											className="custom-select__option"
-											data-value={t("service_5")}
-										>
-											{t("service_5")}
-										</li>
-										<li
-											className="custom-select__option"
-											data-value={t("service_6")}
-										>
-											{t("service_6")}
-										</li>
-										<li
-											className="custom-select__option"
-											data-value={t("service_7")}
-										>
-											{t("service_7")}
-										</li>
+										{services.map((service) => {
+											return (
+												<li
+													className="custom-select__option"
+													data-value={t(service.name)}
+												>
+													{t(service.name)}
+												</li>
+											);
+										})}
 									</ul>
 									<input
 										className="custom-select__input"

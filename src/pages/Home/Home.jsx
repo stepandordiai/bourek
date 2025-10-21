@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import navLinksData from "./../../data/nav-links-data.json";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import FAQ from "../../components/FAQ/FAQ";
@@ -53,55 +54,28 @@ const Home = () => {
 				<div className="home__services" id="services">
 					<h2 className="home__services-title">{t("services_title")}</h2>
 					<div className="home__grid-container">
-						<div className="home__service-card">
-							<p>{t("service_1")}</p>
-							<NavLink className="grid-container__link" to="/surgery">
-								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
-							</NavLink>
-						</div>
-						<div className="home__service-card">
-							<p>{t("service_2")}</p>
-							<NavLink className="grid-container__link" to="/starvac">
-								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
-							</NavLink>
-						</div>
-						<div className="home__service-card">
-							<p>{t("service_3")}</p>
-							<NavLink className="grid-container__link" to="/cellulite">
-								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
-							</NavLink>
-						</div>
-						<div className="home__service-card">
-							<p>{t("service_4")}</p>
-							<NavLink className="grid-container__link" to="/lymphatic">
-								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
-							</NavLink>
-						</div>
-						<div className="home__service-card">
-							<p>{t("service_5")}</p>
-							<NavLink className="grid-container__link" to="/laser">
-								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
-							</NavLink>
-						</div>
-						<div className="home__service-card">
-							<p>{t("service_6")}</p>
-							<NavLink className="grid-container__link" to="/electrotherapy">
-								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
-							</NavLink>
-						</div>
-						<div className="home__service-card">
-							<p>{t("service_7")}</p>
-							<NavLink className="grid-container__link" to="/ltv">
-								<span>{t("home.find_out_more")}</span>
-								<img src={arrowUpperRightIcon} width={20} height={20} alt="" />
-							</NavLink>
-						</div>
+						{navLinksData
+							.filter((link) => link.id === 3)
+							.flatMap((link) => link.nestedLinks)
+							.map((link) => {
+								return (
+									<div className="home__service-card">
+										<p>{t(link.name)}</p>
+										<NavLink
+											className="grid-container__link"
+											to={`/${link.id}`}
+										>
+											<span>{t("home.find_out_more")}</span>
+											<img
+												src={arrowUpperRightIcon}
+												width={20}
+												height={20}
+												alt=""
+											/>
+										</NavLink>
+									</div>
+								);
+							})}
 					</div>
 				</div>
 				<Testimonials />

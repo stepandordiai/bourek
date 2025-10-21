@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
-import CustomDivider from "../CustomDivider/CustomDivider";
+import navLinksData from "./../../data/nav-links-data.json";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import CustomDivider from "../CustomDivider/CustomDivider";
 import logo from "/logo/bourek.png";
 import locationIcon from "/icons/location.png";
 import phoneIcon from "/icons/telephone.png";
@@ -17,6 +18,12 @@ const Footer = () => {
 	// Cesky Brod
 	const addressUrl2 = "https://maps.app.goo.gl/Jew8NoioiT1w8vUE8";
 
+	const aboutUsLinks =
+		navLinksData.find((link) => link.id === 2)?.nestedLinks || [];
+
+	const services =
+		navLinksData.find((link) => link.id === 3)?.nestedLinks || [];
+
 	return (
 		<footer className="footer">
 			<NavLink className="footer__logo" to="/">
@@ -29,26 +36,22 @@ const Footer = () => {
 				<div>
 					<p>{t("footer.nav_title")}</p>
 					<ul>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/"
-							>
-								{t("home_title")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/contact"
-							>
-								{t("contacts_title")}
-							</NavLink>
-						</li>
+						{navLinksData
+							.filter((link) => !link.nestedLinks)
+							.map((link) => {
+								return (
+									<li key={link.id}>
+										<NavLink
+											className={({ isActive }) =>
+												`footer__link ${isActive ? "footer__link--active" : ""}`
+											}
+											to={link.path}
+										>
+											{t(link.name)}
+										</NavLink>
+									</li>
+								);
+							})}
 						<li>
 							<HashLink className="footer__link" to="/#services">
 								{t("services_title")}
@@ -69,121 +72,39 @@ const Footer = () => {
 				<div>
 					<p>{t("about_us_title")}</p>
 					<ul>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/offer"
-							>
-								{t("offer_title")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/price-list"
-							>
-								{t("price_list_title")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/our-team"
-							>
-								{t("our_team_title")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/clinic-gallery"
-							>
-								{t("clinic_gallery_title")}
-							</NavLink>
-						</li>
+						{aboutUsLinks.map((link) => {
+							return (
+								<li key={link.id}>
+									<NavLink
+										className={({ isActive }) =>
+											`footer__link ${isActive ? "footer__link--active" : ""}`
+										}
+										to={`/${link.id}`}
+									>
+										{t(link.name)}
+									</NavLink>
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 				<div>
 					<p>{t("services_title")}</p>
 					<ul>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/surgery"
-							>
-								{t("service_1")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/starvac"
-							>
-								{t("service_2")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/cellulite"
-							>
-								{t("service_3")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/lymphatic"
-							>
-								{t("service_4")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/laser"
-							>
-								{t("service_5")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/electrotherapy"
-							>
-								{t("service_6")}
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									`footer__link ${isActive ? "footer__link--active" : ""}`
-								}
-								to="/ltv"
-							>
-								{t("service_7")}
-							</NavLink>
-						</li>
+						{services.map((service) => {
+							return (
+								<li key={service.id}>
+									<NavLink
+										className={({ isActive }) =>
+											`footer__link ${isActive ? "footer__link--active" : ""}`
+										}
+										to={`/${service.id}`}
+									>
+										{t(service.name)}
+									</NavLink>
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 				<div>

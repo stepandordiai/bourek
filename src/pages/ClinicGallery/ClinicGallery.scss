@@ -1,42 +1,88 @@
-.clinic-gallery__wrapper {
-    // columns: 3;
-    // gap: 40px;
-    text-align: center;
-    padding: 40px;
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    color: var(--blue-clr);
+.clinic-gallery__masonry {
+	columns: 3;
+	padding: 40px 40px 0 40px;
+	gap: 40px;
 
-    // img {
-    //     margin-bottom: 40px;
-    //     width: 100%;
-    // }
+	img {
+		margin-bottom: 40px;
+	}
 }
 
-// @media (max-width: 1000px) {
-//     .clinic-gallery__wrapper {
-//         columns: 2;
-//     }
-// }
+.img-slider {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100dvh;
+	background: #fff;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
 
-// @media (max-width: 900px) {
-//     .clinic-gallery__wrapper {
-//         columns: 2;
-//         gap: 20px;
-//         padding: 20px 20px 0;
+	img {
+		max-height: 100%;
+		object-fit: contain;
+	}
+}
 
-//         img {
-//             margin-bottom: 20px;
-//         }
-//     }
-// }
+.img-slider--active {
+	display: flex;
+}
 
-// @media (max-width: 600px) {
-//     .clinic-gallery__wrapper {
-//         gap: 10px;
-//         padding: 10px 10px 0;
+.img-slider__pagination {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
 
-//         img {
-//             margin-bottom: 10px;
-//         }
-//     }
-// }
+.img-slider__close-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.img-slider__prev-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 20px;
+	font-size: 3rem;
+}
+
+.img-slider__next-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	font-size: 3rem;
+}
+
+@media screen and (width <= 1024px) {
+	.clinic-gallery__masonry {
+		gap: 20px;
+		padding: 20px 20px 0 20px;
+
+		img {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media screen and (width <= 808px) {
+	.clinic-gallery__masonry {
+		columns: 2;
+	}
+}
+
+@media screen and (width <= 600px) {
+	.clinic-gallery__masonry {
+		gap: 10px;
+		padding: 10px 10px 0 10px;
+
+		img {
+			margin-bottom: 10px;
+		}
+	}
+}

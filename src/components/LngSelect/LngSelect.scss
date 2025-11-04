@@ -1,34 +1,34 @@
 @use "./../../mixins" as *;
 
-.lang-select {
+.lng-select {
 	position: relative;
 	z-index: 99;
 }
 
-.lang-select__btn {
+.lng-select__btn {
 	@include flex-center;
 	column-gap: 5px;
 }
 
-.lang-select__btn--active {
+.lng-select__btn--active {
 	background: var(--accent-clr);
 }
 
-.lang-select__btn-value {
+.lng-select__btn-value {
 	pointer-events: none;
 }
 
-.lang-select__btn-icon {
+.lng-select__btn-icon {
 	@include grid-center;
 	pointer-events: none;
 	transition: rotate 0.3s;
 }
 
-.lang-select__btn-icon--active {
+.lng-select__btn-icon--active {
 	rotate: 180deg;
 }
 
-.lang-select__list {
+.lng-select__list {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -46,12 +46,12 @@
 	transition: opacity 0.3s;
 }
 
-.lang-select__list--visible {
+.lng-select__list--visible {
 	opacity: 1;
 	pointer-events: all;
 }
 
-.lang-select__option {
+.lng-select__option {
 	@include flex-center;
 	column-gap: 5px;
 	background: transparent;
@@ -67,11 +67,11 @@
 	}
 }
 
-.lang-select__option--active {
+.lng-select__option--active {
 	background: var(--blue-clr);
 	color: #fff !important;
 }
 
-.lang-select__input {
+.lng-select__input {
 	display: none;
 }

@@ -1,116 +1,96 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import i18n from "i18next";
 import downArrowIcon from "/icons/down-arrow.png";
 import "./LngSelect.scss";
 
+const lngData = [
+	{
+		code: "cs",
+		name: "CZ",
+		iconSrc:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png",
+	},
+	{
+		code: "uk",
+		name: "UA",
+		iconSrc:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png",
+	},
+	{
+		code: "en",
+		name: "EN",
+		iconSrc:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png",
+	},
+];
+
+const getLngCode = () => localStorage.getItem("i18nextLng") || "cs";
+
 const LanguageSelect = () => {
+	const [lngSelectActive, setLngSelectActive] = useState(false);
+	const [selectedLng, setSelectedLng] = useState(
+		lngData.find((lng) => lng.code === getLngCode())
+	);
+
+	const lngSelect = useRef(null);
+
+	const toggleLngSelect = () => setLngSelectActive((prev) => !prev);
+
+	const handleLngSelectOption = (lng) => {
+		i18n.changeLanguage(lng.code);
+		setLngSelectActive(false);
+		setSelectedLng(lng);
+	};
+
 	useEffect(() => {
-		// Function that change language
-		const handleChangeLanguage = (lng) => {
-			i18n.changeLanguage(lng);
+		const handleClickNotOnLngSelect = (e) => {
+			if (lngSelect.current && !lngSelect.current.contains(e.target)) {
+				setLngSelectActive(false);
+			}
 		};
 
-		document.querySelectorAll(".lang-select").forEach((select) => {
-			const selectBtn = select.querySelector(".lang-select__btn");
-			const selectList = select.querySelector(".lang-select__list");
-			const selectOptions = selectList.querySelectorAll(".lang-select__option");
+		document.addEventListener("click", handleClickNotOnLngSelect);
 
-			selectBtn.addEventListener("click", () => {
-				selectList.classList.toggle("lang-select__list--visible");
-				selectBtn.classList.toggle("lang-select__btn--active");
-				document
-					.querySelector(".lang-select__btn-icon")
-					.classList.toggle("lang-select__btn-icon--active");
-			});
-
-			selectOptions.forEach((option) => {
-				option.addEventListener("click", (e) => {
-					e.stopPropagation();
-					handleChangeLanguage(option.dataset.value);
-					selectBtn.classList.remove("lang-select__btn--active");
-					selectList.classList.remove("lang-select__list--visible");
-					document
-						.querySelector(".lang-select__btn-icon")
-						.classList.remove("lang-select__btn-icon--active");
-				});
-			});
-
-			document.addEventListener("click", (e) => {
-				if (e.target !== selectBtn) {
-					selectBtn.classList.remove("lang-select__btn--active");
-					selectList.classList.remove("lang-select__list--visible");
-					document
-						.querySelector(".lang-select__btn-icon")
-						.classList.remove("lang-select__btn-icon--active");
-				}
-			});
-		});
+		return () =>
+			document.removeEventListener("click", handleClickNotOnLngSelect);
 	}, []);
 
-	const lngStorage = localStorage.getItem("i18nextLng") || "cs";
-
-	let selectBtnTxt = "CZ";
-
-	switch (lngStorage) {
-		case "cs":
-			selectBtnTxt = "CZ";
-			break;
-		case "uk":
-			selectBtnTxt = "UA";
-			break;
-		case "en":
-			selectBtnTxt = "EN";
-			break;
-	}
-
-	const inactiveLngOption = "lang-select__option";
-	const activeLngOption = "lang-select__option lang-select__option--active";
-
 	return (
-		<div className="lang-select">
-			<button className="lang-select__btn">
-				<span className="lang-select__btn-value">{selectBtnTxt}</span>
-				<span className="lang-select__btn-icon">
+		<div ref={lngSelect} className="lng-select">
+			<button
+				onClick={toggleLngSelect}
+				className={`lng-select__btn ${
+					lngSelectActive ? "lng-select__btn--active" : ""
+				}`}
+			>
+				<span className="lng-select__btn-value">{selectedLng.name}</span>
+				<span
+					className={`lng-select__btn-icon ${
+						lngSelectActive ? "lng-select__btn-icon--active" : ""
+					}`}
+				>
 					<img width={20} height={20} src={downArrowIcon} alt="" />
 				</span>
 			</button>
-			<ul className="lang-select__list">
-				<li
-					className={lngStorage === "cs" ? activeLngOption : inactiveLngOption}
-					data-value="cs"
-				>
-					<span>CZ</span>
-					<img
-						width={20}
-						height={20}
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
-						alt=""
-					/>
-				</li>
-				<li
-					className={lngStorage === "uk" ? activeLngOption : inactiveLngOption}
-					data-value="uk"
-				>
-					<span>UA</span>
-					<img
-						width={20}
-						height={20}
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
-						alt=""
-					/>
-				</li>
-				<li
-					className={lngStorage === "en" ? activeLngOption : inactiveLngOption}
-					data-value="en"
-				>
-					<span>EN</span>
-					<img
-						width={20}
-						height={20}
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
-						alt=""
-					/>
-				</li>
+			<ul
+				className={`lng-select__list ${
+					lngSelectActive ? "lng-select__list--visible" : ""
+				}`}
+			>
+				{lngData.map((lng) => {
+					return (
+						<li
+							key={lng.code}
+							onClick={() => handleLngSelectOption(lng)}
+							className={`lng-select__option ${
+								lng === selectedLng ? "lng-select__option--active" : ""
+							}`}
+						>
+							<span>{lng.name}</span>
+							<img width={20} height={20} src={lng.iconSrc} alt="" />
+						</li>
+					);
+				})}
 			</ul>
 		</div>
 	);

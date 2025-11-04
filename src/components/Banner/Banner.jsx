@@ -26,7 +26,7 @@ const Banner = () => {
 			}
 		};
 
-		getInfoData(4000);
+		getInfoData(3000);
 	}, []);
 
 	if (error) return;

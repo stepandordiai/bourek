@@ -7,6 +7,7 @@
 	"offer_title": "What we offer",
 	"our_team_title": "Our team",
 	"clinic_gallery_title": "Clinic gallery",
+	"onlineAppointmentTitle": "Online appointment",
 	"testimonials_title": "What our customers say",
 	"faq_title": "Frequently Asked Questions",
 	"service_1": "Surgery",
@@ -18,7 +19,7 @@
 	"service_7": "Individual physiotherapy",
 	"personal_data_title": "Personal data",
 	"testimonials_btn": "Write a review",
-	"appointment_title": "Make an appointment",
+	"appointment_title": "Book an appointment",
 	"page_not_found": "Page not found",
 
 	"banner": {
@@ -231,7 +232,7 @@
 		"map_title": "Where we are"
 	},
 
-	"onlineServices": {
+	"onlineAppointment": {
 		"orClick": "or click"
 	},
 

@@ -1,4 +1,4 @@
-.online-services__ul {
+.online-appointment__ul {
 	li {
 		list-style: disc;
 	}
@@ -8,13 +8,13 @@
 	}
 }
 
-.online-services__wrapper {
+.online-appointment__wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
 }
 
-.online-services__container {
+.online-appointment__container {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -34,7 +34,7 @@
 	border-radius: 10px;
 }
 
-.online-services__link {
+.online-appointment__link {
 	@extend .link-btn-basic;
 	width: max-content;
 	transition: background-color 0.3s;
@@ -44,14 +44,14 @@
 	}
 }
 
-.online-services__ol {
+.online-appointment__ol {
 	::marker {
 		font-weight: 600;
 	}
 }
 
 @media screen and (width < 808px) {
-	.online-services__wrapper {
+	.online-appointment__wrapper {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }

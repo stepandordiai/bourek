@@ -34,7 +34,7 @@ const Home = () => {
 								<a className="home__link" href="#services">
 									{t("services_title")}
 								</a>
-								<NavLink className="home__link" to="/online-services">
+								<NavLink className="home__link" to="/online-appointment">
 									{t("appointment_title")}
 								</NavLink>
 							</div>

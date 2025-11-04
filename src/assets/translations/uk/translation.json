@@ -7,6 +7,7 @@
 	"offer_title": "Що ми пропонуємо",
 	"our_team_title": "Наша команда",
 	"clinic_gallery_title": "Галерея клініки",
+	"onlineAppointmentTitle": "Онлайн-запис",
 	"testimonials_title": "Що кажуть наші клієнти",
 	"faq_title": "Поширені запитання",
 	"service_1": "Хірургія",
@@ -231,7 +232,7 @@
 		"map_title": "Де ми знаходимось"
 	},
 
-	"onlineServices": {
+	"onlineAppointment": {
 		"orClick": "або натисніть"
 	},
 

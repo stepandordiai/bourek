@@ -107,7 +107,7 @@ const Header = () => {
 							</React.Fragment>
 						);
 					})}
-					<NavLink className="header__nav-link" to="/online-services">
+					<NavLink className="header__nav-link" to="/online-appointment">
 						{t("appointment_title")}
 					</NavLink>
 				</nav>

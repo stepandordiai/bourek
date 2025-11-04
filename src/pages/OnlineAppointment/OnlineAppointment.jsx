@@ -5,31 +5,31 @@ import PageInfo from "../../components/PageInfo/PageInfo";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import qr1 from "/qr/with-login.png";
 import qr2 from "/qr/without-login.png";
-import "./OnlineServices.scss";
+import "./OnlineAppointment.scss";
 
-const OnlineServices = () => {
+const OnlineAppointment = () => {
 	const { t } = useTranslation();
 
 	return (
 		<>
 			<Helmet>
-				<title>Online services | Bourek</title>
+				<title>{t("onlineAppointmentTitle")} | Bourek</title>
 			</Helmet>
 			<main>
-				<PageTitle title="Online services" />
+				<PageTitle title={t("onlineAppointmentTitle")} />
 				<PageInfo>
 					<strong>Informace pro pacienty:</strong>
 					<p>
-						Pro naše pacienty zavádíme on-line služby, které po přihlášení
+						Pro naše pacienty zavádíme online služby, které po přihlášení
 						umožňují jednoduchý a bezpečný způsob komunikace s ordinací (místo
 						e-mailu a telefonu), vše na jednom místě, dostupné i mimo naše
 						ordinační hodiny. Pro přihlášení do tohoto systému a využití všech
-						on-line služeb je nutné mít u lékaře uložený kontaktní e-mail. Bez
-						přihlášení lze využít on-line služby pouze v rozsahu objednávání.
-						Prosíme pacienty, kteří chtějí využít on-line služby a nemají u nás
+						online služeb je nutné mít u lékaře uložený kontaktní e-mail. Bez
+						přihlášení lze využít online služby pouze v rozsahu objednávání.
+						Prosíme pacienty, kteří chtějí využít online služby a nemají u nás
 						dosud uložený e-mail o jeho urychlené doplnění.
 					</p>
-					<ul className="online-services__ul">
+					<ul className="online-appointment__ul">
 						<li>
 							Při objednávání prosím respektujte definované typy vyšetření – viz
 							výběr v objednávkovém formuláři
@@ -44,7 +44,7 @@ const OnlineServices = () => {
 							si svou objednávku předem sami
 						</li>
 					</ul>
-					<ul className="online-services__ul">
+					<ul className="online-appointment__ul">
 						<li style={{ listStyle: "disc" }}>
 							Pokud se nemůžete dostavit na plánovanou návštěvu, prosím zrušte
 							si svou objednávku předem sami
@@ -55,19 +55,19 @@ const OnlineServices = () => {
 						</li>
 					</ul>
 					<CustomDivider />
-					<div className="online-services__wrapper">
-						<div className="online-services__container">
+					<div className="online-appointment__wrapper">
+						<div className="online-appointment__container">
 							<strong>
-								Pokud u nás máte email a chcete plně využít on-line služby,
+								Pokud u nás máte email a chcete plně využít online služby,
 								použijte:
 							</strong>
 							<div style={{ width: "min-content", alignSelf: "flex-end" }}>
 								<img src={qr1} alt="" />
 								<p style={{ textAlign: "center" }}>
-									{t("onlineServices.orClick")}
+									{t("onlineAppointment.orClick")}
 								</p>
 								<a
-									className="online-services__link"
+									className="online-appointment__link"
 									href="https://v3.smartmedix.net/Login/?idreg=2478701,2478702&an=0"
 									target="_blank"
 								>
@@ -75,7 +75,7 @@ const OnlineServices = () => {
 								</a>
 							</div>
 						</div>
-						<div className="online-services__container">
+						<div className="online-appointment__container">
 							<strong>
 								Pokud u nás nemáte email, ale jste u nás vedený v péči a chcete
 								se objednat, použijte:
@@ -83,10 +83,10 @@ const OnlineServices = () => {
 							<div style={{ width: "min-content", alignSelf: "flex-end" }}>
 								<img src={qr2} alt="" />
 								<p style={{ textAlign: "center" }}>
-									{t("onlineServices.orClick")}
+									{t("onlineAppointment.orClick")}
 								</p>
 								<a
-									className="online-services__link"
+									className="online-appointment__link"
 									href="https://v3.smartmedix.net/login/anonym/?reg=2478701,2478702"
 									target="_blank"
 								>
@@ -97,7 +97,7 @@ const OnlineServices = () => {
 					</div>
 					<CustomDivider />
 					<strong>Po přihlášení máte k dispozici tyto služby:</strong>
-					<ol className="online-services__ol">
+					<ol className="online-appointment__ol">
 						<li>
 							Zaslání žádosti o recept – vyplníte příslušný formulář, uvedete
 							název a obvyklé dávkování, požadované léky prosím zadávejte pokud
@@ -135,4 +135,4 @@ const OnlineServices = () => {
 	);
 };
 
-export default OnlineServices;
+export default OnlineAppointment;

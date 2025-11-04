@@ -7,6 +7,7 @@
 	"offer_title": "Co nabízíme",
 	"our_team_title": "Náš tým",
 	"clinic_gallery_title": "Galerie kliniky",
+	"onlineAppointmentTitle": "Online objednání",
 	"testimonials_title": "Co o nás říkají klienti",
 	"faq_title": "Často kladené otázky",
 	"service_1": "Ordinace",
@@ -18,7 +19,7 @@
 	"service_7": "Individuální fyzioterapie",
 	"personal_data_title": "Osobní údaje",
 	"testimonials_btn": "Napsat recenzi",
-	"appointment_title": "Domluvte si schůzku",
+	"appointment_title": "Objednat se online",
 	"page_not_found": "Stránka nenalezena",
 
 	"banner": {
@@ -231,7 +232,7 @@
 		"map_title": "Kde jsme"
 	},
 
-	"onlineServices": {
+	"onlineAppointment": {
 		"orClick": "nebo klikněte"
 	},
 

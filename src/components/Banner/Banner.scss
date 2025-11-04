@@ -5,7 +5,6 @@
 	right: 40px;
 	bottom: 40px;
 	left: 40px;
-	min-height: calc(50% - 40px);
 	z-index: 11;
 	border-radius: 10px;
 	background: var(--blue-clr);
@@ -61,7 +60,6 @@
 		right: 20px;
 		bottom: 20px;
 		left: 20px;
-		min-height: calc(50% - 20px);
 	}
 }
 
@@ -70,7 +68,6 @@
 		right: 10px;
 		bottom: 10px;
 		left: 10px;
-		min-height: calc(50% - 10px);
 		padding: 10px;
 	}
 }

@@ -8,7 +8,7 @@ const Banner = () => {
 
 	const [infoData, setInfoData] = useState([]);
 	const [error, setError] = useState(null);
-	const [isVisible, setIsVisible] = useState(false);
+	const [isBannerVisible, setIsBannerVisible] = useState(false);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
@@ -22,7 +22,7 @@ const Banner = () => {
 				setError(error);
 			} finally {
 				setLoading(false);
-				setIsVisible(true);
+				setIsBannerVisible(true);
 			}
 		};
 
@@ -32,30 +32,28 @@ const Banner = () => {
 	if (error) return;
 
 	return (
-		<div className={`banner ${isVisible ? "" : "banner--hide"}`}>
+		<div className={`banner ${isBannerVisible ? "banner--show" : ""}`}>
+			<div className="banner-header">
+				{!loading && (
+					<p className="banner__title">
+						{t("banner.title")} {infoData[0].date}
+					</p>
+				)}
+				<button
+					className="banner__close-btn"
+					onClick={() => setIsBannerVisible(false)}
+				>
+					{t("banner.close_btn")}
+				</button>
+			</div>
+			<div className="banner__divider"></div>
+			{/* <p className="banner__info">{infoData[0].info}</p> */}
+			{/* TODO: */}
 			{!loading && (
-				<>
-					<div className="banner-header">
-						<p className="banner__title">
-							{t("banner.title")} {infoData[0].date}
-						</p>
-						<button
-							className={`banner__close-btn ${
-								isVisible ? "" : "banner__close-btn--hide"
-							}`}
-							onClick={() => setIsVisible(false)}
-						>
-							{t("banner.close_btn")}
-						</button>
-					</div>
-					<div className="banner__divider"></div>
-					{/* <p className="banner__info">{infoData[0].info}</p> */}
-					{/* TODO: */}
-					<p
-						className="banner__info"
-						dangerouslySetInnerHTML={{ __html: infoData[0].info }}
-					></p>
-				</>
+				<p
+					className="banner__info"
+					dangerouslySetInnerHTML={{ __html: infoData[0].info }}
+				></p>
 			)}
 		</div>
 	);

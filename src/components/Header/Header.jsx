@@ -56,8 +56,8 @@ const Header = () => {
 					<img src={logo} width={40} height={40} alt="MUDr. Josef Bourek" />
 					<span>MUDr. Josef Bourek</span>
 				</NavLink>
-				<LngSelect />
 				<nav className="header__list">
+					{/* TODO: */}
 					{navLinksData.map((link) => {
 						return (
 							<React.Fragment key={link.id}>
@@ -107,18 +107,31 @@ const Header = () => {
 							</React.Fragment>
 						);
 					})}
+					<NavLink className="header__nav-link" to="/online-services">
+						{t("appointment_title")}
+					</NavLink>
 				</nav>
-				{/* burger-btn */}
-				<div onClick={toggleBurgerBtn} className="burger__container">
-					<p>menu</p>
-					<div
-						className={`burger-btn ${isMenuOpen ? "burger-btn--active" : ""}`}
-					>
-						<span
-							className={`burger-btn__center-line ${
-								isMenuOpen ? "burger-btn__center-line--active" : ""
-							}`}
-						></span>
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						columnGap: 20,
+					}}
+				>
+					<LngSelect />
+					{/* burger-btn */}
+					<div onClick={toggleBurgerBtn} className="burger__container">
+						<p>menu</p>
+						<div
+							className={`burger-btn ${isMenuOpen ? "burger-btn--active" : ""}`}
+						>
+							<span
+								className={`burger-btn__center-line ${
+									isMenuOpen ? "burger-btn__center-line--active" : ""
+								}`}
+							></span>
+						</div>
 					</div>
 				</div>
 				{/* menu */}

@@ -34,9 +34,9 @@ const Home = () => {
 								<a className="home__link" href="#services">
 									{t("services_title")}
 								</a>
-								<a className="home__link" href="tel:+420602273579">
+								<NavLink className="home__link" to="/online-services">
 									{t("appointment_title")}
-								</a>
+								</NavLink>
 							</div>
 						</div>
 						<div>

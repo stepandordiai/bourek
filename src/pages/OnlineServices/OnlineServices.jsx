@@ -1,9 +1,15 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import "./OnlineServices.scss";
 import PageInfo from "../../components/PageInfo/PageInfo";
+import CustomDivider from "../../components/CustomDivider/CustomDivider";
+import qr1 from "/qr/with-login.png";
+import qr2 from "/qr/without-login.png";
+import "./OnlineServices.scss";
 
 const OnlineServices = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Helmet>
@@ -12,7 +18,7 @@ const OnlineServices = () => {
 			<main>
 				<PageTitle title="Online services" />
 				<PageInfo>
-					<p>Informace pro pacienty:</p>
+					<strong>Informace pro pacienty:</strong>
 					<p>
 						Pro naše pacienty zavádíme on-line služby, které po přihlášení
 						umožňují jednoduchý a bezpečný způsob komunikace s ordinací (místo
@@ -23,7 +29,7 @@ const OnlineServices = () => {
 						Prosíme pacienty, kteří chtějí využít on-line služby a nemají u nás
 						dosud uložený e-mail o jeho urychlené doplnění.
 					</p>
-					<ul>
+					<ul className="online-services__ul">
 						<li>
 							Při objednávání prosím respektujte definované typy vyšetření – viz
 							výběr v objednávkovém formuláři
@@ -38,8 +44,8 @@ const OnlineServices = () => {
 							si svou objednávku předem sami
 						</li>
 					</ul>
-					<ul>
-						<li>
+					<ul className="online-services__ul">
+						<li style={{ listStyle: "disc" }}>
 							Pokud se nemůžete dostavit na plánovanou návštěvu, prosím zrušte
 							si svou objednávku předem sami
 						</li>
@@ -48,34 +54,50 @@ const OnlineServices = () => {
 							rovnou do přihlašovací obrazovky
 						</li>
 					</ul>
-					<div>
-						<p>
-							Pokud u nás máte email a chcete plně využít on-line služby,
-							použijte:
-						</p>
-						<a
-							className="online-services__link"
-							href="https://v3.smartmedix.net/Login/?idreg=2478701,2478702&an=0"
-							target="_blank"
-						>
-							Přístup s přihlášením
-						</a>
+					<CustomDivider />
+					<div className="online-services__wrapper">
+						<div className="online-services__container">
+							<strong>
+								Pokud u nás máte email a chcete plně využít on-line služby,
+								použijte:
+							</strong>
+							<div style={{ width: "min-content", alignSelf: "flex-end" }}>
+								<img src={qr1} alt="" />
+								<p style={{ textAlign: "center" }}>
+									{t("onlineServices.orClick")}
+								</p>
+								<a
+									className="online-services__link"
+									href="https://v3.smartmedix.net/Login/?idreg=2478701,2478702&an=0"
+									target="_blank"
+								>
+									Přístup s přihlášením
+								</a>
+							</div>
+						</div>
+						<div className="online-services__container">
+							<strong>
+								Pokud u nás nemáte email, ale jste u nás vedený v péči a chcete
+								se objednat, použijte:
+							</strong>
+							<div style={{ width: "min-content", alignSelf: "flex-end" }}>
+								<img src={qr2} alt="" />
+								<p style={{ textAlign: "center" }}>
+									{t("onlineServices.orClick")}
+								</p>
+								<a
+									className="online-services__link"
+									href="https://v3.smartmedix.net/login/anonym/?reg=2478701,2478702"
+									target="_blank"
+								>
+									Přístup bez přihlášení
+								</a>
+							</div>
+						</div>
 					</div>
-					<div>
-						<p>
-							Pokud u nás nemáte email, ale jste u nás vedený v péči a chcete se
-							objednat, použijte:
-						</p>
-						<a
-							className="online-services__link"
-							href="https://v3.smartmedix.net/login/anonym/?reg=2478701,2478702"
-							target="_blank"
-						>
-							Přístup bez přihlášení
-						</a>
-					</div>
-					<p>Po přihlášení máte k dispozici tyto služby:</p>
-					<ol>
+					<CustomDivider />
+					<strong>Po přihlášení máte k dispozici tyto služby:</strong>
+					<ol className="online-services__ol">
 						<li>
 							Zaslání žádosti o recept – vyplníte příslušný formulář, uvedete
 							název a obvyklé dávkování, požadované léky prosím zadávejte pokud

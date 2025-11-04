@@ -231,6 +231,10 @@
 		"map_title": "Where we are"
 	},
 
+	"onlineServices": {
+		"orClick": "or click"
+	},
+
 	"personal_data": {
 		"info_1": "Dear patients",
 		"info_2": "Your personal data is processed in medical documentation in full compliance with applicable legal regulations, in particular in accordance with Act No. 372/2011 Coll., on health services and conditions of their provision (Health Services Act) and its implementing regulations.",

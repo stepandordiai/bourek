@@ -231,6 +231,10 @@
 		"map_title": "Kde jsme"
 	},
 
+	"onlineServices": {
+		"orClick": "nebo klikněte"
+	},
+
 	"personal_data": {
 		"info_1": "Vážení pacienti",
 		"info_2": "Vaše osobní údaje jsou zpracovávány ve zdravotnické dokumentaci v plném souladu s platnými právními předpisy zejména v souladu se zákonem č. 372/2011 Sb., o zdravotních službách a podmínkách jejich poskytování (zákon o zdravotních službách) a jeho prováděcími předpisy.",

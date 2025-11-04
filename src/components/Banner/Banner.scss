@@ -10,7 +10,7 @@
 	border-radius: 10px;
 	background: var(--blue-clr);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	padding: 20px;
+	padding: 10px;
 	transition: all 0.5s;
 }
 
@@ -31,29 +31,13 @@
 
 .banner__close-btn {
 	position: relative;
-	color: #fff;
-}
-
-.banner__close-btn::before {
-	content: attr(data-hint-value);
-	position: absolute;
-	right: 0;
-	top: calc(-100% - 20px);
-	white-space: nowrap;
-	background: #fff;
 	color: #000;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
+	background: #fff;
 	padding: 10px;
-	opacity: 0;
-	pointer-events: none;
-	animation: animateBannerCloseBtn 0.5s 1s forwards;
-}
+	border-radius: 5px;
 
-@keyframes animateBannerCloseBtn {
-	to {
-		opacity: 1;
-		pointer-events: all;
+	&:hover {
+		color: var(--blue-clr);
 	}
 }
 
@@ -66,13 +50,15 @@
 
 .banner__info {
 	color: #fff;
+	// TODO:
+	white-space: pre-wrap;
 }
 
 @media (max-width: 900px) {
 	.banner {
-		right: 20px;
-		bottom: 20px;
-		left: 20px;
+		right: 10px;
+		bottom: 10px;
+		left: 10px;
 		min-height: calc(50% - 20px);
 	}
 }

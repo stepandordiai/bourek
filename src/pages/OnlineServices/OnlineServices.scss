@@ -1,0 +1,17 @@
+// TODO:
+.link-btn-basic {
+	display: inline-block;
+	background: var(--blue-clr);
+	color: #fff !important;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.online-services__link {
+	@extend .link-btn-basic;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--blue-clr-8);
+	}
+}

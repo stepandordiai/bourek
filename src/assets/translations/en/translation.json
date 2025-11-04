@@ -23,8 +23,7 @@
 
 	"banner": {
 		"title": "Important information from",
-		"close_btn": "close",
-		"close_btn_hint": "Click here to close"
+		"close_btn": "close"
 	},
 
 	"header": {

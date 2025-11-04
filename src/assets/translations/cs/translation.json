@@ -23,8 +23,7 @@
 
 	"banner": {
 		"title": "Důležité informace od",
-		"close_btn": "zavřít",
-		"close_btn_hint": "Kliknutím sem zavřete"
+		"close_btn": "zavřít"
 	},
 
 	"header": {

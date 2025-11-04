@@ -40,15 +40,21 @@ const Banner = () => {
 							{t("banner.title")} {infoData[0].date}
 						</p>
 						<button
-							className="banner__close-btn"
+							className={`banner__close-btn ${
+								isVisible ? "" : "banner__close-btn--hide"
+							}`}
 							onClick={() => setIsVisible(false)}
-							data-hint-value={t("banner.close_btn_hint") + " 👇"}
 						>
-							{t("banner.close_btn")} <i className="fa-solid fa-xmark"></i>
+							{t("banner.close_btn")}
 						</button>
 					</div>
 					<div className="banner__divider"></div>
-					<p className="banner__info">{infoData[0].info}</p>
+					{/* <p className="banner__info">{infoData[0].info}</p> */}
+					{/* TODO: */}
+					<p
+						className="banner__info"
+						dangerouslySetInnerHTML={{ __html: infoData[0].info }}
+					></p>
 				</>
 			)}
 		</div>

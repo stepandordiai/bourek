@@ -14,6 +14,7 @@ const OnlineAppointment = () => {
 		<>
 			<Helmet>
 				<title>{t("onlineAppointmentTitle")} | Bourek</title>
+				<link rel="canonical" href="https://www.bourek.cz/online-appointment" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("onlineAppointmentTitle")} />

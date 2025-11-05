@@ -8,13 +8,13 @@ const Banner = () => {
 
 	const [infoData, setInfoData] = useState([]);
 	const [error, setError] = useState(null);
-	const [isBannerVisible, setIsBannerVisible] = useState(false);
 	const [loading, setLoading] = useState(true);
+	const [isBannerVisible, setIsBannerVisible] = useState(false);
 
 	useEffect(() => {
 		const getInfoData = async (timeout) => {
-			await new Promise((resolve) => setTimeout(resolve, timeout));
 			try {
+				await new Promise((resolve) => setTimeout(resolve, timeout));
 				const response = await axios(import.meta.env.VITE_API_URL);
 				setInfoData(response.data);
 			} catch (error) {
@@ -32,7 +32,11 @@ const Banner = () => {
 	if (error) return;
 
 	return (
-		<div className={`banner ${isBannerVisible ? "banner--show" : ""}`}>
+		<div
+			className={`banner ${
+				isBannerVisible && infoData[0].info.length ? "banner--show" : ""
+			}`}
+		>
 			<div className="banner-header">
 				{!loading && (
 					<p className="banner__title">

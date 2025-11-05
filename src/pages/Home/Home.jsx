@@ -62,7 +62,7 @@ const Home = () => {
 							.flatMap((link) => link.nestedLinks)
 							.map((link) => {
 								return (
-									<div className="home__service-card">
+									<div key={link.id} className="home__service-card">
 										<p>{t(link.name)}</p>
 										<NavLink
 											className="grid-container__link"

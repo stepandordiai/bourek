@@ -107,9 +107,12 @@ const Header = () => {
 							</React.Fragment>
 						);
 					})}
-					<NavLink className="header__nav-link" to="/online-appointment">
+					{/* <NavLink className="header__nav-link" to="/online-appointment">
 						{t("appointment_title")}
-					</NavLink>
+					</NavLink> */}
+					<a className="header__nav-link" href="tel:+420602273579">
+						{t("appointment_title")}
+					</a>
 				</nav>
 				<div
 					style={{

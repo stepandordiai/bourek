@@ -23,7 +23,7 @@ import Banner from "./components/Banner/Banner";
 import phoneCallIcon from "/icons/phone-call.png";
 import dotsIcon from "/icons/dots.png";
 import facebookIcon from "/icons/facebook.png";
-import OnlineAppointment from "./pages/OnlineAppointment/OnlineAppointment";
+// import OnlineAppointment from "./pages/OnlineAppointment/OnlineAppointment";
 import NotFound from "./pages/NotFound/NotFound";
 import "./i18n";
 import "./App.scss";
@@ -71,7 +71,7 @@ function App() {
 					<Route path="/ltv" element={<LTV />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/personal-data" element={<PersonalData />} />
-					<Route path="/online-appointment" element={<OnlineAppointment />} />
+					{/* <Route path="/online-appointment" element={<OnlineAppointment />} /> */}
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 				<div className="fixed-link-container">

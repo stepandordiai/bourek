@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import "./FAQ.scss";
 
 const faqData = [
@@ -145,7 +146,7 @@ const FAQ = () => {
 
 	// FIXME:
 	useEffect(() => {
-		document.addEventListener("scroll", () => {
+		const handleFaqSectionLink = () => {
 			const faqSection = document.querySelectorAll(".js-faq-section");
 			const faqSectionLink = document.querySelectorAll(".js-link-section");
 			for (let i = 0; i < faqSectionLink.length; i++) {
@@ -157,7 +158,11 @@ const FAQ = () => {
 					faqSectionLink[index].classList.add("faq-section-link--active");
 				}
 			});
-		});
+		};
+
+		document.addEventListener("scroll", handleFaqSectionLink);
+
+		return () => document.removeEventListener("scroll", handleFaqSectionLink);
 	}, []);
 	return (
 		<>
@@ -170,9 +175,13 @@ const FAQ = () => {
 						{uniqueSections.map((section, index) => {
 							return (
 								<li key={index}>
-									<a className="js-link-section" href={`#faq${index + 1}`}>
+									<HashLink
+										className="js-link-section"
+										to={`/#faq${index + 1}`}
+										smooth
+									>
 										{section}
-									</a>
+									</HashLink>
 								</li>
 							);
 						})}

@@ -6,12 +6,11 @@ const Loading = () => {
 	const [loadingVisible, setLoadingVisible] = useState(true);
 
 	useEffect(() => {
-		// TODO:
-		const timer = setTimeout(() => {
+		const timeout = setTimeout(() => {
 			setLoadingVisible(false);
 		}, 2000);
 
-		return () => clearTimeout(timer);
+		return () => clearTimeout(timeout);
 	}, []);
 
 	return (

@@ -1,268 +1,272 @@
 @use "./../../mixins" as *;
 
 .contact__wrapper {
-    padding: 40px;
+	padding: 40px;
 }
 
 .contact__list {
-    @include flex-between-center;
-    flex-wrap: wrap;
-    gap: 40px;
-    border-radius: 10px;
-    padding: 5px;
+	@include flex-between-center;
+	flex-wrap: wrap;
+	gap: 40px;
+	border-radius: 10px;
+	padding: 5px;
 
-    a {
-        @include flex-center;
-        column-gap: 5px;
-        padding: 10px;
-        border-radius: 10px;
-        transition: all 0.3s;
+	a {
+		@include flex-center;
+		column-gap: 5px;
+		padding: 10px;
+		border-radius: 10px;
+		transition: all 0.3s;
 
-        &:hover {
-            background: var(--blue-clr-4);
-        }
-    }
+		&:hover {
+			background: var(--blue-clr-4);
+		}
+	}
 }
 
 .contact__list--active {
-    background: var(--blue-clr-1);
+	background: var(--blue-clr-1);
 }
 
 .form-map-wrapper {
-    display: flex;
-    gap: 40px;
+	display: flex;
+	gap: 40px;
 }
 
 .form-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .custom-divider--hide {
-    display: none;
+	display: none;
 }
 
 .map-wrapper {
-    width: 100%;
+	width: 100%;
 }
 
 .contact-details__title {
-    text-align: start;
-    font-size: 24px;
-    color: var(--blue-clr);
+	text-align: start;
+	font-size: 24px;
+	color: var(--blue-clr);
 }
 
 .contact__map-title {
-    text-align: start;
-    font-size: 24px;
-    color: var(--blue-clr);
+	text-align: start;
+	font-size: 24px;
+	color: var(--blue-clr);
 }
 
 .map-wrapper__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
 }
 
 .map-wrapper__header-container {
-    position: relative;
-    display: flex;
-    background: var(--blue-clr-1);
-    border-radius: 10px;
-    padding: 5px;
+	position: relative;
+	display: flex;
+	background: var(--blue-clr-1);
+	border-radius: 10px;
+	padding: 5px;
 
-    button {
-        padding: 10px;
-    }
+	button {
+		padding: 10px;
+	}
 }
 
 .active-bg {
-    position: absolute;
-    left: 5px;
-    background: var(--blue-clr-4);
-    height: calc(100% - 10px);
-    border-radius: 10px;
-    width: 57.94px;
-    pointer-events: none;
-    transition: all 0.3s;
+	position: absolute;
+	left: 5px;
+	background: var(--blue-clr-4);
+	height: calc(100% - 10px);
+	border-radius: 10px;
+	width: 57.94px;
+	pointer-events: none;
+	transition: all 0.3s;
 }
 
 .active-bg--active {
-    left: calc(57.94px + 5px);
-    width: 108.99px;
+	left: calc(57.94px + 5px);
+	width: 108.99px;
 }
 
 .contact__form-title {
-    text-align: start;
-    font-size: 24px;
-    color: var(--blue-clr);
-    padding-bottom: 10px;
+	text-align: start;
+	font-size: 24px;
+	color: var(--blue-clr);
+	padding-bottom: 10px;
 }
 
 .contact__form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	flex-grow: 1;
 }
 
 .contact-form__inputs {
-    @include flex-center;
-    column-gap: 10px;
+	@include flex-center;
+	column-gap: 10px;
 }
 
 .first-name,
 .last-name {
-    background: var(--blue-clr-1);
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
+	background: var(--blue-clr-1);
+	border-radius: 10px;
+	padding: 10px;
+	width: 100%;
 }
 
 .email,
 .phone {
-    background: var(--blue-clr-2);
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
+	background: var(--blue-clr-2);
+	border-radius: 10px;
+	padding: 10px;
+	width: 100%;
 }
 
 // Custom select
 
 .custom-select {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .custom-select__btn {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    text-align: left;
-    background: var(--blue-clr-3);
-    border-radius: 10px;
-    border: 1px solid transparent;
-    cursor: pointer;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	text-align: left;
+	background: var(--blue-clr-3);
+	border-radius: 10px;
+	border: 1px solid transparent;
+	cursor: pointer;
 
-    &:focus {
-        border: 1px solid var(--blue-clr);
-    }
+	&:focus {
+		border: 1px solid var(--blue-clr);
+	}
 }
 
 .custom-select__btn--active {
-    border: 1px solid var(--blue-clr);
+	border: 1px solid var(--blue-clr);
 }
 
 .custom-select__btn::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-    width: 10px;
-    aspect-ratio: 1/1;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    background: #000;
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	width: 10px;
+	aspect-ratio: 1/1;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+	background: #000;
 }
 
 .custom-select__list {
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s;
+	position: absolute;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .custom-select__list--visible {
-    pointer-events: all;
-    opacity: 1;
+	pointer-events: all;
+	opacity: 1;
 }
 
 .custom-select__option {
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
+	border-radius: 10px;
+	padding: 10px;
+	cursor: pointer;
 
-    &:hover {
-        background: var(--blue-clr-3);
-    }
+	&:hover {
+		background: var(--blue-clr-3);
+	}
+}
+
+.custom-select__option--active {
+	background: var(--blue-clr-3);
 }
 
 .custom-select__input {
-    display: none;
+	display: none;
 }
 
 .date-container,
 .time-container {
-    width: 100%;
-    @include flex-center-start;
-    flex-direction: column;
+	width: 100%;
+	@include flex-center-start;
+	flex-direction: column;
 }
 
 label {
-    color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .date,
 .time {
-    background: var(--blue-clr-4);
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
+	background: var(--blue-clr-4);
+	border-radius: 10px;
+	padding: 10px;
+	width: 100%;
 }
 
 .submit-btn {
-    margin-top: auto;
-    align-self: flex-end;
-    border-radius: 10px;
-    padding: 10px;
-    color: #fff;
-    font-weight: inherit;
-    background: var(--blue-clr);
-    transition: background-color 200ms;
+	margin-top: auto;
+	align-self: flex-end;
+	border-radius: 10px;
+	padding: 10px;
+	color: #fff;
+	font-weight: inherit;
+	background: var(--blue-clr);
+	transition: background-color 200ms;
 
-    &:hover {
-        background: var(--blue-clr-8);
-    }
+	&:hover {
+		background: var(--blue-clr-8);
+	}
 }
 
 .contact__google-map {
-    width: 100%;
-    height: 400px;
+	width: 100%;
+	height: 400px;
 }
 
 @media (max-width: 1000px) {
-    .form-map-wrapper {
-        flex-direction: column;
-    }
+	.form-map-wrapper {
+		flex-direction: column;
+	}
 
-    .custom-divider--hide {
-        display: initial;
-    }
+	.custom-divider--hide {
+		display: initial;
+	}
 }
 
 @media (max-width: 900px) {
-    .contact__wrapper {
-        padding: 40px 20px;
-    }
+	.contact__wrapper {
+		padding: 40px 20px;
+	}
 }
 
 @media (max-width: 600px) {
-    .contact__wrapper {
-        padding: 40px 10px;
-    }
+	.contact__wrapper {
+		padding: 40px 10px;
+	}
 
-    .contact-form__inputs {
-        flex-direction: column;
-        row-gap: 10px;
-    }
+	.contact-form__inputs {
+		flex-direction: column;
+		row-gap: 10px;
+	}
 }

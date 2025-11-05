@@ -31,23 +31,19 @@ import "./App.scss";
 function App() {
 	const [floatContactActive, setFloatContactActive] = useState(false);
 
+	const toggleFloatContact = () => setFloatContactActive((prev) => !prev);
+
 	useEffect(() => {
 		setTimeout(() => {
 			document.querySelector(".wrapper").style.display = "initial";
 		}, 2000);
 
-		const hideFloatContactOnScroll = () => {
-			setFloatContactActive(false);
-		};
+		const hideFloatContact = () => setFloatContactActive(false);
 
-		window.addEventListener("scroll", hideFloatContactOnScroll);
+		window.addEventListener("scroll", hideFloatContact);
 
-		return () => window.removeEventListener("scroll", hideFloatContactOnScroll);
+		return () => window.removeEventListener("scroll", hideFloatContact);
 	}, []);
-
-	const toggleFloatContact = () => {
-		setFloatContactActive((prev) => !prev);
-	};
 
 	return (
 		<Router>

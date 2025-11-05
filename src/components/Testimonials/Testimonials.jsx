@@ -9,35 +9,38 @@ import googleIcon from "/icons/google.png";
 import starIcon from "/icons/star.png";
 import "./Testimonials.scss";
 
+const testimonialsData = [
+	{
+		name: "Cathy Mattson",
+		date: "April 2, 2025",
+		review:
+			"Naprosto perfekní přístup a profesionální chování. Neumím si představit lepší a příjemnější místo na rehabilitaci. Doporučuji všem známým!",
+		rating: 5,
+	},
+	{
+		name: "Valeria Novitskaia",
+		date: "January 10, 2025",
+		review:
+			"Všechno probíhalo na jedničku. Velice milý a profesionální přístup.",
+		rating: 4,
+	},
+	{
+		name: "Jan Šmída",
+		date: "March 16, 2025",
+		review: "Velmi pozitivní a přátelský přístup. Pár cviků a obrovský posun.",
+		rating: 5,
+	},
+	{
+		name: "Jiri Capek",
+		date: "March 25, 2025",
+		review:
+			"Nádherné, moderní a čisté prostředí. Extrémně empatický, milý a trpělivý personál. Celkově místo působí profesionálním, ale zároveň přívětivým dojmem.",
+		rating: 5,
+	},
+];
+
 const Testimonials = () => {
 	const { t } = useTranslation();
-
-	const testimonialsData = [
-		{
-			name: "Cathy Mattson",
-			date: "April 2, 2025",
-			review:
-				"Naprosto perfekní přístup a profesionální chování. Neumím si představit lepší a příjemnější místo na rehabilitaci. Doporučuji všem známým!",
-		},
-		{
-			name: "Valeria Novitskaia",
-			date: "January 10, 2025",
-			review:
-				"Všechno probíhalo na jedničku. Velice milý a profesionální přístup.",
-		},
-		{
-			name: "Jan Šmída",
-			date: "March 16, 2025",
-			review:
-				"Velmi pozitivní a přátelský přístup. Pár cviků a obrovský posun.",
-		},
-		{
-			name: "Jiri Capek",
-			date: "March 25, 2025",
-			review:
-				"Nádherné, moderní a čisté prostředí. Extrémně empatický, milý a trpělivý personál. Celkově místo působí profesionálním, ale zároveň přívětivým dojmem.",
-		},
-	];
 
 	return (
 		<>
@@ -89,11 +92,18 @@ const Testimonials = () => {
 									<img src={googleIcon} width={40} height={40} alt="" />
 								</div>
 								<div className="testimonials-card__rating">
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
-									<img src={starIcon} width={20} height={20} alt="" />
+									{/* TODO: TO LEARN */}
+									{Array.from({ length: testimonial.rating }).map((_, i) => {
+										return (
+											<img
+												key={i}
+												src={starIcon}
+												width={20}
+												height={20}
+												alt=""
+											/>
+										);
+									})}
 								</div>
 								<p>{testimonial.review}</p>
 							</div>

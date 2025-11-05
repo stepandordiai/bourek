@@ -4,6 +4,7 @@ import navLinksData from "./../../data/nav-links-data.json";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import FAQ from "../../components/FAQ/FAQ";
+import { HashLink } from "react-router-hash-link";
 import arrowUpperRightIcon from "/icons/arrow-upper-right.png";
 import "./Home.scss";
 
@@ -31,9 +32,9 @@ const Home = () => {
 							<h2 className="home__sec-title accent">{t("home.title")}</h2>
 							<h3 className="home__title">{t("home.secondary_title")}</h3>
 							<div className="home__link-container">
-								<a className="home__link" href="#services">
+								<HashLink className="home__link" to="/#services" smooth>
 									{t("services_title")}
-								</a>
+								</HashLink>
 								{/* <NavLink className="home__link" to="/online-appointment">
 									{t("appointment_title")}
 								</NavLink> */}

@@ -4,88 +4,88 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import profileIcon from "/icons/profile-icon.png";
 import "./OurTeam.scss";
 
+const ourTeamData = [
+	{
+		profession: "our_team.profession_type_1",
+		name: "MUDr. Josef Bourek",
+		number: "+420 602 273 579",
+		email: "josef@bourek.cz",
+		workingHours: [
+			{ name: "our_team.wed", hours: "12:30 - 17:00" },
+			{ name: "our_team.thu", hours: "8:30 - 11:30" },
+		],
+		place: 1,
+	},
+	{
+		profession: "our_team.profession_type_1",
+		name: "MUDr. Julie Cadorini",
+		email: "cadorinij@seznam.cz",
+		workingHours: [
+			{ name: "our_team.mon", hours: "7:30 - 11:30" },
+			{ name: "our_team.tue", hours: "13:00 - 16:30" },
+		],
+		place: 1,
+	},
+	{
+		profession: "our_team.profession_type_2",
+		name: "Matějková Iva",
+		number: "+420 607 841 622",
+		workingHours: [
+			{ name: "our_team.mon", hours: "6:00 - 14:00" },
+			{ name: "our_team.tue", hours: "6:00 - 14:00" },
+			{ name: "our_team.wed", hours: "6:00 - 18:00" },
+			{ name: "our_team.thu", hours: "6:00 - 13:30" },
+			{ name: "our_team.fri", hours: "6:00 - 13:00" },
+		],
+		place: 1,
+	},
+	{
+		profession: "our_team.profession_type_2",
+		name: "Jansová Radka",
+		workingHours: [
+			{ name: "our_team.mon", hours: "7:00 - 17:00" },
+			{ name: "our_team.tue", hours: "7:00 - 14:30" },
+			{ name: "our_team.wed", hours: "7:00 - 15:00" },
+			{ name: "our_team.thu", hours: "7:00 - 14:30" },
+			{ name: "our_team.fri", hours: "7:00 - 14:00" },
+		],
+		place: 1,
+	},
+	{
+		profession: "our_team.profession_type_3",
+		name: "Pixová Dagmar",
+		workingHours: [
+			{ name: "our_team.mon", hours: "7:00 - 17:00" },
+			{ name: "our_team.tue", hours: "7:00 - 14:30" },
+			{ name: "our_team.wed", hours: "7:00 - 15:00" },
+			{ name: "our_team.thu", hours: "7:00 - 14:30" },
+			{ name: "our_team.fri", hours: "7:00 - 14:00" },
+		],
+		place: 1,
+	},
+	{
+		profession: "our_team.profession_type_3",
+		name: "Soňa Minovska",
+		workingHours: [
+			{ name: "our_team.mon", hours: "7:00 - 17:00" },
+			{ name: "our_team.tue", hours: "7:00 - 14:30" },
+			{ name: "our_team.wed", hours: "7:00 - 15:00" },
+			{ name: "our_team.thu", hours: "7:00 - 14:30" },
+			{ name: "our_team.fri", hours: "7:00 - 14:00" },
+		],
+		place: 1,
+	},
+	{
+		profession: "our_team.profession_type_3",
+		name: "Elena Zajičkova",
+		number: "+420 601 369 198",
+		workingHours: [{ name: "our_team.tue", hours: "8:30 - 14:30" }],
+		place: 2,
+	},
+];
+
 const OurTeam = () => {
 	const { t } = useTranslation();
-
-	const ourTeamData = [
-		{
-			profession: t("our_team.profession_type_1"),
-			name: "MUDr. Josef Bourek",
-			number: "+420 602 273 579",
-			email: "josef@bourek.cz",
-			workingHours: [
-				{ name: t("our_team.wed"), hours: "12:30 - 17:00" },
-				{ name: t("our_team.thu"), hours: "8:30 - 11:30" },
-			],
-			place: 1,
-		},
-		{
-			profession: t("our_team.profession_type_1"),
-			name: "MUDr. Julie Cadorini",
-			email: "cadorinij@seznam.cz",
-			workingHours: [
-				{ name: t("our_team.mon"), hours: "7:30 - 11:30" },
-				{ name: t("our_team.tue"), hours: "13:00 - 16:30" },
-			],
-			place: 1,
-		},
-		{
-			profession: t("our_team.profession_type_2"),
-			name: "Matějková Iva",
-			number: "+420 607 841 622",
-			workingHours: [
-				{ name: t("our_team.mon"), hours: "6:00 - 14:00" },
-				{ name: t("our_team.tue"), hours: "6:00 - 14:00" },
-				{ name: t("our_team.wed"), hours: "6:00 - 18:00" },
-				{ name: t("our_team.thu"), hours: "6:00 - 13:30" },
-				{ name: t("our_team.fri"), hours: "6:00 - 13:00" },
-			],
-			place: 1,
-		},
-		{
-			profession: t("our_team.profession_type_2"),
-			name: "Jansová Radka",
-			workingHours: [
-				{ name: t("our_team.mon"), hours: "7:00 - 17:00" },
-				{ name: t("our_team.tue"), hours: "7:00 - 14:30" },
-				{ name: t("our_team.wed"), hours: "7:00 - 15:00" },
-				{ name: t("our_team.thu"), hours: "7:00 - 14:30" },
-				{ name: t("our_team.fri"), hours: "7:00 - 14:00" },
-			],
-			place: 1,
-		},
-		{
-			profession: t("our_team.profession_type_3"),
-			name: "Pixová Dagmar",
-			workingHours: [
-				{ name: t("our_team.mon"), hours: "7:00 - 17:00" },
-				{ name: t("our_team.tue"), hours: "7:00 - 14:30" },
-				{ name: t("our_team.wed"), hours: "7:00 - 15:00" },
-				{ name: t("our_team.thu"), hours: "7:00 - 14:30" },
-				{ name: t("our_team.fri"), hours: "7:00 - 14:00" },
-			],
-			place: 1,
-		},
-		{
-			profession: t("our_team.profession_type_3"),
-			name: "Soňa Minovska",
-			workingHours: [
-				{ name: t("our_team.mon"), hours: "7:00 - 17:00" },
-				{ name: t("our_team.tue"), hours: "7:00 - 14:30" },
-				{ name: t("our_team.wed"), hours: "7:00 - 15:00" },
-				{ name: t("our_team.thu"), hours: "7:00 - 14:30" },
-				{ name: t("our_team.fri"), hours: "7:00 - 14:00" },
-			],
-			place: 1,
-		},
-		{
-			profession: t("our_team.profession_type_3"),
-			name: "Elena Zajičkova",
-			number: "+420 601 369 198",
-			workingHours: [{ name: t("our_team.tue"), hours: "8:30 - 14:30" }],
-			place: 2,
-		},
-	];
 
 	return (
 		<>
@@ -110,7 +110,7 @@ const OurTeam = () => {
 										<div key={index} className="our-team__card">
 											<img src={profileIcon} alt={name} loading="lazy" />
 											<div className="our-team__card-top">
-												<p>{profession}</p>
+												<p>{t(profession)}</p>
 												<p>{name}</p>
 												{number && (
 													<a href={`tel:${number.replaceAll(" ", "")}`}>
@@ -127,7 +127,7 @@ const OurTeam = () => {
 													{workingHours.map((day, index) => {
 														return (
 															<li key={index} className="day">
-																<span>{day.name}:</span>
+																<span>{t(day.name)}:</span>
 																<span>{day.hours}</span>
 															</li>
 														);
@@ -149,7 +149,7 @@ const OurTeam = () => {
 										<div key={index} className="our-team__card">
 											<img src={profileIcon} alt="" />
 											<div className="our-team__card-top">
-												<p>{profession}</p>
+												<p>{t(profession)}</p>
 												<p>{name}</p>
 												{number && (
 													<a href={`tel:${number.replaceAll(" ", "")}`}>
@@ -166,7 +166,7 @@ const OurTeam = () => {
 													{workingHours.map((day, index) => {
 														return (
 															<li key={index} className="day">
-																<span>{day.name}:</span>
+																<span>{t(day.name)}:</span>
 																<span>{day.hours}</span>
 															</li>
 														);

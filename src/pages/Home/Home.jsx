@@ -22,7 +22,7 @@ const Home = () => {
 				<link rel="canonical" href="https://www.bourek.cz/" />
 			</Helmet>
 			<main className="home">
-				<div className="home__container">
+				<section className="home-hero">
 					<div className="home__wrapper">
 						<div>
 							<div className="home__title-container">
@@ -51,10 +51,10 @@ const Home = () => {
 							/>
 						</div>
 					</div>
-					<a className="home__scroll-mouse-btn" href="#services">
+					<HashLink className="home__scroll-mouse-btn" to="/#services" smooth>
 						<div className="wheel"></div>
-					</a>
-				</div>
+					</HashLink>
+				</section>
 				<div className="home__services" id="services">
 					<h2 className="home__services-title">{t("services_title")}</h2>
 					<div className="home__grid-container">

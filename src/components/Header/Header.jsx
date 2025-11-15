@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import navLinksData from "./../../data/nav-links-data.json";
 import React from "react";
 import LngSelect from "../LngSelect/LngSelect";
+import addressesData from "./../../data/addresses-data.json";
 import facebookIcon from "/icons/facebook.png";
 import logo from "/logo/bourek.png";
 import downArrowIcon from "/icons/down-arrow.png";
@@ -57,7 +58,6 @@ const Header = () => {
 					<span>MUDr. Josef Bourek</span>
 				</NavLink>
 				<nav className="header__list">
-					{/* TODO: */}
 					{navLinksData.map((link) => {
 						return (
 							<React.Fragment key={link.id}>
@@ -217,10 +217,16 @@ const Header = () => {
 					</ul>
 					<footer className="burger-menu__footer">
 						<div className="burger-menu__contact">
-							<p style={{ color: "var(--blue-clr)" }}>Kolín</p>
-							<a href="tel:+420602273579">+420 602 273 579</a>
-							<p style={{ color: "var(--blue-clr)" }}>Český Brod</p>
-							<a href="tel:+420601369198">+420 601 369 198</a>
+							{addressesData.map((address, i) => {
+								return (
+									<React.Fragment key={i}>
+										<p style={{ color: "var(--blue-clr)" }}>{address.place}</p>
+										<a href={`tel:${address.tel.replaceAll(" ", "")}`}>
+											{address.tel}
+										</a>
+									</React.Fragment>
+								);
+							})}
 						</div>
 						<a
 							className="burger-menu__footer-link"

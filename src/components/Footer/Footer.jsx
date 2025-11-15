@@ -11,12 +11,6 @@ import phoneIcon from "/icons/telephone.png";
 import mailIcon from "/icons/mail.png";
 import "./Footer.scss";
 
-// Kolin
-const addressUrl1 = "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9";
-
-// Cesky Brod
-const addressUrl2 = "https://maps.app.goo.gl/Jew8NoioiT1w8vUE8";
-
 const aboutUsLinks = navLinksData.find((link) => link.id === 2)?.nestedLinks;
 
 const services = navLinksData.find((link) => link.id === 3)?.nestedLinks;

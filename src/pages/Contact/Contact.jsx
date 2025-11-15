@@ -4,33 +4,13 @@ import { Helmet } from "react-helmet-async";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Container from "../../components/Container/Container";
+import addressesData from "./../../data/addresses-data.json";
 import React from "react";
 import locationIcon from "/icons/location.png";
 import phoneIcon from "/icons/telephone.png";
 import mailIcon from "/icons/mail.png";
 import addressImg from "/clinic/03-c.jpg";
 import "./Contact.scss";
-
-const addressesData = [
-	{
-		place: "Kolín",
-		tel: "+420 602 273 579",
-		email: "josef@bourek.cz",
-		address: "Pod Hroby 271 Kolín IV",
-		addressUrl: "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9",
-		mapUrl:
-			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz",
-	},
-	{
-		place: "Český Brod",
-		tel: "+420 601 369 198",
-		email: "josef@bourek.cz",
-		address: "Žižkova 282, 282 01 Český Brod",
-		addressUrl: "https://maps.app.goo.gl/SuWAbEfPY9TAUzDE7",
-		mapUrl:
-			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d658.5162078271319!2d14.85188380568383!3d50.07297137932055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adc832cb7fb%3A0x3d803bb0b249fa74!2zxb1pxb5rb3ZhIDI4MiwgMjgyIDAxIMSMZXNrw70gQnJvZA!5e1!3m2!1sen!2scz!4v1763201273136!5m2!1sen!2scz",
-	},
-];
 
 // const services = navLinksData.find((link) => link.id === 3)?.nestedLinks;
 

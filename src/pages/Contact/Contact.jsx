@@ -87,7 +87,6 @@ const Contact = () => {
 	};
 
 	const handleMouseMove = (e) => {
-		e.preventDefault();
 		if (!isDragging) return;
 		const rect = wrapperRef.current.getBoundingClientRect();
 
@@ -189,7 +188,10 @@ const Contact = () => {
 									onMouseDown={handleMouseDown}
 									onMouseUp={handleMouseUp}
 									onMouseLeave={handleMouseUp}
-									onMouseMove={handleMouseMove}
+									onMouseMove={(e) => {
+										e.preventDefault();
+										handleMouseMove(e);
+									}}
 									onTouchStart={handleMouseDown}
 									onTouchMove={handleMouseMove}
 									onTouchEnd={handleMouseUp}

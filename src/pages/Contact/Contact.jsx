@@ -121,7 +121,7 @@ const Contact = () => {
 												</a>
 											</li>
 											<li>
-												<a href="mailto:josef@bourek.cz">
+												<a href={`mailto:${address.email}`}>
 													<img src={mailIcon} width={25} height={25} alt="" />
 													<span>{address.email}</span>
 												</a>

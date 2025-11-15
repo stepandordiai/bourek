@@ -3,6 +3,8 @@ import navLinksData from "./../../data/nav-links-data.json";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import CustomDivider from "../CustomDivider/CustomDivider";
+import addressesData from "./../../data/addresses-data.json";
+import React from "react";
 import logo from "/logo/bourek.png";
 import locationIcon from "/icons/location.png";
 import phoneIcon from "/icons/telephone.png";
@@ -107,40 +109,31 @@ const Footer = () => {
 				</div>
 				<div>
 					<p>{t("contacts_title")}</p>
-					<p style={{ marginTop: 10 }}>Kolín</p>
-					<ul className="footer__contact-list">
-						<li>
-							<img src={phoneIcon} width={20} height={20} alt="" />
-							<a href="tel:+420602273579">+420 602 273 579</a>
-						</li>
-						<li>
-							<img src={mailIcon} width={20} height={20} alt="" />
-							<a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
-						</li>
-						<li>
-							<img src={locationIcon} width={20} height={20} alt="" />
-							<a href={addressUrl1} target="_blank">
-								Pod Hroby 271 Kolín IV
-							</a>
-						</li>
-					</ul>
-					<p style={{ marginTop: 10 }}>Český Brod</p>
-					<ul className="footer__contact-list">
-						<li>
-							<img src={phoneIcon} width={20} height={20} alt="" />
-							<a href="tel:+420601369198">+420 601 369 198</a>
-						</li>
-						<li>
-							<img src={mailIcon} width={20} height={20} alt="" />
-							<a href="mailto:josef@bourek.cz">josef@bourek.cz</a>
-						</li>
-						<li>
-							<img src={locationIcon} width={20} height={20} alt="" />
-							<a href={addressUrl2} target="_blank">
-								Český Brod
-							</a>
-						</li>
-					</ul>
+					{addressesData.map((address, i) => {
+						return (
+							<React.Fragment key={i}>
+								<p style={{ marginTop: 10 }}>{address.place}</p>
+								<ul className="footer__contact-list">
+									<li>
+										<img src={phoneIcon} width={20} height={20} alt="" />
+										<a href={`tel:${address.tel.replaceAll(" ", "")}`}>
+											{address.tel}
+										</a>
+									</li>
+									<li>
+										<img src={mailIcon} width={20} height={20} alt="" />
+										<a href={`mailto:${address.email}`}>{address.email}</a>
+									</li>
+									<li>
+										<img src={locationIcon} width={20} height={20} alt="" />
+										<a href={address.addressUrl} target="_blank">
+											{address.address}
+										</a>
+									</li>
+								</ul>
+							</React.Fragment>
+						);
+					})}
 					<p style={{ marginTop: 10 }}>
 						{t("footer.about_title")} MUDr. Josef Bourek s.r.o.
 					</p>

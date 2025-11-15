@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Container from "../../components/Container/Container";
 import "./ClinicGallery.scss";
 
 const clinicGallery = [
@@ -64,19 +65,21 @@ const ClinicGallery = () => {
 			</Helmet>
 			<main>
 				<PageTitle title={t("clinic_gallery_title")} />
-				<div className="clinic-gallery__masonry">
-					{clinicGallery.map((imgSrc, index) => {
-						return (
-							<img
-								key={index}
-								onClick={() => showImgSlider(index)}
-								src={imgSrc}
-								alt=""
-								loading="lazy"
-							/>
-						);
-					})}
-				</div>
+				<Container>
+					<div className="clinic-gallery__masonry">
+						{clinicGallery.map((imgSrc, index) => {
+							return (
+								<img
+									key={index}
+									onClick={() => showImgSlider(index)}
+									src={imgSrc}
+									alt=""
+									loading="lazy"
+								/>
+							);
+						})}
+					</div>
+				</Container>
 			</main>
 			<div
 				className={`img-slider ${

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import profileIcon from "/icons/profile-icon.png";
 import "./OurTeam.scss";
+import Container from "../../components/Container/Container";
 
 const ourTeamData = [
 	{
@@ -99,86 +100,98 @@ const OurTeam = () => {
 			</Helmet>
 			<main>
 				<PageTitle title={t("our_team_title")} />
-				<div className="our-team">
-					<p className="our-team__title">Kolín</p>
-					<div className="our-team__grid">
-						{ourTeamData
-							.filter((member) => member.place === 1)
-							.map(
-								({ profession, name, number, email, workingHours }, index) => {
-									return (
-										<div key={index} className="our-team__card">
-											<img src={profileIcon} alt={name} loading="lazy" />
-											<div className="our-team__card-top">
-												<p>{t(profession)}</p>
-												<p>{name}</p>
-												{number && (
-													<a href={`tel:${number.replaceAll(" ", "")}`}>
-														{number}
-													</a>
-												)}
-												{email && <a href="mailto:josef@gmail.com">{email}</a>}
+				<Container>
+					<div className="our-team">
+						<p className="our-team__title">Kolín</p>
+						<div className="our-team__grid">
+							{ourTeamData
+								.filter((member) => member.place === 1)
+								.map(
+									(
+										{ profession, name, number, email, workingHours },
+										index
+									) => {
+										return (
+											<div key={index} className="our-team__card">
+												<img src={profileIcon} alt={name} loading="lazy" />
+												<div className="our-team__card-top">
+													<p>{t(profession)}</p>
+													<p>{name}</p>
+													{number && (
+														<a href={`tel:${number.replaceAll(" ", "")}`}>
+															{number}
+														</a>
+													)}
+													{email && (
+														<a href="mailto:josef@gmail.com">{email}</a>
+													)}
+												</div>
+												<div className="our-team__card-bottom">
+													<p style={{ marginBottom: 5 }}>
+														{t("our_team.working_hours")}
+													</p>
+													<ul className="our-team__working-hours">
+														{workingHours.map((day, index) => {
+															return (
+																<li key={index} className="day">
+																	<span>{t(day.name)}:</span>
+																	<span>{day.hours}</span>
+																</li>
+															);
+														})}
+													</ul>
+												</div>
 											</div>
-											<div className="our-team__card-bottom">
-												<p style={{ marginBottom: 5 }}>
-													{t("our_team.working_hours")}
-												</p>
-												<ul className="our-team__working-hours">
-													{workingHours.map((day, index) => {
-														return (
-															<li key={index} className="day">
-																<span>{t(day.name)}:</span>
-																<span>{day.hours}</span>
-															</li>
-														);
-													})}
-												</ul>
+										);
+									}
+								)}
+						</div>
+						<p className="our-team__title">Český Brod</p>
+						<div className="our-team__grid">
+							{ourTeamData
+								.filter((member) => member.place === 2)
+								.map(
+									(
+										{ profession, name, number, email, workingHours },
+										index
+									) => {
+										return (
+											<div key={index} className="our-team__card">
+												<img src={profileIcon} alt="" />
+												<div className="our-team__card-top">
+													<p>{t(profession)}</p>
+													<p>{name}</p>
+													{number && (
+														<a href={`tel:${number.replaceAll(" ", "")}`}>
+															{number}
+														</a>
+													)}
+													{email && (
+														<a href="mailto:josef@gmail.com">{email}</a>
+													)}
+												</div>
+												<div className="our-team__card-bottom">
+													<p style={{ marginBottom: 5 }}>
+														{t("our_team.working_hours")}
+													</p>
+													<ul className="our-team__working-hours">
+														{workingHours.map((day, index) => {
+															return (
+																<li key={index} className="day">
+																	<span>{t(day.name)}:</span>
+																	<span>{day.hours}</span>
+																</li>
+															);
+														})}
+													</ul>
+												</div>
 											</div>
-										</div>
-									);
-								}
-							)}
+										);
+									}
+								)}
+						</div>
 					</div>
-					<p className="our-team__title">Český Brod</p>
-					<div className="our-team__grid">
-						{ourTeamData
-							.filter((member) => member.place === 2)
-							.map(
-								({ profession, name, number, email, workingHours }, index) => {
-									return (
-										<div key={index} className="our-team__card">
-											<img src={profileIcon} alt="" />
-											<div className="our-team__card-top">
-												<p>{t(profession)}</p>
-												<p>{name}</p>
-												{number && (
-													<a href={`tel:${number.replaceAll(" ", "")}`}>
-														{number}
-													</a>
-												)}
-												{email && <a href="mailto:josef@gmail.com">{email}</a>}
-											</div>
-											<div className="our-team__card-bottom">
-												<p style={{ marginBottom: 5 }}>
-													{t("our_team.working_hours")}
-												</p>
-												<ul className="our-team__working-hours">
-													{workingHours.map((day, index) => {
-														return (
-															<li key={index} className="day">
-																<span>{t(day.name)}:</span>
-																<span>{day.hours}</span>
-															</li>
-														);
-													})}
-												</ul>
-											</div>
-										</div>
-									);
-								}
-							)}
-					</div>
-				</div>
+				</Container>
 			</main>
 		</>
 	);

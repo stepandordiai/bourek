@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Container from "../../components/Container/Container";
 import React from "react";
 import locationIcon from "/icons/location.png";
 import phoneIcon from "/icons/telephone.png";
@@ -118,106 +119,112 @@ const Contact = () => {
 			</Helmet>
 			<main>
 				<PageTitle title={t("contacts_title")} />
-				<div className="contact__wrapper">
-					{addressesData.map((address, i) => {
-						return (
-							<React.Fragment key={i}>
-								<div>
-									<p className="contact-details__title">{address.place}</p>
-									<ul
-										className={
-											filterAddressPlace === address.place
-												? "contact__list contact__list--active"
-												: "contact__list"
-										}
-									>
-										<li>
-											{/* TODO: LEARN THIS */}
-											<a href={`tel:${address.tel.replaceAll(" ", "")}`}>
-												<img src={phoneIcon} width={25} height={25} alt="" />
-												<span>{address.tel}</span>
-											</a>
-										</li>
-										<li>
-											<a href="mailto:josef@bourek.cz">
-												<img src={mailIcon} width={25} height={25} alt="" />
-												<span>{address.email}</span>
-											</a>
-										</li>
-										<li>
-											<a href={address.addressUrl} target="_blank">
-												<img src={locationIcon} width={25} height={25} alt="" />
-												<span>{address.address}</span>
-											</a>
-										</li>
-									</ul>
+				<Container>
+					<div className="contact__wrapper">
+						{addressesData.map((address, i) => {
+							return (
+								<React.Fragment key={i}>
+									<div>
+										<p className="contact-details__title">{address.place}</p>
+										<ul
+											className={
+												filterAddressPlace === address.place
+													? "contact__list contact__list--active"
+													: "contact__list"
+											}
+										>
+											<li>
+												{/* TODO: LEARN THIS */}
+												<a href={`tel:${address.tel.replaceAll(" ", "")}`}>
+													<img src={phoneIcon} width={25} height={25} alt="" />
+													<span>{address.tel}</span>
+												</a>
+											</li>
+											<li>
+												<a href="mailto:josef@bourek.cz">
+													<img src={mailIcon} width={25} height={25} alt="" />
+													<span>{address.email}</span>
+												</a>
+											</li>
+											<li>
+												<a href={address.addressUrl} target="_blank">
+													<img
+														src={locationIcon}
+														width={25}
+														height={25}
+														alt=""
+													/>
+													<span>{address.address}</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<CustomDivider />
+								</React.Fragment>
+							);
+						})}
+						<div className="form-map-wrapper">
+							<div className="map-wrapper">
+								<div className="map-wrapper__header">
+									<h2 className="contact__map-title">
+										{t("contacts.map_title")}
+									</h2>
+									<div className="map-wrapper__header-container">
+										{addressesData.map((address, i) => {
+											return (
+												<button
+													key={i}
+													onClick={() => setFilterAddressPlace(address.place)}
+												>
+													{address.place}
+												</button>
+											);
+										})}
+										<div
+											className={`active-bg ${
+												filterAddressPlace === addressesData[1].place
+													? "active-bg--active"
+													: ""
+											}`}
+										></div>
+									</div>
 								</div>
-								<CustomDivider />
-							</React.Fragment>
-						);
-					})}
-					<div className="form-map-wrapper">
-						<div className="map-wrapper">
-							<div className="map-wrapper__header">
-								<h2 className="contact__map-title">
-									{t("contacts.map_title")}
-								</h2>
-								<div className="map-wrapper__header-container">
-									{addressesData.map((address, i) => {
-										return (
-											<button
-												key={i}
-												onClick={() => setFilterAddressPlace(address.place)}
-											>
-												{address.place}
-											</button>
-										);
-									})}
+								<div ref={wrapperRef} className="contact__map">
 									<div
-										className={`active-bg ${
-											filterAddressPlace === addressesData[1].place
-												? "active-bg--active"
-												: ""
-										}`}
-									></div>
+										ref={imgRef}
+										onMouseDown={handleMouseDown}
+										onMouseUp={handleMouseUp}
+										onMouseLeave={handleMouseUp}
+										onMouseMove={(e) => {
+											e.preventDefault();
+											handleMouseMove(e);
+										}}
+										onTouchStart={handleMouseDown}
+										onTouchMove={handleMouseMove}
+										onTouchEnd={handleMouseUp}
+										className="contact__map-img-wrapper"
+									>
+										<img
+											className="contact__map-img"
+											src={addressImg}
+											alt="Bourek map image"
+											// TODO: LEARN THIS
+											draggable={false}
+										/>
+									</div>
+									<iframe
+										className="contact__google-map"
+										src={
+											addressesData.find(
+												(address) => address.place === filterAddressPlace
+											).mapUrl
+										}
+										loading="lazy"
+									></iframe>
 								</div>
 							</div>
-							<div ref={wrapperRef} className="contact__map">
-								<div
-									ref={imgRef}
-									onMouseDown={handleMouseDown}
-									onMouseUp={handleMouseUp}
-									onMouseLeave={handleMouseUp}
-									onMouseMove={(e) => {
-										e.preventDefault();
-										handleMouseMove(e);
-									}}
-									onTouchStart={handleMouseDown}
-									onTouchMove={handleMouseMove}
-									onTouchEnd={handleMouseUp}
-									className="contact__map-img-wrapper"
-								>
-									<img
-										className="contact__map-img"
-										src={addressImg}
-										alt="Bourek map image"
-										// TODO: LEARN THIS
-										draggable={false}
-									/>
-								</div>
-								<iframe
-									className="contact__google-map"
-									src={
-										addressesData.find(
-											(address) => address.place === filterAddressPlace
-										).mapUrl
-									}
-									loading="lazy"
-								></iframe>
-							</div>
-						</div>
-						{/* <CustomDivider className="custom-divider--hide" /> */}
-						{/* <div className="form-wrapper">
+							{/* <CustomDivider className="custom-divider--hide" /> */}
+							{/* <div className="form-wrapper">
 							<h2 className="contact__form-title">{t("appointment_title")}</h2>
 							<form
 								className="contact__form"
@@ -333,8 +340,9 @@ const Contact = () => {
 								</button>
 							</form>
 						</div> */}
+						</div>
 					</div>
-				</div>
+				</Container>
 			</main>
 		</>
 	);

@@ -1,65 +1,109 @@
-import navLinksData from "./../../data/nav-links-data.json";
-import dayjs from "dayjs";
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import locationIcon from "/icons/location.png";
 import phoneIcon from "/icons/telephone.png";
 import mailIcon from "/icons/mail.png";
+import addressImg from "/clinic/03-c.jpg";
 import "./Contact.scss";
 
-// Kolin
-const addressUrl1 = "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9";
-const mapOption1 =
-	"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz";
+const addressesData = [
+	{
+		place: "Kolín",
+		tel: "+420 602 273 579",
+		email: "josef@bourek.cz",
+		address: "Pod Hroby 271 Kolín IV",
+		addressUrl: "https://maps.app.goo.gl/qpbWKMAZ28ndXQRa9",
+		mapUrl:
+			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3769121247105!2d15.207949529345697!3d50.02303286368041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1567f730be5f%3A0xba05366bb1086eb!2sPepa%20Bourek!5e0!3m2!1scs!2scz!4v1738333836740!5m2!1scs!2scz",
+	},
+	{
+		place: "Český Brod",
+		tel: "+420 601 369 198",
+		email: "josef@bourek.cz",
+		address: "Žižkova 282, 282 01 Český Brod",
+		addressUrl: "https://maps.app.goo.gl/SuWAbEfPY9TAUzDE7",
+		mapUrl:
+			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d658.5162078271319!2d14.85188380568383!3d50.07297137932055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adc832cb7fb%3A0x3d803bb0b249fa74!2zxb1pxb5rb3ZhIDI4MiwgMjgyIDAxIMSMZXNrw70gQnJvZA!5e1!3m2!1sen!2scz!4v1763201273136!5m2!1sen!2scz",
+	},
+];
 
-// Cesky Brod
-const addressUrl2 = "https://maps.app.goo.gl/Jew8NoioiT1w8vUE8";
-const mapOption2 =
-	"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37503.0678967374!2d14.860131349999993!3d50.07384145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adbf3a61443%3A0xccfd1bd77ac3cf3a!2zxIxlc2vDvSBCcm9kLCAyODIgMDEgxIxlc2vDvSBCcm9k!5e1!3m2!1sen!2scz!4v1744183535629!5m2!1sen!2scz";
+// const services = navLinksData.find((link) => link.id === 3)?.nestedLinks;
 
-const services = navLinksData.find((link) => link.id === 3)?.nestedLinks;
+// const dateNow = dayjs();
+// const hoursNow = dateNow.hour();
+// const minutesNow = dateNow.minute();
 
-const dateNow = dayjs();
-const hoursNow = dateNow.hour();
-const minutesNow = dateNow.minute();
-
-const formatedDate = dateNow.format("YYYY-MM-DD");
-const formatedHours = hoursNow < 10 ? "0" + hoursNow : hoursNow;
-const formatedMinutes = minutesNow < 10 ? "0" + minutesNow : minutesNow;
+// const formatedDate = dateNow.format("YYYY-MM-DD");
+// const formatedHours = hoursNow < 10 ? "0" + hoursNow : hoursNow;
+// const formatedMinutes = minutesNow < 10 ? "0" + minutesNow : minutesNow;
 
 const Contact = () => {
 	const { t } = useTranslation();
 
-	const [filterMapSrc, setFilterMapSrc] = useState(1);
-	const [selectActive, setSelectActive] = useState(false);
-	const [selectedOption, setSelectedOption] = useState("");
+	const [filterAddressPlace, setFilterAddressPlace] = useState(
+		addressesData[0].place
+	);
+	// const [selectActive, setSelectActive] = useState(false);
+	// const [selectedOption, setSelectedOption] = useState("");
 
-	const customSelect = useRef(null);
+	// const customSelect = useRef(null);
 
-	const handleSelect = (e) => {
-		e.preventDefault();
-		setSelectActive((prev) => !prev);
+	// const handleSelect = (e) => {
+	// 	e.preventDefault();
+	// 	setSelectActive((prev) => !prev);
+	// };
+
+	// const handleSelectOption = (serviceName) => {
+	// 	setSelectedOption(serviceName);
+	// 	setSelectActive(false);
+	// };
+
+	// useEffect(() => {
+	// 	const handleClickNotOnSelect = (e) => {
+	// 		if (customSelect.current && !customSelect.current.contains(e.target)) {
+	// 			setSelectActive(false);
+	// 		}
+	// 	};
+
+	// 	document.addEventListener("click", handleClickNotOnSelect);
+
+	// 	return () => document.removeEventListener("click", handleClickNotOnSelect);
+	// }, []);
+
+	const [isDragging, setIsDragging] = useState(false);
+	const wrapperRef = useRef(null);
+	const imgRef = useRef(null);
+
+	const handleMouseDown = () => {
+		setIsDragging(true);
 	};
 
-	const handleSelectOption = (serviceName) => {
-		setSelectedOption(serviceName);
-		setSelectActive(false);
+	const handleMouseUp = () => {
+		setIsDragging(false);
 	};
 
-	useEffect(() => {
-		const handleClickNotOnSelect = (e) => {
-			if (customSelect.current && !customSelect.current.contains(e.target)) {
-				setSelectActive(false);
-			}
-		};
+	const handleMouseMove = (e) => {
+		if (!isDragging) return;
+		const rect = wrapperRef.current.getBoundingClientRect();
 
-		document.addEventListener("click", handleClickNotOnSelect);
+		const container = imgRef.current;
 
-		return () => document.removeEventListener("click", handleClickNotOnSelect);
-	}, []);
+		// Update container position
+		if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+			container.style.left = e.touches[0].clientX - rect.x + "px";
+			container.style.top = e.touches[0].clientY - rect.y + "px";
+		} else {
+			container.style.left = e.clientX - rect.x + "px";
+			container.style.top = e.clientY - rect.y + "px";
+		}
+
+		container.style.right = "auto";
+		container.style.bottom = "auto";
+		container.style.transform = "translate(-50%, -50%)";
+	};
 
 	return (
 		<>
@@ -74,66 +118,42 @@ const Contact = () => {
 			<main>
 				<PageTitle title={t("contacts_title")} />
 				<div className="contact__wrapper">
-					<div>
-						<p className="contact-details__title">Kolín</p>
-						<ul
-							className={
-								filterMapSrc === 1
-									? "contact__list contact__list--active"
-									: "contact__list"
-							}
-						>
-							<li>
-								<a href="tel:+420602273579">
-									<img src={phoneIcon} width={25} height={25} alt="" />
-									<span>+420 602 273 579</span>
-								</a>
-							</li>
-							<li>
-								<a href="mailto:josef@bourek.cz">
-									<img src={mailIcon} width={25} height={25} alt="" />
-									<span>josef@bourek.cz</span>
-								</a>
-							</li>
-							<li>
-								<a href={addressUrl1} target="_blank">
-									<img src={locationIcon} width={25} height={25} alt="" />
-									<span>Pod Hroby 271 Kolín IV</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<CustomDivider />
-					<div>
-						<p className="contact-details__title">Český Brod</p>
-						<ul
-							className={
-								filterMapSrc === 2
-									? "contact__list contact__list--active"
-									: "contact__list"
-							}
-						>
-							<li>
-								<a href="tel:+420601369198">
-									<img src={phoneIcon} width={25} height={25} alt="" />
-									<span>+420 601 369 198</span>
-								</a>
-							</li>
-							<li>
-								<a href="mailto:josef@bourek.cz">
-									<img src={mailIcon} width={25} height={25} alt="" />
-									<span>josef@bourek.cz</span>
-								</a>
-							</li>
-							<li>
-								<a href={addressUrl2} target="_blank">
-									<img src={locationIcon} width={25} height={25} alt="" />
-									<span>Český Brod</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<CustomDivider />
+					{addressesData.map((address) => {
+						return (
+							<>
+								<div>
+									<p className="contact-details__title">{address.place}</p>
+									<ul
+										className={
+											filterAddressPlace === address.place
+												? "contact__list contact__list--active"
+												: "contact__list"
+										}
+									>
+										<li>
+											<a href="tel:+420602273579">
+												<img src={phoneIcon} width={25} height={25} alt="" />
+												<span>{address.tel}</span>
+											</a>
+										</li>
+										<li>
+											<a href="mailto:josef@bourek.cz">
+												<img src={mailIcon} width={25} height={25} alt="" />
+												<span>{address.email}</span>
+											</a>
+										</li>
+										<li>
+											<a href={address.addressUrl} target="_blank">
+												<img src={locationIcon} width={25} height={25} alt="" />
+												<span>{address.address}</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<CustomDivider />
+							</>
+						);
+					})}
 					<div className="form-map-wrapper">
 						<div className="map-wrapper">
 							<div className="map-wrapper__header">
@@ -141,23 +161,58 @@ const Contact = () => {
 									{t("contacts.map_title")}
 								</h2>
 								<div className="map-wrapper__header-container">
-									<button onClick={() => setFilterMapSrc(1)}>Kolín</button>
-									<button onClick={() => setFilterMapSrc(2)}>Český Brod</button>
+									{addressesData.map((address, i) => {
+										return (
+											<button
+												key={i}
+												onClick={() => setFilterAddressPlace(address.place)}
+											>
+												{address.place}
+											</button>
+										);
+									})}
 									<div
 										className={`active-bg ${
-											filterMapSrc === 2 ? "active-bg--active" : ""
+											filterAddressPlace === addressesData[1].place
+												? "active-bg--active"
+												: ""
 										}`}
 									></div>
 								</div>
 							</div>
-							<iframe
-								className="contact__google-map"
-								src={filterMapSrc === 1 ? mapOption1 : mapOption2}
-								loading="lazy"
-							></iframe>
+							<div ref={wrapperRef} className="contact__map">
+								<div
+									ref={imgRef}
+									onMouseDown={handleMouseDown}
+									onMouseUp={handleMouseUp}
+									onMouseLeave={handleMouseUp}
+									onMouseMove={handleMouseMove}
+									onTouchStart={handleMouseDown}
+									onTouchMove={handleMouseMove}
+									onTouchEnd={handleMouseUp}
+									className="contact__map-img-wrapper"
+								>
+									<img
+										className="contact__map-img"
+										src={addressImg}
+										alt="Bourek map image"
+										// TODO: LEARN THIS
+										draggable={false}
+									/>
+								</div>
+								<iframe
+									className="contact__google-map"
+									src={
+										addressesData.find(
+											(address) => address.place === filterAddressPlace
+										).mapUrl
+									}
+									loading="lazy"
+								></iframe>
+							</div>
 						</div>
-						<CustomDivider className=" custom-divider--hide" />
-						<div className="form-wrapper">
+						{/* <CustomDivider className="custom-divider--hide" /> */}
+						{/* <div className="form-wrapper">
 							<h2 className="contact__form-title">{t("appointment_title")}</h2>
 							<form
 								className="contact__form"
@@ -272,7 +327,7 @@ const Contact = () => {
 									{t("contacts.form_btn")}
 								</button>
 							</form>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</main>

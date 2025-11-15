@@ -244,6 +244,26 @@ label {
 	height: 400px;
 }
 
+.contact__map {
+	position: relative;
+	overflow: hidden;
+}
+
+.contact__map-img-wrapper {
+	position: absolute;
+	width: clamp(200px, 20vw, 300px);
+	bottom: 40px;
+	right: 40px;
+	background: linear-gradient(-90deg, var(--blue-clr), rgb(15, 239, 206));
+	padding: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	cursor: grab;
+
+	&:active {
+		cursor: grabbing;
+	}
+}
+
 @media (max-width: 1000px) {
 	.form-map-wrapper {
 		flex-direction: column;
@@ -258,6 +278,11 @@ label {
 	.contact__wrapper {
 		padding: 40px 20px;
 	}
+
+	.contact__map-img-wrapper {
+		bottom: 20px;
+		right: 20px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -268,5 +293,10 @@ label {
 	.contact-form__inputs {
 		flex-direction: column;
 		row-gap: 10px;
+	}
+
+	.contact__map-img-wrapper {
+		bottom: 10px;
+		right: 10px;
 	}
 }

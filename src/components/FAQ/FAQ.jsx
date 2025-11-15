@@ -210,7 +210,9 @@ const FAQ = () => {
 														onClick={() => handleFaqItems(globalFaqIndex)}
 														className="faq__item-header"
 													>
-														<span>{faq.question}</span>
+														<span style={{ textAlign: "left" }}>
+															{faq.question}
+														</span>
 														<span
 															className={`faq__btn ${
 																faqItems[globalFaqIndex]

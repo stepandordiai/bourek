@@ -34,13 +34,13 @@ const Banner = () => {
 	return (
 		<div
 			className={`banner ${
-				isBannerVisible && infoData[0].info.length ? "banner--show" : ""
+				isBannerVisible && infoData.info.length ? "banner--show" : ""
 			}`}
 		>
 			<div className="banner-header">
 				{!loading && (
 					<p className="banner__title">
-						{t("banner.title")} {infoData[0].date}
+						{t("banner.title")} {infoData.date}
 					</p>
 				)}
 				<button
@@ -51,12 +51,12 @@ const Banner = () => {
 				</button>
 			</div>
 			<div className="banner__divider"></div>
-			{/* <p className="banner__info">{infoData[0].info}</p> */}
-			{/* TODO: */}
+			{/* <p className="banner__info">{infoData.info}</p> */}
 			{!loading && (
 				<p
 					className="banner__info"
-					dangerouslySetInnerHTML={{ __html: infoData[0].info }}
+					// TODO: LEARN THIS
+					dangerouslySetInnerHTML={{ __html: infoData.info }}
 				></p>
 			)}
 		</div>

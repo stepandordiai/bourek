@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import React from "react";
 import locationIcon from "/icons/location.png";
 import phoneIcon from "/icons/telephone.png";
 import mailIcon from "/icons/mail.png";
@@ -86,6 +87,7 @@ const Contact = () => {
 	};
 
 	const handleMouseMove = (e) => {
+		e.preventDefault();
 		if (!isDragging) return;
 		const rect = wrapperRef.current.getBoundingClientRect();
 
@@ -118,9 +120,9 @@ const Contact = () => {
 			<main>
 				<PageTitle title={t("contacts_title")} />
 				<div className="contact__wrapper">
-					{addressesData.map((address) => {
+					{addressesData.map((address, i) => {
 						return (
-							<>
+							<React.Fragment key={i}>
 								<div>
 									<p className="contact-details__title">{address.place}</p>
 									<ul
@@ -131,7 +133,8 @@ const Contact = () => {
 										}
 									>
 										<li>
-											<a href="tel:+420602273579">
+											{/* TODO: LEARN THIS */}
+											<a href={`tel:${address.tel.replaceAll(" ", "")}`}>
 												<img src={phoneIcon} width={25} height={25} alt="" />
 												<span>{address.tel}</span>
 											</a>
@@ -151,7 +154,7 @@ const Contact = () => {
 									</ul>
 								</div>
 								<CustomDivider />
-							</>
+							</React.Fragment>
 						);
 					})}
 					<div className="form-map-wrapper">

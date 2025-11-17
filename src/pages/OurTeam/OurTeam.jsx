@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Container from "../../components/Container/Container";
 import profileIcon from "/icons/profile-icon.png";
 import "./OurTeam.scss";
-import Container from "../../components/Container/Container";
 
 const ourTeamData = [
 	{
@@ -21,6 +21,7 @@ const ourTeamData = [
 		profession: "our_team.profession_type_1",
 		name: "MUDr. Julie Cadorini",
 		email: "cadorinij@seznam.cz",
+		emailTxt: true,
 		workingHours: [
 			{ name: "our_team.mon", hours: "7:30 - 11:30" },
 			{ name: "our_team.tue", hours: "13:00 - 16:30" },
@@ -56,24 +57,16 @@ const ourTeamData = [
 		profession: "our_team.profession_type_3",
 		name: "Pixová Dagmar",
 		workingHours: [
-			{ name: "our_team.mon", hours: "7:00 - 17:00" },
-			{ name: "our_team.tue", hours: "7:00 - 14:30" },
-			{ name: "our_team.wed", hours: "7:00 - 15:00" },
-			{ name: "our_team.thu", hours: "7:00 - 14:30" },
-			{ name: "our_team.fri", hours: "7:00 - 14:00" },
+			{ name: "our_team.mon", hours: "7:30 - 11:30" },
+			{ name: "our_team.wed", hours: "12:30 - 17:00" },
+			{ name: "our_team.thu", hours: "8:30 - 11:30" },
 		],
 		place: 1,
 	},
 	{
 		profession: "our_team.profession_type_3",
 		name: "Soňa Minovska",
-		workingHours: [
-			{ name: "our_team.mon", hours: "7:00 - 17:00" },
-			{ name: "our_team.tue", hours: "7:00 - 14:30" },
-			{ name: "our_team.wed", hours: "7:00 - 15:00" },
-			{ name: "our_team.thu", hours: "7:00 - 14:30" },
-			{ name: "our_team.fri", hours: "7:00 - 14:00" },
-		],
+		workingHours: [{ name: "our_team.tue", hours: "13:00 - 16:30" }],
 		place: 1,
 	},
 	{
@@ -108,7 +101,7 @@ const OurTeam = () => {
 								.filter((member) => member.place === 1)
 								.map(
 									(
-										{ profession, name, number, email, workingHours },
+										{ profession, name, number, email, workingHours, emailTxt },
 										index
 									) => {
 										return (
@@ -124,6 +117,21 @@ const OurTeam = () => {
 													)}
 													{email && (
 														<a href="mailto:josef@gmail.com">{email}</a>
+													)}
+													{emailTxt && (
+														<p
+															style={{
+																textAlign: "center",
+																backgroundColor: "var(--blue-clr)",
+																color: "#fff",
+																padding: 10,
+																borderRadius: 10,
+															}}
+														>
+															Pro konzultaci lékarky využijte zabezpečenou
+															komunikaci přes Smartmedix.net, odpoví v pracovní
+															době.
+														</p>
 													)}
 												</div>
 												<div className="our-team__card-bottom">

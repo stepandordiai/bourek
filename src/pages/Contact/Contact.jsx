@@ -101,11 +101,17 @@ const Contact = () => {
 				<PageTitle title={t("contacts_title")} />
 				<Container>
 					<div className="contact__wrapper">
+						<p style={{ marginBottom: 40 }}>
+							Volejte prosím jen v případě technických problémů s užíváním
+							platformy Smartmedix.net, kterou využíváme pro objednávání a
+							komunikaci s pacienty.
+						</p>
 						{addressesData.map((address, i) => {
 							return (
 								<React.Fragment key={i}>
 									<div>
 										<p className="contact-details__title">{address.place}</p>
+
 										<ul
 											className={
 												filterAddressPlace === address.place

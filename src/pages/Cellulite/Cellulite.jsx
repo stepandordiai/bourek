@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageInfo from "../../components/PageInfo/PageInfo";
+import { HashLink } from "react-router-hash-link";
 import "./Cellulite.scss";
 
 const Cellulite = () => {
@@ -23,22 +24,34 @@ const Cellulite = () => {
 					<strong>{t("cellulite.chapters")}:</strong>
 					<ul className="cellulite__chapters-list">
 						<li>
-							<a href="#chapter1">{t("cellulite.chapter_1")}</a>
+							<HashLink to="#chapter1" smooth>
+								{t("cellulite.chapter_1")}
+							</HashLink>
 						</li>
 						<li>
-							<a href="#chapter2">{t("cellulite.chapter_2")}</a>
+							<HashLink to="#chapter2" smooth>
+								{t("cellulite.chapter_2")}
+							</HashLink>
 						</li>
 						<li>
-							<a href="#chapter3">{t("cellulite.chapter_3")}</a>
+							<HashLink to="#chapter3" smooth>
+								{t("cellulite.chapter_3")}
+							</HashLink>
 						</li>
 						<li>
-							<a href="#chapter4">{t("cellulite.chapter_4")}</a>
+							<HashLink to="#chapter4" smooth>
+								{t("cellulite.chapter_4")}
+							</HashLink>
 						</li>
 						<li>
-							<a href="#chapter5">{t("cellulite.chapter_5")}</a>
+							<HashLink to="#chapter5" smooth>
+								{t("cellulite.chapter_5")}
+							</HashLink>
 						</li>
 						<li>
-							<a href="#chapter6">{t("cellulite.chapter_6")}</a>
+							<HashLink href="#chapter6" smooth>
+								{t("cellulite.chapter_6")}
+							</HashLink>
 						</li>
 					</ul>
 					<div className="chapter" id="chapter1">

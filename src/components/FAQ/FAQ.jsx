@@ -131,9 +131,11 @@ const uniqueSections = [...new Set(faqData.map((faq) => faq.sectionTitle))];
 const FAQ = () => {
 	const { t } = useTranslation();
 
-	const [faqItems, setFaqItems] = useState(
-		new Array(faqData.length).fill(false)
-	);
+	// TODO:
+	const [faqItems, setFaqItems] = useState([
+		true,
+		...new Array((faqData.length - 1).length).fill(false),
+	]);
 
 	const handleFaqItems = (index) => {
 		setFaqItems((prev) => {

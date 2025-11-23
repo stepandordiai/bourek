@@ -119,7 +119,6 @@ const Contact = () => {
 											<li>
 												{/* TODO: LEARN THIS */}
 												<a href={`tel:${address.tel.replaceAll(" ", "")}`}>
-													{/* <img src={phoneIcon} width={25} height={25} alt="" /> */}
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
 														width="24"

@@ -55,9 +55,15 @@
 }
 
 .footer__contact-list {
-	img {
-		vertical-align: middle;
-		margin-right: 5px;
+	li {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		column-gap: 5px;
+	}
+
+	svg {
+		color: var(--blue-clr);
 	}
 
 	a {
@@ -72,19 +78,6 @@
 .footer__footer {
 	display: flex;
 	gap: 40px;
-}
-
-.related-sites-container {
-	display: flex;
-	flex-direction: column;
-
-	a {
-		transition: color 200ms;
-
-		&:hover {
-			color: var(--blue-clr);
-		}
-	}
 }
 
 .footer__creator-link {

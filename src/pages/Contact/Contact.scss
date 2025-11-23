@@ -19,7 +19,12 @@
 		transition: all 0.3s;
 
 		&:hover {
-			background: var(--blue-clr-4);
+			background: var(--blue-clr-2);
+		}
+
+		// TODO:
+		svg {
+			color: var(--blue-clr);
 		}
 	}
 }

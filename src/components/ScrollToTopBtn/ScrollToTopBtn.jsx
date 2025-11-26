@@ -30,7 +30,6 @@ const ScrollToTopBtn = () => {
 			className={`to-top-btn ${visible ? "to-top-btn--visible" : ""}`}
 			onClick={scrollOnClick}
 		>
-			{/* TODO: */}
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="32"

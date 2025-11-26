@@ -128,9 +128,14 @@ const Header = () => {
 				>
 					<LngSelect />
 					{/* burger-btn */}
-					<div onClick={toggleBurgerBtn} className="burger__container">
-						<p>menu</p>
-						<div
+					<button
+						onClick={toggleBurgerBtn}
+						className="burger__container"
+						// TODO: LEARN THIS
+						aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+					>
+						<span>menu</span>
+						<span
 							className={`burger-btn ${isMenuOpen ? "burger-btn--active" : ""}`}
 						>
 							<span
@@ -138,8 +143,8 @@ const Header = () => {
 									isMenuOpen ? "burger-btn__center-line--active" : ""
 								}`}
 							></span>
-						</div>
-					</div>
+						</span>
+					</button>
 				</div>
 				{/* menu */}
 				<div

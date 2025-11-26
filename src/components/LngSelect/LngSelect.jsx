@@ -1,31 +1,31 @@
 import { useEffect, useRef, useState } from "react";
 import i18n from "i18next";
+import csIcon from "/icons/cs.svg";
+import ukIcon from "/icons/uk.svg";
+import enIcon from "/icons/en.svg";
 import "./LngSelect.scss";
 
 const lngData = [
 	{
 		code: "cs",
 		name: "CZ",
-		iconSrc:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png",
+		iconSrc: csIcon,
 	},
 	{
 		code: "uk",
 		name: "UA",
-		iconSrc:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png",
+		iconSrc: ukIcon,
 	},
 	{
 		code: "en",
 		name: "EN",
-		iconSrc:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png",
+		iconSrc: enIcon,
 	},
 ];
 
 const getLngCode = () => localStorage.getItem("i18nextLng") || "cs";
 
-const LanguageSelect = () => {
+const LngSelect = () => {
 	const [lngSelectActive, setLngSelectActive] = useState(false);
 	const [selectedLng, setSelectedLng] = useState(
 		lngData.find((lng) => lng.code === getLngCode())
@@ -63,6 +63,7 @@ const LanguageSelect = () => {
 				}`}
 			>
 				<span className="lng-select__btn-value">{selectedLng.name}</span>
+				<img width={20} height={20} src={selectedLng.iconSrc} alt="" />
 				<span
 					className={`lng-select__btn-icon ${
 						lngSelectActive ? "lng-select__btn-icon--active" : ""
@@ -72,12 +73,12 @@ const LanguageSelect = () => {
 						xmlns="http://www.w3.org/2000/svg"
 						width="20"
 						height="20"
-						fill="#000000"
-						class="bi bi-chevron-down"
+						fill="currentColor"
+						className="bi bi-chevron-down"
 						viewBox="0 0 16 16"
 					>
 						<path
-							fill-rule="evenodd"
+							fillRule="evenodd"
 							d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
 						/>
 					</svg>
@@ -107,4 +108,4 @@ const LanguageSelect = () => {
 	);
 };
 
-export default LanguageSelect;
+export default LngSelect;

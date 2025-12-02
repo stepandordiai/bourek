@@ -37,7 +37,7 @@ const Header = () => {
 	// Close menu on Esc
 	useEffect(() => {
 		const closeMenuOnEsc = (e) => {
-			if (e.key === "Escape") {
+			if (e.code === "Escape") {
 				closeMenu();
 			}
 		};
@@ -51,7 +51,12 @@ const Header = () => {
 		<header className="header">
 			<div className="header-wrapper">
 				<NavLink className="header__logo" to="/">
-					<img src={logo} width={40} height={40} alt="MUDr. Josef Bourek" />
+					<img
+						src={logo}
+						width={40}
+						height={40}
+						alt="MUDr. Josef Bourek logo"
+					/>
 					<span>MUDr. Josef Bourek</span>
 				</NavLink>
 				<nav className="header__list">
@@ -127,12 +132,14 @@ const Header = () => {
 					}}
 				>
 					<LngSelect />
-					{/* burger-btn */}
+					{/* menu-btn */}
 					<button
 						onClick={toggleBurgerBtn}
 						className="burger__container"
 						// TODO: LEARN THIS
-						aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+						aria-label={
+							isMenuOpen ? t("header.closeMenu") : t("header.openMenu")
+						}
 					>
 						<span>menu</span>
 						<span

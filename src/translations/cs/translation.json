@@ -28,7 +28,9 @@
 	},
 
 	"header": {
-		"menu_title": "menu"
+		"menu_title": "menu",
+		"openMenu": "Otevřít menu",
+		"closeMenu": "Zavřít menu"
 	},
 
 	"home": {

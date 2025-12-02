@@ -28,7 +28,9 @@
 	},
 
 	"header": {
-		"menu_title": "menu"
+		"menu_title": "menu",
+		"openMenu": "Open menu",
+		"closeMenu": "Close menu"
 	},
 
 	"home": {

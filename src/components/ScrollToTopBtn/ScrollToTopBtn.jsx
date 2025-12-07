@@ -6,13 +6,17 @@ const ScrollToTopBtn = () => {
 	const { t } = useTranslation();
 	const [visible, setVisible] = useState(false);
 
-	const handleBtnOnScroll = () => {
-		if (window.scrollY >= 500) {
-			setVisible(true);
-		} else {
-			setVisible(false);
-		}
-	};
+	useEffect(() => {
+		// Prevent re-calc window.innerHeight each time on scroll so i save value in a variable
+		const windowHeight = window.innerHeight;
+
+		const handleBtnOnScroll = () => setVisible(window.scrollY >= windowHeight);
+
+		// TODO: LEARN { passive: true }
+		window.addEventListener("scroll", handleBtnOnScroll, { passive: true });
+
+		return () => window.removeEventListener("scroll", handleBtnOnScroll);
+	}, []);
 
 	function scrollOnClick() {
 		window.scrollTo({
@@ -20,12 +24,6 @@ const ScrollToTopBtn = () => {
 			behavior: "smooth",
 		});
 	}
-
-	useEffect(() => {
-		window.addEventListener("scroll", handleBtnOnScroll);
-
-		return () => window.removeEventListener("scroll", handleBtnOnScroll);
-	}, []);
 
 	return (
 		<button

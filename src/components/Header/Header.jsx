@@ -136,10 +136,9 @@ const Header = () => {
 					<button
 						onClick={toggleBurgerBtn}
 						className="burger__container"
-						// TODO: LEARN THIS
-						aria-label={
-							isMenuOpen ? t("header.closeMenu") : t("header.openMenu")
-						}
+						// TODO: learn this
+						aria-expanded={isMenuOpen}
+						aria-controls="menu"
 					>
 						<span>menu</span>
 						<span
@@ -154,8 +153,10 @@ const Header = () => {
 					</button>
 				</div>
 				{/* menu */}
-				<div
+				<nav
 					className={`burger-menu ${isMenuOpen ? "burger-menu--active" : ""}`}
+					id="menu"
+					hidden={!isMenuOpen}
 				>
 					<ul className="burger-menu__nav">
 						{navLinksData.map((link, index) => {
@@ -269,7 +270,7 @@ const Header = () => {
 							</svg>
 						</a>
 					</footer>
-				</div>
+				</nav>
 			</div>
 		</header>
 	);

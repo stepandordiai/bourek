@@ -29,9 +29,7 @@
 	},
 
 	"header": {
-		"menu_title": "меню",
-		"openMenu": "Відкрити меню",
-		"closeMenu": "Закрити меню"
+		"menu_title": "меню"
 	},
 
 	"home": {

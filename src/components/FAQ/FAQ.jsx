@@ -201,16 +201,19 @@ const FAQ = () => {
 								<div className="home__faq">
 									{faqData
 										.filter((faq) => faq.sectionTitle === section)
-										.map((faq, index) => {
-											// TODO:
+										.map((faq) => {
+											// TODO: learn this
 											const globalFaqIndex = faqData.findIndex(
 												(f) => f.question === faq.question
 											);
+
 											return (
-												<div key={index} className="faq__item">
+												<div key={globalFaqIndex} className="faq__item">
 													<button
 														onClick={() => handleFaqItems(globalFaqIndex)}
 														className="faq__item-header"
+														aria-expanded={faqItems[globalFaqIndex]}
+														aria-controls={`faq__item-${globalFaqIndex}`}
 													>
 														<span style={{ textAlign: "left" }}>
 															{faq.question}
@@ -229,6 +232,8 @@ const FAQ = () => {
 																? "grid-line--active"
 																: ""
 														}`}
+														id={`faq__item-${globalFaqIndex}`}
+														hidden={!faqItems[globalFaqIndex]}
 													>
 														<p
 															className={`faq__txt ${

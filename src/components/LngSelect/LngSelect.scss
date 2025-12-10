@@ -48,7 +48,7 @@
 
 .lng-select__list--visible {
 	opacity: 1;
-	pointer-events: all;
+	pointer-events: auto;
 }
 
 .lng-select__option {
@@ -59,7 +59,6 @@
 	border-radius: 10px;
 	padding: 10px;
 	font-weight: 300;
-	cursor: pointer;
 
 	&:hover {
 		background: var(--blue-clr);

@@ -26,25 +26,25 @@ const lngData = [
 const getLngCode = () => localStorage.getItem("i18nextLng") || "cs";
 
 const LngSelect = () => {
-	const [lngSelectActive, setLngSelectActive] = useState(false);
+	const [lngSelectVisible, setLngSelectVisible] = useState(false);
 	const [selectedLng, setSelectedLng] = useState(
 		lngData.find((lng) => lng.code === getLngCode())
 	);
 
 	const lngSelect = useRef(null);
 
-	const toggleLngSelect = () => setLngSelectActive((prev) => !prev);
+	const toggleLngSelect = () => setLngSelectVisible((prev) => !prev);
 
 	const handleLngSelectOption = (lng) => {
 		i18n.changeLanguage(lng.code);
-		setLngSelectActive(false);
+		setLngSelectVisible(false);
 		setSelectedLng(lng);
 	};
 
 	useEffect(() => {
 		const handleClickNotOnLngSelect = (e) => {
 			if (lngSelect.current && !lngSelect.current.contains(e.target)) {
-				setLngSelectActive(false);
+				setLngSelectVisible(false);
 			}
 		};
 
@@ -59,14 +59,16 @@ const LngSelect = () => {
 			<button
 				onClick={toggleLngSelect}
 				className={`lng-select__btn ${
-					lngSelectActive ? "lng-select__btn--active" : ""
+					lngSelectVisible ? "lng-select__btn--active" : ""
 				}`}
+				aria-expanded={lngSelectVisible}
+				aria-controls="lng-select-list"
 			>
 				<span className="lng-select__btn-value">{selectedLng.name}</span>
 				<img width={20} height={20} src={selectedLng.iconSrc} alt="" />
 				<span
 					className={`lng-select__btn-icon ${
-						lngSelectActive ? "lng-select__btn-icon--active" : ""
+						lngSelectVisible ? "lng-select__btn-icon--active" : ""
 					}`}
 				>
 					<svg
@@ -86,20 +88,24 @@ const LngSelect = () => {
 			</button>
 			<ul
 				className={`lng-select__list ${
-					lngSelectActive ? "lng-select__list--visible" : ""
+					lngSelectVisible ? "lng-select__list--visible" : ""
 				}`}
+				id="lng-select-list"
+				aria-hidden={!lngSelectVisible}
 			>
 				{lngData.map((lng) => {
 					return (
-						<li
-							key={lng.code}
-							onClick={() => handleLngSelectOption(lng)}
-							className={`lng-select__option ${
-								lng === selectedLng ? "lng-select__option--active" : ""
-							}`}
-						>
-							<span>{lng.name}</span>
-							<img width={20} height={20} src={lng.iconSrc} alt="" />
+						<li>
+							<button
+								key={lng.code}
+								onClick={() => handleLngSelectOption(lng)}
+								className={`lng-select__option ${
+									lng === selectedLng ? "lng-select__option--active" : ""
+								}`}
+							>
+								<span>{lng.name}</span>
+								<img width={20} height={20} src={lng.iconSrc} alt="" />
+							</button>
 						</li>
 					);
 				})}

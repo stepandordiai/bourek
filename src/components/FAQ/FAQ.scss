@@ -41,7 +41,7 @@
 }
 
 .faq-section-link--active {
-	background: var(--blue-clr) !important;
+	background: var(--blue-clr);
 	color: #fff !important;
 }
 
@@ -90,10 +90,10 @@
 		content: "";
 		position: absolute;
 		left: 50%;
-		transform: translateX(-50%);
 		height: 100%;
 		width: 2px;
 		background: #000;
+		transform: translateX(-50%);
 		transform-origin: center center;
 		transition: transform 300ms;
 	}
@@ -112,14 +112,14 @@
 }
 
 .faq__btn--active::before {
-	transform: rotate(90deg) !important;
+	transform: translateX(-50%) rotate(90deg);
 }
 
 .grid-line {
 	display: grid;
-	grid-template-rows: 0fr;
 	overflow: hidden;
-	transition: all 0.3s;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.3s;
 
 	p {
 		overflow: hidden;
@@ -128,7 +128,7 @@
 }
 
 .grid-line--active {
-	grid-template-rows: 1fr !important;
+	grid-template-rows: 1fr;
 }
 
 .faq__txt {

@@ -131,7 +131,7 @@ const uniqueSections = [...new Set(faqData.map((faq) => faq.sectionTitle))];
 const FAQ = () => {
 	const { t } = useTranslation();
 
-	// TODO:
+	// TODO: learn this
 	const [faqItems, setFaqItems] = useState([
 		true,
 		...new Array((faqData.length - 1).length).fill(false),
@@ -139,7 +139,7 @@ const FAQ = () => {
 
 	const handleFaqItems = (index) => {
 		setFaqItems((prev) => {
-			// TODO:
+			// TODO: learn this
 			const updated = new Array(faqData.length).fill(false);
 			updated[index] = !prev[index];
 			return updated;
@@ -233,7 +233,7 @@ const FAQ = () => {
 																: ""
 														}`}
 														id={`faq__item-${globalFaqIndex}`}
-														hidden={!faqItems[globalFaqIndex]}
+														aria-hidden={!faqItems[globalFaqIndex]}
 													>
 														<p
 															className={`faq__txt ${

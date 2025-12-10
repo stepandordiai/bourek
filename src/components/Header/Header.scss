@@ -207,16 +207,16 @@
 	flex-direction: column;
 	background: #fff;
 	padding: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.5s;
-	overflow-y: auto;
-	overflow-x: hidden;
 }
 
 .burger-menu--active {
 	opacity: 1;
-	pointer-events: all;
+	pointer-events: auto;
 }
 
 .burger-menu__select-title {

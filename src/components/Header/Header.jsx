@@ -16,7 +16,7 @@ const Header = () => {
 		new Array(navLinksData.length).fill(false)
 	);
 
-	const toggleBurgerBtn = () => {
+	const toggleMenu = () => {
 		setIsMenuOpen((prev) => !prev);
 		setMenuDropdown((prev) => prev.map(() => false));
 	};
@@ -37,7 +37,7 @@ const Header = () => {
 	// Close menu on Esc
 	useEffect(() => {
 		const closeMenuOnEsc = (e) => {
-			if (e.code === "Escape") {
+			if (e.key === "Escape") {
 				closeMenu();
 			}
 		};
@@ -134,7 +134,7 @@ const Header = () => {
 					<LngSelect />
 					{/* menu-btn */}
 					<button
-						onClick={toggleBurgerBtn}
+						onClick={toggleMenu}
 						className="burger__container"
 						// TODO: learn this
 						aria-expanded={isMenuOpen}
@@ -156,7 +156,8 @@ const Header = () => {
 				<nav
 					className={`burger-menu ${isMenuOpen ? "burger-menu--active" : ""}`}
 					id="menu"
-					hidden={!isMenuOpen}
+					// TODO: learn this
+					aria-hidden={!isMenuOpen}
 				>
 					<ul className="burger-menu__nav">
 						{navLinksData.map((link, index) => {

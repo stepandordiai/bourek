@@ -43,10 +43,8 @@ const Testimonials = () => {
 	const { t } = useTranslation();
 
 	return (
-		<>
-			<h2 className="home__testimonials-title" id="testimonials">
-				{t("testimonials_title")}
-			</h2>
+		<section id="testimonials">
+			<h2 className="home__testimonials-title">{t("testimonials_title")}</h2>
 			<a
 				className="testimonials__link"
 				href="https://g.page/r/CeuGELtmU6ALEAE/review"
@@ -111,7 +109,7 @@ const Testimonials = () => {
 					);
 				})}
 			</Swiper>
-		</>
+		</section>
 	);
 };
 

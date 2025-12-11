@@ -167,10 +167,8 @@ const FAQ = () => {
 		return () => document.removeEventListener("scroll", handleFaqSectionLink);
 	}, []);
 	return (
-		<>
-			<h2 className="home__faq-title" id="faq">
-				{t("faq_title")}
-			</h2>
+		<section id="faq">
+			<h2 className="home__faq-title">{t("faq_title")}</h2>
 			<div className="faq">
 				<div className="faq__nav">
 					<ul className="faq__nav-list">
@@ -254,7 +252,7 @@ const FAQ = () => {
 					})}
 				</div>
 			</div>
-		</>
+		</section>
 	);
 };
 

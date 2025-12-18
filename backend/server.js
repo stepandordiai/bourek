@@ -40,9 +40,7 @@ app.get("/health", (req, res) => {
 
 mongoose.set("strictQuery", false);
 mongoose
-	.connect(
-		"mongodb+srv://stepandordiaiBdWcumZOkcl:Overwatch1@stepandordiaiapi.1ocur.mongodb.net/NodeAPI?retryWrites=true&w=majority&appName=StepanDordiaiAPI"
-	)
+	.connect(process.env.MONGO_URI)
 	.then(() => {
 		console.log("Connected to MongoDB database");
 		app.listen(3000, () => {

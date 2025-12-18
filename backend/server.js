@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const infoRoute = require("./routes/infoRoute");
 const cors = require("cors");
-
+const dotenv = require("dotenv");
+dotenv.config();
 const app = express();
 
 // List of allowed origins (admin + public site)

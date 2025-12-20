@@ -162,9 +162,9 @@ const FAQ = () => {
 			});
 		};
 
-		document.addEventListener("scroll", handleFaqSectionLink);
+		window.addEventListener("scroll", handleFaqSectionLink);
 
-		return () => document.removeEventListener("scroll", handleFaqSectionLink);
+		return () => window.removeEventListener("scroll", handleFaqSectionLink);
 	}, []);
 	return (
 		<section id="faq">

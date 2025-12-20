@@ -76,7 +76,7 @@
 
 .faq__item-header {
 	@include flex-between-center;
-	cursor: pointer;
+	column-gap: 5px;
 	padding: 10px;
 	width: 100%;
 }
@@ -85,6 +85,7 @@
 	position: relative;
 	width: 20px;
 	height: 20px;
+	flex-shrink: 0;
 
 	&::before {
 		content: "";
@@ -117,14 +118,8 @@
 
 .grid-line {
 	display: grid;
-	overflow: hidden;
 	grid-template-rows: 0fr;
 	transition: grid-template-rows 0.3s;
-
-	p {
-		overflow: hidden;
-		font-weight: 200;
-	}
 }
 
 .grid-line--active {
@@ -132,6 +127,8 @@
 }
 
 .faq__txt {
+	overflow: hidden;
+	font-weight: 300;
 	padding: 0 10px;
 	transition: padding 0.3s;
 }

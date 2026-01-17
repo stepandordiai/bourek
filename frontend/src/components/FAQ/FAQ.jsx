@@ -177,7 +177,7 @@ const FAQ = () => {
 								<li key={index}>
 									<HashLink
 										className="js-link-section"
-										to={`/#faq${index + 1}`}
+										to={`/#sekce${index + 1}`}
 										smooth
 									>
 										{section}
@@ -193,7 +193,7 @@ const FAQ = () => {
 							<div
 								key={index}
 								className="js-faq-section"
-								id={`faq${index + 1}`}
+								id={`sekce${index + 1}`}
 							>
 								<p className="faq__section-title">{section}</p>
 								<div className="home__faq">
@@ -202,7 +202,7 @@ const FAQ = () => {
 										.map((faq) => {
 											// TODO: learn this
 											const globalFaqIndex = faqData.findIndex(
-												(f) => f.question === faq.question
+												(f) => f.question === faq.question,
 											);
 
 											return (

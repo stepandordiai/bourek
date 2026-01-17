@@ -4,24 +4,24 @@
 		"id": 2,
 		"name": "about_us_title",
 		"nestedLinks": [
-			{ "id": "offer", "name": "offer_title" },
-			{ "id": "price-list", "name": "price_list_title" },
-			{ "id": "our-team", "name": "our_team_title" },
-			{ "id": "clinic-gallery", "name": "clinic_gallery_title" }
+			{ "id": "co-nabizime", "name": "offer_title" },
+			{ "id": "cenik", "name": "price_list_title" },
+			{ "id": "nas-tym", "name": "our_team_title" },
+			{ "id": "galerie-kliniky", "name": "clinic_gallery_title" }
 		]
 	},
 	{
 		"id": 3,
 		"name": "services_title",
 		"nestedLinks": [
-			{ "id": "surgery", "name": "service_1" },
+			{ "id": "ordinace", "name": "service_1" },
 			{ "id": "starvac", "name": "service_2" },
-			{ "id": "cellulite", "name": "service_3" },
-			{ "id": "lymphatic", "name": "service_4" },
+			{ "id": "celulitida", "name": "service_3" },
+			{ "id": "lymfodrenaz", "name": "service_4" },
 			{ "id": "laser", "name": "service_5" },
-			{ "id": "electrotherapy", "name": "service_6" },
-			{ "id": "ltv", "name": "service_7" }
+			{ "id": "elektrolecba", "name": "service_6" },
+			{ "id": "individualni-fyzioterapie", "name": "service_7" }
 		]
 	},
-	{ "id": 4, "name": "contacts_title", "path": "/contact" }
+	{ "id": 4, "name": "contacts_title", "path": "/kontakt" }
 ]

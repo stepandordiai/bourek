@@ -15,7 +15,7 @@ const Surgery = () => {
 					content="Ordinace MUDr. Josef Bourek v Kolíně a Českém Brodě – komplexní rehabilitační péče, fyzioterapie, elektroterapie, laserová terapie a další moderní léčebné metody."
 				/>
 				<title>{t("service_1")} | Bourek</title>
-				<link rel="canonical" href="https://www.bourek.cz/surgery" />
+				<link rel="canonical" href="https://www.bourek.cz/ordinace" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("service_1")} />

@@ -89,7 +89,7 @@ const OurTeam = () => {
 					content="Seznamte se s týmem odborníků v ordinaci MUDr. Josef Bourek v Kolíně. Zkušení fyzioterapeuti a zdravotnický personál poskytují individuální rehabilitační péči."
 				/>
 				<title>{t("our_team_title")} | Bourek</title>
-				<link rel="canonical" href="https://www.bourek.cz/our-team" />
+				<link rel="canonical" href="https://www.bourek.cz/nas-tym" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("our_team_title")} />
@@ -102,7 +102,7 @@ const OurTeam = () => {
 								.map(
 									(
 										{ profession, name, number, email, workingHours, emailTxt },
-										index
+										index,
 									) => {
 										return (
 											<div key={index} className="our-team__card">
@@ -151,7 +151,7 @@ const OurTeam = () => {
 												</div>
 											</div>
 										);
-									}
+									},
 								)}
 						</div>
 						<p className="our-team__title">Český Brod</p>
@@ -161,7 +161,7 @@ const OurTeam = () => {
 								.map(
 									(
 										{ profession, name, number, email, workingHours },
-										index
+										index,
 									) => {
 										return (
 											<div key={index} className="our-team__card">
@@ -195,7 +195,7 @@ const OurTeam = () => {
 												</div>
 											</div>
 										);
-									}
+									},
 								)}
 						</div>
 					</div>

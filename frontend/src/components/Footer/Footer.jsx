@@ -164,7 +164,7 @@ const Footer = () => {
 								className={({ isActive }) =>
 									`footer__link ${isActive ? "footer__link--active" : ""}`
 								}
-								to="/personal-data"
+								to="/osobni-udaje"
 							>
 								{t("personal_data_title")}
 							</NavLink>

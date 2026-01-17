@@ -53,19 +53,19 @@ function App() {
 				<ScrollToTopBtn />
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/offer" element={<Offer />} />
-					<Route path="/price-list" element={<PriceList />} />
-					<Route path="/our-team" element={<OurTeam />} />
-					<Route path="/clinic-gallery" element={<ClinicGallery />} />
-					<Route path="/surgery" element={<Surgery />} />
+					<Route path="/co-nabizime" element={<Offer />} />
+					<Route path="/cenik" element={<PriceList />} />
+					<Route path="/nas-tym" element={<OurTeam />} />
+					<Route path="/galerie-kliniky" element={<ClinicGallery />} />
+					<Route path="/ordinace" element={<Surgery />} />
 					<Route path="/starvac" element={<Starvac />} />
-					<Route path="/cellulite" element={<Cellulite />} />
-					<Route path="/lymphatic" element={<Lymphatic />} />
+					<Route path="/celulitida" element={<Cellulite />} />
+					<Route path="/lymfodrenaz" element={<Lymphatic />} />
 					<Route path="/laser" element={<Laser />} />
-					<Route path="/electrotherapy" element={<Electrotherapy />} />
-					<Route path="/ltv" element={<LTV />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/personal-data" element={<PersonalData />} />
+					<Route path="/elektrolecba" element={<Electrotherapy />} />
+					<Route path="/individualni-fyzioterapie" element={<LTV />} />
+					<Route path="/kontakt" element={<Contact />} />
+					<Route path="/osobni-udaje" element={<PersonalData />} />
 					{/* <Route path="/online-appointment" element={<OnlineAppointment />} /> */}
 					<Route path="*" element={<NotFound />} />
 				</Routes>

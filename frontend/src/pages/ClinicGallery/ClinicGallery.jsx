@@ -61,7 +61,7 @@ const ClinicGallery = () => {
 					content="Prohlédněte si moderní prostory ordinace MUDr. Josefa Bourka v Kolíně a Českém Brodě. Galerie nabízí pohled na vybavení a příjemné prostředí kliniky."
 				/>
 				<title>{t("clinic_gallery_title")} | Bourek</title>
-				<link rel="canonical" href="https://www.bourek.cz/clinic-gallery" />
+				<link rel="canonical" href="https://www.bourek.cz/galerie-kliniky" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("clinic_gallery_title")} />

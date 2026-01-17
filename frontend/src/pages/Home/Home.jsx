@@ -33,7 +33,7 @@ const Home = () => {
 								<h2 className="home__sec-title accent">{t("home.title")}</h2>
 								<h3 className="home__title">{t("home.secondary_title")}</h3>
 								<div className="home__link-container">
-									<HashLink className="home__link" to="/#services" smooth>
+									<HashLink className="home__link" to="/#sluzby" smooth>
 										{t("services_title")}
 									</HashLink>
 									{/* <NavLink className="home__link" to="/online-appointment">
@@ -52,7 +52,7 @@ const Home = () => {
 								/>
 							</div>
 						</div>
-						<HashLink className="home__scroll-mouse-btn" to="/#services" smooth>
+						<HashLink className="home__scroll-mouse-btn" to="/#sluzby" smooth>
 							<div className="wheel"></div>
 						</HashLink>
 					</section>

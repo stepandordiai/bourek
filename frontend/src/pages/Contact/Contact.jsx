@@ -23,7 +23,7 @@ const Contact = () => {
 	const { t } = useTranslation();
 
 	const [filterAddressPlace, setFilterAddressPlace] = useState(
-		addressesData[0].place
+		addressesData[0].place,
 	);
 	// const [selectActive, setSelectActive] = useState(false);
 	// const [selectedOption, setSelectedOption] = useState("");
@@ -92,7 +92,7 @@ const Contact = () => {
 					content="Kontaktujte ordinaci MUDr. Josef Bourek v Kolíně nebo Českém Brodě. Objednejte se na rehabilitaci, fyzioterapii či další služby online nebo telefonicky."
 				/>
 				<title>{t("contacts_title")} | Bourek</title>
-				<link rel="canonical" href="https://www.bourek.cz/contact" />
+				<link rel="canonical" href="https://www.bourek.cz/kontakt" />
 			</Helmet>
 			<main>
 				<PageTitle title={t("contacts_title")} />
@@ -224,7 +224,7 @@ const Contact = () => {
 										className="contact__google-map"
 										src={
 											addressesData.find(
-												(address) => address.place === filterAddressPlace
+												(address) => address.place === filterAddressPlace,
 											).mapUrl
 										}
 										loading="lazy"

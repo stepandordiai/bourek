@@ -12,8 +12,8 @@ const ourTeamData = [
 		number: "+420 602 273 579",
 		email: "josef@bourek.cz",
 		workingHours: [
-			{ name: "our_team.wed", hours: "12:30 - 17:00" },
-			{ name: "our_team.thu", hours: "8:30 - 11:30" },
+			{ id: 3, name: "our_team.wed", start: "12:30", end: "17:00" },
+			{ id: 4, name: "our_team.thu", start: "8:30", end: "11:30" },
 		],
 		place: 1,
 	},
@@ -23,8 +23,8 @@ const ourTeamData = [
 		email: "cadorinij@seznam.cz",
 		emailTxt: true,
 		workingHours: [
-			{ name: "our_team.mon", hours: "7:30 - 11:30" },
-			{ name: "our_team.tue", hours: "13:00 - 16:30" },
+			{ id: 1, name: "our_team.mon", start: "7:30", end: "11:30" },
+			{ id: 2, name: "our_team.tue", start: "13:00", end: "16:30" },
 		],
 		place: 1,
 	},
@@ -33,11 +33,11 @@ const ourTeamData = [
 		name: "Matějková Iva",
 		number: "+420 607 841 622",
 		workingHours: [
-			{ name: "our_team.mon", hours: "6:00 - 14:00" },
-			{ name: "our_team.tue", hours: "6:00 - 14:00" },
-			{ name: "our_team.wed", hours: "6:00 - 18:00" },
-			{ name: "our_team.thu", hours: "6:00 - 13:30" },
-			{ name: "our_team.fri", hours: "6:00 - 13:00" },
+			{ id: 1, name: "our_team.mon", start: "6:00", end: "14:00" },
+			{ id: 2, name: "our_team.tue", start: "6:00", end: "14:00" },
+			{ id: 3, name: "our_team.wed", start: "6:00", end: "18:00" },
+			{ id: 4, name: "our_team.thu", start: "6:00", end: "13:30" },
+			{ id: 5, name: "our_team.fri", start: "6:00", end: "13:00" },
 		],
 		place: 1,
 	},
@@ -45,11 +45,11 @@ const ourTeamData = [
 		profession: "our_team.profession_type_2",
 		name: "Jansová Radka",
 		workingHours: [
-			{ name: "our_team.mon", hours: "7:00 - 17:00" },
-			{ name: "our_team.tue", hours: "7:00 - 14:30" },
-			{ name: "our_team.wed", hours: "7:00 - 15:00" },
-			{ name: "our_team.thu", hours: "7:00 - 14:30" },
-			{ name: "our_team.fri", hours: "7:00 - 14:00" },
+			{ id: 1, name: "our_team.mon", start: "7:00", end: "14:30" },
+			{ id: 2, name: "our_team.tue", start: "7:00", end: "17:00" },
+			{ id: 3, name: "our_team.wed", start: "7:00", end: "15:00" },
+			{ id: 4, name: "our_team.thu", start: "7:00", end: "14:30" },
+			{ id: 5, name: "our_team.fri", start: "7:00", end: "14:00" },
 		],
 		place: 1,
 	},
@@ -57,26 +57,40 @@ const ourTeamData = [
 		profession: "our_team.profession_type_3",
 		name: "Pixová Dagmar",
 		workingHours: [
-			{ name: "our_team.mon", hours: "7:30 - 11:30" },
-			{ name: "our_team.wed", hours: "12:30 - 17:00" },
-			{ name: "our_team.thu", hours: "8:30 - 11:30" },
+			{ id: 1, name: "our_team.mon", start: "7:30", end: "11:30" },
+			{ id: 3, name: "our_team.wed", start: "12:30", end: "17:00" },
+			{ id: 4, name: "our_team.thu", start: "8:30", end: "11:30" },
 		],
 		place: 1,
 	},
 	{
 		profession: "our_team.profession_type_3",
 		name: "Soňa Minovska",
-		workingHours: [{ name: "our_team.tue", hours: "13:00 - 16:30" }],
+		workingHours: [
+			{ id: 2, name: "our_team.tue", start: "13:00", end: "16:30" },
+		],
 		place: 1,
 	},
 	{
 		profession: "our_team.profession_type_3",
 		name: "Elena Zajičkova",
 		number: "+420 601 369 198",
-		workingHours: [{ name: "our_team.tue", hours: "8:30 - 14:30" }],
+		workingHours: [
+			{ id: 2, name: "our_team.tue", start: "8:30", end: "14:30" },
+		],
 		place: 2,
 	},
 ];
+
+const now = new Date();
+const dayNow = now.getDay();
+const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+// TODO: learn this
+function timeToMinutes(time) {
+	const [h, m] = time.split(":").map(Number);
+	return h * 60 + m;
+}
 
 const OurTeam = () => {
 	const { t } = useTranslation();
@@ -104,8 +118,37 @@ const OurTeam = () => {
 										{ profession, name, number, email, workingHours, emailTxt },
 										index,
 									) => {
+										// TODO: learn this
+										const isWorkingNow = workingHours.some((day) => {
+											const start = timeToMinutes(day.start);
+											const end = timeToMinutes(day.end);
+
+											return (
+												currentMinutes >= start &&
+												currentMinutes <= end &&
+												day.id === dayNow
+											);
+										});
+
 										return (
 											<div key={index} className="our-team__card">
+												<div
+													style={{
+														display: "flex",
+														justifyContent: "flex-start",
+														alignItems: "center",
+														gap: 10,
+													}}
+												>
+													<span
+														className={`our-team__card-indicator ${isWorkingNow ? "indicator--active" : ""}`.trim()}
+													></span>
+													<span>
+														{isWorkingNow
+															? t("our_team.atWork")
+															: t("our_team.offWork")}
+													</span>
+												</div>
 												<img src={profileIcon} alt={name} loading="lazy" />
 												<div className="our-team__card-top">
 													<p>{t(profession)}</p>
@@ -135,15 +178,20 @@ const OurTeam = () => {
 													)}
 												</div>
 												<div className="our-team__card-bottom">
-													<p style={{ marginBottom: 5 }}>
+													<p style={{ marginBottom: 5, fontWeight: 600 }}>
 														{t("our_team.working_hours")}
 													</p>
 													<ul className="our-team__working-hours">
-														{workingHours.map((day, index) => {
+														{workingHours.map((day, i) => {
 															return (
-																<li key={index} className="day">
+																<li
+																	key={i}
+																	className={`day ${day.id === dayNow ? "day--active" : ""}`.trim()}
+																>
 																	<span>{t(day.name)}:</span>
-																	<span>{day.hours}</span>
+																	<span>
+																		{day.start} - {day.end}
+																	</span>
 																</li>
 															);
 														})}
@@ -163,8 +211,36 @@ const OurTeam = () => {
 										{ profession, name, number, email, workingHours },
 										index,
 									) => {
+										const isWorkingNow = workingHours.some((day) => {
+											const start = timeToMinutes(day.start);
+											const end = timeToMinutes(day.end);
+
+											return (
+												currentMinutes >= start &&
+												currentMinutes <= end &&
+												day.id === dayNow
+											);
+										});
+
 										return (
 											<div key={index} className="our-team__card">
+												<div
+													style={{
+														display: "flex",
+														justifyContent: "flex-start",
+														alignItems: "center",
+														gap: 10,
+													}}
+												>
+													<span
+														className={`our-team__card-indicator ${isWorkingNow ? "indicator--active" : ""}`.trim()}
+													></span>
+													<span>
+														{isWorkingNow
+															? t("our_team.atWork")
+															: t("our_team.offWork")}
+													</span>
+												</div>
 												<img src={profileIcon} alt="" />
 												<div className="our-team__card-top">
 													<p>{t(profession)}</p>
@@ -179,15 +255,20 @@ const OurTeam = () => {
 													)}
 												</div>
 												<div className="our-team__card-bottom">
-													<p style={{ marginBottom: 5 }}>
+													<p style={{ marginBottom: 5, fontWeight: 500 }}>
 														{t("our_team.working_hours")}
 													</p>
 													<ul className="our-team__working-hours">
-														{workingHours.map((day, index) => {
+														{workingHours.map((day, i) => {
 															return (
-																<li key={index} className="day">
+																<li
+																	key={i}
+																	className={`day ${day.id === dayNow ? "day--active" : ""}`.trim()}
+																>
 																	<span>{t(day.name)}:</span>
-																	<span>{day.hours}</span>
+																	<span>
+																		{day.start} - {day.end}
+																	</span>
 																</li>
 															);
 														})}

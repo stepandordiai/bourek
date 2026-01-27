@@ -74,7 +74,9 @@
 		"thu": "Thursday",
 		"fri": "Friday",
 		"sat": "Saturday",
-		"sun": "Sunday"
+		"sun": "Sunday",
+		"atWork": "At work",
+		"offWork": "Off work"
 	},
 
 	"surgery": {

@@ -17,6 +17,36 @@
 	gap: 40px;
 }
 
+.our-team__card-indicator {
+	display: inline-block;
+	width: 11px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.indicator--active {
+	position: relative;
+	background: var(--blue-clr);
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		aspect-ratio: 1/1;
+		border-radius: inherit;
+		background: var(--blue-clr);
+		animation: animateIndicator 2s infinite;
+	}
+}
+
+@keyframes animateIndicator {
+	to {
+		scale: 2;
+		opacity: 0;
+	}
+}
+
 .our-team__card {
 	display: flex;
 	justify-content: flex-start;
@@ -49,10 +79,6 @@
 .our-team__card-bottom {
 	width: 100%;
 	margin-top: auto;
-
-	p {
-		color: var(--blue-clr);
-	}
 }
 
 .our-team__working-hours {
@@ -66,8 +92,7 @@
 }
 
 .day--active {
-	background: var(--blue-clr);
-	color: #fff;
+	color: var(--blue-clr);
 }
 
 @media (max-width: 1200px) {

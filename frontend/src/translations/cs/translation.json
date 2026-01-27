@@ -74,7 +74,9 @@
 		"thu": "Čtvrtek",
 		"fri": "Pátek",
 		"sat": "Sobota",
-		"sun": "Neděle"
+		"sun": "Neděle",
+		"atWork": "V práci",
+		"offWork": "Mimo práci"
 	},
 
 	"surgery": {

@@ -1,15 +1,15 @@
 .img-text__container {
-    img {
-        float: left;
-        padding-right: 20px;
-    }
+	img {
+		float: left;
+		padding-right: 20px;
+	}
 }
 
 .starvac__ul-list {
-    li {
-        list-style: disc;
-    }
-    ::marker {
-        color: var(--blue-clr);
-    }
+	li {
+		list-style: disc;
+	}
+	::marker {
+		color: var(--blue-clr);
+	}
 }

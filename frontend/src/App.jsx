@@ -9,13 +9,13 @@ import Offer from "./pages/Offer/Offer";
 import PriceList from "./pages/PriceList/PriceList";
 import ClinicHours from "./pages/ClinicHours/ClinicHours";
 import ClinicGallery from "./pages/ClinicGallery/ClinicGallery";
-import Surgery from "./pages/Surgery/Surgery";
-import Starvac from "./pages/Starvac/Starvac";
-import Cellulite from "./pages/Cellulite/Cellulite";
-import Lymphatic from "./pages/Lymphatic/Lymphatic";
-import Laser from "./pages/Laser/Laser";
-import Electrotherapy from "./pages/Electrotherapy/Electrotherapy";
-import LTV from "./pages/LTV/LTV";
+// import Surgery from "./pages/Surgery/Surgery";
+// import Starvac from "./pages/Starvac/Starvac";
+// import Cellulite from "./pages/Cellulite/Cellulite";
+// import Lymphatic from "./pages/Lymphatic/Lymphatic";
+// import Laser from "./pages/Laser/Laser";
+// import Electrotherapy from "./pages/Electrotherapy/Electrotherapy";
+// import LTV from "./pages/LTV/LTV";
 import Contact from "./pages/Contact/Contact";
 import PersonalData from "./pages/PersonalData/PersonalData";
 import Footer from "./components/Footer/Footer";
@@ -57,13 +57,13 @@ function App() {
 					<Route path="/cenik" element={<PriceList />} />
 					<Route path="/ordinacni-doba" element={<ClinicHours />} />
 					<Route path="/galerie-kliniky" element={<ClinicGallery />} />
-					<Route path="/ordinace" element={<Surgery />} />
-					<Route path="/starvac" element={<Starvac />} />
-					<Route path="/celulitida" element={<Cellulite />} />
-					<Route path="/lymfodrenaz" element={<Lymphatic />} />
-					<Route path="/laser" element={<Laser />} />
-					<Route path="/elektrolecba" element={<Electrotherapy />} />
-					<Route path="/individualni-fyzioterapie" element={<LTV />} />
+					{/* <Route path="/ordinace" element={<Surgery />} /> */}
+					{/* <Route path="/starvac" element={<Starvac />} /> */}
+					{/* <Route path="/celulitida" element={<Cellulite />} /> */}
+					{/* <Route path="/lymfodrenaz" element={<Lymphatic />} /> */}
+					{/* <Route path="/laser" element={<Laser />} /> */}
+					{/* <Route path="/elektrolecba" element={<Electrotherapy />} /> */}
+					{/* <Route path="/individualni-fyzioterapie" element={<LTV />} /> */}
 					<Route path="/kontakt" element={<Contact />} />
 					<Route path="/osobni-udaje" element={<PersonalData />} />
 					{/* <Route path="/online-appointment" element={<OnlineAppointment />} /> */}

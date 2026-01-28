@@ -79,7 +79,7 @@ const Footer = () => {
 						})}
 					</ul>
 				</div>
-				<div>
+				{/* <div>
 					<p>{t("services_title")}</p>
 					<ul>
 						{services.map((service) => {
@@ -97,7 +97,7 @@ const Footer = () => {
 							);
 						})}
 					</ul>
-				</div>
+				</div> */}
 				<div>
 					<p>{t("contacts_title")}</p>
 					{addressesData.map((address, i) => {

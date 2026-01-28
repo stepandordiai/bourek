@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { lazy, useEffect, useRef, useState } from "react";
 import i18n from "i18next";
 import csIcon from "/icons/cs.svg";
 import ukIcon from "/icons/uk.svg";
@@ -28,7 +28,7 @@ const getLngCode = () => localStorage.getItem("i18nextLng") || "cs";
 const LngSelect = () => {
 	const [lngSelectVisible, setLngSelectVisible] = useState(false);
 	const [selectedLng, setSelectedLng] = useState(
-		lngData.find((lng) => lng.code === getLngCode())
+		lngData.find((lng) => lng.code === getLngCode()),
 	);
 
 	const lngSelect = useRef(null);
@@ -95,7 +95,7 @@ const LngSelect = () => {
 			>
 				{lngData.map((lng) => {
 					return (
-						<li>
+						<li key={lng.code}>
 							<button
 								key={lng.code}
 								onClick={() => handleLngSelectOption(lng)}

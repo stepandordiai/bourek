@@ -10,18 +10,5 @@
 			{ "id": "galerie-kliniky", "name": "clinic_gallery_title" }
 		]
 	},
-	{
-		"id": 3,
-		"name": "services_title",
-		"nestedLinks": [
-			{ "id": "ordinace", "name": "service_1" },
-			{ "id": "starvac", "name": "service_2" },
-			{ "id": "celulitida", "name": "service_3" },
-			{ "id": "lymfodrenaz", "name": "service_4" },
-			{ "id": "laser", "name": "service_5" },
-			{ "id": "elektrolecba", "name": "service_6" },
-			{ "id": "individualni-fyzioterapie", "name": "service_7" }
-		]
-	},
-	{ "id": 4, "name": "contacts_title", "path": "/kontakt" }
+	{ "id": 3, "name": "contacts_title", "path": "/kontakt" }
 ]

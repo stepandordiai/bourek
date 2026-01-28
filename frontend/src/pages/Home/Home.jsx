@@ -62,7 +62,7 @@ const Home = () => {
 							<div className="wheel"></div>
 						</HashLink>
 					</section>
-					<section className="home__services" id="sluzby">
+					{/* <section className="home__services" id="sluzby">
 						<h2 className="home__services-title">{t("services_title")}</h2>
 						<div className="home__grid-container">
 							{navLinksData
@@ -96,7 +96,7 @@ const Home = () => {
 									);
 								})}
 						</div>
-					</section>
+					</section> */}
 					<Testimonials />
 					{/* <FAQ /> */}
 				</Container>

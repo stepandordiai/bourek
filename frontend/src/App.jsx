@@ -7,7 +7,7 @@ import ScrollToTopBtn from "./components/ScrollToTopBtn/ScrollToTopBtn";
 import Home from "./pages/Home/Home";
 import Offer from "./pages/Offer/Offer";
 import PriceList from "./pages/PriceList/PriceList";
-import OurTeam from "./pages/OurTeam/OurTeam";
+import ClinicHours from "./pages/ClinicHours/ClinicHours";
 import ClinicGallery from "./pages/ClinicGallery/ClinicGallery";
 import Surgery from "./pages/Surgery/Surgery";
 import Starvac from "./pages/Starvac/Starvac";
@@ -24,8 +24,8 @@ import Banner from "./components/Banner/Banner";
 import NotFound from "./pages/NotFound/NotFound";
 import "./i18n";
 import FacebookIcon from "./icons/FacebookIcon";
-import "./App.scss";
 import TelIcon from "./icons/TelIcon";
+import "./App.scss";
 
 function App() {
 	const [floatContactActive, setFloatContactActive] = useState(false);
@@ -55,7 +55,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/co-nabizime" element={<Offer />} />
 					<Route path="/cenik" element={<PriceList />} />
-					<Route path="/nas-tym" element={<OurTeam />} />
+					<Route path="/ordinacni-doba" element={<ClinicHours />} />
 					<Route path="/galerie-kliniky" element={<ClinicGallery />} />
 					<Route path="/ordinace" element={<Surgery />} />
 					<Route path="/starvac" element={<Starvac />} />

@@ -6,7 +6,7 @@
 		"nestedLinks": [
 			{ "id": "co-nabizime", "name": "offer_title" },
 			{ "id": "cenik", "name": "price_list_title" },
-			{ "id": "nas-tym", "name": "our_team_title" },
+			{ "id": "ordinacni-doba", "name": "clinicHoursTitle" },
 			{ "id": "galerie-kliniky", "name": "clinic_gallery_title" }
 		]
 	},

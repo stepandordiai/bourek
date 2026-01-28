@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Container from "../../components/Container/Container";
 import profileIcon from "/icons/profile-icon.png";
-import "./OurTeam.scss";
+import "./ClinicHours.scss";
 
 const ourTeamData = [
 	{
@@ -92,7 +92,7 @@ function timeToMinutes(time) {
 	return h * 60 + m;
 }
 
-const OurTeam = () => {
+const ClinicHours = () => {
 	const { t } = useTranslation();
 
 	return (
@@ -102,11 +102,11 @@ const OurTeam = () => {
 					name="description"
 					content="Seznamte se s týmem odborníků v ordinaci MUDr. Josef Bourek v Kolíně. Zkušení fyzioterapeuti a zdravotnický personál poskytují individuální rehabilitační péči."
 				/>
-				<title>{t("our_team_title")} | Bourek</title>
-				<link rel="canonical" href="https://www.bourek.cz/nas-tym" />
+				<title>{t("clinicHoursTitle")} | Bourek</title>
+				<link rel="canonical" href="https://www.bourek.cz/ordinacni-doba" />
 			</Helmet>
 			<main>
-				<PageTitle title={t("our_team_title")} />
+				<PageTitle title={t("clinicHoursTitle")} />
 				<Container>
 					<div className="our-team">
 						<p className="our-team__title">Kolín</p>
@@ -286,4 +286,4 @@ const OurTeam = () => {
 	);
 };
 
-export default OurTeam;
+export default ClinicHours;

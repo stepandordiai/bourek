@@ -13,7 +13,7 @@ const Header = () => {
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [menuDropdown, setMenuDropdown] = useState(
-		new Array(navLinksData.length).fill(false)
+		new Array(navLinksData.length).fill(false),
 	);
 
 	const toggleMenu = () => {
@@ -55,9 +55,9 @@ const Header = () => {
 						src={logo}
 						width={40}
 						height={40}
-						alt="MUDr. Josef Bourek logo"
+						alt="MUDr. Josef Bourek, s.r.o. logo"
 					/>
-					<span>MUDr. Josef Bourek</span>
+					<span>MUDr. Josef Bourek, s.r.o.</span>
 				</NavLink>
 				<nav className="header__list">
 					{navLinksData.map((link) => {

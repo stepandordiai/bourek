@@ -4,7 +4,7 @@ import Container from "../../components/Container/Container";
 import navLinksData from "./../../data/nav-links-data.json";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import FAQ from "../../components/FAQ/FAQ";
+// import FAQ from "../../components/FAQ/FAQ";
 import { HashLink } from "react-router-hash-link";
 import "./Home.scss";
 
@@ -27,18 +27,24 @@ const Home = () => {
 						<div className="home__wrapper">
 							<div>
 								<div className="home__title-container">
-									<h1 className="home__title accent">MUDr. Josef Bourek</h1>
-									<p className="home__title">MUDr. Julie Cadorini</p>
+									<h1 className="home__heading accent">
+										Ordinace rehabilitačního lékaře:
+										<br />
+										MUDr. Josef Bourek,
+										<br />
+										MUDr. Julie Cadorini
+									</h1>
+									<h2 className="home__subheading">
+										Lékařská akupunktura:
+										<br />
+										MUDr. Julie Cadorini Fyzioterapie
+									</h2>
 								</div>
-								<h2 className="home__sec-title accent">{t("home.title")}</h2>
-								<h3 className="home__title">{t("home.secondary_title")}</h3>
+
 								<div className="home__link-container">
 									<HashLink className="home__link" to="/#sluzby" smooth>
 										{t("services_title")}
 									</HashLink>
-									{/* <NavLink className="home__link" to="/online-appointment">
-									{t("appointment_title")}
-								</NavLink> */}
 									<a className="home__link" href="tel:+420602273579">
 										{t("appointment_title")}
 									</a>
@@ -56,7 +62,7 @@ const Home = () => {
 							<div className="wheel"></div>
 						</HashLink>
 					</section>
-					<section className="home__services" id="services">
+					<section className="home__services" id="sluzby">
 						<h2 className="home__services-title">{t("services_title")}</h2>
 						<div className="home__grid-container">
 							{navLinksData
@@ -92,7 +98,7 @@ const Home = () => {
 						</div>
 					</section>
 					<Testimonials />
-					<FAQ />
+					{/* <FAQ /> */}
 				</Container>
 			</main>
 		</>

@@ -24,6 +24,11 @@ const PriceList = () => {
 						<table className="prices__table">
 							<tbody>
 								<tr>
+									<td>{t("price_list.option8")}</td>
+									<td>1 sezení</td>
+									<td>650 Kč</td>
+								</tr>
+								<tr>
 									<td>{t("price_list.price_list_1")}</td>
 									<td>1 aplikace</td>
 									<td>80 Kč</td>

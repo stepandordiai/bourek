@@ -328,7 +328,6 @@
 
 	.burger__container {
 		display: flex;
-		// display: inline-block;
 	}
 }
 
@@ -336,9 +335,7 @@
 	.header-wrapper {
 		padding: 0 10px;
 	}
-}
 
-@media (max-width: 500px) {
 	.header__logo {
 		span {
 			display: none;

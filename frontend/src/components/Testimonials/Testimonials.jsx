@@ -43,7 +43,7 @@ const Testimonials = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section id="testimonials">
+		<section style={{ marginBottom: 40 }} id="testimonials">
 			<h2 className="home__testimonials-title">{t("testimonials_title")}</h2>
 			<a
 				className="testimonials__link"

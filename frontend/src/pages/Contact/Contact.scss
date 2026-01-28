@@ -4,10 +4,15 @@
 	padding: 40px;
 }
 
+.contact-details-container {
+	display: flex;
+	gap: 20px;
+}
+
 .contact__list {
 	@include flex-between-center;
 	flex-wrap: wrap;
-	gap: 40px;
+	gap: 20px;
 	border-radius: 10px;
 	padding: 5px;
 
@@ -56,6 +61,7 @@
 	text-align: start;
 	font-size: 24px;
 	color: var(--blue-clr);
+	margin-bottom: 10px;
 }
 
 .contact__map-title {
@@ -289,6 +295,12 @@ label {
 	.contact__map-img-wrapper {
 		bottom: 20px;
 		right: 20px;
+	}
+}
+
+@media (max-width: 900px) {
+	.contact-details-container {
+		flex-direction: column;
 	}
 }
 

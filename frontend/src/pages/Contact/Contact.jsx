@@ -98,17 +98,20 @@ const Contact = () => {
 				<PageTitle title={t("contacts_title")} />
 				<Container>
 					<div className="contact__wrapper">
+						<p style={{ marginBottom: 20 }}>
+							Pro konzultaci lékaře využijte zabezpečenou komunikaci přes
+							Smartmedix.net, odpoví v pracovní době.
+						</p>
 						<p style={{ marginBottom: 40 }}>
 							Volejte prosím jen v případě technických problémů s užíváním
 							platformy Smartmedix.net, kterou využíváme pro objednávání a
 							komunikaci s pacienty.
 						</p>
-						{addressesData.map((address, i) => {
-							return (
-								<React.Fragment key={i}>
-									<div>
+						<div className="contact-details-container">
+							{addressesData.map((address, i) => {
+								return (
+									<div style={{ width: "100%" }} key={i}>
 										<p className="contact-details__title">{address.place}</p>
-
 										<ul
 											className={`contact__list ${
 												filterAddressPlace === address.place
@@ -136,21 +139,6 @@ const Contact = () => {
 												</a>
 											</li>
 											<li>
-												<a href={`mailto:${address.email}`}>
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														width="24"
-														height="24"
-														fill="currentColor"
-														className="bi bi-envelope-fill"
-														viewBox="0 0 16 16"
-													>
-														<path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-													</svg>
-													<span>{address.email}</span>
-												</a>
-											</li>
-											<li>
 												<a href={address.addressUrl} target="_blank">
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
@@ -167,10 +155,10 @@ const Contact = () => {
 											</li>
 										</ul>
 									</div>
-									<CustomDivider />
-								</React.Fragment>
-							);
-						})}
+								);
+							})}
+						</div>
+						<CustomDivider />
 						<div className="form-map-wrapper">
 							<div className="map-wrapper">
 								<div className="map-wrapper__header">

@@ -43,21 +43,21 @@ const Footer = () => {
 									</li>
 								);
 							})}
-						<li>
+						{/* <li>
 							<HashLink className="footer__link" to="/#services" smooth>
 								{t("services_title")}
 							</HashLink>
-						</li>
+						</li> */}
 						<li>
 							<HashLink className="footer__link" to="/#testimonials" smooth>
 								{t("testimonials_title")}
 							</HashLink>
 						</li>
-						<li>
+						{/* <li>
 							<HashLink className="footer__link" to="/#faq" smooth>
 								{t("faq_title")}
 							</HashLink>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 				<div>

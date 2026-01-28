@@ -42,9 +42,9 @@ const Home = () => {
 								</div>
 
 								<div className="home__link-container">
-									<HashLink className="home__link" to="/#sluzby" smooth>
-										{t("services_title")}
-									</HashLink>
+									<NavLink className="home__link" to="/co-nabizime">
+										{t("offer_title")}
+									</NavLink>
 									<a className="home__link" href="tel:+420602273579">
 										{t("appointment_title")}
 									</a>

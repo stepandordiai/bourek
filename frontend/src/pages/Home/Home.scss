@@ -37,7 +37,7 @@
 }
 
 .home__subheading {
-	font-size: clamp(1.25rem, 2vw, 1.5rem);
+	font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .accent {
@@ -71,7 +71,7 @@
 }
 
 .home__img {
-	width: clamp(300px, 40vw, 500px);
+	width: clamp(250px, 40vw, 500px);
 	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 	animation: morphing 20s infinite;
 }

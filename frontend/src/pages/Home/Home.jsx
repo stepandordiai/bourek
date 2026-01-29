@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import Container from "../../components/Container/Container";
-import navLinksData from "./../../data/nav-links-data.json";
+// import navLinksData from "./../../data/nav-links-data.json";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../../components/Testimonials/Testimonials";
 // import FAQ from "../../components/FAQ/FAQ";
@@ -54,11 +54,15 @@ const Home = () => {
 								<img
 									className="home__img"
 									src="https://ld-wp73.template-help.com/wordpress/prod_29195/v1/wp-content/uploads/2020/05/Rectangle-64.png"
-									alt="MUDr. Josef Bourek"
+									alt="MUDr. Josef Bourek, s.r.o."
 								/>
 							</div>
 						</div>
-						<HashLink className="home__scroll-mouse-btn" to="/#sluzby" smooth>
+						<HashLink
+							className="home__scroll-mouse-btn"
+							to="/#testimonials"
+							smooth
+						>
 							<div className="wheel"></div>
 						</HashLink>
 					</section>

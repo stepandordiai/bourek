@@ -19,9 +19,16 @@ const Loading = () => {
 			className="loading-logo"
 			style={loadingVisible ? { display: "flex" } : { display: "none" }}
 		>
-			<img src={logo} width={50} height={50} alt="MUDr. Josef Bourek" />
-			<div className="text-line">
-				<p>MUDr. Josef Bourek</p>
+			<img
+				src={logo}
+				width={40}
+				height={40}
+				alt="MUDr. Josef Bourek, s.r.o. logo"
+			/>
+			<div className="text-content">
+				<div className="text-line">
+					<p>MUDr. Josef Bourek, s.r.o.</p>
+				</div>
 			</div>
 		</div>
 	);

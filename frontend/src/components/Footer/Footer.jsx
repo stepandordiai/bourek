@@ -19,7 +19,7 @@ const Footer = () => {
 		<footer className="footer">
 			<NavLink className="footer__logo" to="/">
 				<img width={40} height={40} src={logo} alt="MUDr. Josef Bourek" />
-				<span>MUDr. Josef Bourek, s.r.o.</span>
+				<span>MUDr. Josef Bourek s.r.o.</span>
 			</NavLink>
 			<p className="footer__logo-details">Ordinace rehabilitačního lékaře</p>
 			<CustomDivider />
@@ -156,7 +156,7 @@ const Footer = () => {
 						);
 					})}
 					<p style={{ marginTop: 10 }}>
-						{t("footer.about_title")} MUDr. Josef Bourek, s.r.o.
+						{t("footer.about_title")} MUDr. Josef Bourek s.r.o.
 					</p>
 					<ul>
 						<li>
@@ -178,8 +178,7 @@ const Footer = () => {
 					<div>
 						<p className="copyright">
 							<span>
-								&copy; 2025&ndash;{new Date().getFullYear()} MUDr. Josef Bourek,
-								s.r.o.
+								&copy; {new Date().getFullYear()} MUDr. Josef Bourek s.r.o.
 							</span>
 							<span> | </span>
 							<span>{t("footer.all_rights_reserved")}</span>

@@ -57,7 +57,7 @@ const Header = () => {
 						height={40}
 						alt="MUDr. Josef Bourek, s.r.o. logo"
 					/>
-					<span>MUDr. Josef Bourek, s.r.o.</span>
+					<span>MUDr. Josef Bourek s.r.o.</span>
 				</NavLink>
 				<nav className="header__list">
 					{navLinksData.map((link) => {

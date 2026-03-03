@@ -1,0 +1,34 @@
+@use "./../../scss/mixins" as *;
+
+.to-top-btn {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 2;
+	@include grid-center;
+	background: var(--blue-clr-8);
+	color: #fff;
+	width: 40px;
+	aspect-ratio: 1/1;
+	border-radius: 10px;
+	opacity: 0;
+	will-change: opacity;
+	pointer-events: none;
+	transition:
+		opacity 300ms,
+		scale 300ms;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+.to-top-btn--visible {
+	opacity: 1;
+	// TODO: pointer-events: all; only SVG
+	pointer-events: auto;
+}

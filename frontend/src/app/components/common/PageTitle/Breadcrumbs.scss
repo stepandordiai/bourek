@@ -1,0 +1,22 @@
+.breadcrumbs {
+	text-align: center;
+	padding: 80px 0;
+	background: linear-gradient(-90deg, var(--blue-clr), rgb(15, 239, 206));
+	color: #fff;
+}
+
+.breadcrumbs__title {
+	font-size: clamp(2.5rem, 5vw, 3rem);
+}
+
+.breadcrumbs__link {
+	color: #fff !important;
+	transition: opacity 0.2s;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+.breadcrumbs__link--inactive {
+	opacity: 0.5;
+}

@@ -1,0 +1,76 @@
+@use "./../../scss/mixins" as *;
+
+.lng-select {
+	position: relative;
+	z-index: 99;
+}
+
+.lng-select__btn {
+	@include flex-center;
+	column-gap: 5px;
+}
+
+.lng-select__btn--active {
+	background: var(--accent-clr);
+}
+
+.lng-select__btn-value {
+	pointer-events: none;
+}
+
+.lng-select__btn-icon {
+	@include grid-center;
+	pointer-events: none;
+	transition: rotate 0.3s;
+}
+
+.lng-select__btn-icon--active {
+	rotate: 180deg;
+}
+
+.lng-select__list {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 5px;
+	border-radius: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
+}
+
+.lng-select__list--visible {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.lng-select__option {
+	@include flex-center;
+	column-gap: 5px;
+	background: transparent;
+	color: #000;
+	border-radius: 10px;
+	padding: 10px;
+	font-weight: 300;
+
+	&:hover {
+		background: var(--blue-clr);
+		color: #fff !important;
+	}
+}
+
+.lng-select__option--active {
+	background: var(--blue-clr);
+	color: #fff !important;
+}
+
+.lng-select__input {
+	display: none;
+}

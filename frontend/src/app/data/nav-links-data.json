@@ -1,0 +1,14 @@
+[
+	{ "id": 1, "name": "home_title", "path": "/" },
+	{
+		"id": 2,
+		"name": "about_us_title",
+		"nestedLinks": [
+			{ "id": "co-nabizime", "name": "offer_title" },
+			{ "id": "cenik", "name": "price_list_title" },
+			{ "id": "ordinacni-doba", "name": "clinicHoursTitle" },
+			{ "id": "galerie-kliniky", "name": "clinic_gallery_title" }
+		]
+	},
+	{ "id": 3, "name": "contacts_title", "path": "/kontakt" }
+]

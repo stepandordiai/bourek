@@ -1,0 +1,126 @@
+@use "./../../../scss/mixins" as *;
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	background: #fff;
+	min-height: 100px;
+	margin-top: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer__logo {
+	@include flex-center;
+	align-self: flex-start;
+
+	span {
+		font-size: 1.5rem;
+		color: #000;
+	}
+}
+
+.footer__logo-details {
+	margin-top: 10px;
+}
+
+.footer__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	p {
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+	}
+}
+
+.footer__link {
+	transition: color 200ms;
+
+	&:hover {
+		color: var(--blue-clr);
+	}
+}
+
+.footer__link--active {
+	color: var(--blue-clr) !important;
+}
+
+.footer__contact-list {
+	li {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		column-gap: 5px;
+	}
+
+	svg {
+		color: var(--blue-clr);
+	}
+
+	a {
+		transition: color 200ms;
+
+		&:hover {
+			color: var(--blue-clr);
+		}
+	}
+}
+
+.footer__copy-btn {
+	transition: color 200ms;
+
+	&:hover {
+		color: var(--blue-clr) !important;
+	}
+}
+
+.footer__creator-link {
+	transition: color 200ms;
+
+	&:hover {
+		color: var(--blue-clr);
+	}
+}
+
+@media (max-width: 900px) {
+	.footer {
+		padding: 40px 20px;
+	}
+
+	.footer__nav {
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 40px;
+	}
+
+	.footer__nav-table {
+		width: 100%;
+	}
+
+	.footer__footer {
+		flex-direction: column-reverse;
+	}
+}
+
+@media (max-width: 600px) {
+	.footer {
+		padding: 40px 10px;
+	}
+}
+
+@media (max-width: 450px) {
+	.footer__logo {
+		span {
+			display: none;
+		}
+	}
+}

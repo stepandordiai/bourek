@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--accent-clr: #28a1ff;
+	--accent-clr-semi-tp: rgb(40, 161, 255, 0.5);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+#root {
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 10px;
+	width: 600px;
+}
+
+header {
+	height: 80px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.header__logo {
+	font-size: 1.25rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.accent-logo {
+	color: var(--accent-clr);
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	margin-bottom: 20px;
+}
+
+input {
+	font-family: inherit;
+	padding: 10px;
+	font-size: 1rem;
+	border: 2px solid var(--accent-clr-semi-tp);
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+
+input:focus {
+	outline: none;
+	border: 2px solid var(--accent-clr);
+}
+
+textarea {
+	font-family: inherit;
+	padding: 10px;
+	font-size: 1rem;
+	resize: vertical;
+	border-radius: 10px;
+	border: 2px solid var(--accent-clr-semi-tp);
+	transition: all 0.3s;
+}
+
+textarea:focus {
+	outline: none;
+	border: 2px solid var(--accent-clr);
+}
+
+.btn {
+	font-family: "Poppins", sans-serif;
+	padding: 10px;
+	background: var(--accent-clr);
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.25rem;
+	cursor: pointer;
+	margin-bottom: 20px;
+	align-self: flex-end;
+	transition: all 0.3s;
+}
+
+.btn:hover {
+	background: var(--accent-clr-semi-tp);
+}
+
+.btn--disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+s.check-site-container {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	margin-top: auto;
+}
+
+.pop-up {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	padding: 25px;
+	border-radius: 10px;
+	white-space: nowrap;
+}
+
+.sample {
+	background: var(--accent-clr-semi-tp);
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+}
+
+.sample > p {
+	margin-bottom: 5px;
+}
+
+.sample__img {
+	width: 100%;
+}
+
+@media screen and (width < 620px) {
+	.wrapper {
+		width: 100%;
+	}
+}

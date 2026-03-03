@@ -1,0 +1,59 @@
+@use "./../../scss/mixins" as *;
+
+.offer-container {
+	width: min(100%, 1000px);
+	margin: 0 auto;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.offer-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	ul {
+		padding-left: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		li {
+			list-style: circle;
+		}
+	}
+
+	li {
+		list-style: disc;
+
+		&:has(ul) {
+			li:first-child {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	::marker {
+		color: var(--blue-clr);
+	}
+}
+
+@media (max-width: 1024px) {
+	.offer__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 900px) {
+	.offer-container {
+		padding: 40px 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.offer-container {
+		padding: 40px 10px;
+	}
+}

@@ -1,0 +1,116 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+import "./Testimonials.scss";
+
+const testimonialsData = [
+	{
+		name: "Cathy Mattson",
+		date: "April 2, 2025",
+		review:
+			"Naprosto perfekní přístup a profesionální chování. Neumím si představit lepší a příjemnější místo na rehabilitaci. Doporučuji všem známým!",
+		rating: 5,
+	},
+	{
+		name: "Valeria Novitskaia",
+		date: "January 10, 2025",
+		review:
+			"Všechno probíhalo na jedničku. Velice milý a profesionální přístup.",
+		rating: 4,
+	},
+	{
+		name: "Jan Šmída",
+		date: "March 16, 2025",
+		review: "Velmi pozitivní a přátelský přístup. Pár cviků a obrovský posun.",
+		rating: 5,
+	},
+	{
+		name: "Jiri Capek",
+		date: "March 25, 2025",
+		review:
+			"Nádherné, moderní a čisté prostředí. Extrémně empatický, milý a trpělivý personál. Celkově místo působí profesionálním, ale zároveň přívětivým dojmem.",
+		rating: 5,
+	},
+];
+
+const Testimonials = () => {
+	const t = useTranslations();
+
+	return (
+		<section style={{ marginBottom: 40 }} id="testimonials">
+			<h2 className="home__testimonials-title">{t("testimonials_title")}</h2>
+			<a
+				className="testimonials__link"
+				href="https://g.page/r/CeuGELtmU6ALEAE/review"
+				target="_blank"
+			>
+				{t("testimonials_btn")}
+			</a>
+			<Swiper
+				breakpoints={{
+					1200: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					},
+
+					900: {
+						slidesPerView: 2,
+						spaceBetween: 40,
+					},
+				}}
+				slidesPerView={1}
+				centeredSlides={true}
+				spaceBetween={20}
+				grabCursor={true}
+				autoplay={{
+					delay: 4000,
+					disableOnInteraction: false,
+				}}
+				modules={[Autoplay]}
+			>
+				{testimonialsData.map((testimonial, index) => {
+					return (
+						<SwiperSlide key={index}>
+							<div className="testimonials__card">
+								<div className="testimonials-card__header">
+									<div>
+										<p className="testimonials-card__header-name">
+											{testimonial.name}
+										</p>
+										<p className="testimonials-card__header-date">
+											{testimonial.date}
+										</p>
+									</div>
+									<img src="/icons/google.png" width={40} height={40} alt="" />
+								</div>
+								<div className="testimonials-card__rating">
+									{/* TODO: TO LEARN */}
+									{Array.from({ length: testimonial.rating }).map((_, i) => {
+										return (
+											<img
+												key={i}
+												src="/icons/star.png"
+												width={20}
+												height={20}
+												alt=""
+											/>
+										);
+									})}
+								</div>
+								<p>{testimonial.review}</p>
+							</div>
+						</SwiperSlide>
+					);
+				})}
+			</Swiper>
+		</section>
+	);
+};
+
+export default Testimonials;

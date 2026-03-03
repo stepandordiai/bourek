@@ -13,9 +13,8 @@ export async function generateMetadata({
 	const baseUrl = "https://www.bourek.cz";
 
 	return {
-		title: `${t("contacts_title")} | Bourek`,
-		description:
-			"Kontaktujte ordinaci MUDr. Josef Bourek v Kolíně nebo Českém Brodě. Objednejte se na rehabilitaci, fyzioterapii či další služby online nebo telefonicky.",
+		title: `${t("clinic_gallery_title")} | Bourek`,
+		description: "",
 		alternates: {
 			canonical: `${baseUrl}/${locale}/galerie-kliniky`,
 			languages: {

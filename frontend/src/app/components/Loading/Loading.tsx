@@ -1,16 +1,23 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import "./Loading.scss";
 import Image from "next/image";
+import "./Loading.scss";
 
 const Loading = () => {
 	const [loadingVisible, setLoadingVisible] = useState(true);
 
 	useEffect(() => {
+		document.documentElement.style.overflow = "hidden";
 		const timeout = setTimeout(() => {
 			setLoadingVisible(false);
+			document.documentElement.style.overflow = "";
 		}, 2000);
 
-		return () => clearTimeout(timeout);
+		return () => {
+			clearTimeout(timeout);
+			document.documentElement.style.overflow = "";
+		};
 	}, []);
 
 	return (

@@ -9,13 +9,12 @@ import React from "react";
 import LngSelect from "../../LngSelect/LngSelect";
 import { usePathname } from "@/i18n/navigation";
 import Image from "next/image";
+import ChevronDownIcon from "@/app/icons/ChevronDownIcon";
 import "./Header.scss";
 
 const Header = () => {
 	const t = useTranslations();
 	const pathname = usePathname();
-
-	console.log(pathname);
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [menuDropdown, setMenuDropdown] = useState(
@@ -83,19 +82,7 @@ const Header = () => {
 										<div className="nav__custom-select-item">
 											<span>{t(link.name)}</span>
 											<span className="nav__dd-btn-icon">
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="20"
-													height="20"
-													fill="currentColor"
-													className="bi bi-chevron-down"
-													viewBox="0 0 16 16"
-												>
-													<path
-														fillRule="evenodd"
-														d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-													/>
-												</svg>
+												<ChevronDownIcon size={20} />
 											</span>
 										</div>
 										<div className="nav__custom-options">
@@ -184,19 +171,7 @@ const Header = () => {
 															: ""
 													}`}
 												>
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														width="40"
-														height="40"
-														fill="currentColor"
-														className="bi bi-chevron-down"
-														viewBox="0 0 16 16"
-													>
-														<path
-															fillRule="evenodd"
-															d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-														/>
-													</svg>
+													<ChevronDownIcon size={40} />
 												</span>
 											</div>
 											<div

@@ -1,10 +1,10 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
 import Container from "../../components/Container/Container";
-import type { Metadata } from "next";
 import "./ClinicHours.scss";
 
-const ourTeamData = [
+const ourTeam = [
 	{
 		profession: "our_team.profession_type_1",
 		name: "MUDr. Josef Bourek",
@@ -98,19 +98,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-	const baseUrl = "https://www.bourek.cz";
+
+	const locales = ["cs", "uk", "en"];
+	const languages = Object.fromEntries(
+		locales.map((l) => [l, `/${l}/ordinacni-doba`]),
+	);
 
 	return {
 		title: `${t("clinicHoursTitle")} | Bourek`,
 		description:
 			"Seznamte se s týmem odborníků v ordinaci MUDr. Josef Bourek v Kolíně. Zkušení fyzioterapeuti a zdravotnický personál poskytují individuální rehabilitační péči.",
 		alternates: {
-			canonical: `${baseUrl}/${locale}/ordinacni-doba`,
+			canonical: `/${locale}/ordinacni-doba`,
 			languages: {
-				cs: `${baseUrl}/cs/ordinacni-doba`,
-				uk: `${baseUrl}/uk/ordinacni-doba`,
-				en: `${baseUrl}/en/ordinacni-doba`,
-				"x-default": `${baseUrl}/cs/ordinacni-doba`,
+				...languages,
+				"x-default": `/cs/ordinacni-doba`,
 			},
 		},
 	};
@@ -126,7 +128,7 @@ export default async function ClinicHours() {
 				<div className="our-team">
 					<p className="our-team__title">Kolín</p>
 					<div className="our-team__grid">
-						{ourTeamData
+						{ourTeam
 							.filter((member) => member.place === 1)
 							.map(
 								(
@@ -221,7 +223,7 @@ export default async function ClinicHours() {
 					</div>
 					<p className="our-team__title">Český Brod</p>
 					<div className="our-team__grid">
-						{ourTeamData
+						{ourTeam
 							.filter((member) => member.place === 2)
 							.map(
 								({ profession, name, number, email, workingHours }, index) => {

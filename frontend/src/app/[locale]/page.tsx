@@ -12,18 +12,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-	const baseUrl = "https://www.bourek.cz";
+
+	const locales = ["cs", "uk", "en"];
+	const languages = Object.fromEntries(locales.map((l) => [l, `/${l}`]));
+
 	return {
 		title: `Bourek | ${t("homeMetaTitle")}`,
 		description:
 			"Ordinace MUDr. Josef Bourek – odborná rehabilitační péče v Kolíně. Fyzioterapie, elektroléčba, lymfodrenáže a moderní terapie pro úlevu od bolesti.",
 		alternates: {
-			canonical: `${baseUrl}/${locale}`,
+			canonical: `/${locale}`,
 			languages: {
-				cs: `${baseUrl}/cs`,
-				uk: `${baseUrl}/uk`,
-				en: `${baseUrl}/en`,
-				"x-default": `${baseUrl}/cs`,
+				...languages,
+				"x-default": `/cs`,
 			},
 		},
 	};

@@ -1,8 +1,8 @@
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
 import Container from "../../components/Container/Container";
 import WordFileIcon from "../../icons/WordFileIcon";
-import { Metadata } from "next";
 import "./Offer.scss";
 
 export async function generateMetadata({
@@ -12,19 +12,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-	const baseUrl = "https://www.bourek.cz";
+
+	const locales = ["cs", "uk", "en"];
+	const languages = Object.fromEntries(
+		locales.map((l) => [l, `/${l}/co-nabizime`]),
+	);
 
 	return {
 		title: `${t("offer_title")} | Bourek`,
 		description:
 			"Komplexní rehabilitační péče v ordinaci MUDr. Josef Bourek v Kolíně – odborné lékařské služby, fyzioterapie, elektroterapie, lymfodrenáž a další moderní terapie.",
 		alternates: {
-			canonical: `${baseUrl}/${locale}/co-nabizime`,
+			canonical: `/${locale}/co-nabizime`,
 			languages: {
-				cs: `${baseUrl}/cs/co-nabizime`,
-				uk: `${baseUrl}/uk/co-nabizime`,
-				en: `${baseUrl}/en/co-nabizime`,
-				"x-default": `${baseUrl}/cs/co-nabizime`,
+				...languages,
+				"x-default": `/cs/co-nabizime`,
 			},
 		},
 	};
@@ -94,7 +96,7 @@ export default async function Offer() {
 								alignItems: "center",
 								gap: 5,
 							}}
-							href="/INFORMOSOUHLAS.pdf"
+							href="/infosouhlas.pdf"
 						>
 							<span>dokument</span>
 							<WordFileIcon />

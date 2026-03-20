@@ -1,21 +1,11 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
 import Container from "../../components/Container/Container";
 import addressesData from "../../data/addresses-data.json";
 import ContactClient from "./ContactClient";
-import type { Metadata } from "next";
 import "./Contact.scss";
-
-// const services = navLinksData.find((link) => link.id === 3)?.nestedLinks;
-
-// const dateNow = dayjs();
-// const hoursNow = dateNow.hour();
-// const minutesNow = dateNow.minute();
-
-// const formatedDate = dateNow.format("YYYY-MM-DD");
-// const formatedHours = hoursNow < 10 ? "0" + hoursNow : hoursNow;
-// const formatedMinutes = minutesNow < 10 ? "0" + minutesNow : minutesNow;
 
 export async function generateMetadata({
 	params,
@@ -24,19 +14,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-	const baseUrl = "https://www.bourek.cz";
+
+	const locales = ["cs", "uk", "en"];
+	const languages = Object.fromEntries(
+		locales.map((l) => [l, `/${l}/kontakt`]),
+	);
 
 	return {
 		title: `${t("contacts_title")} | Bourek`,
 		description:
 			"Kontaktujte ordinaci MUDr. Josef Bourek v Kolíně nebo Českém Brodě. Objednejte se na rehabilitaci, fyzioterapii či další služby online nebo telefonicky.",
 		alternates: {
-			canonical: `${baseUrl}/${locale}/kontakt`,
+			canonical: `/${locale}/kontakt`,
 			languages: {
-				cs: `${baseUrl}/cs/kontakt`,
-				uk: `${baseUrl}/uk/kontakt`,
-				en: `${baseUrl}/en/kontakt`,
-				"x-default": `${baseUrl}/cs/kontakt`,
+				...languages,
+				"x-default": `/cs/kontakt`,
 			},
 		},
 	};

@@ -1,8 +1,8 @@
 # Bourek
 
-![Bourek hero screenshot](./public/screenshot/bourek-ss-v5-c.png)
+![Bourek hero screenshot](./docs/screenshots/bourek-ss-v6-c.png)
 
 ## Tech stack
 
-- React.js (JavaScript)
+- Next.js (TypeScript)
 - SCSS

@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import Container from "../components/Container/Container";
 import Testimonials from "../components/Testimonials/Testimonials";
 import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
 import "./Home.scss";
 
 export async function generateMetadata({
@@ -12,9 +13,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-
-	const locales = ["cs", "uk", "en"];
-	const languages = Object.fromEntries(locales.map((l) => [l, `/${l}`]));
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `/${l}`]),
+	);
 
 	return {
 		title: `Bourek | ${t("homeMetaTitle")}`,
@@ -24,7 +25,7 @@ export async function generateMetadata({
 			canonical: `/${locale}`,
 			languages: {
 				...languages,
-				"x-default": `/cs`,
+				"x-default": `/${routing.defaultLocale}`,
 			},
 		},
 	};

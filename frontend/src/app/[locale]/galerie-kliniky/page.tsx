@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import ClinicGalleryClient from "./ClinicGalleryClient";
 import "./ClinicGallery.scss";
 
@@ -10,20 +11,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-
-	const locales = ["cs", "uk", "en"];
+	const page = "galerie-kliniky";
 	const languages = Object.fromEntries(
-		locales.map((l) => [l, `/${l}/galerie-kliniky`]),
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
 		title: `${t("clinic_gallery_title")} | Bourek`,
 		description: "",
 		alternates: {
-			canonical: `/${locale}/galerie-kliniky`,
+			canonical: `/${locale}/${page}`,
 			languages: {
 				...languages,
-				"x-default": `/cs/galerie-kliniky`,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

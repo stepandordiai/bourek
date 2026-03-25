@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
 import Container from "../../components/Container/Container";
@@ -14,10 +15,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-
-	const locales = ["cs", "uk", "en"];
+	const page = "kontakt";
 	const languages = Object.fromEntries(
-		locales.map((l) => [l, `/${l}/kontakt`]),
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
@@ -25,10 +25,10 @@ export async function generateMetadata({
 		description:
 			"Kontaktujte ordinaci MUDr. Josef Bourek v Kolíně nebo Českém Brodě. Objednejte se na rehabilitaci, fyzioterapii či další služby online nebo telefonicky.",
 		alternates: {
-			canonical: `/${locale}/kontakt`,
+			canonical: `/${locale}/${page}`,
 			languages: {
 				...languages,
-				"x-default": `/cs/kontakt`,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

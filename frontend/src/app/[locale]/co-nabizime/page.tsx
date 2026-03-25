@@ -1,5 +1,6 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
 import Container from "../../components/Container/Container";
 import WordFileIcon from "../../icons/WordFileIcon";
@@ -12,10 +13,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-
-	const locales = ["cs", "uk", "en"];
+	const page = "co-nabizime";
 	const languages = Object.fromEntries(
-		locales.map((l) => [l, `/${l}/co-nabizime`]),
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
@@ -23,10 +23,10 @@ export async function generateMetadata({
 		description:
 			"Komplexní rehabilitační péče v ordinaci MUDr. Josef Bourek v Kolíně – odborné lékařské služby, fyzioterapie, elektroterapie, lymfodrenáž a další moderní terapie.",
 		alternates: {
-			canonical: `/${locale}/co-nabizime`,
+			canonical: `/${locale}/${page}`,
 			languages: {
 				...languages,
-				"x-default": `/cs/co-nabizime`,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

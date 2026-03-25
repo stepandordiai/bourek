@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
 import Container from "../../components/Container/Container";
 import "./PriceList.scss";
@@ -11,19 +12,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-
-	const locales = ["cs", "uk", "en"];
-	const languages = Object.fromEntries(locales.map((l) => [l, `/${l}/cenik`]));
+	const page = "cenik";
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
+	);
 
 	return {
 		title: `${t("price_list_title")} | Bourek`,
 		description:
 			"Aktuální ceník rehabilitačních služeb MUDr. Josef Bourek v Kolíně a Českém Brodě – fyzioterapie, elektroterapie, laser, lymfodrenáž, Starvac a další.",
 		alternates: {
-			canonical: `/${locale}/cenik`,
+			canonical: `/${locale}/${page}`,
 			languages: {
 				...languages,
-				"x-default": `/cs/cenik`,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

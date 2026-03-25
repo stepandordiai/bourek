@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
 import PageInfo from "../../components/PageInfo/PageInfo";
 import "./PersonalData.scss";
@@ -11,19 +12,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale });
-
-	const locales = ["cs", "uk", "en"];
-	const languages = Object.fromEntries(locales.map((l) => [l, `/${l}/gdpr`]));
+	const page = "gdpr";
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
+	);
 
 	return {
 		title: `${t("personal_data_title")} | Bourek`,
 		description:
 			"Zásady ochrany osobních údajů v ordinaci MUDr. Josef Bourek v Kolíně a Českém Brodě – informace o zpracování a zabezpečení vašich dat v souladu s GDPR.",
 		alternates: {
-			canonical: `/${locale}/gdpr`,
+			canonical: `/${locale}/${page}`,
 			languages: {
 				...languages,
-				"x-default": `/cs/gdpr`,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

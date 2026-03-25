@@ -1,3 +1,4 @@
+import { routing } from "@/i18n/routing";
 import { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.bourek.cz";
@@ -10,18 +11,17 @@ const pages = [
 	"kontakty",
 	"gdpr",
 ];
-const locales = ["cs", "uk", "en"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	// TODO: LEARN THIS
 	const alternates = (path: string) => ({
 		...Object.fromEntries(
-			locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
+			routing.locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
 		),
-		"x-default": `${BASE_URL}/cs${path}`,
+		"x-default": `${BASE_URL}/${routing.defaultLocale}${path}`,
 	});
 
-	return locales.flatMap((locale) =>
+	return routing.locales.flatMap((locale) =>
 		pages.map((page) => ({
 			url: `${BASE_URL}/${locale}/${page}`.replace(/\/$/, ""),
 			lastModified: new Date(),

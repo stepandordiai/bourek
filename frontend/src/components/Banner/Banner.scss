@@ -1,13 +1,16 @@
-@use "./../../scss/mixins" as *;
+@use "@/scss/mixins" as *;
 
 .banner {
 	position: fixed;
 	right: 40px;
 	bottom: 40px;
-	left: 40px;
 	z-index: 11;
+	width: min(calc(100% - 20px), 500px);
 	border-radius: 10px;
-	background: var(--blue-clr);
+	background: rgba(255, 255, 255, 0.5);
+	-webkit-backdrop-filter: blur(40px);
+	backdrop-filter: blur(40px);
+	border: 2px solid var(--blue-clr-2);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding: 20px;
 	opacity: 0;
@@ -27,31 +30,28 @@
 }
 
 .banner__title {
-	color: #fff;
+	font-weight: 500;
 }
 
 .banner__close-btn {
 	position: relative;
-	color: #000;
-	background: #fff;
+	color: #fff;
+	background: var(--blue-clr);
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 10px;
 
 	&:hover {
-		color: var(--blue-clr);
+		background: var(--blue-clr-8);
 	}
 }
 
 .banner__divider {
-	height: 4px;
+	height: 2px;
 	margin: 10px 0;
-	background: rgba(255, 255, 255, 0.4);
-	border-radius: 2px;
+	background: var(--blue-clr-2);
 }
 
 .banner__info {
-	color: #fff;
-	// TODO:
 	white-space: pre-wrap;
 }
 
@@ -59,7 +59,6 @@
 	.banner {
 		right: 20px;
 		bottom: 20px;
-		left: 20px;
 	}
 }
 
@@ -67,7 +66,6 @@
 	.banner {
 		right: 10px;
 		bottom: 10px;
-		left: 10px;
 		padding: 10px;
 	}
 }

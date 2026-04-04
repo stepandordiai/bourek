@@ -47,7 +47,7 @@ const Banner = () => {
 			<div className="banner-header">
 				{!loading && infoData && (
 					<p className="banner__title">
-						{t("banner.title")} {infoData.date}
+						{t("banner.title")} {infoData.date.replaceAll("-", ".")}
 					</p>
 				)}
 				<button
@@ -58,7 +58,6 @@ const Banner = () => {
 				</button>
 			</div>
 			<div className="banner__divider"></div>
-			{/* <p className="banner__info">{infoData.info}</p> */}
 			{!loading && infoData && (
 				<p
 					className="banner__info"

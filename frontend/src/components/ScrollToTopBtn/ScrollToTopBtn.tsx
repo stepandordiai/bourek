@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import ArrowUpIcon from "../../icons/ArrowUpIcon";
+import ArrowUpIcon from "@/components/icons/ArrowUpIcon";
 import "./ScrollToTopBtn.scss";
 
 const ScrollToTopBtn = () => {

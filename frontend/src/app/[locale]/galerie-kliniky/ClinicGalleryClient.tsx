@@ -2,8 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
-import Container from "../../components/Container/Container";
+import Breadcrumbs from "@/components/common/PageTitle/Breadcrumbs";
+import Container from "@/components/Container/Container";
 import "./ClinicGallery.scss";
 
 const clinicGallery = [

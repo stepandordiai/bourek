@@ -1,14 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import navLinksData from "../../../data/nav-links-data.json";
+import navLinksData from "@/data/nav-links-data.json";
 import Link from "next/link";
-import CustomDivider from "../../CustomDivider/CustomDivider";
-import addressesData from "../../../data/addresses-data.json";
+import CustomDivider from "@/components/CustomDivider/CustomDivider";
+import addressesData from "@/data/addresses-data.json";
 import React, { useState } from "react";
-import EnvelopeIcon from "../../../icons/EnvelopeIcon";
-import PinIcon from "../../../icons/PinIcon";
-import TelIcon from "../../../icons/TelIcon";
+import EnvelopeIcon from "@/components/icons/EnvelopeIcon";
+import PinIcon from "@/components/icons/PinIcon";
+import TelIcon from "@/components/icons/TelIcon";
 import { usePathname } from "@/i18n/navigation";
 import "./Footer.scss";
 

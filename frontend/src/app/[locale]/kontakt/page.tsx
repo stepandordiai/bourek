@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import CustomDivider from "../../components/CustomDivider/CustomDivider";
-import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
-import Container from "../../components/Container/Container";
-import addressesData from "../../data/addresses-data.json";
+import CustomDivider from "@/components/CustomDivider/CustomDivider";
+import Breadcrumbs from "@/components/common/PageTitle/Breadcrumbs";
+import Container from "@/components/Container/Container";
+import addressesData from "@/data/addresses-data.json";
 import ContactClient from "./ContactClient";
 import "./Contact.scss";
 

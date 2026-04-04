@@ -3,7 +3,7 @@
 import { useLocale } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import ChevronDownIcon from "@/app/icons/ChevronDownIcon";
+import ChevronDownIcon from "@/components/icons/ChevronDownIcon";
 import "./LngSelect.scss";
 
 interface Lng {

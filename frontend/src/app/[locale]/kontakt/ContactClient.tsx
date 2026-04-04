@@ -1,9 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import addressesData from "../../data/addresses-data.json";
+import addressesData from "@/data/addresses-data.json";
 import { useTranslations } from "next-intl";
-
 import "./Contact.scss";
 
 export default function ContactClient() {

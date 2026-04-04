@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import Breadcrumbs from "../../components/common/PageTitle/Breadcrumbs";
-import PageInfo from "../../components/PageInfo/PageInfo";
+import Breadcrumbs from "@/components/common/PageTitle/Breadcrumbs";
+import PageInfo from "@/components/PageInfo/PageInfo";
 import "./PersonalData.scss";
 
 export async function generateMetadata({

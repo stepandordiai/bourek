@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import Container from "../components/Container/Container";
-import Testimonials from "../components/Testimonials/Testimonials";
+import Container from "@/components/Container/Container";
+import Testimonials from "@/components/Testimonials/Testimonials";
 import { Link } from "@/i18n/navigation";
 import "./Home.scss";
 

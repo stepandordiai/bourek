@@ -3,13 +3,13 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import navLinksData from "../../../data/nav-links-data.json";
-import addressesData from "../../../data/addresses-data.json";
+import navLinksData from "@/data/nav-links-data.json";
+import addressesData from "@/data/addresses-data.json";
 import React from "react";
-import LngSelect from "../../LngSelect/LngSelect";
+import LngSelect from "@/components/LngSelect/LngSelect";
 import { usePathname } from "@/i18n/navigation";
 import Image from "next/image";
-import ChevronDownIcon from "@/app/icons/ChevronDownIcon";
+import ChevronDownIcon from "@/components/icons/ChevronDownIcon";
 import "./Header.scss";
 
 const Header = () => {

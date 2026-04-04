@@ -5,12 +5,27 @@ import addressesData from "@/data/addresses-data.json";
 import { useTranslations } from "next-intl";
 import "./Contact.scss";
 
+const mapTypeLabels = [
+	addressesData[0].googleMap.label,
+	addressesData[0].mapyCz.label,
+];
+
 export default function ContactClient() {
 	const t = useTranslations();
 
 	const [filterAddressPlace, setFilterAddressPlace] = useState(
 		addressesData[0].place,
 	);
+	const [filterAddressMap, setFilterAddressMap] = useState(mapTypeLabels[0]);
+
+	const selectedAddress = addressesData.find(
+		(address) => address.place === filterAddressPlace,
+	);
+
+	const selectedMap =
+		filterAddressMap === selectedAddress?.googleMap.label
+			? selectedAddress?.googleMap
+			: selectedAddress?.mapyCz;
 
 	const [isDragging, setIsDragging] = useState(false);
 	const wrapperRef = useRef<HTMLDivElement>(null);
@@ -52,17 +67,21 @@ export default function ContactClient() {
 		container.style.bottom = "auto";
 		container.style.transform = "translate(-50%, -50%)";
 	};
+
+	console.log(mapTypeLabels.indexOf(filterAddressMap));
+
 	return (
 		<div className="form-map-wrapper">
 			<div className="map-wrapper">
-				<div className="map-wrapper__header">
-					<h2 className="contact__map-title">{t("contacts.map_title")}</h2>
+				<h2 className="contact__map-title">{t("contacts.map_title")}</h2>
+				<div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
 					<div className="map-wrapper__header-container">
 						{addressesData.map((address, i) => {
 							return (
 								<button
 									key={i}
 									onClick={() => setFilterAddressPlace(address.place)}
+									className={`${filterAddressPlace === addressesData[i].place ? "map-btn--active" : ""}`}
 								>
 									{address.place}
 								</button>
@@ -75,6 +94,24 @@ export default function ContactClient() {
 									: ""
 							}`}
 						></div>
+					</div>
+					<div className="map-wrapper__header-container">
+						{mapTypeLabels.map((label, i) => (
+							<button
+								key={i}
+								onClick={() => setFilterAddressMap(label)}
+								className={filterAddressMap === label ? "map-btn--active" : ""}
+							>
+								{label}
+							</button>
+						))}
+						<div
+							className={`active-map-bg ${
+								mapTypeLabels.indexOf(filterAddressMap)
+									? "active-map-bg--active"
+									: ""
+							}`}
+						/>
 					</div>
 				</div>
 				<div ref={wrapperRef} className="contact__map">
@@ -102,132 +139,11 @@ export default function ContactClient() {
 					</div>
 					<iframe
 						className="contact__google-map"
-						src={
-							addressesData.find(
-								(address) => address.place === filterAddressPlace,
-							)?.mapUrl || ""
-						}
+						src={selectedMap?.url}
 						loading="lazy"
 					></iframe>
 				</div>
 			</div>
-			{/* <CustomDivider className="custom-divider--hide" /> */}
-			{/* <div className="form-wrapper">
-							<h2 className="contact__form-title">{t("appointment_title")}</h2>
-							<form
-								className="contact__form"
-								action="https://formsubmit.co/josef@bourek.cz"
-								method="post"
-							>
-								<div className="contact-form__inputs">
-									<input
-										className="first-name"
-										type="text"
-										name="firstName"
-										autoComplete="given-name"
-										placeholder={t("contacts.first_name")}
-										required
-									/>
-									<input
-										className="last-name"
-										type="text"
-										name="lastName"
-										autoComplete="family-name"
-										placeholder={t("contacts.last_name")}
-									/>
-								</div>
-								<div className="contact-form__inputs">
-									<input
-										className="email"
-										type="email"
-										name="email"
-										autoComplete="email"
-										placeholder={t("contacts.email")}
-									/>
-									<input
-										className="phone"
-										type="tel"
-										name="tel"
-										autoComplete="tel"
-										placeholder={t("contacts.phone")}
-										required
-									/>
-								</div>
-								<div ref={customSelect} className="custom-select">
-									<button
-										onClick={handleSelect}
-										className={`custom-select__btn ${
-											selectActive ? "custom-select__btn--active" : ""
-										}`}
-									>
-										{selectedOption === ""
-											? t("contacts.select_btn")
-											: t(selectedOption)}
-									</button>
-									<ul
-										className={`custom-select__list ${
-											selectActive ? "custom-select__list--visible" : ""
-										}`}
-									>
-										<li
-											onClick={() => handleSelectOption("")}
-											className={`custom-select__option ${
-												selectedOption === ""
-													? "custom-select__option--active"
-													: ""
-											}`}
-											data-value={t("contacts.not_selected")}
-										>
-											{t("contacts.select_btn")}
-										</li>
-										{services.map((service) => {
-											return (
-												<li
-													onClick={() => handleSelectOption(service.name)}
-													key={service.id}
-													className={`custom-select__option ${
-														selectedOption === service.name
-															? "custom-select__option--active"
-															: ""
-													}`}
-												>
-													{t(service.name)}
-												</li>
-											);
-										})}
-									</ul>
-									<input
-										className="custom-select__input"
-										type="text"
-										name="Service"
-										defaultValue={t(selectedOption)}
-									/>
-								</div>
-								<div className="date-container">
-									<label htmlFor="date">{t("contacts.visit_date")}</label>
-									<input
-										id="date"
-										className="date"
-										defaultValue={formatedDate}
-										type="date"
-										name="Date"
-									/>
-								</div>
-								<div className="time-container">
-									<label htmlFor="time">{t("contacts.visit_time")}</label>
-									<input
-										id="time"
-										className="time"
-										defaultValue={`${formatedHours}:${formatedMinutes}`}
-										type="time"
-										name="Time"
-									/>
-								</div>
-								<button className="submit-btn" type="submit">
-									{t("contacts.form_btn")}
-								</button>
-							</form>
-						</div> */}
 		</div>
 	);
 }

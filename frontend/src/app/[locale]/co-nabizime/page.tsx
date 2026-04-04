@@ -65,12 +65,7 @@ export default async function Offer() {
 									Manuální a myoskeletální medicína (kurz při IPVZ lékařů 2024),
 									Škola zad (IPVZ lékařů 2020),
 								</li>
-								<li>
-									intradermální obstřiky spoušťových bodů a obstřiky SIK
-									lokálním anestetikem, technika suché jehly (pro klasické
-									obstřiky ramen, kyčlí, kolen se obraťte na ortopedickou
-									ambulanci)
-								</li>
+								<li>obstřiky lokálním anestetikem i technika suché jehly</li>
 								<li>
 									<strong>
 										Lékařská akupunktura (celoevropsky platný certifikát, kurz

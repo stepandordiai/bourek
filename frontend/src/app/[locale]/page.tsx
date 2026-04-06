@@ -67,9 +67,13 @@ export default async function Home() {
 							/>
 						</div>
 					</div>
-					<Link className="home__scroll-mouse-btn" href="/#testimonials">
-						<div className="wheel"></div>
-					</Link>
+					<a
+						className="home__scroll-mouse-btn"
+						href="#testimonials"
+						title={t("home.scrollHint")}
+					>
+						<span className="wheel"></span>
+					</a>
 				</section>
 				<Testimonials />
 			</Container>

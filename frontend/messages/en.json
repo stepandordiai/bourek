@@ -36,7 +36,8 @@
 	"home": {
 		"title": "For better health and flexibility",
 		"secondary_title": "Rehabilitation doctor's office",
-		"find_out_more": "Find out more"
+		"find_out_more": "Find out more",
+		"scrollHint": "Scroll down"
 	},
 
 	"offer": {

@@ -36,7 +36,8 @@
 	"home": {
 		"title": "Pro lepší zdraví a flexibilitu",
 		"secondary_title": "Ordinace rehabilitačního lékaře",
-		"find_out_more": "Zjistit víc"
+		"find_out_more": "Zjistit víc",
+		"scrollHint": "Scrollujte dolů"
 	},
 
 	"offer": {

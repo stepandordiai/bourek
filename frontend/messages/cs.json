@@ -89,8 +89,8 @@
 		"fri": "Pátek",
 		"sat": "Sobota",
 		"sun": "Neděle",
-		"atWork": "V práci",
-		"offWork": "Mimo práci"
+		"atWork": "V pracovní době",
+		"offWork": "Mimo pracovní dobu"
 	},
 
 	"clinicGallery": {

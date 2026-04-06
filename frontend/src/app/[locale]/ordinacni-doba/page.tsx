@@ -197,7 +197,7 @@ export default async function ClinicHours() {
 											</div>
 											<div className="our-team__card-bottom">
 												<p style={{ marginBottom: 5, fontWeight: 600 }}>
-													{t("our_team.working_hours")}
+													{t("our_team.working_hours")} (mimo státní svátky)
 												</p>
 												<ul className="our-team__working-hours">
 													{workingHours.map((day, i) => {
@@ -269,7 +269,7 @@ export default async function ClinicHours() {
 											</div>
 											<div className="our-team__card-bottom">
 												<p style={{ marginBottom: 5, fontWeight: 500 }}>
-													{t("our_team.working_hours")}
+													{t("our_team.working_hours")} (mimo státní svátky)
 												</p>
 												<ul className="our-team__working-hours">
 													{workingHours.map((day, i) => {

@@ -7,10 +7,8 @@ import Banner from "@/components/Banner/Banner";
 import ScrollToTop from "@/utils/ScrollToTop";
 import Loading from "@/components/Loading/Loading";
 import ScrollToTopBtn from "@/components/ScrollToTopBtn/ScrollToTopBtn";
-import FacebookIcon from "@/components/icons/FacebookIcon";
-import TelIcon from "@/components/icons/TelIcon";
-import "@/scss/globals.scss";
 import FloatContact from "@/components/FloatContact/FloatContact";
+import "@/scss/globals.scss";
 
 const poppins = Poppins({
 	variable: "--font-poppins",

@@ -10,15 +10,15 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({ locale, namespace: "clinicGallery.meta" });
 	const page = "galerie-kliniky";
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
-		title: `${t("clinic_gallery_title")} | Bourek`,
-		description: "",
+		title: t("title"),
+		description: t("desc"),
 		alternates: {
 			canonical: `/${locale}/${page}`,
 			languages: {

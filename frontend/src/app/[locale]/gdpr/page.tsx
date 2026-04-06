@@ -11,16 +11,15 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({ locale, namespace: "gdpr.meta" });
 	const page = "gdpr";
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
-		title: `${t("personal_data_title")} | Bourek`,
-		description:
-			"Zásady ochrany osobních údajů v ordinaci MUDr. Josef Bourek v Kolíně a Českém Brodě – informace o zpracování a zabezpečení vašich dat v souladu s GDPR.",
+		title: t("title"),
+		description: t("desc"),
 		alternates: {
 			canonical: `/${locale}/${page}`,
 			languages: {

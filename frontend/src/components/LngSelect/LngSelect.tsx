@@ -2,7 +2,7 @@
 
 import { useLocale } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import ChevronDownIcon from "@/components/icons/ChevronDownIcon";
 import "./LngSelect.scss";
 
@@ -46,8 +46,9 @@ const LngSelect = () => {
 
 	// TODO: LEARN THIS
 	const handleLngSelectOption = (lng: Lng) => {
-		const newPathname = pathname.replace(`/${locale}`, `/${lng.locale}`);
-		router.replace(newPathname);
+		// next-intl сама оновить URL, зберігши поточний шлях
+		// Наприклад: /uk/about -> /en/about
+		router.replace(pathname, { locale: lng.locale });
 		setSelectedLng(lng);
 		setLngSelectVisible(false);
 	};

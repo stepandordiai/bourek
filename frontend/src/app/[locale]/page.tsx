@@ -13,15 +13,14 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({ locale, namespace: "home.meta" });
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `/${l}`]),
 	);
 
 	return {
-		title: `Bourek | ${t("homeMetaTitle")}`,
-		description:
-			"Ordinace MUDr. Josef Bourek – odborná rehabilitační péče v Kolíně. Fyzioterapie, elektroléčba, lymfodrenáže a moderní terapie pro úlevu od bolesti.",
+		title: `${t("title")}`,
+		description: t("desc"),
 		alternates: {
 			canonical: `/${locale}`,
 			languages: {

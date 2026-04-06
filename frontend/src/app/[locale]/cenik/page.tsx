@@ -11,16 +11,15 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({ locale, namespace: "price_list.meta" });
 	const page = "cenik";
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
-		title: `${t("price_list_title")} | Bourek`,
-		description:
-			"Aktuální ceník rehabilitačních služeb MUDr. Josef Bourek v Kolíně a Českém Brodě – fyzioterapie, elektroterapie, laser, lymfodrenáž, Starvac a další.",
+		title: t("title"),
+		description: t("desc"),
 		alternates: {
 			canonical: `/${locale}/${page}`,
 			languages: {

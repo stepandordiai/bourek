@@ -34,6 +34,11 @@
 	},
 
 	"home": {
+		"meta": {
+			"title": "Rehabilitation Clinic Kolín | MUDr. Josef Bourek - Physiotherapy & Pain Relief",
+			"desc": "MUDr. Josef Bourek - rehabilitation clinic in Kolín. Physiotherapy, electrotherapy, lymphatic drainage, and modern treatments for back, joint, and muscle pain relief. Book your appointment today."
+		},
+
 		"title": "For better health and flexibility",
 		"secondary_title": "Rehabilitation doctor's office",
 		"find_out_more": "Find out more",
@@ -41,6 +46,11 @@
 	},
 
 	"offer": {
+		"meta": {
+			"title": "Rehabilitation Services Kolín | MUDr. Josef Bourek - What We Offer",
+			"desc": "Comprehensive rehabilitation services by MUDr. Josef Bourek in Kolín. Physiotherapy, electrotherapy, lymphatic drainage, and modern treatments for back, joint, and muscle pain. Individual approach to every patient."
+		},
+
 		"1": "Services of a professional rehabilitation doctor",
 		"2": "Rehabilitation worker services",
 		"3": "All complete rehabilitation services",
@@ -51,6 +61,11 @@
 	},
 
 	"price_list": {
+		"meta": {
+			"title": "Rehabilitation Price List Kolín | MUDr. Josef Bourek - Physiotherapy & Treatments",
+			"desc": "Price list of rehabilitation services by MUDr. Josef Bourek in Kolín and Český Brod. Physiotherapy, electrotherapy, laser therapy, lymphatic drainage, Starvac and more. Clear pricing with no hidden fees."
+		},
+
 		"procedures": "procedures",
 		"min": "min",
 		"cm": "cm",
@@ -58,6 +73,11 @@
 	},
 
 	"our_team": {
+		"meta": {
+			"title": "Opening Hours & Team Kolín | MUDr. Josef Bourek – Rehabilitation",
+			"desc": "Opening hours and team of the rehabilitation clinic of MUDr. Josef Bourek in Kolín and Český Brod. Overview of doctors, physiotherapists, and their availability. Book your rehabilitation or physiotherapy appointment."
+		},
+
 		"profession_type_1": "Rehabilitation doctor",
 		"profession_type_2": "Physiotherapist",
 		"profession_type_3": "Nurse",
@@ -71,6 +91,13 @@
 		"sun": "Sunday",
 		"atWork": "At work",
 		"offWork": "Off work"
+	},
+
+	"clinicGallery": {
+		"meta": {
+			"title": "Clinic Gallery Kolín | MUDr. Josef Bourek – Rehabilitation Clinic",
+			"desc": "Explore the gallery of MUDr. Josef Bourek’s rehabilitation clinic in Kolín. Modern equipment, comfortable environment, and professional care for your health."
+		}
 	},
 
 	"surgery": {
@@ -88,11 +115,11 @@
 		"list_item_3": "Insurance Company of the Ministry of the Interior of the Czech Republic",
 		"list_item_4": "Sectoral health insurance for bank employees",
 		"list_item_5": "Czech Industrial Health Insurance Company",
-		"list_item_6": "ŠKOZAM – employee insurance company"
+		"list_item_6": "ŠKOZAM - employee insurance company"
 	},
 
 	"starvac": {
-		"info_1": "A new cupping assistant – the STARVAC SP2 massage device",
+		"info_1": "A new cupping assistant - the STARVAC SP2 massage device",
 		"info_2": "The original ancient method used to purify the blood - cupping - is now becoming a new hit in therapeutic physiotherapy, as well as in the treatment of cellulite, support of the lymphatic system and subsequent detoxification of the whole body, improvement of blood circulation, weight reduction, body shaping and skin firming.",
 		"info_3": "STARVAC SP2 is a very modern device with an LCD screen, twenty-five preset programs: nine in beauty and body care and sixteen therapeutic applications and the ability to set your own programs (treatment length, frequency, cycle). The vacuum can be set up to 900 millibars in continuous or pulsed vacuum mode. The effect of the treatment is enhanced by a special massage cream with active ingredients, which is supplied with it.",
 		"list_1_title": "Using the device",
@@ -218,6 +245,11 @@
 	},
 
 	"contacts": {
+		"meta": {
+			"title": "Contacts – Rehabilitation Kolín | MUDr. Josef Bourek – Book an Appointment",
+			"desc": "Contact the clinic of MUDr. Josef Bourek in Kolín and Český Brod. Book your physiotherapy and rehabilitation online or by phone. Fast appointment availability and individual care."
+		},
+
 		"first_name": "First name",
 		"last_name": "Last name",
 		"email": "E-mail",
@@ -240,6 +272,13 @@
 		"info_3": "Their security and protection is ensured in accordance with these regulations and in accordance with the General Data Protection Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR).",
 		"info_4": "In addition to the possibility of accessing your personal data processed by us, you have the right to request its correction or restriction of processing if you find that this data is incorrect, inaccurate, has changed, etc.",
 		"info_5": "Providing your personal data is a legal requirement and you as a patient are obliged to provide it, just as a healthcare professional has the right to request it from you. The responsible person you can contact is your treating physician."
+	},
+
+	"gdpr": {
+		"meta": {
+			"title": "GDPR – Personal Data Protection | MUDr. Josef Bourek, Kolín",
+			"desc": "Information on the processing of personal data at the rehabilitation clinic of MUDr. Josef Bourek in Kolín and Český Brod. Your data is securely handled in accordance with GDPR regulations."
+		}
 	},
 
 	"footer": {

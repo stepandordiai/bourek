@@ -34,6 +34,11 @@
 	},
 
 	"home": {
+		"meta": {
+			"title": "Rehabilitační ordinace Kolín | MUDr. Josef Bourek - Fyzioterapie and Léčba bolesti",
+			"desc": "MUDr. Josef Bourek – rehabilitační ordinace v Kolíně. Fyzioterapie, elektroléčba, lymfodrenáže a moderní terapie pro úlevu od bolesti zad, kloubů i svalů. Objednejte se ještě dnes."
+		},
+
 		"title": "Pro lepší zdraví a flexibilitu",
 		"secondary_title": "Ordinace rehabilitačního lékaře",
 		"find_out_more": "Zjistit víc",
@@ -41,6 +46,11 @@
 	},
 
 	"offer": {
+		"meta": {
+			"title": "Rehabilitační služby Kolín | MUDr. Josef Bourek - Co nabízíme",
+			"desc": "Komplexní rehabilitační služby MUDr. Josef Bourek v Kolíně. Fyzioterapie, elektroterapie, lymfodrenáž a moderní léčba bolesti zad, kloubů i svalů. Individuální přístup ke každému pacientovi."
+		},
+
 		"1": "Služby odborného rehabilitačního lékaře",
 		"2": "Služby rehabilitačních pracovnic",
 		"3": "Veškeré kompletní rehabilitační služby",
@@ -51,6 +61,11 @@
 	},
 
 	"price_list": {
+		"meta": {
+			"title": "Ceník rehabilitace Kolín | MUDr. Josef Bourek - Fyzioterapie a terapie",
+			"desc": "Ceník rehabilitačních služeb MUDr. Josef Bourek v Kolíně a Českém Brodě. Fyzioterapie, elektroterapie, laser, lymfodrenáž, Starvac a další. Přehledné ceny bez skrytých poplatků."
+		},
+
 		"procedures": "procedur",
 		"min": "min",
 		"cm": "cm",
@@ -58,6 +73,11 @@
 	},
 
 	"our_team": {
+		"meta": {
+			"title": "Ordinační doba a tým Kolín | MUDr. Josef Bourek – Rehabilitace",
+			"desc": "Ordinační doba a tým rehabilitační ordinace MUDr. Josef Bourek v Kolíně a Českém Brodě. Přehled lékařů, fyzioterapeutů a jejich ordinačních hodin. Objednejte se na rehabilitaci či fyzioterapii."
+		},
+
 		"profession_type_1": "Rehabilitačního lékaře",
 		"profession_type_2": "Fyzioterapeut",
 		"profession_type_3": "Zdravotní sestra",
@@ -71,6 +91,13 @@
 		"sun": "Neděle",
 		"atWork": "V práci",
 		"offWork": "Mimo práci"
+	},
+
+	"clinicGallery": {
+		"meta": {
+			"title": "Fotogalerie ordinace Kolín | MUDr. Josef Bourek – Rehabilitační klinika",
+			"desc": "Prohlédněte si fotogalerii rehabilitační ordinace MUDr. Josef Bourek v Kolíně. Moderní vybavení, příjemné prostředí a profesionální péče o vaše zdraví."
+		}
 	},
 
 	"surgery": {
@@ -88,12 +115,12 @@
 		"list_item_3": "Pojišťovna ministerstva vnitra ČR",
 		"list_item_4": "Oborová zdravotní pojišťovna zaměstnanců bank",
 		"list_item_5": "Česká průmyslová zdravotní pojišťovna",
-		"list_item_6": "ŠKOZAM – zaměstnanecká pojišťovna"
+		"list_item_6": "ŠKOZAM - zaměstnanecká pojišťovna"
 	},
 
 	"starvac": {
-		"info_1": "Nový pomocník při baňkování – masážní přístroj STARVAC SP2",
-		"info_2": "Původní starověká metoda sloužící k čištění krve – přikládání baněk se v dnešní doběstává novým hitem v léčebné fyzioterapii, dále při léčbě celulitidy, podpory lymfatického systemu a následné detoxikaci celého těla, zlepšení krevního oběhu, redukci hmotnosti, tvarování postavy a zpevňování pokožky.",
+		"info_1": "Nový pomocník při baňkování - masážní přístroj STARVAC SP2",
+		"info_2": "Původní starověká metoda sloužící k čištění krve - přikládání baněk se v dnešní doběstává novým hitem v léčebné fyzioterapii, dále při léčbě celulitidy, podpory lymfatického systemu a následné detoxikaci celého těla, zlepšení krevního oběhu, redukci hmotnosti, tvarování postavy a zpevňování pokožky.",
 		"info_3": "STARVAC SP2 je velmi moderní přístroj s LCD obrazovkou, dvaceti pěti přednastavitelnými programy: devět v kráse a péči o tělo a šestnáct terapeutických aplikací a možností nastavení vlastních programů (délka ošetření, frekvence, cyklus) nastavit podtlak se dá až do 900 milibarů v kontinuálním nebo plzním vakuovém módu. Účinek ošetření zvyšuje speciální masážní krém s aktivními složkami, který je k němu dodáván.",
 		"list_1_title": "Využití přístroje",
 		"list_secondary_1_title": "estetická indikace",
@@ -218,6 +245,11 @@
 	},
 
 	"contacts": {
+		"meta": {
+			"title": "Kontakty – Rehabilitace Kolín | MUDr. Josef Bourek – Objednání",
+			"desc": "Kontaktujte ordinaci MUDr. Josef Bourek v Kolíně a Českém Brodě. Objednejte se na fyzioterapii a rehabilitaci online nebo telefonicky. Rychlé termíny a individuální péče."
+		},
+
 		"first_name": "Jméno",
 		"last_name": "Příjmení",
 		"email": "E-mail",
@@ -246,5 +278,12 @@
 		"nav_title": "Navigace",
 		"about_title": "O",
 		"all_rights_reserved": "Všechna práva vyhrazena"
+	},
+
+	"gdpr": {
+		"meta": {
+			"title": "GDPR – Ochrana osobních údajů | MUDr. Josef Bourek, Kolín",
+			"desc": "Informace o zpracování osobních údajů v rehabilitační ordinaci MUDr. Josefa Bourka v Kolíně a Českém Brodě. Vaše data jsou zabezpečena v souladu s nařízením GDPR."
+		}
 	}
 }

@@ -14,16 +14,15 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({ locale, namespace: "contacts.meta" });
 	const page = "kontakt";
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
-		title: `${t("contacts_title")} | Bourek`,
-		description:
-			"Kontaktujte ordinaci MUDr. Josef Bourek v Kolíně nebo Českém Brodě. Objednejte se na rehabilitaci, fyzioterapii či další služby online nebo telefonicky.",
+		title: t("title"),
+		description: t("desc"),
 		alternates: {
 			canonical: `/${locale}/${page}`,
 			languages: {
@@ -36,33 +35,6 @@ export async function generateMetadata({
 
 export default async function Contact() {
 	const t = await getTranslations();
-
-	// const [selectActive, setSelectActive] = useState(false);
-	// const [selectedOption, setSelectedOption] = useState("");
-
-	// const customSelect = useRef(null);
-
-	// const handleSelect = (e) => {
-	// 	e.preventDefault();
-	// 	setSelectActive((prev) => !prev);
-	// };
-
-	// const handleSelectOption = (serviceName) => {
-	// 	setSelectedOption(serviceName);
-	// 	setSelectActive(false);
-	// };
-
-	// useEffect(() => {
-	// 	const handleClickNotOnSelect = (e) => {
-	// 		if (customSelect.current && !customSelect.current.contains(e.target)) {
-	// 			setSelectActive(false);
-	// 		}
-	// 	};
-
-	// 	document.addEventListener("click", handleClickNotOnSelect);
-
-	// 	return () => document.removeEventListener("click", handleClickNotOnSelect);
-	// }, []);
 
 	return (
 		<main>

@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import Container from "@/components/Container/Container";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import { Link } from "@/i18n/navigation";
+import HomeClient from "./HomeClient";
 import "./Home.scss";
 
 export async function generateMetadata({
@@ -39,7 +40,7 @@ export default async function Home() {
 			<Container>
 				<section className="home-hero">
 					<div className="home__wrapper">
-						<div>
+						<div style={{ width: "100%" }}>
 							<div className="home__title-container">
 								<h1 className="home__heading accent">
 									Ordinace rehabilitačních lékařů
@@ -49,7 +50,6 @@ export default async function Home() {
 									Lékařská akupunktura
 								</h1>
 							</div>
-
 							<div className="home__link-container">
 								<Link className="home__link" href="/co-nabizime">
 									{t("offer_title")}
@@ -59,13 +59,7 @@ export default async function Home() {
 								</a>
 							</div>
 						</div>
-						<div>
-							<img
-								className="home__img"
-								src="https://ld-wp73.template-help.com/wordpress/prod_29195/v1/wp-content/uploads/2020/05/Rectangle-64.png"
-								alt="MUDr. Josef Bourek s.r.o."
-							/>
-						</div>
+						<HomeClient />
 					</div>
 					<a
 						className="home__scroll-mouse-btn"

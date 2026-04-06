@@ -6,7 +6,11 @@ import { Poppins, Inter } from "next/font/google";
 import Banner from "@/components/Banner/Banner";
 import ScrollToTop from "@/utils/ScrollToTop";
 import Loading from "@/components/Loading/Loading";
+import ScrollToTopBtn from "@/components/ScrollToTopBtn/ScrollToTopBtn";
+import FacebookIcon from "@/components/icons/FacebookIcon";
+import TelIcon from "@/components/icons/TelIcon";
 import "@/scss/globals.scss";
+import FloatContact from "@/components/FloatContact/FloatContact";
 
 const poppins = Poppins({
 	variable: "--font-poppins",
@@ -42,6 +46,8 @@ export default async function LocaleLayout({
 				<NextIntlClientProvider locale={locale}>
 					<Loading />
 					<Banner />
+					<FloatContact />
+					<ScrollToTopBtn />
 					<Header />
 					{children}
 					<Footer />

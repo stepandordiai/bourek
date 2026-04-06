@@ -82,7 +82,11 @@ const ourTeam = [
 	},
 ];
 
-const now = new Date();
+// TODO: learn this
+const now = new Date(
+	new Date().toLocaleString("en-US", { timeZone: "Europe/Prague" }),
+);
+
 const dayNow = now.getDay();
 const currentMinutes = now.getHours() * 60 + now.getMinutes();
 

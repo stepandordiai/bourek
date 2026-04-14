@@ -6,7 +6,7 @@ import Link from "next/link";
 import navLinksData from "@/data/nav-links-data.json";
 import addressesData from "@/data/addresses-data.json";
 import React from "react";
-import LngSelect from "@/components/LngSelect/LngSelect";
+import LngSelect from "@/components/common/LngSelect/LngSelect";
 import { usePathname } from "@/i18n/navigation";
 import Image from "next/image";
 import ChevronDownIcon from "@/components/icons/ChevronDownIcon";

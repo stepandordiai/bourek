@@ -7,21 +7,70 @@ import Container from "@/components/Container/Container";
 import "./ClinicGallery.scss";
 
 const clinicGallery = [
-	"./../clinic/01-c.jpg",
-	"./../clinic/02-c.jpg",
-	"./../clinic/03-c.jpg",
-	"./../clinic/04-c.jpg",
-	"./../clinic/05-c.jpg",
-	"./../clinic/06-c.jpg",
-	"./../clinic/07-c.jpg",
-	"./../clinic/08-c.jpg",
-	"./../clinic/09-c.jpg",
-	"./../clinic/10-c.jpg",
-	"./../clinic/11-c.jpg",
-	"./../clinic/12-c.jpg",
-	"./../clinic/13-c.jpg",
-	"./../clinic/14-c.jpg",
-	"./../clinic/15-c.jpg",
+	{
+		src: "/clinic/01-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/02-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/03-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/04-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/05-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/06-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/07-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/08-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/09-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/10-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/11-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/12-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/13-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/14-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/15-c.jpg",
+		alt: "",
+	},
+	{
+		src: "/clinic/16-c.jpg",
+		alt: "",
+	},
 ];
 
 function ClinicGalleryClient() {
@@ -53,18 +102,19 @@ function ClinicGalleryClient() {
 
 		document.body.style.overflow = "auto";
 	};
+
 	return (
 		<>
 			<main>
 				<Breadcrumbs title={t("clinic_gallery_title")} />
 				<Container>
 					<div className="clinic-gallery__masonry">
-						{clinicGallery.map((imgSrc, index) => {
+						{clinicGallery.map((img, index) => {
 							return (
 								<img
 									key={index}
 									onClick={() => showImgSlider(index)}
-									src={imgSrc}
+									src={img.src}
 									alt=""
 									loading="lazy"
 								/>
@@ -84,7 +134,7 @@ function ClinicGalleryClient() {
 				<button className="img-slider__close-btn" onClick={hideImgSlider}>
 					{t("banner.close_btn")}
 				</button>
-				<img src={clinicGallery[imgIndex]} alt="" />
+				<img src={clinicGallery[imgIndex].src} alt="" />
 				<button
 					onClick={() => handleImgSlider(-1)}
 					className="img-slider__prev-btn"

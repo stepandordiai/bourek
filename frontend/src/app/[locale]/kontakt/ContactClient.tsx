@@ -68,8 +68,6 @@ export default function ContactClient() {
 		container.style.transform = "translate(-50%, -50%)";
 	};
 
-	console.log(mapTypeLabels.indexOf(filterAddressMap));
-
 	return (
 		<div className="form-map-wrapper">
 			<div className="map-wrapper">

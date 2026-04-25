@@ -1,7 +1,6 @@
 import { routing } from "@/i18n/routing";
+import { BASE_URL } from "@/lib/constants";
 import { MetadataRoute } from "next";
-
-const BASE_URL = "https://www.bourek.cz";
 
 const pages = [
 	{ path: "", priority: 1.0, changeFreq: "weekly" },

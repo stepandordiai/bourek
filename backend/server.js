@@ -7,25 +7,27 @@ dotenv.config();
 const app = express();
 
 // List of allowed origins (admin + public site)
-const allowedOrigins = [
-	"http://localhost:5173",
-	"http://localhost:5174",
-	"http://localhost:3000",
-	"https://bourek-admin.netlify.app",
-	"https://bourek.vercel.app",
-	"https://bourek.cz",
-	"https://www.bourek.cz",
-];
+// const allowedOrigins = [
+// 	"http://localhost:5173",
+// 	"http://localhost:5174",
+// 	"http://localhost:3000",
+// 	"https://bourek-admin.netlify.app",
+// 	"https://bourek.vercel.app",
+// 	"https://bourek.cz",
+// 	"https://www.bourek.cz",
+// ];
 
-app.use(
-	cors({
-		origin: function (origin, callback) {
-			if (!origin || allowedOrigins.includes(origin)) {
-				callback(null, true);
-			}
-		},
-	}),
-);
+// app.use(
+// 	cors({
+// 		origin: function (origin, callback) {
+// 			if (!origin || allowedOrigins.includes(origin)) {
+// 				callback(null, true);
+// 			}
+// 		},
+// 	}),
+// );
+
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

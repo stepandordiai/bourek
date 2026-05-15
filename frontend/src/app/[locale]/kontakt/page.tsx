@@ -41,7 +41,7 @@ export default async function Contact() {
 			<Breadcrumbs title={t("contacts_title")} />
 			<Container>
 				<div className="contact__wrapper">
-					<p style={{ marginBottom: 20 }}>
+					{/* <p style={{ marginBottom: 20 }}>
 						Pro konzultaci lékaře využijte zabezpečenou komunikaci přes
 						Smartmedix.net, odpoví v pracovní době.
 					</p>
@@ -49,7 +49,7 @@ export default async function Contact() {
 						Volejte prosím jen v případě technických problémů s užíváním
 						platformy Smartmedix.net, kterou využíváme pro objednávání a
 						komunikaci s pacienty.
-					</p>
+					</p> */}
 					<div className="contact-details-container">
 						{addressesData.map((address, i) => {
 							return (
@@ -104,7 +104,12 @@ export default async function Contact() {
 						})}
 					</div>
 					<CustomDivider />
-					<ContactClient />
+					<div className="form-map-wrapper">
+						<div className="map-wrapper">
+							<h2 className="contact__map-title">{t("contacts.map_title")}</h2>
+							<ContactClient />
+						</div>
+					</div>
 				</div>
 			</Container>
 		</main>

@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import addressesData from "@/data/addresses-data.json";
-import { useTranslations } from "next-intl";
 import "./Contact.scss";
 
 const mapTypeLabels = [
@@ -11,8 +10,6 @@ const mapTypeLabels = [
 ];
 
 export default function ContactClient() {
-	const t = useTranslations();
-
 	const [filterAddressPlace, setFilterAddressPlace] = useState(
 		addressesData[0].place,
 	);
@@ -69,79 +66,76 @@ export default function ContactClient() {
 	};
 
 	return (
-		<div className="form-map-wrapper">
-			<div className="map-wrapper">
-				<h2 className="contact__map-title">{t("contacts.map_title")}</h2>
-				<div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
-					<div className="map-wrapper__header-container">
-						{addressesData.map((address, i) => {
-							return (
-								<button
-									key={i}
-									onClick={() => setFilterAddressPlace(address.place)}
-									className={`${filterAddressPlace === addressesData[i].place ? "map-btn--active" : ""}`}
-								>
-									{address.place}
-								</button>
-							);
-						})}
-						<div
-							className={`active-bg ${
-								filterAddressPlace === addressesData[1].place
-									? "active-bg--active"
-									: ""
-							}`}
-						></div>
-					</div>
-					<div className="map-wrapper__header-container">
-						{mapTypeLabels.map((label, i) => (
+		<>
+			<div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
+				<div className="map-wrapper__header-container">
+					{addressesData.map((address, i) => {
+						return (
 							<button
 								key={i}
-								onClick={() => setFilterAddressMap(label)}
-								className={filterAddressMap === label ? "map-btn--active" : ""}
+								onClick={() => setFilterAddressPlace(address.place)}
+								className={`${filterAddressPlace === addressesData[i].place ? "map-btn--active" : ""}`}
 							>
-								{label}
+								{address.place}
 							</button>
-						))}
-						<div
-							className={`active-map-bg ${
-								mapTypeLabels.indexOf(filterAddressMap)
-									? "active-map-bg--active"
-									: ""
-							}`}
-						/>
-					</div>
-				</div>
-				<div ref={wrapperRef} className="contact__map">
+						);
+					})}
 					<div
-						ref={imgRef}
-						onMouseDown={handleMouseDown}
-						onMouseUp={handleMouseUp}
-						onMouseLeave={handleMouseUp}
-						onMouseMove={(e) => {
-							e.preventDefault();
-							handleMouseMove(e);
-						}}
-						onTouchStart={handleMouseDown}
-						onTouchMove={handleMouseMove}
-						onTouchEnd={handleMouseUp}
-						className="contact__map-img-wrapper"
-					>
-						<img
-							className="contact__map-img"
-							src="/clinic/03-c.jpg"
-							alt="MUDr. Josef Bourek s.r.o. map image"
-							// TODO: learn this
-							draggable={false}
-						/>
-					</div>
-					<iframe
-						className="contact__google-map"
-						src={selectedMap?.url}
-						loading="lazy"
-					></iframe>
+						className={`active-bg ${
+							filterAddressPlace === addressesData[1].place
+								? "active-bg--active"
+								: ""
+						}`}
+					></div>
+				</div>
+				<div className="map-wrapper__header-container">
+					{mapTypeLabels.map((label, i) => (
+						<button
+							key={i}
+							onClick={() => setFilterAddressMap(label)}
+							className={filterAddressMap === label ? "map-btn--active" : ""}
+						>
+							{label}
+						</button>
+					))}
+					<div
+						className={`active-map-bg ${
+							mapTypeLabels.indexOf(filterAddressMap)
+								? "active-map-bg--active"
+								: ""
+						}`}
+					/>
 				</div>
 			</div>
-		</div>
+			<div ref={wrapperRef} className="contact__map">
+				<div
+					ref={imgRef}
+					onMouseDown={handleMouseDown}
+					onMouseUp={handleMouseUp}
+					onMouseLeave={handleMouseUp}
+					onMouseMove={(e) => {
+						e.preventDefault();
+						handleMouseMove(e);
+					}}
+					onTouchStart={handleMouseDown}
+					onTouchMove={handleMouseMove}
+					onTouchEnd={handleMouseUp}
+					className="contact__map-img-wrapper"
+				>
+					<img
+						className="contact__map-img"
+						src="/clinic/03-c.jpg"
+						alt="MUDr. Josef Bourek s.r.o. map image"
+						// TODO: learn this
+						draggable={false}
+					/>
+				</div>
+				<iframe
+					className="contact__google-map"
+					src={selectedMap?.url}
+					loading="lazy"
+				></iframe>
+			</div>
+		</>
 	);
 }

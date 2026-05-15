@@ -21,7 +21,6 @@ const ourTeam = [
 		profession: "our_team.profession_type_1",
 		name: "MUDr. Julie Cadorini",
 		email: "cadorinij@seznam.cz",
-		emailTxt: true,
 		workingHours: [
 			{ id: 1, name: "our_team.mon", start: "7:30", end: "11:30" },
 			{ id: 2, name: "our_team.tue", start: "13:00", end: "16:30" },
@@ -134,10 +133,7 @@ export default async function ClinicHours() {
 						{ourTeam
 							.filter((member) => member.place === 1)
 							.map(
-								(
-									{ profession, name, number, email, workingHours, emailTxt },
-									index,
-								) => {
+								({ profession, name, number, email, workingHours }, index) => {
 									// TODO: learn this
 									const isWorkingNow = workingHours.some((day) => {
 										const start = timeToMinutes(day.start);
@@ -183,7 +179,7 @@ export default async function ClinicHours() {
 													</a>
 												)}
 												{email && <a href="mailto:josef@gmail.com">{email}</a>}
-												{emailTxt && (
+												{/* {emailTxt && (
 													<p
 														style={{
 															textAlign: "center",
@@ -197,7 +193,7 @@ export default async function ClinicHours() {
 														komunikaci přes Smartmedix.net, odpoví v pracovní
 														době.
 													</p>
-												)}
+												)} */}
 											</div>
 											<div className="our-team__card-bottom">
 												<p style={{ marginBottom: 5, fontWeight: 600 }}>

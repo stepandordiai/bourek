@@ -16,7 +16,7 @@ export default function HomeClient() {
 
 	useEffect(() => {
 		setRandomNumbers(
-			Array.from({ length: 4 }, () => Math.floor(Math.random() * 15) + 1),
+			Array.from({ length: 4 }, () => Math.floor(Math.random() * 16) + 1),
 		);
 
 		const interval = setInterval(() => {
@@ -25,7 +25,7 @@ export default function HomeClient() {
 
 			setTimeout(() => {
 				setRandomNumbers(
-					Array.from({ length: 4 }, () => Math.floor(Math.random() * 15) + 1),
+					Array.from({ length: 4 }, () => Math.floor(Math.random() * 16) + 1),
 				);
 
 				setVisible(true);

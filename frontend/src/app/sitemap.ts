@@ -4,18 +4,22 @@ import { MetadataRoute } from "next";
 
 const pages = [
 	{ path: "", priority: 1.0, changeFreq: "weekly" },
-	{ path: "co-nabizime", priority: 0.9, changeFreq: "monthly" },
-	{ path: "cenik", priority: 0.8, changeFreq: "monthly" },
-	{ path: "ordinacni-doba", priority: 0.8, changeFreq: "monthly" },
-	{ path: "kontakty", priority: 0.7, changeFreq: "monthly" },
-	{ path: "galerie-kliniky", priority: 0.5, changeFreq: "yearly" },
-	{ path: "gdpr", priority: 0.1, changeFreq: "yearly" },
+	{ path: "cenik", priority: 0.9, changeFreq: "monthly" },
+	{ path: "galerie-usmevu", priority: 0.8, changeFreq: "monthly" },
+	{ path: "kontakty", priority: 0.8, changeFreq: "monthly" },
+	{ path: "nase-klinika", priority: 0.5, changeFreq: "monthly" },
+	{ path: "ordinacni-hodiny", priority: 0.8, changeFreq: "monthly" },
+	{
+		path: "zasady-ochrany-osobnich-udaju",
+		priority: 0.1,
+		changeFreq: "yearly",
+	},
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	const alternates = (path: string) => ({
 		...Object.fromEntries(
-			routing.locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
+			routing.locales.map((l) => [l, `${BASE_URL}/${l}${path}`]),
 		),
 		"x-default": `${BASE_URL}/${routing.defaultLocale}${path}`,
 	});

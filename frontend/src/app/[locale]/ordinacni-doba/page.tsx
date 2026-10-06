@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/common/PageTitle/Breadcrumbs";
 import Container from "@/components/Container/Container";
+import PersonFillIcon from "@/components/icons/PersonFillIcon";
 import "./ClinicHours.scss";
 
 const ourTeam = [
@@ -23,7 +24,8 @@ const ourTeam = [
 		email: "cadorinij@seznam.cz",
 		workingHours: [
 			{ id: 1, name: "our_team.mon", start: "7:30", end: "11:30" },
-			{ id: 2, name: "our_team.tue", start: "13:00", end: "16:30" },
+			{ id: 2, name: "our_team.tue", start: "7:30", end: "11:30" },
+			{ id: 3, name: "our_team.wed", start: "7:30", end: "11:30" },
 		],
 		place: 1,
 	},
@@ -165,35 +167,26 @@ export default async function ClinicHours() {
 														: t("our_team.offWork")}
 												</span>
 											</div>
-											<img
-												src="/icons/profile-icon.png"
-												alt={name}
-												loading="lazy"
-											/>
+											<div
+												style={{
+													color: isWorkingNow
+														? "var(--blue-clr)"
+														: "rgba(0, 0, 0, 0.1)",
+													display: "grid",
+													placeItems: "center",
+												}}
+											>
+												<PersonFillIcon />
+											</div>
 											<div className="our-team__card-top">
 												<p>{t(profession)}</p>
-												<p>{name}</p>
+												<p style={{ fontWeight: "500" }}>{name}</p>
 												{number && (
 													<a href={`tel:${number.replaceAll(" ", "")}`}>
 														{number}
 													</a>
 												)}
 												{email && <a href="mailto:josef@gmail.com">{email}</a>}
-												{/* {emailTxt && (
-													<p
-														style={{
-															textAlign: "center",
-															backgroundColor: "var(--blue-clr)",
-															color: "#fff",
-															padding: 10,
-															borderRadius: 10,
-														}}
-													>
-														Pro konzultaci lékarky využijte zabezpečenou
-														komunikaci přes Smartmedix.net, odpoví v pracovní
-														době.
-													</p>
-												)} */}
 											</div>
 											<div className="our-team__card-bottom">
 												<p style={{ marginBottom: 5, fontWeight: 600 }}>
@@ -256,7 +249,17 @@ export default async function ClinicHours() {
 														: t("our_team.offWork")}
 												</span>
 											</div>
-											<img src="/icons/profile-icon.png" alt="" />
+											<div
+												style={{
+													color: isWorkingNow
+														? "var(--blue-clr)"
+														: "rgba(0, 0, 0, 0.1)",
+													display: "grid",
+													placeItems: "center",
+												}}
+											>
+												<PersonFillIcon />
+											</div>
 											<div className="our-team__card-top">
 												<p>{t(profession)}</p>
 												<p>{name}</p>

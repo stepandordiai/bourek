@@ -12,6 +12,7 @@ import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { BASE_URL } from "@/lib/constants";
+import { setRequestLocale } from "next-intl/server";
 import "@/scss/globals.scss";
 
 const poppins = Poppins({
@@ -30,6 +31,14 @@ export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
 };
 
+// TODO: LEARN THIS
+export function generateStaticParams() {
+	return routing.locales.map((locale) => ({ locale }));
+}
+
+// TODO: LEARN THIS
+export const dynamicParams = false;
+
 type LocaleLayoutProps = {
 	children: React.ReactNode;
 	params: Promise<{ locale: string }>;
@@ -41,9 +50,10 @@ export default async function LocaleLayout({
 }: Readonly<LocaleLayoutProps>) {
 	const { locale } = await params;
 
-	if (!hasLocale(routing.locales, locale)) {
-		return notFound();
-	}
+	if (!hasLocale(routing.locales, locale)) notFound();
+
+	// TODO: LEARN THIS
+	setRequestLocale(locale);
 
 	return (
 		<html lang={locale}>

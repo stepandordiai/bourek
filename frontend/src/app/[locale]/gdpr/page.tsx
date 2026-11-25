@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/common/PageTitle/Breadcrumbs";
 import PageInfo from "@/components/PageInfo/PageInfo";
@@ -30,7 +30,13 @@ export async function generateMetadata({
 	};
 }
 
-export default async function PersonalData() {
+export default async function PersonalData({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
+	setRequestLocale(locale);
 	const t = await getTranslations();
 
 	return (
